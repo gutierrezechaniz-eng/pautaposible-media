@@ -36,7 +36,7 @@ Notas de evidencia: reparto basado en el «plato saludable» (Harvard T.H. Chan)
 
 ## Texto de la publicación
 
-Monta tu plato sin báscula.
+Deja la báscula: monta tu plato a ojo.
 
 Mitad verduras y hortalizas, un cuarto de proteína y un cuarto de hidratos (mejor integrales). Es una guía, no una regla: si entrenas o tienes más hambre, ajusta la cantidad.
 

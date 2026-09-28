@@ -39,7 +39,7 @@ Notas de evidencia: el gasto energético continúa durante el sueño (metabolism
 
 ¿Cenar hidratos engorda?
 
-Mientras duermes tu cuerpo sigue gastando energía. A largo plazo pesa más el conjunto de lo que comes en el día que la hora del reloj. Elige bien el tipo de hidrato, sírvete una cantidad razonable y acompáñalo de verdura y algo de proteína.
+Mientras duermes tu cuerpo sigue gastando energía. A largo plazo pesa más el conjunto de lo que comes en el día y cuánto te mueves que la hora del reloj. Elige bien el tipo de hidrato, sírvete una cantidad razonable y acompáñalo de verdura y algo de proteína.
 
 Guárdalo y envíaselo a quien cena con culpa.
 
