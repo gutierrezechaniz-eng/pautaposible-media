@@ -4,16 +4,18 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 
 ## Historial
 
-| Fecha de publicación | Pilar | Tema | Hora programada (Madrid) | Carpeta | Id de Metricool |
+| Fecha de publicación | Pilar / formato | Tema | Hora programada (Madrid) | Carpeta | Id de Metricool |
 |---|---|---|---|---|---|
 | 2026-09-28 (lun) | Mito o realidad | ¿Los hidratos por la noche engordan? | 10:00 | posts/2026-09-28-hidratos-noche | 383165533 |
 | 2026-09-29 (mar) | Mito o realidad (aprobado) | ¿Comer huevo sube el colesterol? | 10:00 | posts/2026-09-29-huevo-colesterol | 383165551 |
+| 2026-09-29 (mar) | Reel · Mito o realidad | ¿Cenar hidratos engorda? | 18:00 | reels/2026-09-29-hidratos-cena | 383170539 |
 | 2026-09-30 (mié) | Receta sencilla | Crema de calabaza en 30 minutos | 10:00 | posts/2026-09-30-crema-calabaza | 383165563 |
 | 2026-10-01 (jue) | Receta sencilla (aprobado) | Lentejas con verduras en 25 minutos | 10:00 | posts/2026-10-01-lentejas-verduras | 383165578 |
+| 2026-10-01 (jue) | Reel · Hábito práctico | Monta tu plato sin báscula | 18:00 | reels/2026-10-01-plato-sin-bascula | 383170554 |
 | 2026-10-02 (vie) | Hábito práctico | Monta tu plato sin pesar nada (método del plato) | 10:00 | posts/2026-10-02-metodo-plato | 383165617 |
 | 2026-10-03 (sáb) | Hábito práctico (aprobado) | Lee una etiqueta en 3 pasos | 10:00 | posts/2026-10-03-leer-etiqueta | 383165658 |
 
-Reels de la semana: reels/2026-09-28.md (hidratos por la noche · método del plato), pendientes de grabar.
+Reels de la semana: guiones en reels/2026-09-28.md; fabricados de forma automática (sin grabación) y programados como Reel en Metricool (ver tabla).
 
 ## Temas usados
 
