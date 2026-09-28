@@ -6,3 +6,5 @@ Sube aquí tus notas de voz (cualquier formato: m4a, mp3, ogg, opus, wav…). El
 - El audio del reel del **jueves**, antes del jueves a las 12:00.
 
 Si no hay audio, el reel se publica igualmente, sin voz. Los textos para leer de cada semana están en GUIONES.md.
+
+Iván envía sus notas de voz por el chat de Claude; los audios originales no se guardan en este repositorio público.

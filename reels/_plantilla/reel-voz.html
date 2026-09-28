@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Manrope;font-weight:600;src:url(node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:700;src:url(node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:800;src:url(node_modules/@fontsource/manrope/files/manrope-latin-800-normal.woff2)}
+:root{--forest:#2E6F57;--cream:#FAFAF7;--mint:#DDEEDF;--sage:#6FA67A;--gold:#D7A95B;--char:#24322A}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--cream);font-family:Manrope,sans-serif;color:var(--char)}
+.layer{position:absolute;inset:0}
+.blob{position:absolute;border-radius:50%}
+/* Zonas seguras: 12 % superior (230 px) y 20 % inferior (384 px) libres de texto */
+#hook{background:var(--forest);color:var(--cream)}
+#hook .ptr{position:absolute;left:50%;top:300px;width:500px;height:500px;margin-left:-250px}
+#hook .title{position:absolute;left:70px;right:70px;top:860px;text-align:center;font-weight:800;font-size:112px;line-height:1.02;letter-spacing:-2.5px}
+.circle{border-radius:50%;background:var(--mint);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.circle img{width:94%;display:block;transform-origin:50% 100%}
+#main{opacity:0}
+#card{position:absolute;left:60px;right:60px;top:250px;height:680px;border-radius:56px;overflow:hidden;background:var(--mint);box-shadow:0 24px 60px rgba(36,50,42,.10)}
+.ill{position:absolute;inset:0;opacity:0}
+.ill .kb{position:absolute;inset:0;transform-origin:50% 55%}
+.ill svg{width:100%;height:100%;display:block}
+.ill .cap{position:absolute;left:0;right:0;bottom:34px;text-align:center}
+.tag{display:inline-block;border-radius:999px;padding:14px 34px;font-weight:800;font-size:38px;background:var(--forest);color:var(--cream)}
+#me{position:absolute;left:50%;top:965px;width:170px;height:170px;margin-left:-85px}
+#me .ring{position:absolute;inset:-8px;border-radius:50%;background:var(--sage);opacity:.35}
+#me .circle{position:absolute;inset:0;border:8px solid var(--cream)}
+#subs{position:absolute;left:50px;right:50px;top:1160px;height:290px;display:flex;align-items:center;justify-content:center;text-align:center}
+.blk{text-wrap:balance;font-weight:800;font-size:78px;line-height:1.16;letter-spacing:-1px;color:var(--char)}
+.w{display:inline-block;padding:0 12px;margin:0 -2px;border-radius:22px}
+.w.on{background:var(--mint);color:var(--forest)}
+.w.done{color:var(--char)}
+.w.todo{color:rgba(36,50,42,.38)}
+#hook .blk{color:var(--cream)}
+#hook .w.todo{color:rgba(250,250,247,.45)}
+#hook .w.on{background:var(--mint);color:var(--forest)}
+#hook .w.done{color:var(--cream)}
+#hsubs{position:absolute;left:60px;right:60px;top:1150px;height:300px;display:flex;align-items:center;justify-content:center;text-align:center}
+.handle{position:absolute;left:0;right:0;top:1470px;text-align:center;font-weight:700;font-size:30px;color:var(--char);opacity:.45}
+#end{background:var(--forest);color:var(--cream);opacity:0}
+#end .zone{position:absolute;left:80px;right:80px;top:290px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cta{display:inline-block;border-radius:999px;padding:30px 60px;font-weight:800;font-size:52px;background:var(--cream);color:var(--forest)}
+.save{display:inline-block;border-radius:999px;padding:22px 56px;font-weight:800;font-size:44px;border:5px solid var(--gold);color:var(--cream)}
+.e{opacity:0}
+</style></head>
+<body>
+<div class="layer" id="main">
+  <div class="blob" style="width:360px;height:360px;right:-150px;top:-120px;background:var(--mint)"></div>
+  <div class="blob" style="width:60px;height:60px;left:70px;top:170px;background:var(--gold)"></div>
+  <div class="blob" style="width:300px;height:300px;left:-170px;top:1180px;background:var(--mint);opacity:.7"></div>
+  <div id="card"></div>
+  <div id="me"><div class="ring"></div><div class="circle"><img src="ivan.png"></div></div>
+  <div id="subs"></div>
+  <div class="handle">@pautaposible</div>
+</div>
+<div class="layer" id="hook">
+  <div class="blob" style="width:560px;height:560px;right:-200px;top:-160px;background:rgba(111,166,122,.28)"></div>
+  <div class="blob" style="width:110px;height:110px;right:120px;top:260px;background:var(--gold)"></div>
+  <div class="blob" style="width:380px;height:380px;left:-190px;top:1380px;background:rgba(111,166,122,.2)"></div>
+  <div class="ptr"><div class="circle" style="box-shadow:0 0 0 16px rgba(221,238,223,.22)"><img id="himg" src="ivan.png"></div></div>
+  <div class="title" id="htitle"></div>
+  <div id="hsubs"></div>
+</div>
+<div class="layer" id="end">
+  <div class="blob" style="width:620px;height:620px;left:-270px;top:1250px;background:rgba(111,166,122,.25)"></div>
+  <div class="blob" style="width:90px;height:90px;right:130px;top:250px;background:var(--gold)"></div>
+  <div class="zone">
+    <div class="e" data-d="0" style="width:340px;height:340px"><div class="circle" style="box-shadow:0 0 0 14px rgba(221,238,223,.22)"><img src="ivan.png"></div></div>
+    <div class="e" data-d="0.08" style="font-weight:800;font-size:66px;margin-top:50px">Iván · Pauta Posible</div>
+    <div class="e" data-d="0.16" style="font-weight:600;font-size:44px;margin-top:16px;opacity:.92">Nutrición práctica,<br>sin miedo ni culpa</div>
+    <div class="e" data-d="0.26" style="margin-top:56px"><span class="cta">pautaposible.es/aprende</span></div>
+    <div class="e" data-d="0.36" style="margin-top:36px"><span class="save">Guárdalo</span></div>
+  </div>
+  <div class="e" data-d="0.45" style="position:absolute;left:0;right:0;top:1470px;text-align:center;font-weight:700;font-size:30px;color:rgba(250,250,247,.65)">@pautaposible</div>
+</div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(Math.max(x,a),b);
+const ease=x=>1-Math.pow(1-clamp(x),3);
+const HOOK=2.5, XF=0.4, IXF=0.5, ENDXF=0.3;
+let C, BLOCKS, ILLS=[];
+function blocks(words){
+  // Frases cortadas en la puntuación y repartidas en bloques de hasta 8 palabras / 36 caracteres (máx. 2 líneas)
+  const phrases=[];let cur=[];
+  words.forEach((w,i)=>{cur.push(w);if(/[.,:;?!]$/.test(w.w)||i===words.length-1){phrases.push(cur);cur=[]}});
+  // une frases muy cortas con la siguiente si caben
+  const len=a=>a.map(w=>w.w).join(' ').length;
+  const merged=[];
+  phrases.forEach(p=>{const last=merged[merged.length-1];
+    if(last&&!/[.?!:]$/.test(last[last.length-1].w)&&last.length+p.length<=8&&len([...last,...p])<=36&&(last.length<=3||p.length<=2))merged[merged.length-1]=[...last,...p];else merged.push(p)});
+  const out=[];
+  merged.forEach(p=>{
+    const n=Math.max(Math.ceil(p.length/8),Math.ceil(len(p)/36));
+    // corta antes de una conjunción o preposición cercana al punto ideal (evita «y» o «a» colgando)
+    const CUT=/^(y|o|que|a|con|para|de|el|la)$/i;
+    let i=0;
+    for(let part=n;part>1;part--){
+      const ideal=i+Math.round((p.length-i)/part);let best=ideal;
+      search:for(const re of [/^(y|o)$/i,CUT])for(const d of [0,-1,1,2,-2]){const k=ideal+d;if(k>i+1&&k<p.length-1&&re.test(p[k].w)&&len(p.slice(i,k))<=36){best=k;break search}}
+      out.push(p.slice(i,best));i=best;
+    }
+    out.push(p.slice(i));
+  });
+  return out.map((ws,k)=>({ws,s:ws[0].s,e:k+1<out.length?out[k+1][0].s:C.dur+0.3}));
+}
+function setup(cfg){
+  C=cfg;BLOCKS=blocks(cfg.words);
+  document.getElementById('htitle').innerHTML=cfg.hook;
+  const card=document.getElementById('card');
+  card.innerHTML=cfg.scenes.map((s,i)=>`<div class="ill" id="i${i}"><div class="kb">${s.svg}</div>${s.tag?`<div class="cap"><span class="tag">${s.tag}</span></div>`:''}</div>`).join('');
+  ILLS=cfg.scenes.map((s,i)=>({...s,el:document.getElementById('i'+i)}));
+  return cfg.dur+1.5;
+}
+function subsHTML(t){
+  const b=BLOCKS.find(b=>t>=b.s-0.05&&t<b.e)||(t<BLOCKS[0].s?BLOCKS[0]:null);
+  if(!b)return '';
+  return `<div class="blk">${b.ws.map(w=>{const st=t>=w.s&&t<w.e+0.05?'on':(t>=w.e?'done':'todo');return `<span class="w ${st}">${w.w}</span>`}).join(' ')}</div>`;
+}
+function render(t,opts={}){
+  const dur=C.dur;
+  // gancho
+  const hk=document.getElementById('hook');
+  hk.style.opacity=t<HOOK?1:1-ease((t-HOOK)/XF);
+  const hp=ease(t/0.7);
+  document.querySelector('#hook .ptr').style.transform=`scale(${0.86+0.14*hp})`;
+  document.querySelector('#hook .ptr').style.opacity=hp;
+  document.getElementById('himg').style.transform=`scale(${1+0.07*clamp(t/(HOOK+XF))})`;
+  const tt=document.getElementById('htitle'),tp=ease((t-0.15)/0.6);
+  tt.style.opacity=tp;tt.style.transform=`translateY(${(1-tp)*40}px)`;
+  document.getElementById('hsubs').innerHTML=opts.nosubs?'':subsHTML(t);
+  // parte central
+  const mn=document.getElementById('main');
+  mn.style.opacity=t<HOOK?0:(t<dur?1:1);
+  document.getElementById('subs').innerHTML=(opts.nosubs||t<HOOK)?'':subsHTML(Math.min(t,dur-0.01));
+  const env=C.env[Math.min(C.env.length-1,Math.max(0,Math.round(t*30)))]||0;
+  const ring=document.querySelector('#me .ring');
+  ring.style.transform=`scale(${1+0.16*env})`;ring.style.opacity=0.25+0.5*env;
+  ILLS.forEach((s,i)=>{
+    const first=i===0,last=i===ILLS.length-1;
+    const fin=first?1:ease((t-s.start)/IXF), fout=last?1:1-ease((t-s.end)/IXF);
+    const op=(t>=s.start-(first?99:0)&&t<s.end+IXF+(last?99:0))?Math.min(fin,fout):0;
+    s.el.style.opacity=op;
+    if(op<=0)return;
+    const lt=clamp((t-s.start)/(s.end-s.start+IXF));
+    const z=1.0+0.07*lt, dx=(s.pan||0)*lt*30;
+    s.el.querySelector('.kb').style.transform=`translateX(${dx}px) scale(${z})`;
+    s.el.querySelectorAll('[data-at]').forEach(e=>{
+      const p=ease((t-parseFloat(e.dataset.at))/0.45);
+      e.style.opacity=p;
+      if(e.dataset.pop!==undefined){const bb=e.dataset.pop.split(' ');e.setAttribute('transform',`translate(${bb[0]} ${bb[1]}) scale(${0.6+0.4*p+0.08*Math.sin(Math.PI*p)}) translate(${-bb[0]} ${-bb[1]})`)}
+    });
+    const cap=s.el.querySelector('.cap');
+    if(cap){const p=ease((t-s.start-0.25)/0.5);cap.style.opacity=p;cap.style.transform=`translateY(${(1-p)*24}px)`}
+  });
+  // cierre
+  const ed=document.getElementById('end');
+  const ep=ease((t-dur)/ENDXF);ed.style.opacity=t<dur?0:ep;
+  ed.querySelectorAll('.e').forEach(e=>{const p=ease((t-dur-parseFloat(e.dataset.d))/0.45);e.style.opacity=p;e.style.transform=`translateY(${(1-p)*36}px)`});
+}
+window.setup=setup;window.render=render;
+</script></body></html>
