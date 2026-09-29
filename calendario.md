@@ -8,7 +8,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 |---|---|---|---|---|---|
 | 2026-09-28 (lun) | Mito o realidad | ¿Los hidratos por la noche engordan? | 10:00 | posts/2026-09-28-hidratos-noche | 383165533 |
 | 2026-09-29 (mar) | Mito o realidad (aprobado) | ¿Comer huevo sube el colesterol? | 10:00 | posts/2026-09-29-huevo-colesterol | 383165551 |
-| 2026-09-29 (mar) | Reel con voz · Mito o realidad | ¿Cenar hidratos engorda? | 18:00 | reels/2026-09-29-hidratos-cena (reel-voz.mp4) | 383200668 (antes 383170539) |
+| 2026-09-29 (mar) | Reel con voz · Mito o realidad | ¿Cenar hidratos engorda? | 18:00 | reels/2026-09-29-hidratos-cena (reel-voz.mp4) | 384113603 (antes 383200668, 383170539) · colaboradora: ibangutierrezetxaniz |
 | 2026-09-30 (mié) | Receta sencilla | Crema de calabaza en 30 minutos | 10:00 | posts/2026-09-30-crema-calabaza | 383165563 |
 | 2026-10-01 (jue) | Receta sencilla (aprobado) | Lentejas con verduras en 25 minutos | 10:00 | posts/2026-10-01-lentejas-verduras | 383165578 |
 | 2026-10-01 (jue) | Reel con voz · Hábito práctico | Monta tu plato sin báscula | 18:00 | reels/2026-10-01-plato-sin-bascula (reel-voz.mp4) | 383200709 (antes 383170554) |
