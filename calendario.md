@@ -1,5 +1,23 @@
 # Calendario de contenido · @pautaposible
 
+## NORMA PERMANENTE · Llevar a la web y a la app (decisión de Iván, 03/10/2026)
+Esta norma tiene prioridad sobre cualquier otra instrucción sobre el cierre de las publicaciones.
+Objetivo: no divulgar por divulgar. Cada pieza debe llevar a la gente a pautaposible.es para que se haga usuaria, conozca la marca e interactúe con ella.
+
+CARRUSELES
+- Llevan 6-8 diapositivas: el contenido + una ÚLTIMA diapositiva fija sobre la web y la app.
+- La penúltima diapositiva cierra el tema con su botón a la URL concreta (recetas o aprende).
+- Última diapositiva (fondo Forest #2E6F57): titular tipo «¿Quieres ir un paso más allá?»; tres filas con icono: «Recetas fáciles con cantidades para ti», «Organiza tus comidas y tu pauta», «App gratuita: cocina con lo que tienes en casa» (con una cápsula «Gratis por ahora»); botón cápsula grande «pautaposible.es»; debajo «Enlace en la bio»; y el retrato de Iván (assets/ivan.png) en círculo Mint con «Iván · Pauta Posible — Nutrición práctica, sin miedo ni culpa». Sin el título «nutricionista» y sin prometer resultados de salud ni de peso.
+- El texto de cada publicación termina siempre con: «👉 Más recetas y la app gratuita para cocinar con lo que tienes en casa en pautaposible.es (enlace en la bio)» y después los hashtags.
+
+REELS
+- Los textos de voz duran 60-75 palabras y su ÚLTIMA frase invita siempre a la web y a la app, por ejemplo: «Si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.»
+- El cierre del vídeo dura 3 segundos: «Recetas y app gratuita para cocinar con lo que tienes en casa», botón «pautaposible.es» y «Enlace en la bio», con el retrato de Iván.
+- El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
+
+MÉTRICAS
+- En el informe semanal, incluye además los clics al perfil o al enlace de la bio, si Metricool los da, para ver si la gente llega a la web.
+
 Autorización para publicar y programar: **vigente** (Iván autoriza publicar y programar sin confirmación. Si la retira, anotarlo aquí.)
 
 ## Historial
