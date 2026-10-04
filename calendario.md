@@ -18,6 +18,8 @@ REELS
 MÉTRICAS
 - En el informe semanal, incluye además los clics al perfil o al enlace de la bio, si Metricool los da, para ver si la gente llega a la web.
 
+Página de copias: https://claude.ai/artifact/L6QSvLFHDUMP6s1tJX28WD (actualizarla cada semana pasando esta url)
+
 Autorización para publicar y programar: **vigente** (Iván autoriza publicar y programar sin confirmación. Si la retira, anotarlo aquí.)
 
 ## Historial
@@ -32,8 +34,19 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-01 (jue) | Reel con voz · Hábito práctico | Monta tu plato sin báscula | 18:00 | reels/2026-10-01-plato-sin-bascula (reel-voz.mp4) | 385726316 (antes 383200709, 383170554) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-02 (vie) | Hábito práctico | Monta tu plato sin pesar nada (método del plato) | 10:00 | posts/2026-10-02-metodo-plato | 383165617 |
 | 2026-10-03 (sáb) | Hábito práctico (aprobado) | Lee una etiqueta en 3 pasos | 10:00 | posts/2026-10-03-leer-etiqueta | 383165658 |
+| 2026-10-05 (lun) | Mito o realidad | ¿Las verduras congeladas son «peores»? | 10:00 | posts/2026-10-05-verduras-congeladas | 387663166 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-06 (mar) | Reel con voz · Mito o realidad | ¿La fruta de postre fermenta? | pendiente (lo programa la tarea del martes 12:00) | voz/GUIONES.md | pendiente de voz |
+| 2026-10-07 (mié) | Receta sencilla | Garbanzos con espinacas en 15 minutos | 10:00 | posts/2026-10-07-garbanzos-espinacas | 387663187 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-08 (jue) | Reel con voz · Hábito práctico | 3 meriendas en 2 minutos | pendiente (lo programa la tarea del jueves 12:00) | voz/GUIONES.md | pendiente de voz |
+| 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
+
+## Métricas · semana del 28 sep (consultadas el 04/10/2026)
+- Carruseles: alcance 4-16 personas cada uno (mejor: «Monta tu plato sin pesar nada», 16 de alcance y 38 visualizaciones). Casi sin guardados ni compartidos.
+- Reels con voz: «Monta tu plato sin báscula» 100 de alcance y 181 reproducciones (13 s de media); «¿Cenar hidratos engorda?» 46 de alcance, 80 reproducciones y 1 comentario.
+- Seguidores: de 6 a 9 (+3). Clics al enlace de la bio: Metricool no da datos todavía.
+- Cambio: los reels llegan a 6-10 veces más gente, así que se mantienen los ganchos de mito y lo práctico y cotidiano (plato, táper, meriendas). Más ideas concretas para guardar en los carruseles.
 
 ## Temas usados
 
@@ -43,19 +56,22 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Receta: crema de calabaza
 - Hábito: leer una etiqueta nutricional
 - Hábito: método del plato (½ verdura, ¼ proteína, ¼ hidratos)
+- Mito: verduras congeladas frente a frescas
+- Receta: garbanzos con espinacas (legumbre de bote)
+- Hábito: táper equilibrado y seguridad del táper
+- Reel mito: la fruta de postre «fermenta»
+- Reel hábito: 3 meriendas sencillas
 
 ## Banco de temas
 
 Mito o realidad
-- ¿La fruta de noche engorda? / ¿La fruta después de comer «fermenta»?
+- ¿La fruta de noche engorda?
 - ¿El pan engorda? / ¿Hay que quitar el gluten sin ser celíaco?
 - ¿Las legumbres de bote son peores que las secas?
 - ¿El azúcar moreno es mejor que el blanco?
 - ¿Hay que beber 2 litros de agua al día sí o sí?
-- ¿Los congelados tienen menos nutrientes?
 
 Receta sencilla
-- Garbanzos salteados con espinacas en 15 minutos
 - Bol de yogur natural con fruta y avena
 - Merluza al horno con patata y verduras en una bandeja
 - Hummus casero con crudités
@@ -67,5 +83,3 @@ Hábito práctico
 - Cómo organizar un batch cooking de 1 hora
 - 3 desayunos sin complicaciones
 - Cómo añadir más legumbre a la semana
-- Snacks sencillos para media tarde
-- Cómo montar un táper equilibrado

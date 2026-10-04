@@ -1,11 +1,6 @@
-# Guiones de voz · semana del 28 de septiembre de 2026
-
-Léelos con calma, como si se lo contaras a un amigo. Unos 25 segundos cada uno. Graba con el móvil cerca, en una habitación tranquila.
-
-## Reel del martes · ¿Cenar hidratos engorda?
-
-> ¿Cenar arroz engorda más que comerlo al mediodía? Lo que más pesa no es la hora. Mientras duermes, tu cuerpo sigue trabajando y gastando energía. Lo que más cuenta es el conjunto del día: qué hidrato eliges, cuánto te sirves y con qué lo acompañas, como verdura y algo de proteína. Así que no hace falta quitar el arroz de la cena. Guárdalo y envíaselo a quien cena con culpa.
-
-## Reel del jueves · Monta tu plato sin báscula
-
-> No necesitas pesar la comida para comer bien. Imagina tu plato dividido en partes. La mitad, verduras y hortalizas: crudas, al horno o en crema, todas cuentan. Un cuarto, proteína: legumbres, huevo, pescado o carne. Y el otro cuarto, hidratos: arroz, pasta, pan o patata, mejor si son integrales. Es una guía, no una regla: si entrenas o tienes más hambre, ajusta. Guárdalo para tu próxima comida.
+# Guiones de voz · semana del 5 de octubre de 2026
+Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
+## Reel del martes · ¿La fruta de postre fermenta?
+> ¿La fruta de postre fermenta en el estómago? Tranquilidad: no. Tu estómago es muy ácido y mezcla todo lo que comes; la fruta se digiere con el resto, sin pudrirse. Si alguna te sienta pesada, mira la cantidad, no el orden. Lo importante es tomar fruta a diario. Envíaselo a quien la aparta del postre. Y si quieres más ideas fáciles, entra en pautaposible.es: la app es gratis.
+## Reel del jueves · 3 meriendas en 2 minutos
+> ¿Llegas a la cena con un hambre enorme? Prueba a merendar algo sencillo. Un yogur natural con fruta y copos de avena. Una tostada integral con tomate y queso fresco. O un puñado de frutos secos con una pieza de fruta. Dos minutos y listo. Guárdalo para esta tarde. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
