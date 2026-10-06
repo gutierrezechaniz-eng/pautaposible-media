@@ -38,6 +38,17 @@ const reels = {
       { kind: 'end', dur: 4 },
     ],
   },
+  'fruta-postre': {
+    scenes: [
+      { kind: 'hook', dur: 3.2, title: '¿La fruta de<br>postre fermenta?', sub: 'Spoiler: no' },
+      { kind: 'mid', dur: 4, tag: 'Mito o realidad', title: 'Tu estómago es <em>muy ácido</em>', small: 'Y mezcla todo lo que comes.' },
+      { kind: 'mid', dur: 4.2, title: 'La fruta se digiere <em>con el resto</em>', small: 'No se queda «pudriéndose» esperando su turno.' },
+      { kind: 'mid', dur: 4.3, top: 330, title: '¿Te sienta pesada?', pills: ['Mira la cantidad', 'no el orden'] },
+      { kind: 'mid', dur: 4, title: 'Lo importante: <em>fruta a diario</em>', small: 'De postre, a media mañana o cuando te apetezca.' },
+      { kind: 'mid', dur: 3.6, title: 'Envíaselo a quien <em>la aparta</em> del postre' },
+      { kind: 'end', dur: 3.5, lead: 'Recetas y app gratuita para<br>cocinar con lo que tienes en casa', url: 'pautaposible.es', bio: 'Enlace en la bio', save: 'Guárdalo 🔖' },
+    ],
+  },
 };
 
 const [name, outDir] = process.argv.slice(2);

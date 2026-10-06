@@ -55,8 +55,10 @@ function build(cfg){
         <div class="zone" style="top:290px">${portrait(340)}
           <div class="a" data-d="0.15" style="font-weight:800;font-size:64px;margin-top:48px">Iván · Pauta Posible</div>
           <div class="a" data-d="0.3" style="font-weight:600;font-size:42px;margin-top:16px;opacity:.9">Nutrición práctica,<br>sin miedo ni culpa</div>
-          <div class="a" data-d="0.55" style="margin-top:56px"><span class="cta">pautaposible.es/aprende</span></div>
-          <div class="a" data-d="0.8" style="margin-top:34px"><span class="save">Guárdalo 🔖</span></div>
+          ${s.lead?`<div class="a" data-d="0.4" style="font-weight:700;font-size:44px;line-height:1.25;margin-top:44px">${s.lead}</div>`:''}
+          <div class="a" data-d="0.55" style="margin-top:${s.lead?40:56}px"><span class="cta">${s.url||'pautaposible.es/aprende'}</span></div>
+          ${s.bio?`<div class="a" data-d="0.7" style="font-weight:600;font-size:36px;margin-top:18px;opacity:.85">${s.bio}</div>`:''}
+          <div class="a" data-d="0.8" style="margin-top:34px"><span class="save">${s.save||'Guárdalo 🔖'}</span></div>
         </div>
         <div class="handle a" data-d="1.0" style="opacity:.6">@pautaposible</div></div>`;
     } else {
