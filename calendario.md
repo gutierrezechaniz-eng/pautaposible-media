@@ -35,7 +35,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-02 (vie) | Hábito práctico | Monta tu plato sin pesar nada (método del plato) | 10:00 | posts/2026-10-02-metodo-plato | 383165617 |
 | 2026-10-03 (sáb) | Hábito práctico (aprobado) | Lee una etiqueta en 3 pasos | 10:00 | posts/2026-10-03-leer-etiqueta | 383165658 |
 | 2026-10-05 (lun) | Mito o realidad | ¿Las verduras congeladas son «peores»? | 10:00 | posts/2026-10-05-verduras-congeladas | 387663166 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-06 (mar) | Reel con voz · Mito o realidad | ¿La fruta de postre fermenta? | pendiente (lo programa la tarea del martes 12:00) | voz/GUIONES.md | pendiente de voz |
+| 2026-10-06 (mar) | Reel sin voz · Mito o realidad (no llegó nota de voz) | ¿La fruta de postre fermenta? | 18:00 | reels/2026-10-06-fruta-postre (reel.mp4) | 389311432 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-07 (mié) | Receta sencilla | Garbanzos con espinacas en 15 minutos | 10:00 | posts/2026-10-07-garbanzos-espinacas | 387663187 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-08 (jue) | Reel con voz · Hábito práctico | 3 meriendas en 2 minutos | pendiente (lo programa la tarea del jueves 12:00) | voz/GUIONES.md | pendiente de voz |
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
