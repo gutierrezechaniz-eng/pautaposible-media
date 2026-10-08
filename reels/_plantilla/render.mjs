@@ -17,6 +17,29 @@ function plate(active) {
   <line x1="24" y1="180" x2="180" y2="180" stroke="#fff" stroke-width="8"/></svg>`;
 }
 
+
+function food(kind) {
+  const w = (inner) => `<svg width="420" height="320" viewBox="0 0 420 320"><ellipse cx="210" cy="290" rx="170" ry="18" fill="#24322A" opacity=".08"/>${inner}</svg>`;
+  if (kind === 'yogur') return w(`
+  <path d="M60,150 Q60,280 210,280 Q360,280 360,150 Z" fill="#fff" stroke="#2E6F57" stroke-width="8"/>
+  <ellipse cx="210" cy="150" rx="150" ry="34" fill="#FAFAF7" stroke="#2E6F57" stroke-width="8"/>
+  <circle cx="150" cy="138" r="22" fill="#C8475A"/><circle cx="185" cy="128" r="18" fill="#C8475A"/>
+  <circle cx="262" cy="140" r="17" fill="#4B4E8C"/><circle cx="288" cy="128" r="15" fill="#4B4E8C"/>
+  <ellipse cx="225" cy="150" rx="13" ry="7" fill="#D7A95B"/><ellipse cx="120" cy="155" rx="12" ry="6" fill="#D7A95B" transform="rotate(20 120 155)"/>
+  <ellipse cx="305" cy="156" rx="12" ry="6" fill="#D7A95B" transform="rotate(-25 305 156)"/><ellipse cx="200" cy="162" rx="11" ry="6" fill="#D7A95B"/>`);
+  if (kind === 'tostada') return w(`
+  <path d="M80,270 L80,120 Q80,50 150,55 Q210,20 270,55 Q340,50 340,120 L340,270 Z" fill="#D7A95B" stroke="#A97C35" stroke-width="8"/>
+  <path d="M105,255 L105,128 Q105,82 155,84 Q210,55 265,84 Q315,82 315,128 L315,255 Z" fill="#EBC98C"/>
+  <path d="M120,150 Q210,120 300,150 L300,210 Q210,235 120,210 Z" fill="#D9503F" opacity=".85"/>
+  <rect x="140" y="160" width="60" height="44" rx="10" fill="#fff"/><rect x="220" y="168" width="58" height="42" rx="10" fill="#fff"/>
+  <circle cx="200" cy="225" r="6" fill="#6FA67A"/><circle cx="250" cy="140" r="6" fill="#6FA67A"/>`);
+  return w(`
+  <circle cx="275" cy="175" r="95" fill="#C8475A"/><path d="M275,82 q5,-30 22,-42" stroke="#6b4a2b" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M282,70 q40,-30 70,-5 q-35,25 -70,5" fill="#6FA67A"/><ellipse cx="240" cy="140" rx="22" ry="34" fill="#fff" opacity=".25"/>
+  <ellipse cx="95" cy="250" rx="34" ry="22" fill="#A97C35"/><ellipse cx="150" cy="262" rx="30" ry="19" fill="#C99A55"/>
+  <ellipse cx="120" cy="215" rx="28" ry="18" fill="#B98843" transform="rotate(-20 120 215)"/><ellipse cx="70" cy="210" rx="26" ry="17" fill="#C99A55" transform="rotate(25 70 210)"/>`);
+}
+
 const reels = {
   'hidratos-cena': {
     scenes: [
@@ -49,12 +72,23 @@ const reels = {
       { kind: 'end', dur: 3.5, lead: 'Recetas y app gratuita para<br>cocinar con lo que tienes en casa', url: 'pautaposible.es', bio: 'Enlace en la bio', save: 'Guárdalo 🔖' },
     ],
   },
+  'meriendas': {
+    scenes: [
+      { kind: 'hook', dur: 3.2, title: '¿Llegas a la<br>cena con<br>hambre?', sub: '3 meriendas en 2 minutos' },
+      { kind: 'mid', dur: 4.2, top: 300, tag: 'Merienda 1', visual: food('yogur'), title: 'Yogur natural con <em>fruta y avena</em>', small: 'Unos copos y la fruta que tengas.' },
+      { kind: 'mid', dur: 4.2, top: 300, tag: 'Merienda 2', visual: food('tostada'), title: 'Tostada integral con <em>tomate y queso fresco</em>' },
+      { kind: 'mid', dur: 4.2, top: 300, tag: 'Merienda 3', visual: food('frutos'), title: 'Un puñado de <em>frutos secos</em> y una fruta', small: 'Naturales o tostados, sin sal.' },
+      { kind: 'mid', dur: 3.8, title: 'Dos minutos<br><em>y listo</em>', small: 'Llegas a la cena con hambre, no con ansia.' },
+      { kind: 'mid', dur: 3.4, title: 'Guárdalo para <em>esta tarde</em>' },
+      { kind: 'end', dur: 3.5, lead: 'Recetas y app gratuita para<br>cocinar con lo que tienes en casa', url: 'pautaposible.es', bio: 'Enlace en la bio', save: 'Guárdalo 🔖' },
+    ],
+  },
 };
 
 const [name, outDir] = process.argv.slice(2);
 const cfg = reels[name];
 const FPS = 30;
-const browser = await chromium.launch();
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM });
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
 await page.goto('file://' + path.join(dir, 'reel.html'));
 const total = await page.evaluate((c) => window.build(c), cfg);
