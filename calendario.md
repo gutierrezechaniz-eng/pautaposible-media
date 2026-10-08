@@ -37,7 +37,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-05 (lun) | Mito o realidad | ¿Las verduras congeladas son «peores»? | 10:00 | posts/2026-10-05-verduras-congeladas | 387663166 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-06 (mar) | Reel sin voz · Mito o realidad (no llegó nota de voz) | ¿La fruta de postre fermenta? | 18:00 | reels/2026-10-06-fruta-postre (reel.mp4) | 389311432 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-07 (mié) | Receta sencilla | Garbanzos con espinacas en 15 minutos | 10:00 | posts/2026-10-07-garbanzos-espinacas | 387663187 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-08 (jue) | Reel con voz · Hábito práctico | 3 meriendas en 2 minutos | pendiente (lo programa la tarea del jueves 12:00) | voz/GUIONES.md | pendiente de voz |
+| 2026-10-08 (jue) | Reel sin voz · Hábito práctico (no llegó nota de voz) | 3 meriendas en 2 minutos | 18:00 | reels/2026-10-08-meriendas (reel.mp4) | 391047175 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
