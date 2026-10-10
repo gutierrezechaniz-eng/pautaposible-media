@@ -10,7 +10,8 @@ Al empezar cada sesión, lee **`ESTADO.md`** (qué quedó pendiente) y, si la ta
 |---|---|
 | `calendario.md` | Norma permanente (cierre hacia la web y la app), autorización para publicar, historial con los ids de Metricool, métricas, temas usados y banco de temas |
 | `ESTADO.md` | Estado entre conversaciones: pendientes, decisiones recientes y próxima semana |
-| `posts/AAAA-MM-DD-tema/` | Carruseles: `01.png`…`08.png` (6-8 diapositivas; la última es la fija de la web y la app) |
+| `posts/AAAA-MM-DD-tema/` | Carruseles: `01.png`…`08.png` (6-8 diapositivas; la última es la fija de la web y la app) y `texto.md` (texto de la publicación, desde el 12/10) |
+| `posts/_plantilla/` | Generador de carruseles: el contenido va en `carruseles.mjs` y se renderiza con `render.mjs`; ver su README |
 | `reels/AAAA-MM-DD-tema/` | `guion.md` (escenas, fuentes, texto de la publicación), `portada.png`, `reel.mp4` (sin voz) y/o `reel-voz.mp4` |
 | `reels/_plantilla/` | Generador de reels: `render.mjs` (sin voz), `render-voz.mjs` (con voz), `ilustraciones.mjs`; ver su README |
 | `voz/GUIONES.md` | Textos que Iván lee para los reels de la semana |
