@@ -42,7 +42,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 392552812 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-15 (jue) | Reel sin voz · Hábito práctico (respaldo: se sustituye si llega la nota de voz antes de las 12:00) | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel.mp4) | 392568483 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 392552832 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 392569523 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 392569539 · colaboradora: ibangutierrezetxaniz |
@@ -69,7 +69,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (392552812) |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (Iván grabó el texto del carrusel; la fruta por la noche vuelve al banco) | 18:00 | programado (392559960) |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (392552824) |
-| 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | sin voz programado (392568483); se sustituye si llega la nota de voz antes de las 12:00 del jueves |
+| 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | con voz programado (392576485; antes 392568483 sin voz) |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (392552832) |
 
 ## Plan · semana del 19 oct
@@ -99,7 +99,7 @@ Los reels acompañan al carrusel del día anterior o siguiente (como en las sema
 - Receta: merluza al horno con patata y verduras en bandeja
 - Hábito: lista de la compra básica semanal
 - Reel mito: legumbres de bote frente a secas (con voz)
-- Reel hábito: 3 desayunos en 3 minutos
+- Reel hábito: 3 desayunos en 3 minutos (con voz)
 - Mito: azúcar moreno frente a blanco
 - Receta: arroz salteado con verduras y huevo
 - Hábito: batch cooking en 1 hora
