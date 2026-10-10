@@ -175,3 +175,141 @@ export function legumbresBote() {
         pill(560, 380, 300, 'App gratis', 29.4, G, CH, 44)) },
   ];
 }
+
+// ---------- Reel 20/10: Tu vida, no la de un influencer (la muñeca rusa) ----------
+const RJ = '#D9714E', PIEL = '#F6DDC6', TOST = '#C98B5E';
+const at0 = (at) => (at === undefined ? '' : ` data-at="${at}" opacity="0"`);
+const g = (inner, at, pop) => `<g${at0(at)}${pop && at !== undefined ? ` data-pop="${pop}"` : ''}>${inner}</g>`;
+const fl = (inner, amp = 8, per = 2.4) => `<g data-float="${amp} ${per}">${inner}</g>`;
+const box = (x, y, w, h, txt, at, bg = '#fff', col = CH, size = 36) =>
+  `<g${at0(at)} data-pop="${x + w / 2} ${y + h / 2}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" fill="${bg}"/>` + label(x + w / 2, y + h / 2 + size * 0.36, txt, undefined, col, size) + `</g>`;
+const spark = (x, y, sz, per = 2) => fl(ic('star', x, y, sz), 6, per);
+const DCLIP = `<defs><clipPath id="mtop"><rect x="0" y="0" width="100" height="52.5"/></clipPath><clipPath id="mbot"><rect x="0" y="52.5" width="100" height="50"/></clipPath></defs>`;
+// Muñeca rusa de altura h con la base en (cx, by). part: 'top' | 'bot'.
+function doll(cx, by, h, col, flor = G, part) {
+  const k = h / 100, clip = part ? ` clip-path="url(#m${part})"` : '';
+  return `<g transform="translate(${cx - 50 * k} ${by - 98 * k}) scale(${k})"><g${clip}>
+    <path d="M50 4 C70 4 80 18 78 36 C77 44 74 48 72 50 C84 58 88 72 86 84 C84 94 76 98 50 98 C24 98 16 94 14 84 C12 72 16 58 28 50 C26 48 23 44 22 36 C20 18 30 4 50 4Z" fill="${col}"/>
+    <ellipse cx="50" cy="33" rx="15.5" ry="14.5" fill="${PIEL}"/><path d="M34.5 31 C37 19 63 19 65.5 31 C59 25 41 25 34.5 31Z" fill="#5A3B2B"/>
+    <circle cx="44" cy="34" r="1.8" fill="${CH}"/><circle cx="56" cy="34" r="1.8" fill="${CH}"/><circle cx="40" cy="39" r="3" fill="#F2A7A0"/><circle cx="60" cy="39" r="3" fill="#F2A7A0"/>
+    <path d="M45 41 Q50 45 55 41" stroke="#C0504D" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="50" cy="76" rx="24" ry="17" fill="${CR}"/><path d="M38 84 Q42 76 46 82 M62 84 Q58 76 54 82" stroke="${S}" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g fill="${flor}"><circle cx="50" cy="69.5" r="4.2"/><circle cx="43.5" cy="76" r="4.2"/><circle cx="56.5" cy="76" r="4.2"/><circle cx="50" cy="82.5" r="4.2"/></g><circle cx="50" cy="76" r="3.6" fill="${RJ}"/>
+    <path d="M27 51.5 C40 55.5 60 55.5 73 51.5" stroke="rgba(36,50,42,.18)" stroke-width="2" fill="none"/></g></g>`;
+}
+// Influencer (sonrisa, abdominales y moreno). show: {smile, abs} → segundo en que aparecen.
+function influ(cx, by, h, show = {}) {
+  const k = h / 100;
+  return `<g transform="translate(${cx - 50 * k} ${by - 100 * k}) scale(${k})">
+    <path d="M28 100 L31 64 C33 54 67 54 69 64 L72 100Z" fill="${TOST}"/><rect x="45" y="44" width="10" height="12" fill="${TOST}"/>
+    <g${at0(show.abs)} fill="#A86A42"><rect x="41" y="64" width="8" height="8" rx="3"/><rect x="51" y="64" width="8" height="8" rx="3"/><rect x="41" y="75" width="8" height="8" rx="3"/><rect x="51" y="75" width="8" height="8" rx="3"/><rect x="41" y="86" width="8" height="8" rx="3"/><rect x="51" y="86" width="8" height="8" rx="3"/></g>
+    <circle cx="50" cy="31" r="16" fill="${TOST}"/><path d="M33 28 C34 10 66 10 67 28 C60 18 44 18 33 28Z" fill="#E0B04A"/>
+    <circle cx="44" cy="29" r="1.8" fill="${CH}"/><circle cx="56" cy="29" r="1.8" fill="${CH}"/>
+    <path d="M40 35 Q50 47 60 35Z" fill="#fff" stroke="${CH}" stroke-width="1.6" stroke-linejoin="round"/>
+    <g${at0(show.smile)}><path d="M63 33 L64.5 37 L68.5 38.5 L64.5 40 L63 44 L61.5 40 L57.5 38.5 L61.5 37Z" fill="${G}"/></g></g>`;
+}
+function persona(cx, by, h, col = F) {
+  const k = h / 100;
+  return `<g transform="translate(${cx - 50 * k} ${by - 100 * k}) scale(${k})">
+    <path d="M26 100 C26 70 36 58 50 58 C64 58 74 70 74 100Z" fill="${col}"/><circle cx="50" cy="34" r="17" fill="${PIEL}"/><path d="M33 31 C35 14 65 14 67 31 C60 23 42 23 33 31Z" fill="#5A3B2B"/>
+    <circle cx="44" cy="35" r="1.8" fill="${CH}"/><circle cx="56" cy="35" r="1.8" fill="${CH}"/><path d="M44 42 Q50 46 56 42" stroke="${CH}" stroke-width="2" fill="none" stroke-linecap="round"/></g>`;
+}
+const telefono = (x, y, w, h, inner = '') =>
+  `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${w * 0.12}" fill="${CH}"/><rect x="${x + 14}" y="${y + 30}" width="${w - 28}" height="${h - 60}" rx="${w * 0.05}" fill="#fff"/>${inner}`;
+const corazon = (x, y, s, col = RJ) => `<path transform="translate(${x} ${y}) scale(${s / 100})" d="M50 88 C20 66 6 50 6 32 C6 18 17 8 30 8 C40 8 46 14 50 22 C54 14 60 8 70 8 C83 8 94 18 94 32 C94 50 80 66 50 88Z" fill="${col}"/>`;
+const maletin = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="36" y="14" width="28" height="16" rx="6" fill="none" stroke="${CH}" stroke-width="6"/><rect x="8" y="26" width="84" height="62" rx="10" fill="#8A5A3C"/><rect x="8" y="48" width="84" height="6" fill="#6E4630"/><rect x="44" y="44" width="12" height="14" rx="3" fill="${G}"/></g>`;
+const familia = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})">${persona(28, 100, 92, S)}${persona(72, 100, 92, F)}${persona(50, 100, 58, G)}</g>`;
+const nevera = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="22" y="4" width="56" height="92" rx="8" fill="#fff" stroke="${CH}" stroke-width="4"/><path d="M22 38 H78" stroke="${CH}" stroke-width="4"/><rect x="30" y="16" width="5" height="14" rx="2.5" fill="${CH}"/><rect x="30" y="46" width="5" height="22" rx="2.5" fill="${CH}"/><circle cx="62" cy="22" r="5" fill="${RJ}"/><rect x="52" y="52" width="16" height="10" rx="3" fill="${S}"/></g>`;
+const lista = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="16" y="6" width="68" height="88" rx="8" fill="#fff" stroke="${CH}" stroke-width="4"/>${[26, 46, 66].map((yy) => `<path d="M26 ${yy + 4} l5 5 l9 -10" stroke="${F}" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="${yy}" width="28" height="7" rx="3.5" fill="#C9D2CC"/>`).join('')}</g>`;
+const vaso = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M24 8 H76 L68 94 H32Z" fill="#E6F2F5" stroke="${CH}" stroke-width="4" stroke-linejoin="round"/><path d="M28 40 H72 L67 90 H33Z" fill="#9CCFE0"/></g>`;
+const bote = (x, y, w, h, txt, col) => `<g><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="${col}"/><rect x="${x - 6}" y="${y - 22}" width="${w + 12}" height="30" rx="8" fill="${CH}"/><rect x="${x + 10}" y="${y + h * 0.3}" width="${w - 20}" height="${h * 0.42}" rx="8" fill="#fff"/>` +
+  txt.map((t, i) => `<text x="${x + w / 2}" y="${y + h * 0.3 + 34 + i * 30}" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="24" fill="${CH}">${t}</text>`).join('') + `</g>`;
+const maceta = (cx, by) => `<path d="M${cx - 90} ${by - 120} H${cx + 90} L${cx + 70} ${by} H${cx - 70}Z" fill="${RJ}"/><rect x="${cx - 100}" y="${by - 140}" width="200" height="34" rx="10" fill="#C25E40"/>`;
+const hoja = (cx, cy, s, rot) => `<path transform="translate(${cx} ${cy}) rotate(${rot}) scale(${s / 100})" d="M0 0 C20 -40 70 -50 100 -40 C80 -10 40 10 0 0Z" fill="${S}"/>`;
+
+export function munecasRusas() {
+  return [
+    { start: 0, end: 6.0, pan: 1, tag: 'El mayor escaparate', svg: svg(
+        `<rect x="140" y="90" width="680" height="460" rx="18" fill="#fff"/>` +
+        `<g>${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<rect x="${140 + i * 85}" y="90" width="85" height="70" fill="${i % 2 ? CR : F}"/><circle cx="${182.5 + i * 85}" cy="160" r="42.5" fill="${i % 2 ? CR : F}"/>`).join('')}</g>` +
+        `<rect x="180" y="215" width="600" height="300" rx="12" fill="#EAF4F7"/><path d="M220 500 L330 230 M290 500 L400 230" stroke="#fff" stroke-width="16" opacity=".7"/>` +
+        box(345, 22, 270, 66, 'INTERNET', undefined, F, '#fff', 36) +
+        g(`<rect x="210" y="245" width="170" height="240" rx="16" fill="#fff"/>` + influ(295, 485, 220), 3.4, '295 365') +
+        g(`<rect x="395" y="245" width="170" height="240" rx="16" fill="#fff"/><rect x="405" y="255" width="150" height="220" rx="10" fill="#BFE3EE"/><circle cx="510" cy="310" r="30" fill="${G}"/><path d="M405 420 Q445 395 480 420 T555 420 V475 H405Z" fill="${S}"/>`, 4.9, '480 365') +
+        g(`<rect x="580" y="245" width="170" height="240" rx="16" fill="#fff"/>` + ic('star', 600, 280, 130) + label(665, 450, '10/10', undefined, F, 34), 5.4, '665 365') +
+        spark(110, 230, 60, 1.8) + spark(800, 180, 70, 2.3) + spark(770, 470, 50, 2.0), '#DCE9E1') },
+    { start: 6.0, end: 15.4, pan: -1, tag: 'Todo perfecto…', svg: svg(
+        telefono(80, 20, 330, 560, `<circle cx="140" cy="85" r="18" fill="${G}"/><rect x="170" y="78" width="120" height="14" rx="7" fill="${CH}"/>` +
+          g(ic('sun', 250, 120, 140), 10.3, '320 190') + influ(245, 480, 330, { smile: 7.1, abs: 8.6 }) + corazon(110, 495, 44) + `<rect x="165" y="508" width="90" height="14" rx="7" fill="#C9D2CC"/>`) +
+        box(450, 60, 440, 92, 'Sonrisa perfecta', 7.1) +
+        box(450, 175, 440, 92, 'Six pack', 8.6) +
+        box(450, 290, 440, 92, 'Moreno de solárium', 10.3) +
+        box(450, 420, 440, 110, 'Promesas de maravillas', 13.8, G, CH, 34) +
+        spark(840, 20, 56, 1.7) + spark(420, 520, 48, 2.2)) },
+    { start: 15.4, end: 21.1, pan: 1, tag: 'Solo es un gancho', svg: svg(
+        fl(`<path d="M260 0 V230" stroke="${CH}" stroke-width="5"/>` +
+          g(`<path d="M260 220 V440 C260 540 140 540 140 450 L118 474 M140 450 L170 470" stroke="${CH}" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>` +
+            `<rect x="170" y="220" width="180" height="140" rx="16" fill="#fff" stroke="${G}" stroke-width="6"/>` + ic('star', 215, 235, 90) + corazon(240, 322, 40), 16.2, '260 360'), 10, 2.6) +
+        box(470, 170, 400, 100, 'Trampas', 18.2, RJ, '#fff', 44) +
+        `<g data-at="19.2" opacity="0" data-pop="670 370"><rect x="440" y="320" width="460" height="100" rx="50" fill="#fff"/><text x="670" y="384" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="40" fill="${CH}">Verdades a <tspan opacity=".25">medias</tspan></text></g>`, '#DCE9E1') },
+    { start: 21.1, end: 25.7, pan: -1, tag: 'No está pensada para ti', svg: svg(
+        `<circle cx="250" cy="270" r="190" fill="none" stroke="#fff" stroke-width="22"/>` + influ(250, 470, 330) + label(250, 545, 'Su vida', undefined, CH, 44) +
+        g(persona(710, 470, 330), 22.0, '710 300') + g(label(710, 545, 'Tu vida', undefined, F, 44), 22.0) +
+        label(480, 340, '≠', 23.4, RJ, 170)) },
+    { start: 25.7, end: 30.5, pan: 1, tag: 'Tu vida es otra', svg: svg(
+        [[27.1, 'Horarios', ic('clock', 110, 85, 150)], [28.0, 'Trabajo', maletin(510, 80, 160)], [28.8, 'Familia', familia(105, 335, 165)], [29.7, 'Gustos', corazon(515, 345, 140) + `<path d="M570 395 v40 M560 395 v20 M580 395 v20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`]]
+          .map(([t, txt, icon], i) => { const x = i % 2 ? 490 : 80, y = i < 2 ? 60 : 315;
+            return g(`<rect x="${x}" y="${y}" width="390" height="220" rx="28" fill="#fff"/>` + icon + label(x + 280, y + 125, txt, undefined, CH, 42), t, `${x + 195} ${y + 110}`); }).join(''), '#DCE9E1') },
+    { start: 30.5, end: 33.7, pan: -1, tag: 'Lo que no te cuentan', svg: svg(
+        `<circle cx="220" cy="230" r="150" fill="none" stroke="#fff" stroke-width="26"/><path d="M220 380 V560 M150 560 H290" stroke="${CH}" stroke-width="10" stroke-linecap="round"/>` +
+        telefono(180, 150, 80, 160) +
+        box(400, 60, 500, 100, 'Pero… horas de gimnasio', 30.7, '#fff', CH, 34) +
+        box(400, 190, 500, 100, 'Pero… todo pesado al gramo', 31.3, '#fff', CH, 34) +
+        box(400, 320, 500, 100, 'Pero… ¿feliz sin cámara?', 32.0, '#fff', CH, 34) +
+        label(650, 520, '¡Muchos peros!', 32.9, RJ, 54)) },
+    { start: 33.7, end: 38.0, pan: 1, tag: 'Más sencillo de lo que parece', svg: svg(
+        `<g data-out="36.2"><path d="M140 330 C200 120 300 520 360 300 S520 80 470 330 S300 560 600 420 S760 100 820 330" stroke="${CH}" stroke-width="12" fill="none" stroke-linecap="round"/>` +
+          `<path d="M260 250 C340 160 420 420 520 260 C600 140 700 300 640 380" stroke="${RJ}" stroke-width="10" fill="none" stroke-linecap="round" opacity=".7"/>` + label(480, 600, 'Lo que parece', undefined, CH, 44) + `</g>` +
+        `<g data-at="36.4" opacity="0"><path d="M150 330 H740" stroke="${F}" stroke-width="16" stroke-linecap="round"/><path d="M710 290 L760 330 L710 370" stroke="${F}" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>` +
+          ic('check', 780, 270, 120) + label(480, 470, 'Lo que es', undefined, F, 54) + `</g>`) },
+    { start: 38.0, end: 41.6, pan: -1, tag: 'Como una muñeca rusa', svg: svg(DCLIP +
+        g(doll(480, 590, 520, F), 38.9, '480 330') +
+        g(`<path d="M170 160 C230 170 260 200 280 250" stroke="${CH}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M262 236 L282 256 L290 226" stroke="${CH}" stroke-width="7" fill="none" stroke-linecap="round"/>` + label(170, 130, 'Lo de fuera', undefined, CH, 44), 40.0) +
+        spark(700, 90, 60, 1.9) + spark(760, 420, 46, 2.4), '#DCE9E1') },
+    { start: 41.6, end: 45.4, pan: 1, tag: 'Lo importante está dentro', svg: svg(DCLIP +
+        doll(190, 590, 430, F, G, 'bot') + `<g data-mv="42.1 0 -110 0.7">${doll(190, 590, 430, F, G, 'top')}</g>` +
+        g(doll(450, 590, 320, G, F), 42.5, '450 430') + g(doll(650, 590, 230, S), 43.2, '650 475') +
+        g(`<circle cx="805" cy="515" r="95" fill="${G}" opacity=".35"/>`, 44.6) + g(doll(805, 590, 150, RJ, G), 43.9, '805 515') +
+        label(790, 320, 'La esencia', 44.6, F, 48)) },
+    { start: 45.4, end: 48.7, pan: -1, tag: 'Y es lo más simple', svg: svg(DCLIP +
+        fl(`<circle cx="480" cy="330" r="220" fill="${G}" opacity=".28"/>`, 10, 2.2) + doll(480, 560, 400, RJ, G) +
+        label(480, 80, 'Lo más simple', 46.4, F, 60) + spark(220, 160, 70, 1.8) + spark(700, 440, 60, 2.3) + spark(740, 140, 44, 2.0), '#DCE9E1') },
+    { start: 48.7, end: 55.3, pan: 1, tag: 'En 3 pasos', svg: svg(DCLIP +
+        [[48.8, 180, G, F, 'Tu estilo de vida', ic('clock', 0, 0, 100)], [50.9, 480, S, G, 'Pequeños hábitos', plate(50, 50, 48, { lines: true, v: true, p: true, h: true })], [53.7, 780, F, G, 'Un poco de orden', lista(0, 0, 100)]]
+          .map(([t, cx, col, fc, txt, icon], i) => g(
+            `<circle cx="${cx}" cy="70" r="36" fill="${F}"/>` + label(cx, 86, i + 1, undefined, '#fff', 44) +
+            doll(cx - 38, 455, 270, col, fc) + `<g transform="translate(${cx + 52} 215) scale(0.85)">${icon}</g>` +
+            `<rect x="${cx - 140}" y="475" width="280" height="80" rx="40" fill="#fff"/>` + label(cx, 527, txt, undefined, CH, 31), t, `${cx} 320`)).join('')) },
+    { start: 55.3, end: 61.6, pan: -1, tag: 'Sin prisa y sin culpa', svg: svg(
+        g(ic('check', 430, 30, 100), 55.5, '480 80') +
+        g(`<path d="M480 450 V380" stroke="${F}" stroke-width="12" stroke-linecap="round"/>` + hoja(480, 400, 70, -150) + hoja(480, 400, 70, -30), 55.6, '480 410') +
+        g(`<path d="M480 390 V270" stroke="${F}" stroke-width="12" stroke-linecap="round"/>` + hoja(480, 320, 90, -160) + hoja(480, 300, 90, -20), 58.6, '480 330') +
+        g(`<g fill="${G}">${[0, 72, 144, 216, 288].map((a) => `<circle cx="${480 + 30 * Math.cos(a * Math.PI / 180)}" cy="${235 + 30 * Math.sin(a * Math.PI / 180)}" r="24"/>`).join('')}</g><circle cx="480" cy="235" r="20" fill="${RJ}"/>`, 60.5, '480 235') +
+        maceta(480, 590) +
+        box(60, 200, 300, 92, 'Sin prisa', 56.8, '#fff', F, 42) + box(600, 200, 300, 92, 'Sin culpa', 57.8, '#fff', F, 42) +
+        box(620, 380, 300, 92, 'El cambio llega', 60.2, G, CH, 36), '#DCE9E1') },
+    { start: 61.6, end: 65.8, pan: 1, tag: 'Ni milagros ni potingues', svg: svg(
+        ic('basket', 260, 190, 440) +
+        g(bote(300, 150, 130, 180, ['BATIDO', 'MILAGRO'], '#B9A6D9'), 62.5, '365 240') +
+        g(bote(450, 120, 110, 200, ['QUEMA', 'TODO'], RJ), 63.0, '505 220') +
+        g(bote(580, 170, 120, 160, ['DETOX', '7 DÍAS'], G), 63.5, '640 250') +
+        g(`<path d="M250 90 L750 560 M750 90 L250 560" stroke="${RJ}" stroke-width="30" stroke-linecap="round" opacity=".9"/>`, 64.9, '500 325')) },
+    { start: 65.8, end: 99, pan: -1, tag: 'Recetas y app gratis', svg: svg(
+        g(ic('phone', 40, 60, 470), 66.0, '275 295') +
+        box(470, 50, 440, 100, 'pautaposible.es', 67.6, '#fff', F, 44) +
+        box(500, 170, 380, 84, 'Recetas fáciles', 69.3, '#fff', CH, 36) +
+        box(500, 270, 380, 84, 'Para gente normal', 71.3, '#fff', CH, 36) +
+        box(540, 370, 300, 92, 'App gratis', 72.6, G, CH, 44) +
+        g(nevera(445, 455, 120) + label(740, 530, 'Con lo de tu nevera', undefined, F, 36), 74.7, '640 515')) },
+  ];
+}
