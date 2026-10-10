@@ -11,8 +11,12 @@ _Última actualización: sábado 10/10/2026_
 - Carruseles de la semana del 12 oct hechos con la nueva plantilla `posts/_plantilla/` y programados en Metricool (ids en `calendario.md`); añadidos a la página de copias.
 - Routine «Recordatorio voz reels» (trig_01VLSsVajJm6F5WjA5stBthe): cada lunes y miércoles a las 8:51 (Madrid) envía por email el guion de `voz/GUIONES.md`. **Por eso los guiones de la semana siguiente tienen que estar en main antes del lunes.**
 
+- Reel con voz del martes 13 (legumbres de bote) programado (392559960). Iván grabó el texto del carrusel en vez del guion; se aprovechó. La plantilla de voz ya tiene el cierre de 3 s de la norma.
+- Transcripción de notas de voz: `pip install sherpa-onnx` + modelo `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` (releases asr-models de k2-fsa/sherpa-onnx) en el scratchpad.
+
 ## Pendiente
-- [ ] Reels del martes 13 y jueves 15: `/programar-reel` (con voz si Iván manda la nota antes de las 12:00 de ese día).
+- [ ] Reel del jueves 15 (3 desayunos): `/programar-reel` (con voz si Iván manda la nota antes de las 12:00; si no, sin voz).
+- [ ] Los emails de la routine de voz no le llegan a Iván: crear avisos en Google Calendar cuando lo active en el chat y luego borrar trig_01VLSsVajJm6F5WjA5stBthe.
 - [ ] Antes del lunes 19: plan, guiones de voz (en `voz/GUIONES.md`, en main) y carruseles de la semana del 19 oct.
 - [ ] Revisar las métricas del táper del viernes 09/10 (aún sin datos el 10/10).
 
