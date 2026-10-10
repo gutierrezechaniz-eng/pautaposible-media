@@ -59,6 +59,22 @@ const icons = {
     <path d="M30 28 C18 40 12 60 16 78 C18 90 28 96 40 96 H60 C72 96 82 90 84 78 C88 60 82 40 70 28Z" fill="#EBDDBF"/>
     <rect x="27" y="24" width="46" height="8" rx="4" fill="#B98A3E"/><rect x="28" y="54" width="44" height="24" rx="5" fill="#fff" opacity=".9"/>
     <text x="50" y="71" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="13" fill="${CH}">SECAS</text>`,
+  toast: `<path d="M10 92 V40 C10 14 34 8 50 16 C66 8 90 14 90 40 V92Z" fill="${G}"/><path d="M18 86 V42 C18 24 36 20 50 26 C64 20 82 24 82 42 V86Z" fill="#EBC98C"/>
+    <path d="M22 46 C40 38 60 38 78 46 V74 C60 82 40 82 22 74Z" fill="#D9634C" opacity=".9"/><g fill="#B9A23A"><ellipse cx="38" cy="54" rx="7" ry="4"/><ellipse cx="62" cy="64" rx="8" ry="4"/></g>`,
+  oil: `<rect x="40" y="4" width="20" height="12" rx="3" fill="${F}"/><path d="M42 16 H58 V28 C72 34 78 44 78 58 V88 C78 93 74 96 69 96 H31 C26 96 22 93 22 88 V58 C22 44 28 34 42 28Z" fill="#C9B54A"/>
+    <rect x="30" y="56" width="40" height="26" rx="5" fill="#fff" opacity=".9"/><path d="M44 62 C40 70 46 76 50 76 C54 76 60 70 56 62 C54 58 50 56 50 56 C50 56 46 58 44 62Z" fill="${S}"/>`,
+  orange: `<circle cx="50" cy="56" r="38" fill="#E8963A"/><circle cx="50" cy="56" r="38" fill="none" stroke="#C97A26" stroke-width="4"/><path d="M50 18 C52 10 58 6 64 4" stroke="#6b4a2b" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M54 14 C66 2 80 6 86 12 C76 20 64 20 54 14Z" fill="${S}"/><ellipse cx="36" cy="44" rx="8" ry="12" fill="#fff" opacity=".25"/>`,
+  milk: `<path d="M20 6 H80 L72 96 H28Z" fill="#fff" stroke="#B7D3C2" stroke-width="4" stroke-linejoin="round"/><path d="M24 26 H76 L70 92 H30Z" fill="#F4F1E8"/><path d="M24 26 H76" stroke="#E4E0D3" stroke-width="3"/>
+    <path d="M36 36 V80" stroke="#fff" stroke-width="6" stroke-linecap="round"/>`,
+  sandwich: `<rect x="4" y="26" width="92" height="52" rx="26" fill="${G}"/><rect x="10" y="46" width="80" height="12" rx="6" fill="#fff"/>
+    <g stroke="#B98A3E" stroke-width="4" stroke-linecap="round"><path d="M28 34 L36 28"/><path d="M48 34 L56 28"/><path d="M68 34 L76 28"/></g>`,
+  yogurt: `<path d="M8 44 H92 C92 72 74 92 50 92 C26 92 8 72 8 44Z" fill="#fff" stroke="${F}" stroke-width="4"/><ellipse cx="50" cy="44" rx="42" ry="10" fill="#FAFAF7" stroke="${F}" stroke-width="4"/>
+    <g fill="#F3E3A0" stroke="#D9C36A" stroke-width="2"><circle cx="30" cy="42" r="7"/><circle cx="48" cy="38" r="7"/><circle cx="64" cy="43" r="7"/></g><g fill="#8B5E34"><ellipse cx="76" cy="38" rx="7" ry="5"/><ellipse cx="40" cy="47" rx="6" ry="4"/></g>`,
+  banana: `<path d="M10 30 C14 70 50 92 90 72 C92 68 90 64 86 64 C56 74 30 60 22 28 C20 22 10 22 10 30Z" fill="#F2CF4A"/><path d="M22 34 C30 58 52 70 80 68" stroke="#D9AF2C" stroke-width="3" fill="none"/>
+    <path d="M8 26 L14 16 L20 24Z" fill="#6b4a2b"/>`,
+  walnut: `<path d="M50 10 C74 10 90 28 90 52 C90 76 72 92 50 92 C28 92 10 76 10 52 C10 28 26 10 50 10Z" fill="#B07A44"/><path d="M50 12 V90" stroke="#7E5229" stroke-width="4"/>
+    <g stroke="#7E5229" stroke-width="3" fill="none" stroke-linecap="round"><path d="M24 34 C32 40 30 50 22 54"/><path d="M76 34 C68 40 70 50 78 54"/><path d="M28 66 C36 70 38 78 34 84"/><path d="M72 66 C64 70 62 78 66 84"/></g>`,
   phone: `<rect x="22" y="2" width="56" height="96" rx="11" fill="${CH}"/><rect x="27" y="11" width="46" height="76" rx="5" fill="#fff"/>
     <rect x="31" y="15" width="38" height="26" rx="4" fill="${M}"/><path d="M38 28 H62 C62 35 57 39 50 39 C43 39 38 35 38 28Z" fill="${F}"/><g fill="#D8AE63"><circle cx="44" cy="27" r="3"/><circle cx="50" cy="25" r="3"/><circle cx="56" cy="27" r="3"/></g>
     <rect x="31" y="46" width="30" height="5" rx="2.5" fill="${CH}"/><rect x="31" y="56" width="38" height="4" rx="2" fill="#C9D2CC"/><rect x="31" y="64" width="34" height="4" rx="2" fill="#C9D2CC"/>
@@ -173,5 +189,34 @@ export function legumbresBote() {
         pill(500, 140, 420, 'pautaposible.es', 25.6, '#fff', F, 44) +
         label(710, 320, 'Sección de recetas', 27.6, CH, 40) +
         pill(560, 380, 300, 'App gratis', 29.4, G, CH, 44)) },
+  ];
+}
+
+export function desayunos() {
+  return [
+    { start: 0, end: 4.88, pan: 1, tag: '3 desayunos en 3 minutos', svg: svg(
+        ic('clock', 380, 90, 200, 2.6) + label(480, 380, '3 minutos', 4.2, F, 64) +
+        ic('toast', 190, 410, 130, 3.3) + ic('milk', 415, 410, 130, 3.5) + ic('yogurt', 640, 410, 130, 3.7)) },
+    { start: 4.88, end: 10.48, pan: -1, tag: 'Desayuno 1', svg: svg(
+        ic('toast', 100, 70, 300, 5.1) + label(250, 420, 'Tosta integral', 5.6, CH, 40) +
+        ic('oil', 470, 100, 180, 6.2) + label(560, 330, 'Aceite y tomate', 7.2, CH, 36) +
+        ic('orange', 700, 110, 180, 8.1) + label(790, 330, '+ fruta', 8.4, F, 40) +
+        label(480, 510, 'Y la fruta, para el camino', 9.4, F, 44), '#DCE9E1') },
+    { start: 10.48, end: 15.12, pan: 1, tag: 'Desayuno 2', svg: svg(
+        ic('milk', 140, 70, 280, 10.7) + label(280, 410, 'Vaso de leche', 11.0, CH, 40) +
+        ic('sandwich', 510, 90, 340, 11.5) + label(680, 410, 'Bocadillo de queso fresco', 12.5, CH, 36) +
+        label(480, 510, 'Para llevar', 13.6, F, 44)) },
+    { start: 15.12, end: 17.52, pan: -1, tag: 'Desayuno 3', svg: svg(
+        ic('yogurt', 100, 90, 340, 15.3) + label(270, 470, 'Yogur natural', 15.8, CH, 40) +
+        ic('walnut', 590, 60, 140, 16.2) + label(660, 240, 'Nueces', 16.3, CH, 38) +
+        ic('banana', 570, 270, 190, 16.9) + label(665, 500, 'Plátano', 17.0, CH, 38), '#DCE9E1') },
+    { start: 17.52, end: 22.0, pan: 1, tag: 'Guárdalo para mañana', svg: svg(
+        ic('sun', 380, 80, 200, 17.6) + label(480, 380, 'Mañana, en 3 minutos', 18.1, F, 56) +
+        ic('toast', 190, 410, 130, 19.4) + ic('milk', 415, 410, 130, 19.6) + ic('yogurt', 640, 410, 130, 19.8)) },
+    { start: 22.0, end: 99, pan: -1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 22.1) +
+        pill(500, 140, 420, 'pautaposible.es', 22.5, '#fff', F, 44) +
+        pill(560, 290, 300, 'App gratis', 24.2, G, CH, 44) +
+        label(710, 480, 'Cocina con lo que', 25.9, CH, 40) + label(710, 530, 'tienes en la nevera', 26.0, CH, 40), '#DCE9E1') },
   ];
 }
