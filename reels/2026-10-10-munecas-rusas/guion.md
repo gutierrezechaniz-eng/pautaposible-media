@@ -1,6 +1,6 @@
 # Reel · Tu vida, no la de un influencer: la muñeca rusa (con voz)
 
-Publicación: sábado 10/10/2026, 18:30 (Madrid), a petición de Iván (no el martes 20) · Metricool 392827236 · colaboradora ibangutierrezetxaniz · Instagram Reel · ~79 s (76 s de voz + 3 s de cierre) · voz de Iván con subtítulos palabra a palabra e ilustraciones animadas propias.
+Publicación: sábado 10/10/2026, 18:30 (Madrid), a petición de Iván (no el martes 20) · Metricool 392827236 · publicado: https://www.instagram.com/reel/DeUhKcllff4/ · colaboradora ibangutierrezetxaniz · Instagram Reel · ~79 s (76 s de voz + 3 s de cierre) · voz de Iván con subtítulos palabra a palabra e ilustraciones animadas propias.
 Pilar: Hábito práctico (reflexión). Estado: programado para publicarse en el momento; Iván también tiene el vídeo descargable.
 Vídeo: `reel-voz.mp4` (1080×1920, 30 fps, H.264 yuv420p + AAC mono 128 kbps). Portada: `portada.png` (gancho «Tu vida, no la suya»).
 Generado con `reels/_plantilla/render-voz.mjs munecas-rusas` (escenas en `ilustraciones.mjs`, función `munecasRusas`). Los audios originales y el limpio no se suben al repositorio.
