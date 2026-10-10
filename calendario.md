@@ -44,6 +44,9 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel sin voz · Hábito práctico (respaldo: se sustituye si llega la nota de voz antes de las 12:00) | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel.mp4) | 392568483 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 392552832 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 392569523 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 392569539 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 392569546 · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
 
@@ -73,11 +76,11 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
-| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | por programar |
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | programado (392569523) |
 | 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
-| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | por programar |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | programado (392569539) |
 | 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
-| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | por programar |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (392569546) |
 
 ## Temas usados
 
@@ -97,6 +100,9 @@ Los reels acompañan al carrusel del día anterior o siguiente (como en las sema
 - Hábito: lista de la compra básica semanal
 - Reel mito: legumbres de bote frente a secas (con voz)
 - Reel hábito: 3 desayunos en 3 minutos
+- Mito: azúcar moreno frente a blanco
+- Receta: arroz salteado con verduras y huevo
+- Hábito: batch cooking en 1 hora
 
 ## Banco de temas
 
