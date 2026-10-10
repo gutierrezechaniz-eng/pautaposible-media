@@ -12,7 +12,7 @@ _Última actualización: sábado 10/10/2026 (2.ª sesión)_
 - Transcripción de notas de voz: `pip install sherpa-onnx` + modelo `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` (releases asr-models de k2-fsa/sherpa-onnx) en el scratchpad.
 
 ## Pendiente
-- [ ] Confirmar con Iván que le llegó el email de prueba (remitente Claude/Anthropic; mirar Spam y Promociones). Si no llegó, alternativa: GitHub Action que abra un issue con el guion (GitHub manda email) o conectar Gmail.
+- [ ] Los emails de la routine tampoco llegaron tras la corrección. Nuevo aviso: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid; abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email). Tras fusionarlo: lanzarlo a mano (workflow_dispatch) y confirmar que llega. Si llega, desactivar la routine trig_01VLSsVajJm6F5WjA5stBthe. Si no, revisar en GitHub → Settings → Notifications que el email esté activado.
 - [ ] Jueves 15: si llega la nota de voz antes de las 12:00, `/programar-reel` con voz y sustituir 392568483.
 - [ ] Martes 20 y jueves 22: reels con voz (azúcar moreno y batch cooking) con `/programar-reel`; sin nota, versión sin voz.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
