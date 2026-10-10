@@ -69,6 +69,16 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | sin voz programado (392568483); se sustituye si llega la nota de voz antes de las 12:00 del jueves |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (392552832) |
 
+## Plan · semana del 19 oct
+Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
+| Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
+|---|---|---|---|---|
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | por programar |
+| 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | por programar |
+| 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | por programar |
+
 ## Temas usados
 
 - Mito: huevo y colesterol
@@ -93,15 +103,12 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 Mito o realidad
 - ¿La fruta de noche engorda?
 - ¿El pan engorda? / ¿Hay que quitar el gluten sin ser celíaco?
-- ¿El azúcar moreno es mejor que el blanco?
 - ¿Hay que beber 2 litros de agua al día sí o sí?
 
 Receta sencilla
 - Bol de yogur natural con fruta y avena
 - Hummus casero con crudités
-- Arroz salteado con verduras y huevo
 - Tortilla de calabacín al horno
 
 Hábito práctico
-- Cómo organizar un batch cooking de 1 hora
 - Cómo añadir más legumbre a la semana
