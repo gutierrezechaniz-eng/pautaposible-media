@@ -1,13 +1,13 @@
 # Reel · Lo que no te enseñan en redes: la muñeca rusa (con voz)
 
-Propuesta: martes 20/10/2026, 18:00 (Madrid) · Instagram Reel · ~30 s · voz de Iván (o a cámara) con subtítulos palabra a palabra e ilustraciones propias.
+Propuesta: martes 20/10/2026, 18:00 (Madrid) · Instagram Reel · ~1 min · voz de Iván (o a cámara) con subtítulos palabra a palabra e ilustraciones propias.
 Pilar: Hábito práctico (reflexión). Estado: guion listo, falta la nota de voz de Iván. Fecha pendiente de confirmar al hacer el plan de la semana del 19 oct.
 
-## Texto hablado (75 palabras, ~30 s)
+## Texto hablado (versión larga pedida por Iván, 164 palabras, ~1 min)
 
-Léelo despacio y con calma, como si se lo contaras a un amigo. Haz una pausa corta después de «muñeca rusa».
+Supera las 60-75 palabras de la norma a petición de Iván (10/10). El guion para Iván, en lenguaje sencillo, con lo que se ve en cada parte y qué material puede enviar: `Guion - Lo que no te enseñan en redes.docx`. Iván mandará fotos, gifs o vídeos; lo que no mande se hace con ilustraciones propias. La tabla de escenas de abajo es la del primer borrador y se rehará con su material.
 
-> Todo es más sencillo de lo que parece. Internet es un escaparate: cuerpos increíbles, vidas perfectas, promesas de maravillas. Lo que no te cuentan: esa pauta no está hecha para tu vida. Cambiar es como una muñeca rusa: te enseñan la capa de fuera, pero lo importante está dentro, y es lo más simple: adáptate a tu rutina, mejora pequeños hábitos y ponles orden. Con paciencia, llega. Más ideas y la app gratis en pautaposible.es.
+> Comer bien es mucho más sencillo de lo que parece. Hoy internet es el mayor escaparate que existe: cuerpos increíbles, vidas de película, todo perfecto… y promesas de maravillas. Pero muchas veces es solo un gancho, con trampas y verdades a medias. Porque lo que no te cuentan es que esa forma de comer no está pensada para ti. Tu vida es otra: tus horarios, tu trabajo, tu familia, tus gustos. Por eso, luego, lo que prometen tiene muchos peros. Cambiar de verdad es como una muñeca rusa. En redes solo te enseñan la capa de fuera, pero lo importante, la esencia, está dentro. Y es lo más simple: adáptate a tu estilo de vida, mejora pequeños hábitos, de uno en uno, y pon un poco de orden en ellos. Sin prisa y sin culpa. Si haces las cosas bien, el cambio llega. Y si quieres empezar, en pautaposible.es tienes recetas fáciles y una app gratis para cocinar con lo que tienes en casa.
 
 ## Escenas
 
