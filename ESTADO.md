@@ -18,7 +18,7 @@ _Última actualización: sábado 10/10/2026_
 - [ ] Reel del jueves 15 (3 desayunos): `/programar-reel` (con voz si Iván manda la nota antes de las 12:00; si no, sin voz).
 - [ ] **Primero en la próxima conversación:** los emails de la routine de voz no le llegan a Iván. Gmail y Google Calendar están conectados en su cuenta, pero la sesión del 10/10 no los cargó (los conectores se leen al empezar cada conversación). Enviarle por Gmail el guion del jueves (o dejarlo en Borradores si el conector solo crea borradores) y crear en Google Calendar avisos los lunes y miércoles a las 9:00 con el guion dentro. Después, borrar la routine trig_01VLSsVajJm6F5WjA5stBthe.
 - [ ] Antes del lunes 19: plan, guiones de voz (en `voz/GUIONES.md`, en main) y carruseles de la semana del 19 oct.
-- [x] Reel con voz «Tu vida, no la de un influencer» (muñeca rusa): terminado en `reels/2026-10-20-munecas-rusas/` y enviado a Iván para descargarlo; **no programarlo** (lo publica él). El martes 20 queda libre para otro reel.
+- [x] Reel con voz «Tu vida, no la de un influencer» (muñeca rusa): publicado el sábado 10/10 a las 18:30 (Metricool 392827236), en `reels/2026-10-10-munecas-rusas/`. Revisar sus métricas con las de la semana. El martes 20 queda libre.
 - [ ] Revisar las métricas del táper del viernes 09/10 (aún sin datos el 10/10).
 
 ## Decisiones vigentes

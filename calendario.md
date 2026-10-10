@@ -39,6 +39,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-07 (mié) | Receta sencilla | Garbanzos con espinacas en 15 minutos | 10:00 | posts/2026-10-07-garbanzos-espinacas | 387663187 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-08 (jue) | Reel sin voz · Hábito práctico (no llegó nota de voz) | 3 meriendas en 2 minutos | 18:00 | reels/2026-10-08-meriendas (reel.mp4) | 391047175 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-10 (sáb) | Reel con voz · Hábito práctico (fuera del calendario, Iván pidió publicarlo ya) | Tu vida, no la de un influencer (la muñeca rusa) | 18:30 | reels/2026-10-10-munecas-rusas (reel-voz.mp4) | 392827236 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 392552812 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
@@ -85,6 +86,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Receta: merluza al horno con patata y verduras en bandeja
 - Hábito: lista de la compra básica semanal
 - Reel mito: legumbres de bote frente a secas (con voz)
+- Reel hábito: tu vida, no la de un influencer (muñeca rusa; personalizar y pequeños hábitos frente a las promesas de redes)
 
 ## Banco de temas
 
