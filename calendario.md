@@ -40,6 +40,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-08 (jue) | Reel sin voz · Hábito práctico (no llegó nota de voz) | 3 meriendas en 2 minutos | 18:00 | reels/2026-10-08-meriendas (reel.mp4) | 391047175 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 392552812 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 392552832 · colaboradora: ibangutierrezetxaniz |
 
@@ -62,7 +63,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (392552812) |
-| 2026-10-13 (mar) | Reel · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (Iván grabó el texto del carrusel; la fruta por la noche vuelve al banco) | 18:00 | programado (392559960) |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (392552824) |
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (392552832) |
@@ -83,6 +84,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Mito: legumbres de bote frente a secas
 - Receta: merluza al horno con patata y verduras en bandeja
 - Hábito: lista de la compra básica semanal
+- Reel mito: legumbres de bote frente a secas (con voz)
 
 ## Banco de temas
 
