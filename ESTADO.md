@@ -2,24 +2,23 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: sábado 10/10/2026_
+_Última actualización: sábado 10/10/2026 (2.ª sesión)_
 
 ## Hecho recientemente
-- Informe de métricas de la semana del 5 oct en `calendario.md`: los reels sin voz llegaron a menos de la mitad de gente que los de voz; los carruseles mejoran, pero nadie guarda.
-- Plan de la semana del 12 oct en `calendario.md` (sección «Plan»).
-- Guiones de voz de la semana del 12 oct en `voz/GUIONES.md` y en la página de copias (versión 2, con los carruseles marcados «en preparación»).
-- Carruseles de la semana del 12 oct hechos con la nueva plantilla `posts/_plantilla/` y programados en Metricool (ids en `calendario.md`); añadidos a la página de copias.
-- Routine «Recordatorio voz reels» (trig_01VLSsVajJm6F5WjA5stBthe): cada lunes y miércoles a las 8:51 (Madrid) envía por email el guion de `voz/GUIONES.md`. **Por eso los guiones de la semana siguiente tienen que estar en main antes del lunes.**
-
-- Reel con voz del martes 13 (legumbres de bote) programado (392559960). Iván grabó el texto del carrusel en vez del guion; se aprovechó. La plantilla de voz ya tiene el cierre de 3 s de la norma.
+- 10/10 (2.ª sesión): el aviso de voz no llegaba porque la prueba del 10/10 cayó en sábado y la routine decidió no enviar nada. Corregido el prompt de la routine «Recordatorio voz reels» (trig_01VLSsVajJm6F5WjA5stBthe, lunes y miércoles 8:51, notificación por email y móvil): ahora envía siempre y, si se dispara otro día, manda el próximo guion como prueba. Prueba enviada el 10/10 a las 7:35 con el guion del jueves 15. Iván ya no quiere avisos de Google Calendar: solo email.
+- Lo que hay que hacer con la nota de voz: Iván la adjunta en una conversación del proyecto Pauta Posible → `/programar-reel` (sustituye la versión sin voz en la misma publicación de Metricool).
+- Reel sin voz del jueves 15 (3 desayunos) programado como respaldo (392568483).
+- Semana del 19 oct lista: plan en `calendario.md`, guiones en `voz/GUIONES.md` (debajo de los de la semana del 12; la routine elige la semana de hoy), 3 carruseles programados (392569523, 392569539, 392569546) y página de copias actualizada (versión 5).
 - Transcripción de notas de voz: `pip install sherpa-onnx` + modelo `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` (releases asr-models de k2-fsa/sherpa-onnx) en el scratchpad.
 
 ## Pendiente
-- [ ] Reel del jueves 15 (3 desayunos): `/programar-reel` (con voz si Iván manda la nota antes de las 12:00; si no, sin voz).
-- [ ] **Primero en la próxima conversación:** los emails de la routine de voz no le llegan a Iván. Gmail y Google Calendar están conectados en su cuenta, pero la sesión del 10/10 no los cargó (los conectores se leen al empezar cada conversación). Enviarle por Gmail el guion del jueves (o dejarlo en Borradores si el conector solo crea borradores) y crear en Google Calendar avisos los lunes y miércoles a las 9:00 con el guion dentro. Después, borrar la routine trig_01VLSsVajJm6F5WjA5stBthe.
-- [ ] Antes del lunes 19: plan, guiones de voz (en `voz/GUIONES.md`, en main) y carruseles de la semana del 19 oct.
-- [ ] Revisar las métricas del táper del viernes 09/10 (aún sin datos el 10/10).
+- [ ] Confirmar con Iván que le llegó el email de prueba (remitente Claude/Anthropic; mirar Spam y Promociones). Si no llegó, alternativa: GitHub Action que abra un issue con el guion (GitHub manda email) o conectar Gmail.
+- [ ] Jueves 15: si llega la nota de voz antes de las 12:00, `/programar-reel` con voz y sustituir 392568483.
+- [ ] Martes 20 y jueves 22: reels con voz (azúcar moreno y batch cooking) con `/programar-reel`; sin nota, versión sin voz.
+- [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
+- [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
 
 ## Decisiones vigentes
 - Los reels llegan a más gente que los carruseles, y los de voz el doble que los sin voz: insistir a Iván en las notas de voz.
 - Los carruseles necesitan ideas más concretas para guardar (listas, chuletas, cantidades).
+- Los reels con voz acompañan al carrusel del día anterior o siguiente: Iván graba un tema que ya conoce.

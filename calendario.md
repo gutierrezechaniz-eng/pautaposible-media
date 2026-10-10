@@ -42,7 +42,11 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 392552812 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-15 (jue) | Reel sin voz · Hábito práctico (respaldo: se sustituye si llega la nota de voz antes de las 12:00) | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel.mp4) | 392568483 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 392552832 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 392569523 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 392569539 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 392569546 · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
 
@@ -53,7 +57,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Cambio: los reels llegan a 6-10 veces más gente, así que se mantienen los ganchos de mito y lo práctico y cotidiano (plato, táper, meriendas). Más ideas concretas para guardar en los carruseles.
 
 ## Métricas · semana del 5 oct (consultadas el 10/10/2026)
-- Carruseles: «¿Las verduras congeladas son peores?» 22 de alcance y 59 visualizaciones; «Garbanzos con espinacas» 20 de alcance y 57 visualizaciones (los dos, más que cualquier carrusel de la semana anterior). «Tu táper equilibrado» (viernes) aún sin datos. Sin me gusta, guardados ni compartidos.
+- Carruseles: «¿Las verduras congeladas son peores?» 22 de alcance y 59 visualizaciones; «Garbanzos con espinacas» 20 de alcance y 57 visualizaciones (los dos, más que cualquier carrusel de la semana anterior). «Tu táper equilibrado» (viernes) aún sin datos (segunda consulta el 10/10 a las 7:40, todo a 0: Metricool no ha actualizado; va en el informe de la semana del 12). Sin me gusta, guardados ni compartidos.
 - Reels sin voz: «3 meriendas en 2 minutos» 33 de alcance, 48 reproducciones, 5,5 s de media y 2 me gusta; «¿La fruta de postre fermenta?» 30 de alcance, 34 reproducciones y 6,7 s de media.
 - Seguidores: de 29 (lunes) a 33 (jueves), +4. Alcance de la cuenta: 24-42 personas al día.
 - Clics al enlace de la bio: Metricool sigue sin dar datos.
@@ -65,8 +69,18 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (392552812) |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (Iván grabó el texto del carrusel; la fruta por la noche vuelve al banco) | 18:00 | programado (392559960) |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (392552824) |
-| 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | sin voz programado (392568483); se sustituye si llega la nota de voz antes de las 12:00 del jueves |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (392552832) |
+
+## Plan · semana del 19 oct
+Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
+| Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
+|---|---|---|---|---|
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | programado (392569523) |
+| 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | programado (392569539) |
+| 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (392569546) |
 
 ## Temas usados
 
@@ -85,22 +99,22 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Receta: merluza al horno con patata y verduras en bandeja
 - Hábito: lista de la compra básica semanal
 - Reel mito: legumbres de bote frente a secas (con voz)
+- Reel hábito: 3 desayunos en 3 minutos
+- Mito: azúcar moreno frente a blanco
+- Receta: arroz salteado con verduras y huevo
+- Hábito: batch cooking en 1 hora
 
 ## Banco de temas
 
 Mito o realidad
 - ¿La fruta de noche engorda?
 - ¿El pan engorda? / ¿Hay que quitar el gluten sin ser celíaco?
-- ¿El azúcar moreno es mejor que el blanco?
 - ¿Hay que beber 2 litros de agua al día sí o sí?
 
 Receta sencilla
 - Bol de yogur natural con fruta y avena
 - Hummus casero con crudités
-- Arroz salteado con verduras y huevo
 - Tortilla de calabacín al horno
 
 Hábito práctico
-- Cómo organizar un batch cooking de 1 hora
-- 3 desayunos sin complicaciones
 - Cómo añadir más legumbre a la semana
