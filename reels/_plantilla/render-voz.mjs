@@ -1,11 +1,11 @@
-// Reel con la voz de Iván: node render-voz.mjs <hidratos-cena|plato-sin-bascula> <audio-limpio.m4a> <palabras.json> <carpeta-salida>
+// Reel con la voz de Iván: node render-voz.mjs <clave del objeto reels> <audio-limpio.m4a> <palabras.json> <carpeta-salida>
 // palabras.json: {dur, words:[{w,s,e}]} con tiempos en segundos respecto al audio limpio.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'child_process';
 import { createRequire } from 'module';
 import fs from 'fs';
 import path from 'path';
-import { hidratosCena, platoSinBascula } from './ilustraciones.mjs';
+import { hidratosCena, platoSinBascula, legumbresBote } from './ilustraciones.mjs';
 const require = createRequire(import.meta.url);
 const ffmpeg = require('ffmpeg-static');
 const dir = path.dirname(new URL(import.meta.url).pathname);
@@ -14,6 +14,7 @@ const FPS = 30;
 const reels = {
   'hidratos-cena': { hook: '¿Cenar hidratos<br>engorda?', scenes: hidratosCena },
   'plato-sin-bascula': { hook: 'Monta tu plato<br>sin báscula', scenes: platoSinBascula },
+  'legumbres-bote': { hook: '¿De bote<br>o secas?', scenes: legumbresBote },
 };
 const [name, audio, wordsFile, outDir] = process.argv.slice(2);
 const { dur, words } = JSON.parse(fs.readFileSync(wordsFile, 'utf8'));

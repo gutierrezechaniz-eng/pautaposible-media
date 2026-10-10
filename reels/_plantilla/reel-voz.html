@@ -65,13 +65,15 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--cream);fon
   <div class="blob" style="width:620px;height:620px;left:-270px;top:1250px;background:rgba(111,166,122,.25)"></div>
   <div class="blob" style="width:90px;height:90px;right:130px;top:250px;background:var(--gold)"></div>
   <div class="zone">
-    <div class="e" data-d="0" style="width:340px;height:340px"><div class="circle" style="box-shadow:0 0 0 14px rgba(221,238,223,.22)"><img src="ivan.png"></div></div>
-    <div class="e" data-d="0.08" style="font-weight:800;font-size:66px;margin-top:50px">Iván · Pauta Posible</div>
-    <div class="e" data-d="0.16" style="font-weight:600;font-size:44px;margin-top:16px;opacity:.92">Nutrición práctica,<br>sin miedo ni culpa</div>
-    <div class="e" data-d="0.26" style="margin-top:56px"><span class="cta">pautaposible.es/aprende</span></div>
-    <div class="e" data-d="0.36" style="margin-top:36px"><span class="save">Guárdalo</span></div>
+    <div class="e" data-d="0" style="width:280px;height:280px"><div class="circle" style="box-shadow:0 0 0 14px rgba(221,238,223,.22)"><img src="ivan.png"></div></div>
+    <div class="e" data-d="0.08" style="font-weight:800;font-size:62px;margin-top:44px">Iván · Pauta Posible</div>
+    <div class="e" data-d="0.16" style="font-weight:600;font-size:40px;margin-top:12px;opacity:.85">Nutrición práctica, sin miedo ni culpa</div>
+    <div class="e" data-d="0.26" style="font-weight:700;font-size:46px;line-height:1.25;margin-top:60px">Recetas y app gratuita para<br>cocinar con lo que tienes en casa</div>
+    <div class="e" data-d="0.36" style="margin-top:44px"><span class="cta">pautaposible.es</span></div>
+    <div class="e" data-d="0.42" style="font-weight:700;font-size:36px;margin-top:22px;opacity:.85">Enlace en la bio</div>
+    <div class="e" data-d="0.5" style="margin-top:40px"><span class="save">Guárdalo</span></div>
   </div>
-  <div class="e" data-d="0.45" style="position:absolute;left:0;right:0;top:1470px;text-align:center;font-weight:700;font-size:30px;color:rgba(250,250,247,.65)">@pautaposible</div>
+  <div class="e" data-d="0.55" style="position:absolute;left:0;right:0;top:1470px;text-align:center;font-weight:700;font-size:30px;color:rgba(250,250,247,.65)">@pautaposible</div>
 </div>
 <script>
 const clamp=(x,a=0,b=1)=>Math.min(Math.max(x,a),b);
@@ -108,7 +110,7 @@ function setup(cfg){
   const card=document.getElementById('card');
   card.innerHTML=cfg.scenes.map((s,i)=>`<div class="ill" id="i${i}"><div class="kb">${s.svg}</div>${s.tag?`<div class="cap"><span class="tag">${s.tag}</span></div>`:''}</div>`).join('');
   ILLS=cfg.scenes.map((s,i)=>({...s,el:document.getElementById('i'+i)}));
-  return cfg.dur+1.5;
+  return cfg.dur+3.0; // cierre de 3 s (norma de calendario.md)
 }
 function subsHTML(t){
   const b=BLOCKS.find(b=>t>=b.s-0.05&&t<b.e)||(t<BLOCKS[0].s?BLOCKS[0]:null);

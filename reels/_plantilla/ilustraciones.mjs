@@ -34,6 +34,35 @@ const icons = {
   check: `<circle cx="50" cy="50" r="42" fill="${F}"/><path d="M30 52 L44 66 L72 36" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
   fork: `<g fill="#B9C4BC"><rect x="44" y="40" width="10" height="56" rx="5"/><rect x="36" y="4" width="6" height="40" rx="3"/><rect x="46" y="4" width="6" height="40" rx="3"/><rect x="56" y="4" width="6" height="40" rx="3"/><path d="M34 34 H64 V44 C64 52 34 52 34 44Z"/></g>`,
   knife: `<g fill="#B9C4BC"><rect x="44" y="52" width="12" height="44" rx="6"/><path d="M44 56 V10 C44 4 62 8 62 30 C62 46 56 54 56 56Z"/></g>`,
+  jar: `<rect x="26" y="8" width="48" height="14" rx="5" fill="${G}"/><path d="M28 22 H72 V28 C80 32 84 38 84 46 V84 C84 91 79 96 72 96 H28 C21 96 16 91 16 84 V46 C16 38 20 32 28 28Z" fill="#EEF6F1" stroke="#B7D3C2" stroke-width="3"/>
+    <path d="M19 52 H81 V84 C81 89 77 93 72 93 H28 C23 93 19 89 19 84Z" fill="#F3E3C0"/>
+    <g fill="#D8AE63"><circle cx="30" cy="62" r="7"/><circle cx="44" cy="60" r="7"/><circle cx="58" cy="63" r="7"/><circle cx="71" cy="60" r="7"/><circle cx="36" cy="74" r="7"/><circle cx="50" cy="72" r="7"/><circle cx="64" cy="75" r="7"/><circle cx="29" cy="86" r="6"/><circle cx="43" cy="86" r="7"/><circle cx="57" cy="87" r="7"/><circle cx="71" cy="86" r="6"/></g>
+    <path d="M25 36 V80" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>`,
+  bowlBeans: `<g stroke="#B9C4BC" stroke-width="4" fill="none" stroke-linecap="round"><path d="M36 26 C30 20 42 14 36 6"/><path d="M52 26 C46 20 58 14 52 6"/><path d="M68 26 C62 20 74 14 68 6"/></g>
+    <g fill="#D8AE63"><circle cx="24" cy="46" r="8"/><circle cx="38" cy="40" r="8"/><circle cx="52" cy="38" r="8"/><circle cx="66" cy="40" r="8"/><circle cx="78" cy="46" r="8"/><circle cx="45" cy="47" r="7"/><circle cx="60" cy="47" r="7"/></g>
+    <path d="M8 48 H92 C92 74 74 92 50 92 C26 92 8 74 8 48Z" fill="${F}"/><path d="M20 60 C24 72 32 80 42 84" stroke="#4E8C72" stroke-width="5" fill="none" stroke-linecap="round"/>`,
+  salt: `<path d="M34 34 C34 18 66 18 66 34Z" fill="#B9C4BC"/><g fill="#7D8A82"><circle cx="44" cy="27" r="2.5"/><circle cx="50" cy="24" r="2.5"/><circle cx="56" cy="27" r="2.5"/></g>
+    <path d="M32 34 H68 L74 88 C74 92 71 95 67 95 H33 C29 95 26 92 26 88Z" fill="#fff" stroke="#C9D2CC" stroke-width="3"/>
+    <text x="50" y="72" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="18" fill="${CH}">SAL</text>`,
+  colander: `<rect x="2" y="38" width="16" height="9" rx="4.5" fill="${F}"/><rect x="82" y="38" width="16" height="9" rx="4.5" fill="${F}"/>
+    <g fill="#D8AE63"><circle cx="26" cy="40" r="8"/><circle cx="39" cy="35" r="8"/><circle cx="52" cy="33" r="8"/><circle cx="65" cy="35" r="8"/><circle cx="76" cy="40" r="7"/></g>
+    <path d="M10 42 H90 C90 68 72 84 50 84 C28 84 10 68 10 42Z" fill="${F}"/>
+    <g fill="${M}"><circle cx="28" cy="54" r="3"/><circle cx="41" cy="56" r="3"/><circle cx="54" cy="56" r="3"/><circle cx="67" cy="54" r="3"/><circle cx="35" cy="66" r="3"/><circle cx="48" cy="68" r="3"/><circle cx="61" cy="66" r="3"/><circle cx="48" cy="78" r="3"/></g>
+    <path d="M36 84 L32 94 H68 L64 84Z" fill="${F}"/>`,
+  drop: `<path d="M50 8 C64 30 76 44 76 62 C76 78 64 90 50 90 C36 90 24 78 24 62 C24 44 36 30 50 8Z" fill="#8EC5D6"/><path d="M38 62 C38 54 42 48 46 44" stroke="#D3ECF3" stroke-width="6" fill="none" stroke-linecap="round"/>`,
+  tap: `<rect x="22" y="4" width="28" height="8" rx="4" fill="#9AA79F"/><rect x="30" y="10" width="12" height="12" rx="3" fill="#9AA79F"/>
+    <path d="M6 20 H60 C72 20 80 28 80 40 V50 H66 V40 C66 36 64 34 60 34 H6Z" fill="#B9C4BC"/>`,
+  basket: `<path d="M24 42 C24 12 76 12 76 42" stroke="${F}" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M6 40 H94 L84 88 C83 93 79 96 74 96 H26 C21 96 17 93 16 88Z" fill="${G}"/>
+    <g stroke="#B98A3E" stroke-width="4"><path d="M10 56 H90"/><path d="M14 72 H86"/><path d="M34 40 L36 96"/><path d="M50 40 V96"/><path d="M66 40 L64 96"/></g>`,
+  sack: `<g fill="#C79A55"><circle cx="40" cy="18" r="5"/><circle cx="50" cy="14" r="5"/><circle cx="60" cy="18" r="5"/></g>
+    <path d="M30 28 C18 40 12 60 16 78 C18 90 28 96 40 96 H60 C72 96 82 90 84 78 C88 60 82 40 70 28Z" fill="#EBDDBF"/>
+    <rect x="27" y="24" width="46" height="8" rx="4" fill="#B98A3E"/><rect x="28" y="54" width="44" height="24" rx="5" fill="#fff" opacity=".9"/>
+    <text x="50" y="71" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="13" fill="${CH}">SECAS</text>`,
+  phone: `<rect x="22" y="2" width="56" height="96" rx="11" fill="${CH}"/><rect x="27" y="11" width="46" height="76" rx="5" fill="#fff"/>
+    <rect x="31" y="15" width="38" height="26" rx="4" fill="${M}"/><path d="M38 28 H62 C62 35 57 39 50 39 C43 39 38 35 38 28Z" fill="${F}"/><g fill="#D8AE63"><circle cx="44" cy="27" r="3"/><circle cx="50" cy="25" r="3"/><circle cx="56" cy="27" r="3"/></g>
+    <rect x="31" y="46" width="30" height="5" rx="2.5" fill="${CH}"/><rect x="31" y="56" width="38" height="4" rx="2" fill="#C9D2CC"/><rect x="31" y="64" width="34" height="4" rx="2" fill="#C9D2CC"/>
+    <rect x="31" y="74" width="38" height="9" rx="4.5" fill="${F}"/><rect x="42" y="91" width="16" height="3" rx="1.5" fill="#55665B"/>`,
 };
 
 // Icono colocado en (x, y) con tamaño `sz` px; aparece en `at` segundos (opcional).
@@ -112,5 +141,37 @@ export function platoSinBascula() {
         `<g data-at="24.0" opacity="0"><rect x="60" y="560" width="840" height="100" rx="50" fill="#fff"/>` +
         `<rect x="100" y="600" width="560" height="20" rx="10" fill="${M}"/><rect x="100" y="600" width="380" height="20" rx="10" fill="${S}"/><circle cx="480" cy="610" r="26" fill="${F}"/>` +
         label(780, 624, 'Ajusta', undefined, F, 40) + `</g>`) },
+  ];
+}
+
+// ---------- Reel martes 13/10: ¿Las legumbres de bote son peores que las secas? ----------
+const pill = (x, y, w, txt, at, bg = '#fff', col = CH, size = 42) =>
+  `<g data-at="${at}" opacity="0"><rect x="${x}" y="${y}" width="${w}" height="96" rx="48" fill="${bg}"/>` + label(x + w / 2, y + 62, txt, undefined, col, size) + `</g>`;
+export function legumbresBote() {
+  return [
+    { start: 0, end: 6.6, pan: 1, tag: 'Las mismas legumbres', svg: svg(
+        ic('jar', 110, 90, 300) + label(260, 470, 'De bote', undefined, F, 42) +
+        label(480, 330, '=', 3.1, F, 140) +
+        ic('bowlBeans', 560, 120, 280, 4.8) + label(700, 470, 'Cocidas en casa', 4.8, F, 42)) },
+    { start: 6.6, end: 10.1, pan: -1, tag: 'Casi todo se conserva', svg: svg(
+        ic('jar', 90, 120, 300) +
+        `<g data-at="8.1" opacity="0"><rect x="450" y="90" width="430" height="96" rx="48" fill="#fff"/>${ic('check', 466, 102, 72)}${label(690, 152, 'Proteína', undefined, CH, 42)}</g>` +
+        `<g data-at="8.75" opacity="0"><rect x="450" y="220" width="430" height="96" rx="48" fill="#fff"/>${ic('check', 466, 232, 72)}${label(690, 282, 'Fibra', undefined, CH, 42)}</g>` +
+        `<g data-at="9.4" opacity="0"><rect x="450" y="350" width="430" height="96" rx="48" fill="#fff"/>${ic('check', 466, 362, 72)}${label(690, 412, 'Minerales', undefined, CH, 42)}</g>`, '#DCE9E1') },
+    { start: 10.1, end: 13.0, pan: 1, tag: 'Lo único que cambia: la sal', svg: svg(
+        ic('jar', 200, 100, 320) + ic('salt', 600, 120, 230, 11.3) +
+        `<g data-at="11.6" opacity="0" fill="#fff" stroke="#C9D2CC" stroke-width="2"><rect x="640" y="380" width="10" height="10" rx="2"/><rect x="690" y="410" width="10" height="10" rx="2"/><rect x="740" y="390" width="10" height="10" rx="2"/><rect x="665" y="450" width="10" height="10" rx="2"/><rect x="720" y="470" width="10" height="10" rx="2"/></g>`) },
+    { start: 13.0, end: 18.3, pan: -1, tag: 'Escurre y enjuaga', svg: svg(
+        ic('colander', 520, 220, 320) + ic('tap', 540, 10, 200, 14.6) +
+        ic('drop', 666, 140, 40, 14.85) + ic('drop', 680, 195, 40, 15.0) + ic('drop', 662, 250, 40, 15.15) +
+        label(250, 300, '−40 %', 16.4, F, 120) + label(250, 380, 'de sal añadida', 16.5, CH, 40)) },
+    { start: 18.3, end: 24.1, pan: 1, tag: 'Para tu próxima compra', svg: svg(
+        ic('jar', 200, 95, 150, 18.5) + ic('basket', 110, 130, 330, 18.4) +
+        ic('sack', 600, 170, 260, 21.6) + label(480, 100, '¿Bote o secas?', 22.8, F, 54), '#DCE9E1') },
+    { start: 24.1, end: 99, pan: -1, tag: 'Recetas con legumbres', svg: svg(
+        ic('phone', 90, 50, 440, 24.2) +
+        pill(500, 140, 420, 'pautaposible.es', 25.6, '#fff', F, 44) +
+        label(710, 320, 'Sección de recetas', 27.6, CH, 40) +
+        pill(560, 380, 300, 'App gratis', 29.4, G, CH, 44)) },
   ];
 }
