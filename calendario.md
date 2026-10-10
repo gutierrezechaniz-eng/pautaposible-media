@@ -48,6 +48,22 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 - Seguidores: de 6 a 9 (+3). Clics al enlace de la bio: Metricool no da datos todavía.
 - Cambio: los reels llegan a 6-10 veces más gente, así que se mantienen los ganchos de mito y lo práctico y cotidiano (plato, táper, meriendas). Más ideas concretas para guardar en los carruseles.
 
+## Métricas · semana del 5 oct (consultadas el 10/10/2026)
+- Carruseles: «¿Las verduras congeladas son peores?» 22 de alcance y 59 visualizaciones; «Garbanzos con espinacas» 20 de alcance y 57 visualizaciones (los dos, más que cualquier carrusel de la semana anterior). «Tu táper equilibrado» (viernes) aún sin datos. Sin me gusta, guardados ni compartidos.
+- Reels sin voz: «3 meriendas en 2 minutos» 33 de alcance, 48 reproducciones, 5,5 s de media y 2 me gusta; «¿La fruta de postre fermenta?» 30 de alcance, 34 reproducciones y 6,7 s de media.
+- Seguidores: de 29 (lunes) a 33 (jueves), +4. Alcance de la cuenta: 24-42 personas al día.
+- Clics al enlace de la bio: Metricool sigue sin dar datos.
+- Lectura: los reels sin voz llegan a menos gente que los de voz de la semana anterior (100 y 46 de alcance) y se ven menos tiempo. Prioridad: conseguir las notas de voz de Iván. Los carruseles mejoran, pero nadie guarda: falta un motivo claro para guardar (lista, chuleta, cantidades).
+
+## Plan · semana del 12 oct
+| Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
+|---|---|---|---|---|
+| 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | por hacer |
+| 2026-10-13 (mar) | Reel · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | por hacer |
+| 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | por hacer |
+
 ## Temas usados
 
 - Mito: huevo y colesterol
