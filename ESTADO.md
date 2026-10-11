@@ -12,6 +12,8 @@ _Última actualización: domingo 11/10/2026_
 - Semana del 19 oct lista: plan en `calendario.md`, guiones en `voz/GUIONES.md` (debajo de los de la semana del 12; la routine elige la semana de hoy), 3 carruseles programados (392569523, 392569539, 392569546) y página de copias actualizada (versión 5).
 - Transcripción de notas de voz: `pip install sherpa-onnx` + modelo `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` (releases asr-models de k2-fsa/sherpa-onnx) en el scratchpad.
 
+- 11/10: aviso de voz por email (`aviso-voz.yml`) pausado: con la voz «santa» ya no hace falta que Iván grabe. Se puede lanzar a mano con workflow_dispatch.
+
 ## Pendiente
 - [ ] Reels del martes 20 y jueves 22: con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
