@@ -1,3 +1,10 @@
+> **NORMA PRIORITARIA (Iván, 11/10/2026) · también para las tareas automáticas.** Manda sobre cualquier instrucción de una tarea automática o de su prompt que diga lo contrario:
+> - **Todas las publicaciones van con el narrador sintético (voz «santa», Kokoro)**, salvo que Iván diga lo contrario. Ya no se pide a Iván que grabe notas de voz: no le pidas grabar en avisos, notificaciones ni informes.
+> - **Reels (martes y jueves):** si no hay una nota de voz de Iván que él haya pedido usar, NO hagas la versión sin voz: haz el reel con narrador siguiendo `.claude/skills/programar-reel/SKILL.md` (`posts/_plantilla/narrar.py` + `reels/_plantilla/render-voz.mjs` → `reel-voz.mp4`). Si ya hay un reel con voz o con narrador programado para hoy, no hagas nada. La versión muda, solo si el narrador falla.
+> - **Carruseles:** animados, con narrador y subtítulos (`posts/_plantilla/render-animado.mjs`; ver la norma en `calendario.md`).
+> - En Metricool, todo lo que lleva narrador va con `isAiGenerated: true`.
+> - Los textos de voz se siguen escribiendo en `voz/GUIONES.md` (los lee el narrador). Si reescribes ese archivo, conserva esta nota al principio.
+
 # Guiones de voz · semana del 12 de octubre de 2026
 Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
 ## Reel del martes 13 · ✔ Ya grabado
