@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: sábado 10/10/2026 (2.ª sesión)_
+_Última actualización: domingo 11/10/2026_
 
 ## Hecho recientemente
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
@@ -13,12 +13,14 @@ _Última actualización: sábado 10/10/2026 (2.ª sesión)_
 - Transcripción de notas de voz: `pip install sherpa-onnx` + modelo `sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8` (releases asr-models de k2-fsa/sherpa-onnx) en el scratchpad.
 
 ## Pendiente
+- [ ] Reels del martes 20 y jueves 22: si Iván no manda nota de voz, hacer la versión **con narrador** (voz «santa») en vez de la muda (ver `/programar-reel`), con `isAiGenerated: true`.
 - [ ] Martes 20 y jueves 22: reels con voz (azúcar moreno y batch cooking) con `/programar-reel`; sin nota, versión sin voz.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
 - [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
 - [ ] Revisar las métricas del reel «Tu vida, no la de un influencer» (sábado 10/10, 18:30, Metricool 392827236) con las de la semana.
 
 ## Decisiones vigentes
+- 11/10: todas las publicaciones van **animadas, con narrador sintético (voz «santa», Kokoro) y subtítulos**, también las recetas (`posts/_plantilla/render-animado.mjs`; ver la norma en `calendario.md`). Se marcan como contenido de IA en Instagram (`isAiGenerated: true`), como pide Instagram; Iván está de acuerdo. Los modelos de voz se descargan en el scratchpad (releases `tts-models` de k2-fsa/sherpa-onnx: `kokoro-multi-lang-v1_0`).
 - Los reels llegan a más gente que los carruseles, y los de voz el doble que los sin voz: insistir a Iván en las notas de voz.
 - Los carruseles necesitan ideas más concretas para guardar (listas, chuletas, cantidades).
 - Los reels con voz acompañan al carrusel del día anterior o siguiente: Iván graba un tema que ya conoce.
