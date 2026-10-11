@@ -7,10 +7,12 @@ Objetivo: no divulgar por divulgar. Cada pieza debe llevar a la gente a pautapos
 CARRUSELES
 - Llevan 6-8 diapositivas: el contenido + una ÚLTIMA diapositiva fija sobre la web y la app.
 - La penúltima diapositiva cierra el tema con su botón a la URL concreta (recetas o aprende).
+- **Estilo (decisión de Iván, 11/10/2026):** los carruseles educativos (Mito o realidad, Hábito práctico) dejan de ser solo texto: tienen que ser más visuales, dinámicos y con mucha animación, siempre con el estilo de Pauta Posible (colores, Manrope, ilustraciones propias). Se hacen como carrusel de vídeos cortos con `posts/_plantilla/render-animado.mjs`: dibujos que entran y se mueven, números que cuentan, textos que aparecen palabra a palabra y una barra de progreso; la última diapositiva fija sigue siendo la imagen estática. Las recetas mantienen el formato actual. Iván aprobó el estilo el 11/10 y pidió además **subtítulos y un narrador con voz sintética que suene humana** (sin grabar él): `narrar.py` (Kokoro, sherpa-onnx); se marca como contenido generado con IA al programarlo. Voz elegida el 11/10: **«santa»** (Kokoro, voz 3 de las muestras). Ese mismo día pidió ponerlo **en todas las publicaciones**: también las recetas van animadas, con narrador y subtítulos (conversor automático `desdeCarrusel` de `animados.mjs`, que anima cualquier carrusel de `carruseles.mjs`).
 - Última diapositiva (fondo Forest #2E6F57): titular tipo «¿Quieres ir un paso más allá?»; tres filas con icono: «Recetas fáciles con cantidades para ti», «Organiza tus comidas y tu pauta», «App gratuita: cocina con lo que tienes en casa» (con una cápsula «Gratis por ahora»); botón cápsula grande «pautaposible.es»; debajo «Enlace en la bio»; y el retrato de Iván (assets/ivan.png) en círculo Mint con «Iván · Pauta Posible — Nutrición práctica, sin miedo ni culpa». Sin el título «nutricionista» y sin prometer resultados de salud ni de peso.
 - El texto de cada publicación termina siempre con: «👉 Más recetas y la app gratuita para cocinar con lo que tienes en casa en pautaposible.es (enlace en la bio)» y después los hashtags.
 
 REELS
+- **Voz (decisión de Iván, 11/10/2026):** todos los reels van con el narrador sintético (voz «santa», Kokoro), salvo que Iván diga lo contrario. Ya no se espera su nota de voz; si manda una y pide usarla, se usa. Se marcan como contenido de IA (`isAiGenerated: true`).
 - Los textos de voz duran 60-75 palabras y su ÚLTIMA frase invita siempre a la web y a la app, por ejemplo: «Si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.»
 - El cierre del vídeo dura 3 segundos: «Recetas y app gratuita para cocinar con lo que tienes en casa», botón «pautaposible.es» y «Enlace en la bio», con el retrato de Iván.
 - El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
@@ -39,14 +41,15 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-07 (mié) | Receta sencilla | Garbanzos con espinacas en 15 minutos | 10:00 | posts/2026-10-07-garbanzos-espinacas | 387663187 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-08 (jue) | Reel sin voz · Hábito práctico (no llegó nota de voz) | 3 meriendas en 2 minutos | 18:00 | reels/2026-10-08-meriendas (reel.mp4) | 391047175 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 392552812 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-10 (sáb) | Reel con voz · Hábito práctico (fuera del calendario, Iván pidió publicarlo ya) | Tu vida, no la de un influencer (la muñeca rusa) | 18:30 | reels/2026-10-10-munecas-rusas (reel-voz.mp4) | 392827236 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 393114739 (antes 392552812, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 392552824 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 393118634 (antes 392552824, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
-| 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 392552832 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 392569523 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 392569539 · colaboradora: ibangutierrezetxaniz |
-| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 392569546 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 393118651 (antes 392552832, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393114051 (antes 392569523, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393118665 (antes 392569539, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393118676 (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
 
@@ -66,21 +69,21 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 ## Plan · semana del 12 oct
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
-| 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (392552812) |
+| 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (393114739, animado con narrador) |
 | 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (Iván grabó el texto del carrusel; la fruta por la noche vuelve al banco) | 18:00 | programado (392559960) |
-| 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (392552824) |
+| 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (393118634, animado con narrador) |
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | con voz programado (392576485; antes 392568483 sin voz) |
-| 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (392552832) |
+| 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (393118651, animado con narrador) |
 
 ## Plan · semana del 19 oct
 Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
-| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | programado (392569523) |
+| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | programado (393114051, animado con narrador) |
 | 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
-| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | programado (392569539) |
+| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | programado (393118665, animado con narrador) |
 | 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
-| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (392569546) |
+| 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393118676, animado con narrador) |
 
 ## Temas usados
 
@@ -99,6 +102,7 @@ Los reels acompañan al carrusel del día anterior o siguiente (como en las sema
 - Receta: merluza al horno con patata y verduras en bandeja
 - Hábito: lista de la compra básica semanal
 - Reel mito: legumbres de bote frente a secas (con voz)
+- Reel hábito: tu vida, no la de un influencer (muñeca rusa; personalizar y pequeños hábitos frente a las promesas de redes)
 - Reel hábito: 3 desayunos en 3 minutos (con voz)
 - Mito: azúcar moreno frente a blanco
 - Receta: arroz salteado con verduras y huevo

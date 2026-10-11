@@ -3,9 +3,11 @@
 # y solo sigue la que cae a las 8 en Madrid.
 name: Aviso de voz
 
+# Pausado el 11/10/2026: Iván decidió que todas las publicaciones van con la voz «santa»,
+# así que ya no hace falta recordarle grabar. Para reactivarlo, descomenta las dos líneas de schedule.
 on:
-  schedule:
-    - cron: '51 6,7 * * 1,3'
+  # schedule:
+  #   - cron: '51 6,7 * * 1,3'
   workflow_dispatch:
     inputs:
       fecha:

@@ -145,11 +145,15 @@ function render(t,opts={}){
     const lt=clamp((t-s.start)/(s.end-s.start+IXF));
     const z=1.0+0.07*lt, dx=(s.pan||0)*lt*30;
     s.el.querySelector('.kb').style.transform=`translateX(${dx}px) scale(${z})`;
-    s.el.querySelectorAll('[data-at]').forEach(e=>{
-      const p=ease((t-parseFloat(e.dataset.at))/0.45);
-      e.style.opacity=p;
+    s.el.querySelectorAll('[data-at],[data-out]').forEach(e=>{
+      const p=e.dataset.at===undefined?1:ease((t-parseFloat(e.dataset.at))/0.45);
+      const q=e.dataset.out===undefined?1:1-ease((t-parseFloat(e.dataset.out))/0.35);
+      e.style.opacity=p*q;
       if(e.dataset.pop!==undefined){const bb=e.dataset.pop.split(' ');e.setAttribute('transform',`translate(${bb[0]} ${bb[1]}) scale(${0.6+0.4*p+0.08*Math.sin(Math.PI*p)}) translate(${-bb[0]} ${-bb[1]})`)}
     });
+    // data-mv="segundo dx dy duración": desplazamiento; data-float="amplitud periodo": vaivén continuo (usar en grupos sin data-pop)
+    s.el.querySelectorAll('[data-mv]').forEach(e=>{const [a,dx,dy,d]=e.dataset.mv.split(' ').map(Number);const p=ease((t-a)/(d||0.6));e.setAttribute('transform',`translate(${dx*p} ${dy*p})`)});
+    s.el.querySelectorAll('[data-float]').forEach(e=>{const [amp,per]=e.dataset.float.split(' ').map(Number);e.setAttribute('transform',`translate(0 ${(amp*Math.sin(2*Math.PI*t/(per||2))).toFixed(2)})`)});
     const cap=s.el.querySelector('.cap');
     if(cap){const p=ease((t-s.start-0.25)/0.5);cap.style.opacity=p;cap.style.transform=`translateY(${(1-p)*24}px)`}
   });

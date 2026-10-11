@@ -20,7 +20,7 @@ Al empezar cada sesión, lee **`ESTADO.md`** (qué quedó pendiente) y, si la ta
 ## Calendario semanal habitual
 
 - Carruseles: lunes, miércoles y viernes a las 10:00 (Madrid). Pilares: Mito o realidad, Receta sencilla, Hábito práctico.
-- Reels: martes y jueves a las 18:00 (Madrid). Con voz si Iván envía su nota antes de las 12:00 de ese día; si no, la versión sin voz.
+- Reels: martes y jueves a las 18:00 (Madrid). Todas las publicaciones van con el narrador sintético (voz «santa») salvo que Iván diga lo contrario (decisión del 11/10); ver `calendario.md`.
 - Colaboradora en Metricool: `ibangutierrezetxaniz`.
 
 ## Reglas fijas
