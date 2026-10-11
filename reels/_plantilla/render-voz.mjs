@@ -5,7 +5,7 @@ import { spawn, execFileSync } from 'child_process';
 import { createRequire } from 'module';
 import fs from 'fs';
 import path from 'path';
-import { hidratosCena, platoSinBascula, legumbresBote, munecasRusas } from './ilustraciones.mjs';
+import { hidratosCena, platoSinBascula, legumbresBote, munecasRusas, desayunos } from './ilustraciones.mjs';
 const require = createRequire(import.meta.url);
 const ffmpeg = require('ffmpeg-static');
 const dir = path.dirname(new URL(import.meta.url).pathname);
@@ -16,6 +16,7 @@ const reels = {
   'plato-sin-bascula': { hook: 'Monta tu plato<br>sin báscula', scenes: platoSinBascula },
   'legumbres-bote': { hook: '¿De bote<br>o secas?', scenes: legumbresBote },
   'munecas-rusas': { hook: 'Tu vida,<br>no la suya', scenes: munecasRusas },
+  'desayunos': { hook: '¿Sales sin<br>desayunar?', scenes: desayunos },
 };
 const [name, audio, wordsFile, outDir] = process.argv.slice(2);
 const { dur, words } = JSON.parse(fs.readFileSync(wordsFile, 'utf8'));

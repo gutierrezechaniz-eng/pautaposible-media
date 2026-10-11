@@ -1,0 +1,45 @@
+# Aviso de voz para los reels: abre un issue que menciona a Iván (GitHub se lo envía por email).
+# Lunes y miércoles a las 8:51 (Madrid). Se programan las dos horas UTC posibles (verano e invierno)
+# y solo sigue la que cae a las 8 en Madrid.
+name: Aviso de voz
+
+on:
+  schedule:
+    - cron: '51 6,7 * * 1,3'
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: 'Fecha a simular (AAAA-MM-DD); vacío = hoy. Fuera de lunes y miércoles es un envío de prueba.'
+        required: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  aviso:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ¿Son las 8 en Madrid?
+        id: hora
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(TZ=Europe/Madrid date +%H)" != "08" ]; then
+            echo "seguir=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "seguir=si" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.hora.outputs.seguir == 'si'
+      - name: Preparar el aviso
+        if: steps.hora.outputs.seguir == 'si'
+        run: python3 .github/scripts/aviso_voz.py "${{ inputs.fecha }}"
+      - name: Abrir el issue (y cerrar los avisos anteriores)
+        if: steps.hora.outputs.seguir == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create aviso-voz --color 2E6F57 --description "Aviso para grabar la voz de los reels" --force
+          for n in $(gh issue list --label aviso-voz --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --reason completed
+          done
+          gh issue create --title "$(cat aviso_titulo.txt)" --body-file aviso_cuerpo.md --label aviso-voz --assignee gutierrezechaniz-eng
