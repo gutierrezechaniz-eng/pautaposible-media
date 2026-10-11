@@ -29,7 +29,7 @@ for (const [i, s] of slides.entries()) {
   let wav = null;
   if (s.voz) {
     wav = path.join(out, `_voz${n}.wav`);
-    const res = JSON.parse(execFileSync('python3', [path.join(dir, 'narrar.py')], { input: JSON.stringify({ voz: process.env.VOZ || 'dora', speed: +(process.env.VELOCIDAD || 1), chunks: s.voz.map((v) => v[0]), out: wav }), stdio: ['pipe', 'pipe', 'ignore'] }).toString());
+    const res = JSON.parse(execFileSync('python3', [path.join(dir, 'narrar.py')], { input: JSON.stringify({ voz: process.env.VOZ || 'santa', speed: +(process.env.VELOCIDAD || 1), chunks: s.voz.map((v) => v[0]), out: wav }), stdio: ['pipe', 'pipe', 'ignore'] }).toString());
     Object.assign(cfg, { cues: res.cues, subs: s.voz.map((v) => v[1]), dur: Math.max(s.dur, res.dur + 0.9) });
   }
   const dur = await page.evaluate((c) => window.setup(c), cfg);

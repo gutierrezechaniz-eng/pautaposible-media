@@ -125,3 +125,80 @@ export const animados = {
         foot('@pautaposible', '6 / 7') },
   ],
 };
+
+// ---------- Conversor automático: cualquier carrusel de carruseles.mjs → animado con narrador y subtítulos ----------
+import { carruseles } from './carruseles.mjs';
+import { ic } from '../../reels/_plantilla/ilustraciones.mjs';
+const sinMd = (s) => s.replace(/\*\*/g, '');
+// Lo que lee el narrador (números y símbolos dichos como se dicen)
+const decir = (s) => sinMd(s).replace(/[«»]/g, '').replace(/(\d+)\s?g\b/g, '$1 gramos').replace(/°C/g, ' grados').replace(/(\d+)\s?%/g, '$1 por ciento')
+  .replace(/(\d+)-(\d+)/g, '$1 o $2').replace(/½/g, 'medio').replace(/ · /g, ', ').replace(/pautaposible\.es(\/\w+)?/g, 'pauta posible punto es').replace(/\s+/g, ' ').trim();
+// Trozos de voz de una frase larga: por oraciones y, si hace falta, por comas (≤ 75 caracteres)
+function trozos(txt) {
+  const out = [];
+  sinMd(txt).split(/(?<=[.:?!])\s+/).forEach((o) => {
+    if (o.length <= 75) return out.push(o);
+    let cur = '';
+    o.split(/(?<=,)\s+/).forEach((p) => { if (cur && (cur + ' ' + p).length > 75) { out.push(cur); cur = p; } else cur = cur ? cur + ' ' + p : p; });
+    if (cur) out.push(cur);
+  });
+  return out.filter(Boolean);
+}
+const icono = (name, size, extra = '') => `<svg width="${size}" height="${size}" viewBox="0 0 100 100" style="overflow:visible${extra}">${ic(name, 0, 0, 100)}</svg>`;
+const flota = (name, left, top, size, at, ph = 0) =>
+  `<div class="a" style="left:${left}px;top:${top}px" data-in="${at} pop"><div data-float="10 2.8 ${ph}">${icono(name, size)}</div></div>`;
+
+function animarDiapositiva(s, i, n, iconos) {
+  const num = `${i + 1} / ${n}`;
+  const voz = []; const cue = (txt) => { const c = voz.length; trozos(txt).forEach((t) => voz.push([decir(t), t])); return `c${c}`; };
+  if (s.type === 'portada') {
+    cue(s.title); const cs = cue(s.sub);
+    const pos = [[90, 760, 180], [330, 830, 150], [560, 760, 190], [800, 840, 150], [450, 1000, 130]];
+    return { dur: 5, cls: 'dark', voz, html: blobs(true) + brand(true) + kick(s.tag, 0.15) +
+      `<div class="title xl" style="font-size:${s.title.length > 45 ? 84 : 96}px">${words(s.title, 0.35, 0.08)}</div>` +
+      `<div class="a" style="left:80px;right:80px;top:600px;font-size:40px;font-weight:600;opacity:.92" data-in="${cs} fade">${sinMd(s.sub)}</div>` +
+      iconos.slice(0, 5).map((k, j) => flota(k, pos[j][0], pos[j][1], pos[j][2], (0.9 + j * 0.18).toFixed(2), j * 0.2)).join('') +
+      foot('@pautaposible', 'Desliza →', ' data-nudge="14 1.2" style="display:inline-block"') };
+  }
+  if (s.type === 'cierre') {
+    cue(s.title); const cf = cue(s.foot + '.'); const cu = voz.length;
+    voz.push(['Y si quieres más recetas y la app gratis, entra en pauta posible punto es.', 'Más recetas y la app gratis en pautaposible.es']);
+    return { dur: 5, cls: 'dark', voz, html: blobs(true) + brand(true) +
+      iconos.slice(0, 4).map((k, j) => flota(k, [90, 860, 830, 100][j], [150, 170, 990, 1000][j], 120, (0.8 + j * 0.2).toFixed(2), j * 0.25)).join('') +
+      `<div class="title xl" style="top:300px;text-align:center;font-size:${s.title.length > 35 ? 84 : 100}px">${words(s.title, 0.3, 0.09)}</div>` +
+      `<div class="a" style="left:80px;right:80px;top:660px;text-align:center;font-size:40px;font-weight:600;opacity:.9" data-in="1.5 fade">${sinMd(s.sub)}</div>` +
+      `<div class="a" style="left:0;right:0;top:760px;text-align:center" data-in="c${cu} pop"><span class="btn" data-pulse=".05 1.4" style="display:inline-block">${s.url}</span></div>` +
+      `<div class="a" style="left:0;right:0;top:910px;text-align:center;font-size:34px;font-weight:700" data-in="${cf} up"><span data-float="4 1.4" style="display:inline-block;vertical-align:middle"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 H23 V28 L13 21 L3 28Z" fill="#D7A95B"/></svg></span> ${sinMd(s.foot)}</div>` +
+      foot('@pautaposible', num) };
+  }
+  // texto
+  let body = '';
+  cue(s.title);
+  const nItems = (s.steps || []).length + (s.checks || []).length;
+  const fs = nItems > 5 ? 38 : 42;
+  if (s.p) body += `<div style="font-size:${fs + 1}px;font-weight:600;line-height:1.35" data-in="${cue(s.p)} up">${md(s.p)}</div>`;
+  if (s.steps) body += s.steps.map((st, k) => `<div class="card" style="position:relative;padding:22px 28px 22px 100px;font-size:${fs}px;font-weight:600;line-height:1.3" data-in="${cue(st)} right">` +
+    `<span style="position:absolute;left:26px;top:50%;margin-top:-27px;width:54px;height:54px;border-radius:50%;background:${F};color:#fff;font-weight:800;font-size:30px;display:flex;align-items:center;justify-content:center">${(s.start || 1) + k}</span>${md(st)}</div>`).join('');
+  if (s.checks) body += `<div style="display:flex;flex-direction:column;gap:${nItems > 5 ? 10 : 16}px">` + s.checks.map((ck) =>
+    `<div style="display:flex;align-items:center;gap:22px;font-size:${fs}px;font-weight:600" data-in="${cue(ck)} left"><svg width="52" height="52" viewBox="0 0 46 46" style="flex:none"><circle cx="23" cy="23" r="21" fill="${F}"/><path d="M13 24 L20 31 L33 16" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${md(ck)}</span></div>`).join('') + `</div>`;
+  if (s.chips) { const cc = cue(s.chips.join(', ') + '.'); body += `<div style="display:flex;gap:18px;flex-wrap:wrap">` + s.chips.map((c, k) => `<span style="background:${M};color:${F};border-radius:999px;padding:16px 34px;font-weight:800;font-size:40px" data-in="${cc}+${(k * 0.35).toFixed(2)} pop">${c}</span>`).join('') + `</div>`; }
+  if (s.box) body += `<div style="border-radius:30px;background:${M};padding:24px 32px;font-size:${fs - 1}px;font-weight:600;line-height:1.32" data-in="${cue(s.box)} up">${md(s.box).replace(/<b>/g, `<b style="color:${F}">`)}</div>`;
+  if (s.p2) body += `<div style="font-size:${fs - 2}px;font-weight:600;line-height:1.35;opacity:.9" data-in="${cue(s.p2)} up">${md(s.p2)}</div>`;
+  const k1 = iconos[(i * 2) % iconos.length];
+  return { dur: 5, cls: 'light', voz, html: blobs(false).replace(/<div class="blob" data-pulse[^>]*><\/div>/, '') + brand(false) + kick(s.kicker) +
+    `<div class="a" style="right:70px;top:36px" data-in="0.5 pop"><div data-float="8 2.6" data-sway="6 3.2">${icono(k1, 120)}</div></div>` +
+    `<div class="a" style="left:80px;right:80px;top:225px;bottom:228px;display:flex;flex-direction:column;gap:${nItems > 5 ? 26 : 34}px">` +
+    `<div style="font-weight:800;font-size:${s.title.length > 40 ? 70 : 80}px;line-height:1.05;letter-spacing:-1.5px">${words(s.title, 0.3, 0.08)}</div>${body}</div>` +
+    foot('pauta posible', `<b>${num}</b>`) };
+}
+export function desdeCarrusel(key, iconos) {
+  const sl = carruseles[key].slides; const n = sl.length;
+  return sl.filter((s) => s.type !== 'final').map((s, i) => animarDiapositiva(s, i, n, iconos));
+}
+Object.assign(animados, {
+  'legumbres-bote': desdeCarrusel('legumbres-bote', ['jar', 'bowlBeans', 'colander', 'beans', 'drop']),
+  'merluza-bandeja': desdeCarrusel('merluza-bandeja', ['fish', 'potato', 'carrot', 'tomato', 'leaf']),
+  'lista-compra': desdeCarrusel('lista-compra', ['basket', 'carrot', 'egg', 'bread', 'fish']),
+  'arroz-salteado': desdeCarrusel('arroz-salteado', ['rice', 'egg', 'carrot', 'broccoli', 'ladle']),
+  'batch-cooking': desdeCarrusel('batch-cooking', ['clock', 'rice', 'egg', 'broccoli', 'beans']),
+});

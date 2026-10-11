@@ -6,7 +6,7 @@ import sys, os, json, numpy as np, sherpa_onnx, soundfile as sf
 M = os.environ.get('TTS_MODELOS', '.') + '/'
 KOKORO = {'dora': 28, 'alex': 29, 'santa': 53}
 cfg = json.load(sys.stdin)
-voz = cfg.get('voz', 'dora')
+voz = cfg.get('voz', 'santa')
 if voz in KOKORO:
     d = M + 'kokoro-multi-lang-v1_0/'
     model = sherpa_onnx.OfflineTtsModelConfig(kokoro=sherpa_onnx.OfflineTtsKokoroModelConfig(model=d + 'model.onnx', voices=d + 'voices.bin', tokens=d + 'tokens.txt', data_dir=d + 'espeak-ng-data', lexicon='', lang='es'), num_threads=4)
