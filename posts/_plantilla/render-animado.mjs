@@ -1,4 +1,6 @@
 // Carrusel educativo animado: node render-animado.mjs <clave> <carpeta-del-post> [--preview t1,t2]
+// Narrador: las diapositivas con «voz» se narran con narrar.py (VOZ=dora|alex|santa|<voz piper>, TTS_MODELOS=carpeta de modelos)
+// y llevan subtítulos; la diapositiva dura lo que la voz más 0,9 s (como mínimo su «dur»).
 // Crea <carpeta>/animado/01.mp4… (1080×1350, 30 fps, H.264 + audio AAC silencioso), copia la diapositiva final estática
 // (último PNG de la carpeta) y monta vista-previa.mp4 con todas seguidas.
 import { chromium } from 'playwright';
@@ -23,15 +25,23 @@ await page.evaluate(() => document.fonts.ready);
 const files = [];
 for (const [i, s] of slides.entries()) {
   const n = String(i + 1).padStart(2, '0');
-  const dur = await page.evaluate((c) => window.setup(c), s);
+  const cfg = { ...s };
+  let wav = null;
+  if (s.voz) {
+    wav = path.join(out, `_voz${n}.wav`);
+    const res = JSON.parse(execFileSync('python3', [path.join(dir, 'narrar.py')], { input: JSON.stringify({ voz: process.env.VOZ || 'dora', speed: +(process.env.VELOCIDAD || 1), chunks: s.voz.map((v) => v[0]), out: wav }), stdio: ['pipe', 'pipe', 'ignore'] }).toString());
+    Object.assign(cfg, { cues: res.cues, subs: s.voz.map((v) => v[1]), dur: Math.max(s.dur, res.dur + 0.9) });
+  }
+  const dur = await page.evaluate((c) => window.setup(c), cfg);
   if (flag === '--preview') {
     for (const t of (times || '1,3,5.9').split(',').map(Number)) { await page.evaluate((t) => window.render(t), t); await page.screenshot({ path: path.join(out, `p${n}-${t}.png`) }); }
     continue;
   }
   const file = path.join(out, `${n}.mp4`); files.push(file);
-  const ff = spawn(ffmpeg, ['-y', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo',
-    '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-c:a', 'aac', '-b:a', '64k', '-shortest', '-movflags', '+faststart', file], { stdio: ['pipe', 'ignore', 'inherit'] });
   const frames = Math.round(dur * FPS);
+  const aud = wav ? ['-i', wav, '-af', 'highpass=f=70,loudnorm=I=-16:TP=-1.5,apad', '-ar', '48000', '-ac', '2'] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'];
+  const ff = spawn(ffmpeg, ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-', ...aud,
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-c:a', 'aac', '-b:a', '128k', '-t', String(frames / FPS), '-movflags', '+faststart', file], { stdio: ['pipe', 'ignore', 'inherit'] });
   for (let f = 0; f < frames; f++) {
     await page.evaluate((t) => window.render(t), f / FPS);
     const buf = await page.screenshot({ type: 'png' });
@@ -39,6 +49,7 @@ for (const [i, s] of slides.entries()) {
     if (f === frames - 1) fs.writeFileSync(path.join(out, `${n}.png`), buf); // fotograma final como imagen fija
   }
   ff.stdin.end(); await new Promise((r) => ff.on('close', r));
+  if (wav) fs.rmSync(wav);
   console.log(n, dur, 's');
 }
 await browser.close();

@@ -50,69 +50,78 @@ const bolsa = (x, y, w, h) => `<path d="M${x} ${y + 30} L${x + 20} ${y} H${x + w
 const pegatina = (left, top, txt, at, rot, bg = G, col = CH) =>
   `<div class="a" style="left:${left}px;top:${top}px" data-in="${at} pop"><div style="transform:rotate(${rot}deg);background:${bg};color:${col};border-radius:999px;padding:16px 34px;font-weight:800;font-size:38px;box-shadow:0 10px 24px rgba(36,50,42,.15)">${txt}</div></div>`;
 
+// Cada diapositiva: {dur, cls, voz: [[lo que dice el narrador, subtítulo], …], html}. Sin «voz», sin narrador ni subtítulos.
+// En el html, «c2+0.4» en data-in/out/mv/count = cuando el narrador empieza el trozo 2, más 0,4 s.
 export const animados = {
   'azucar-moreno': [
-    { dur: 6, cls: 'dark', html: blobs(true) + brand(true) + kick('Mito o realidad', 0.15) +
+    { dur: 6, cls: 'dark', voz: [['¿El azúcar moreno es mejor que el blanco?', '¿El azúcar moreno es mejor que el blanco?'], ['Spoiler:', 'Spoiler:'], ['lo que cambia es el color, no mucho más.', 'lo que cambia es el color, no mucho más.']],
+      html: blobs(true) + brand(true) + kick('Mito o realidad', 0.15) +
         `<div class="title xl" style="font-size:88px">${words('¿El azúcar moreno es mejor que el blanco?', 0.35, 0.08)}</div>` +
-        `<div class="a" style="left:80px;top:470px;font-size:40px;font-weight:600;opacity:.9" data-in="1.4 fade">Lo que cambia es el color, no mucho más.</div>` +
+        `<div class="a" style="left:80px;top:470px;font-size:40px;font-weight:600;opacity:.9" data-in="c2 fade">Lo que cambia es el color, no mucho más.</div>` +
         svgLayer(
-          `<g data-in="0.6 up">${bowl(300, 1150, 380, BLANCO)}</g><g data-in="0.75 up">${bowl(780, 1150, 380, MORENO)}</g>` +
-          [[180, 0.9], [255, 1.05], [330, 1.2]].map(([x, t], i) => `<g data-in="${t} drop"><g data-float="6 2.4 ${i * 0.2}">${terron(x, 905 - (i % 2) * 22, 90, false)}</g></g>`).join('') +
-          [[660, 1.0], [735, 1.15], [810, 1.3]].map(([x, t], i) => `<g data-in="${t} drop"><g data-float="6 2.4 ${0.5 + i * 0.2}">${terron(x, 905 - (i % 2) * 22, 90, true)}</g></g>`).join('') +
-          `<g data-in="2.0 pop"><g data-pulse=".08 1.4"><circle cx="540" cy="760" r="78" fill="${G}"/><text x="540" y="788" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="76" fill="${CH}">VS</text></g></g>`) +
-        `<div class="lbl" style="left:170px;width:300px;top:1170px;font-size:40px" data-in="2.3 up">Blanco</div><div class="lbl" style="left:610px;width:300px;top:1170px;font-size:40px" data-in="2.45 up">Moreno</div>` +
+          `<g data-in="0.6 up">${bowl(300, 1080, 380, BLANCO)}</g><g data-in="0.75 up">${bowl(780, 1080, 380, MORENO)}</g>` +
+          [[180, 0.9], [255, 1.05], [330, 1.2]].map(([x, t], i) => `<g data-in="${t} drop"><g data-float="6 2.4 ${i * 0.2}">${terron(x, 835 - (i % 2) * 22, 90, false)}</g></g>`).join('') +
+          [[660, 1.0], [735, 1.15], [810, 1.3]].map(([x, t], i) => `<g data-in="${t} drop"><g data-float="6 2.4 ${0.5 + i * 0.2}">${terron(x, 835 - (i % 2) * 22, 90, true)}</g></g>`).join('') +
+          `<g data-in="c1 pop"><g data-pulse=".08 1.4"><circle cx="540" cy="700" r="74" fill="${G}"/><text x="540" y="727" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="72" fill="${CH}">VS</text></g></g>`) +
+        `<div class="lbl" style="left:150px;width:300px;top:1090px;font-size:38px" data-in="1.6 up">Blanco</div><div class="lbl" style="left:630px;width:300px;top:1090px;font-size:38px" data-in="1.75 up">Moreno</div>` +
         foot('@pautaposible', 'Desliza →', ' data-nudge="14 1.2" style="display:inline-block"') },
 
-    { dur: 6, cls: 'light', html: blobs(false) + brand(false) + kick('Respuesta corta') +
+    { dur: 6, cls: 'light', voz: [['Respuesta corta: no.', 'Respuesta corta: no.'], ['Los dos son casi todo sacarosa.', 'Los dos son casi todo sacarosa.'], ['El moreno solo lleva un poco de melaza,', 'El moreno solo lleva un poco de melaza,'], ['y aportan prácticamente las mismas calorías.', 'y aportan prácticamente las mismas calorías.']],
+      html: blobs(false) + brand(false) + kick('Respuesta corta') +
         `<div class="title">${words('No: los dos son casi todo **sacarosa.**', 0.3, 0.09)}</div>` +
         svgLayer(
-          `<g data-in="0.9 pop"><g data-float="8 3">${terron(150, 470, 250, false)}</g></g>` +
-          `<g data-in="1.1 pop"><g data-float="8 3 .5">${terron(680, 470, 250, true)}</g></g>` +
-          `<g data-in="1.7 drop"><path d="M805 420 C790 445 790 462 805 470 C820 462 820 445 805 420Z" fill="#5A3B1E"/></g>` +
-          `<g data-in="2.8 pop"><g data-pulse=".1 1.2"><text x="540" y="650" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="190" fill="${G}">≈</text></g></g>`) +
-        `<div class="lbl" style="left:650px;width:340px;top:370px;font-size:30px;color:${MORENO2}" data-in="2.0 left">+ un poco de melaza</div>` +
-        `<div class="lbl" style="left:125px;width:300px;top:780px;font-size:40px" data-in="1.2 up">Blanco</div><div class="lbl" style="left:655px;width:300px;top:780px;font-size:40px" data-in="1.4 up">Moreno</div>` +
-        `<div class="lbl" style="left:125px;width:300px;top:835px;font-size:96px;color:${F}" data-in="1.3 fade"><span data-count="1.3 1.4 0 387">0</span></div>` +
-        `<div class="lbl" style="left:655px;width:300px;top:835px;font-size:96px;color:${F}" data-in="1.5 fade"><span data-count="1.5 1.4 0 380">0</span></div>` +
-        `<div class="lbl" style="left:0;width:1080px;top:960px;font-size:28px;font-weight:700;opacity:.65" data-in="2.2 fade">kcal por cada 100 g</div>` +
-        `<div class="note" style="top:1035px" data-in="3.3 up">Aportan prácticamente <b>las mismas calorías</b>: unas 4 por cada gramo.</div>` +
+          `<g data-in="c1 pop"><g data-float="8 3">${terron(150, 470, 250, false)}</g></g>` +
+          `<g data-in="c1+0.2 pop"><g data-float="8 3 .5">${terron(680, 470, 250, true)}</g></g>` +
+          `<g data-in="c2+0.3 drop"><path d="M805 420 C790 445 790 462 805 470 C820 462 820 445 805 420Z" fill="#5A3B1E"/></g>` +
+          `<g data-in="c3 pop"><g data-pulse=".1 1.2"><text x="540" y="650" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="190" fill="${G}">≈</text></g></g>`) +
+        `<div class="lbl" style="left:650px;width:340px;top:370px;font-size:30px;color:${MORENO2}" data-in="c2+0.6 left">+ un poco de melaza</div>` +
+        `<div class="lbl" style="left:125px;width:300px;top:780px;font-size:40px" data-in="c1+0.3 up">Blanco</div><div class="lbl" style="left:655px;width:300px;top:780px;font-size:40px" data-in="c1+0.5 up">Moreno</div>` +
+        `<div class="lbl" style="left:125px;width:300px;top:835px;font-size:96px;color:${F}" data-in="c3 fade"><span data-count="c3 1.4 0 387">0</span></div>` +
+        `<div class="lbl" style="left:655px;width:300px;top:835px;font-size:96px;color:${F}" data-in="c3+0.15 fade"><span data-count="c3+0.15 1.4 0 380">0</span></div>` +
+        `<div class="lbl" style="left:0;width:1080px;top:960px;font-size:28px;font-weight:700;opacity:.65" data-in="c3+0.6 fade">kcal por cada 100 g</div>` +
+        `<div class="note" style="top:1020px;padding:20px 30px;font-size:32px" data-in="c3+1.2 up">Unas <b>4 kcal por gramo</b>, sea del color que sea.</div>` +
         foot('pauta posible', '<b>2 / 7</b>') },
 
-    { dur: 6, cls: 'light', html: blobs(false) + brand(false) + kick('Ojo con la etiqueta') +
+    { dur: 6, cls: 'light', voz: [['Y ojo con la etiqueta:', 'Y ojo con la etiqueta:'], ['muchos azúcares morenos son azúcar blanco con melaza.', 'muchos azúcares morenos son azúcar blanco con melaza.'], ['Que ponga moreno, de caña o natural', 'Que ponga «moreno», «de caña» o «natural»'], ['no quiere decir más sano.', 'no quiere decir más sano.']],
+      html: blobs(false) + brand(false) + kick('Ojo con la etiqueta') +
         `<div class="title">${words('Muchos son azúcar blanco **con melaza.**', 0.3, 0.09)}</div>` +
-        svgLayer(`<g data-in="0.8 pop"><g data-sway="2 3">${bolsa(380, 470, 320, 420)}</g></g>` +
-          `<g data-in="1.2 left"><g data-mv="1.5 330 40 1.3">${lupa(140, 560, 200)}</g></g>`) +
-        `<div class="a" style="left:0;width:1080px;top:925px;text-align:center" data-in="2.7 pop"><span style="display:inline-block;background:${CH};color:${CR};border-radius:999px;padding:16px 40px;font-weight:800;font-size:44px">blanco + melaza</span></div>` +
-        pegatina(70, 470, '«Moreno»', 3.1, -8) + pegatina(740, 520, '«De caña»', 3.35, 7, S, '#fff') + pegatina(720, 790, '«Natural»', 3.6, -5, M, F) +
-        `<div class="note" style="top:1040px" data-in="4.1 up">«Moreno», «de caña» o «natural» no quiere decir <b>más sano</b>.</div>` +
+        svgLayer(`<g data-in="0.8 pop"><g data-sway="2 3">${bolsa(380, 450, 320, 420)}</g></g>` +
+          `<g data-in="c1 left"><g data-mv="c1+0.4 330 40 1.3">${lupa(140, 540, 200)}</g></g>`) +
+        `<div class="a" style="left:0;width:1080px;top:895px;text-align:center" data-in="c1+1.9 pop"><span style="display:inline-block;background:${CH};color:${CR};border-radius:999px;padding:16px 40px;font-weight:800;font-size:44px">blanco + melaza</span></div>` +
+        pegatina(70, 450, '«Moreno»', 'c2+0.25', -8) + pegatina(740, 500, '«De caña»', 'c2+0.9', 7, S, '#fff') + pegatina(720, 770, '«Natural»', 'c2+1.6', -5, M, F) +
+        `<div class="note" style="top:1020px;padding:20px 30px;font-size:32px" data-in="c3 up">Ninguno es <b>más sano</b>: siguen siendo azúcar.</div>` +
         foot('pauta posible', '<b>3 / 7</b>') },
 
-    { dur: 6.5, cls: 'light', html: blobs(false) + brand(false) + kick('Lo que sí cuenta') +
+    { dur: 6.5, cls: 'light', voz: [['Lo que sí cuenta es cuánto tomas.', 'Lo que sí cuenta es cuánto tomas.'], ['Lo ideal, según la OMS, es no pasar de unos veinticinco gramos al día:', 'Lo ideal, según la OMS, es no pasar de unos 25 g al día:'], ['unas seis cucharaditas,', 'unas 6 cucharaditas,'], ['contando el que ya llevan los productos.', 'contando el que ya llevan los productos.']],
+      html: blobs(false) + brand(false) + kick('Lo que sí cuenta') +
         `<div class="title">${words('Cuánto tomas, **no de qué color** es.', 0.3, 0.09)}</div>` +
-        `<div class="a" style="left:80px;top:420px;font-size:36px;font-weight:700" data-in="0.9 up">Lo ideal, según la OMS: menos de</div>` +
-        `<div class="a" style="left:70px;top:455px;font-size:210px;font-weight:800;color:${F};letter-spacing:-6px" data-in="1.0 zoom"><span data-count="1.0 1.3 0 25">0</span> g</div>` +
-        `<div class="a" style="left:560px;top:540px;font-size:52px;font-weight:800;line-height:1.1" data-in="2.2 left">al día, unas<br><span class="hl">6 cucharaditas</span></div>` +
-        svgLayer([0, 1, 2, 3, 4, 5].map((i) => `<g data-in="${(2.5 + i * 0.18).toFixed(2)} drop"><g data-sway="6 2.2">${cucharita(95 + i * 150, 760, 150)}</g></g>`).join('')) +
-        `<div class="note" style="top:960px" data-in="3.8 up">Contando el que <b>ya llevan los productos</b>: refrescos, galletas, cereales, salsas…</div>` +
+        `<div class="a" style="left:80px;top:420px;font-size:36px;font-weight:700" data-in="c1 up">Lo ideal, según la OMS: menos de</div>` +
+        `<div class="a" style="left:70px;top:455px;font-size:210px;font-weight:800;color:${F};letter-spacing:-6px" data-in="c1+0.4 zoom"><span data-count="c1+0.4 1.6 0 25">0</span> g</div>` +
+        `<div class="a" style="left:560px;top:540px;font-size:52px;font-weight:800;line-height:1.1" data-in="c2 left">al día, unas<br><span class="hl">6 cucharaditas</span></div>` +
+        svgLayer([0, 1, 2, 3, 4, 5].map((i) => `<g data-in="c2+${(0.1 + i * 0.16).toFixed(2)} drop"><g data-sway="6 2.2">${cucharita(95 + i * 150, 760, 150)}</g></g>`).join('')) +
+        `<div class="note" style="top:960px" data-in="c3 up">Contando el que <b>ya llevan los productos</b>: refrescos, galletas, cereales, salsas…</div>` +
         foot('pauta posible', '<b>4 / 7</b>') },
 
-    { dur: 7, cls: 'light', html: blobs(false) + brand(false) + kick('Para tomar menos') +
+    { dur: 7, cls: 'light', voz: [['Tres trucos para tomar menos:', 'Tres trucos para tomar menos:'], ['ve reduciendo poco a poco el azúcar del café,', 've reduciendo poco a poco el azúcar del café,'], ['endulza el yogur con fruta troceada,', 'endulza el yogur con fruta troceada,'], ['y en la etiqueta, mira: de los cuales azúcares.', 'y en la etiqueta, mira «de los cuales azúcares».']],
+      html: blobs(false) + brand(false) + kick('Para tomar menos') +
         `<div class="title">${words('**3 trucos** fáciles.', 0.3, 0.1)}</div>` +
-        [[0.7, 'Ve <b>reduciendo poco a poco</b> el azúcar del café: el paladar se acostumbra.', taza(40, 30, 150)],
-         [1.7, 'Endulza el yogur natural con <b>fruta troceada</b> o canela.', yogur(40, 50, 150) +
-            [[70, '#E8964A', 2.2], [110, RJ, 2.35], [150, G, 2.5]].map(([x, c, t]) => `<g data-in="${t} drop">${fruta(x, 48, 30, c)}</g>`).join('')],
-         [2.7, 'En la etiqueta, mira «hidratos de carbono, <b>de los cuales azúcares</b>».', etiqueta(40, 25, 150) + `<g data-sway="10 2">${lupa(105, 85, 90)}</g>`]]
-          .map(([t, txt, ill], i) => `<div class="card" style="left:80px;right:80px;top:${380 + i * 270}px;height:240px" data-in="${t} right">` +
-            `<svg class="a" style="left:0;top:0" width="240" height="240" viewBox="0 0 240 240">${ill}</svg>` +
+        [['c1', 'Ve <b>reduciendo poco a poco</b> el azúcar del café: el paladar se acostumbra.', taza(40, 30, 150)],
+         ['c2', 'Endulza el yogur natural con <b>fruta troceada</b> o canela.', yogur(40, 50, 150) +
+            [[70, '#E8964A', 0.5], [110, RJ, 0.65], [150, G, 0.8]].map(([x, c, d]) => `<g data-in="c2+${d} drop">${fruta(x, 48, 30, c)}</g>`).join('')],
+         ['c3', 'En la etiqueta, mira «hidratos de carbono, <b>de los cuales azúcares</b>».', etiqueta(40, 25, 150) + `<g data-sway="10 2">${lupa(105, 85, 90)}</g>`]]
+          .map(([t, txt, ill], i) => `<div class="card" style="left:80px;right:80px;top:${370 + i * 250}px;height:225px" data-in="${t} right">` +
+            `<svg class="a" style="left:0;top:-8px" width="240" height="240" viewBox="0 0 240 240">${ill}</svg>` +
             `<div class="a" style="left:220px;top:22px;width:52px;height:52px;border-radius:50%;background:${F};color:#fff;font-weight:800;font-size:30px;display:flex;align-items:center;justify-content:center">${i + 1}</div>` +
-            `<div class="a" style="left:290px;right:40px;top:0;bottom:0;display:flex;align-items:center;font-size:35px;font-weight:600;line-height:1.3"><div>${txt}</div></div></div>`).join('') +
+            `<div class="a" style="left:290px;right:40px;top:0;bottom:0;display:flex;align-items:center;font-size:34px;font-weight:600;line-height:1.3"><div>${txt}</div></div></div>`).join('') +
         foot('pauta posible', '<b>5 / 7</b>') },
 
-    { dur: 6, cls: 'dark', html: blobs(true) + brand(true) +
+    { dur: 6, cls: 'dark', voz: [['Moreno o blanco: mejor, poco.', 'Moreno o blanco: mejor, poco.'], ['Guárdalo para tu próxima compra.', 'Guárdalo para tu próxima compra.'], ['Y si quieres más guías y la app gratis,', 'Y si quieres más guías y la app gratis,'], ['entra en pauta posible punto es.', 'entra en pautaposible.es']],
+      html: blobs(true) + brand(true) +
         svgLayer([[150, 470, 0.8, 0], [880, 380, 1.0, 1], [820, 960, 1.2, 0], [120, 1000, 1.4, 1]].map(([x, y, t, m], i) => `<g data-in="${t} pop"><g data-float="12 3 ${i * 0.25}">${terron(x, y, 70, m)}</g></g>`).join('')) +
-        `<div class="title xl" style="top:300px;text-align:center;font-size:104px">${words('Moreno o blanco: mejor,', 0.3, 0.1)} <span class="w gold" data-in="0.9 pop">poco.</span></div>` +
-        `<div class="a" style="left:80px;right:80px;top:640px;text-align:center;font-size:40px;font-weight:600;opacity:.9" data-in="1.6 fade">Más guías para entender lo que comes.</div>` +
-        `<div class="a" style="left:0;right:0;top:760px;text-align:center" data-in="2.2 pop"><span class="btn" data-pulse=".05 1.4" style="display:inline-block">pautaposible.es/aprende</span></div>` +
-        foot('<span data-float="4 1.4" style="display:inline-block;vertical-align:middle"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 H23 V28 L13 21 L3 28Z" fill="#D7A95B"/></svg></span> Guárdalo para tu próxima compra', '6 / 7') },
+        `<div class="title xl" style="top:300px;text-align:center;font-size:104px">${words('Moreno o blanco: mejor,', 0.3, 0.1)} <span class="w gold" data-in="c0+1.4 pop">poco.</span></div>` +
+        `<div class="a" style="left:80px;right:80px;top:640px;text-align:center;font-size:40px;font-weight:600;opacity:.9" data-in="c2 fade">Más guías y la app gratis en</div>` +
+        `<div class="a" style="left:0;right:0;top:730px;text-align:center" data-in="c3 pop"><span class="btn" data-pulse=".05 1.4" style="display:inline-block">pautaposible.es/aprende</span></div>` +
+        `<div class="a" style="left:0;right:0;top:880px;text-align:center;font-size:34px;font-weight:700" data-in="c1 up"><span data-float="4 1.4" style="display:inline-block;vertical-align:middle"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 H23 V28 L13 21 L3 28Z" fill="#D7A95B"/></svg></span> Guárdalo para tu próxima compra</div>` +
+        foot('@pautaposible', '6 / 7') },
   ],
 };
