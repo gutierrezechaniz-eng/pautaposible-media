@@ -12,9 +12,11 @@ Argumento opcional: fecha o tema (por ejemplo `jueves 15/10` o `meriendas`). Sin
 - Usa un reel anterior como modelo de formato: `reels/2026-10-08-meriendas/guion.md`.
 - No leas `reels/_plantilla/render.mjs` entero: busca con grep `const reels` y el bloque de un reel parecido.
 
-## 2. ¿Con voz o sin voz?
-- **Con voz** si Iván envió la nota por el chat o hay un audio en `voz/` antes de las 12:00 del día de publicación.
-- Si no la hay, **con narrador** (decisión de Iván del 11/10): genera el audio del guion con `posts/_plantilla/narrar.py` (voz «santa»; modelos de sherpa-onnx en el scratchpad), saca los tiempos de palabra con Parakeet y renderiza con `render-voz.mjs` como si fuera la nota de Iván. En Metricool, `isAiGenerated: true`. Anótalo en el `guion.md`: «No había nota de voz de Iván para hoy: narrador sintético…». La versión muda (`render.mjs`) queda solo como último recurso.
+## 2. ¿Qué voz?
+- **Norma de Iván (11/10/2026): todas las publicaciones van con el narrador sintético (voz «santa»), salvo que Iván diga lo contrario.** No hace falta esperar ni pedir su nota de voz.
+- Genera el audio del guion con `posts/_plantilla/narrar.py` (voz «santa»; modelos de sherpa-onnx en el scratchpad), saca los tiempos de palabra con Parakeet y renderiza con `render-voz.mjs`. En Metricool, `isAiGenerated: true`. Anótalo en el `guion.md`: «Narrador sintético (voz «santa»)…».
+- Solo si Iván manda una nota de voz y pide expresamente usarla para ese reel, usa su voz en lugar del narrador.
+- La versión muda (`render.mjs`) queda solo como último recurso si el narrador falla.
 
 ## 3. Generar
 Desde `reels/_plantilla/` (instrucciones completas en su README):

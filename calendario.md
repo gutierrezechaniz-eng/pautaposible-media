@@ -12,6 +12,7 @@ CARRUSELES
 - El texto de cada publicación termina siempre con: «👉 Más recetas y la app gratuita para cocinar con lo que tienes en casa en pautaposible.es (enlace en la bio)» y después los hashtags.
 
 REELS
+- **Voz (decisión de Iván, 11/10/2026):** todos los reels van con el narrador sintético (voz «santa», Kokoro), salvo que Iván diga lo contrario. Ya no se espera su nota de voz; si manda una y pide usarla, se usa. Se marcan como contenido de IA (`isAiGenerated: true`).
 - Los textos de voz duran 60-75 palabras y su ÚLTIMA frase invita siempre a la web y a la app, por ejemplo: «Si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.»
 - El cierre del vídeo dura 3 segundos: «Recetas y app gratuita para cocinar con lo que tienes en casa», botón «pautaposible.es» y «Enlace en la bio», con el retrato de Iván.
 - El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
