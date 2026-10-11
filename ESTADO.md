@@ -14,7 +14,6 @@ _Última actualización: domingo 11/10/2026_
 
 ## Pendiente
 - [ ] Reels del martes 20 y jueves 22: si Iván no manda nota de voz, hacer la versión **con narrador** (voz «santa») en vez de la muda (ver `/programar-reel`), con `isAiGenerated: true`.
-- [ ] Martes 20 y jueves 22: reels con voz (azúcar moreno y batch cooking) con `/programar-reel`; sin nota, versión sin voz.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
 - [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
 - [ ] Revisar las métricas del reel «Tu vida, no la de un influencer» (sábado 10/10, 18:30, Metricool 392827236) con las de la semana.
