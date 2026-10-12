@@ -18,7 +18,7 @@ _Última actualización: lunes 12/10/2026_
 
 ## Pendiente
 - [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
-- [ ] Reels del martes 20 y jueves 22: con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`.
+- [ ] Reels del martes 20 (¿El pan engorda?) y jueves 22 (Más verdura sin darte cuenta): con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`. Guiones en `voz/GUIONES.md`.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
 - [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
 - [ ] Revisar las métricas del reel «Tu vida, no la de un influencer» (sábado 10/10, 18:30, Metricool 392827236) con las de la semana.
@@ -28,4 +28,4 @@ _Última actualización: lunes 12/10/2026_
 - 11/10 (Iván): **de ahora en adelante todas las publicaciones, reels incluidos, van con la voz «santa»**, salvo que Iván diga lo contrario. Ya no hay que pedirle notas de voz; si manda una y pide usarla, se usa.
 - Los reels llegan a más gente que los carruseles, y los que tienen voz el doble que los mudos: nunca publicar reels sin voz.
 - Los carruseles necesitan ideas más concretas para guardar (listas, chuletas, cantidades).
-- Los reels con voz acompañan al carrusel del día anterior o siguiente: Iván graba un tema que ya conoce.
+- 12/10 (Iván): «no quiero dos publicaciones iguales». Los reels tienen tema propio y nunca repiten un carrusel. El reel del martes 13 pasó de legumbres de bote a «¿2 litros de agua al día?» (393679420); los del 20 y 22 pasan a «¿El pan engorda?» y «Más verdura sin darte cuenta».

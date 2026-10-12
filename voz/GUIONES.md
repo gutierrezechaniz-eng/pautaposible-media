@@ -7,14 +7,14 @@
 
 # Guiones de voz · semana del 12 de octubre de 2026
 Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
-## Reel del martes 13 · ✔ Ya grabado
+## Reel del martes 13 · ✔ Hecho con narrador: ¿Hay que beber 2 litros de agua al día? (sustituye al de legumbres de bote, 12/10)
 Iván envió el 10/10 su nota de voz sobre las legumbres de bote: ese es el reel del martes (ya programado). No hay que grabar nada más para el martes.
 ## Reel del jueves 15 · ✔ Ya grabado
 Iván envió el 10/10 su nota de voz de los 3 desayunos: el reel del jueves ya está programado con su voz. No hay que grabar nada más para el jueves.
 
 # Guiones de voz · semana del 19 de octubre de 2026
 Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
-## Reel del martes 20 · ¿El azúcar moreno es mejor que el blanco?
-> ¿El azúcar moreno es más sano que el blanco? No. Los dos son casi todo sacarosa: el moreno solo lleva un poco de melaza, que le da color. Sus minerales están en cantidades tan pequeñas que no cambian nada. Lo que cuenta es cuánto azúcar tomas, no su color. Envíaselo a quien se ha pasado al moreno. Y si quieres más recetas fáciles, entra en pautaposible.es: la app es gratis.
-## Reel del jueves 22 · Batch cooking en 1 hora
-> ¿Llegas a casa sin tiempo para cocinar? Prueba a cocinar una hora el domingo. No hagas platos: prepara bases. Una bandeja de verduras al horno, una olla de legumbre, arroz o patata cocida, unos huevos cocidos y una proteína a la plancha. Entre semana, solo combinas en diez minutos. Guárdalo para el domingo. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
+## Reel del martes 20 · ¿El pan engorda?
+> ¿El pan engorda? Así, solo, no. Ningún alimento engorda por sí solo: lo que cuenta es el conjunto de lo que comes en el día. El pan es un cereal y cabe en una alimentación saludable. Mejor si es integral, que tiene más fibra, y ojo con lo que le pones encima. Envíaselo a quien ha desterrado el pan de casa. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
+## Reel del jueves 22 · Más verdura sin darte cuenta
+> ¿Te cuesta comer verdura? Prueba a esconderla en lo que ya comes. Echa un puñado de espinacas a la tortilla, ralla calabacín o zanahoria en la salsa de tomate, añade verdura congelada al arroz o a la pasta y ten a mano unas crudités para picar. Poco a poco, sin cambiar de menú. Guárdalo para esta semana. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.

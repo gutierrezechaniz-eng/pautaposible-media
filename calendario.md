@@ -24,6 +24,7 @@ REELS
 - Los textos de voz duran 60-75 palabras y su ÚLTIMA frase invita siempre a la web y a la app, por ejemplo: «Si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.»
 - El cierre del vídeo dura 3 segundos: «Recetas y app gratuita para cocinar con lo que tienes en casa», botón «pautaposible.es» y «Enlace en la bio», con el retrato de Iván.
 - El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
+- **Tema propio (decisión de Iván, 12/10/2026):** «no quiero dos publicaciones iguales». Un reel nunca repite el tema de un carrusel (ni de la misma semana ni de otra); se elige del banco de temas o uno nuevo.
 
 MÉTRICAS
 - En el informe semanal, incluye además los clics al perfil o al enlace de la bio, si Metricool los da, para ver si la gente llega a la web.
@@ -51,7 +52,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-09 (vie) | Hábito práctico | Tu táper equilibrado en 4 pasos | 10:00 | posts/2026-10-09-taper-equilibrado | 387663199 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-10 (sáb) | Reel con voz · Hábito práctico (fuera del calendario, Iván pidió publicarlo ya) | Tu vida, no la de un influencer (la muñeca rusa) | 18:30 | reels/2026-10-10-munecas-rusas (reel-voz.mp4) | 392827236 · colaboradora: ibangutierrezetxaniz |
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | posts/2026-10-12-legumbres-bote | 393114739 (antes 392552812, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
-| 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (acompaña al carrusel del lunes) | 18:00 | reels/2026-10-13-legumbres-bote (reel-voz.mp4) | 392559960 · colaboradora: ibangutierrezetxaniz |
+| 2026-10-13 (mar) | Reel con narrador · Mito o realidad | ¿Hay que beber 2 litros de agua al día? (sustituye el 12/10 al de legumbres de bote, que repetía el carrusel del lunes) | 18:00 | reels/2026-10-13-agua-2-litros (reel-voz.mp4) | 393679420 (antes 392559960, legumbres de bote con la voz de Iván) · etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 393118634 (antes 392552824, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 393118651 (antes 392552832, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
@@ -80,19 +81,19 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
 | 2026-10-12 (lun) | Mito o realidad | ¿Las legumbres de bote son peores que las secas? | 10:00 | programado (393114739, animado con narrador) |
-| 2026-10-13 (mar) | Reel con voz · Mito o realidad | ¿Las legumbres de bote son peores que las secas? (Iván grabó el texto del carrusel; la fruta por la noche vuelve al banco) | 18:00 | programado (392559960) |
+| 2026-10-13 (mar) | Reel con narrador · Mito o realidad | ¿Hay que beber 2 litros de agua al día? (sustituye al de legumbres de bote) | 18:00 | programado (393679420) |
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (393118634, animado con narrador) |
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | con voz programado (392576485; antes 392568483 sin voz) |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (393118651, animado con narrador) |
 
 ## Plan · semana del 19 oct
-Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
+Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 12/10).
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | programado (393679028, animado con narrador) |
-| 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-20 (mar) | Reel con narrador · Mito o realidad | ¿El pan engorda? | 18:00 | guion en voz/GUIONES.md |
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (393679081, animado con narrador) |
-| 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
+| 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | guion en voz/GUIONES.md |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393118676, animado con narrador) |
 
 ## Series de lunes y miércoles (decisión de Iván del 12/10/2026)
@@ -134,6 +135,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Mito: azúcar moreno frente a blanco
 - Receta: arroz salteado con verduras y huevo
 - Hábito: batch cooking en 1 hora
+- Reel mito: ¿hay que beber 2 litros de agua al día? (con narrador)
 - Serie suplementos 1: ¿los necesitas o te han convencido?
 - Serie salsas 1: ketchup casero
 
@@ -141,8 +143,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 
 Mito o realidad
 - ¿La fruta de noche engorda?
-- ¿El pan engorda? / ¿Hay que quitar el gluten sin ser celíaco?
-- ¿Hay que beber 2 litros de agua al día sí o sí?
+- ¿Hay que quitar el gluten sin ser celíaco? (el pan engorda: reel del 20/10)
 
 Receta sencilla
 - Bol de yogur natural con fruta y avena
