@@ -201,4 +201,6 @@ Object.assign(animados, {
   'lista-compra': desdeCarrusel('lista-compra', ['basket', 'carrot', 'egg', 'bread', 'fish']),
   'arroz-salteado': desdeCarrusel('arroz-salteado', ['rice', 'egg', 'carrot', 'broccoli', 'ladle']),
   'batch-cooking': desdeCarrusel('batch-cooking', ['clock', 'rice', 'egg', 'broccoli', 'beans']),
+  'suplementos-1': desdeCarrusel('suplementos-1', ['pillBottle', 'pill', 'orange', 'fish', 'leaf']),
+  'ketchup-casero': desdeCarrusel('ketchup-casero', ['ketchup', 'tomato', 'jar', 'ladle', 'salt']),
 });

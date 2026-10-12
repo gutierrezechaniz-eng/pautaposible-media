@@ -56,6 +56,30 @@ export const carruseles = {
       { type: 'final' },
     ],
   },
+  'suplementos-1': {
+    slides: [
+      { type: 'portada', tag: 'Mito o realidad', title: '¿Necesitas suplementos… o te han convencido de que los necesitas?', sub: 'Serie suplementos · 1 de 4 · Lo que el bote no te cuenta.' },
+      { type: 'texto', kicker: 'El negocio', title: 'Un mercado enorme.', p: 'Los complementos alimenticios mueven **más de 150.000 millones de dólares** al año en el mundo.', box: 'Solo en herbolarios y tiendas de dietética, en España se facturaron unos **550 millones de euros** en 2024.' },
+      { type: 'texto', kicker: 'Cómo te lo venden', title: 'Frases para que sientas que te falta algo.', chips: ['Más energía', 'Defensas', 'Detox', 'Cansancio'], p2: 'En la UE solo valen las declaraciones de salud **autorizadas**, y casi siempre hablan de **cubrir una carencia**, no de mejorar a quien ya come bien.' },
+      { type: 'texto', kicker: 'Lo que nadie te cuenta', title: 'No es un medicamento.', p: 'Para venderlo basta con **notificarlo**: no tiene que demostrar antes que funciona.', box: 'Si tu dieta ya cubre una vitamina, tomar más no te da «más salud»: se elimina o, en algunos casos, **se acumula**.' },
+      { type: 'texto', kicker: 'Quién sí puede necesitarlos', title: 'Con pauta profesional.', checks: ['**B12**, si sigues una alimentación vegana', '**Ácido fólico**, si buscas embarazo o estás embarazada', '**Vitamina D**, si una analítica confirma el déficit', '**Hierro**, si tienes anemia diagnosticada'] },
+      { type: 'texto', kicker: 'Para el resto', title: 'Antes del bote, tus hábitos.', checks: ['Verdura y fruta a diario', 'Legumbre, al menos 4 veces por semana', 'Pescado y frutos secos', 'Dormir bien y moverte'], p2: 'Si tienes un diagnóstico, estás embarazada o tomas medicación, **consulta con tu médico o dietista-nutricionista** antes de empezar o dejar un suplemento.' },
+      { type: 'cierre', title: 'Primero el plato. Después, si hace falta, el bote.', sub: 'Próxima semana: qué comer en vez del bote.', url: 'pautaposible.es/aprende', foot: 'Guárdalo y compártelo' },
+      { type: 'final' },
+    ],
+  },
+  'ketchup-casero': {
+    slides: [
+      { type: 'portada', tag: 'Receta sencilla', title: 'Tu ketchup casero, sin azúcar de mesa', sub: 'Serie salsas caseras · 1 · Un tarro en 30 minutos.' },
+      { type: 'texto', kicker: 'Lo que pone el bote', title: 'La etiqueta típica.', chips: ['Tomate concentrado', 'vinagre', 'azúcar', 'sal', 'almidón modificado', 'especias', 'aroma'], p2: 'Unos **20-25 g de azúcar por 100 g**: una cucharada sopera lleva casi una cucharadita de azúcar.' },
+      { type: 'texto', kicker: 'Cómo leerla', title: 'El orden importa.', p: 'Los ingredientes van de **más a menos** cantidad. El azúcar está en **tercer lugar**: es de lo que más lleva.', box: 'El **almidón modificado** espesa para que parezca más tomate. Y «aroma» puede ser casi cualquier cosa.' },
+      { type: 'texto', kicker: 'Ingredientes · 1 tarro (300 g)', title: 'Lo que necesitas.', checks: ['400 g de tomate triturado natural', '½ cebolla y 1 diente de ajo', '1 manzana pequeña, pelada', '2 cucharadas de vinagre de manzana', '½ cucharadita de pimentón dulce'], p2: 'Y además: una pizca de canela, de clavo y de sal.' },
+      { type: 'texto', kicker: 'Paso a paso', title: 'Cuécelo y tritúralo.', steps: ['**Pocha** la cebolla y el ajo picados **5 minutos**.', 'Añade el tomate, la manzana en trozos y las especias. **Cuece 20 minutos** a fuego bajo, hasta que espese.', 'Añade el vinagre, **tritura muy fino** y deja que se enfríe.'] },
+      { type: 'texto', kicker: 'Conservación', title: 'En tarro y a la nevera.', box: 'Tarro de cristal limpio y cerrado: **hasta 7 días en la nevera**. Sírvete siempre con una cuchara limpia.', p2: '¿Te sobra? **Congélalo en cubitera** y saca solo lo que necesites. Y lleva **menos de la mitad del azúcar** que el de bote.' },
+      { type: 'cierre', title: 'Sabes leer el bote. Y tienes alternativa.', sub: 'La semana que viene: mayonesa casera segura.', url: 'pautaposible.es/recetas', foot: 'Guárdala para tu próxima salsa' },
+      { type: 'final' },
+    ],
+  },
   'batch-cooking': {
     slides: [
       { type: 'portada', tag: 'Hábito práctico', title: 'Batch cooking en 1 hora', sub: 'Una hora el domingo y la semana, mucho más fácil.' },
