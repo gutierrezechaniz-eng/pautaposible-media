@@ -79,6 +79,12 @@ const icons = {
     <rect x="31" y="15" width="38" height="26" rx="4" fill="${M}"/><path d="M38 28 H62 C62 35 57 39 50 39 C43 39 38 35 38 28Z" fill="${F}"/><g fill="#D8AE63"><circle cx="44" cy="27" r="3"/><circle cx="50" cy="25" r="3"/><circle cx="56" cy="27" r="3"/></g>
     <rect x="31" y="46" width="30" height="5" rx="2.5" fill="${CH}"/><rect x="31" y="56" width="38" height="4" rx="2" fill="#C9D2CC"/><rect x="31" y="64" width="34" height="4" rx="2" fill="#C9D2CC"/>
     <rect x="31" y="74" width="38" height="9" rx="4.5" fill="${F}"/><rect x="42" y="91" width="16" height="3" rx="1.5" fill="#55665B"/>`,
+  pill: `<g transform="rotate(-35 50 50)"><rect x="14" y="34" width="72" height="32" rx="16" fill="#fff" stroke="${CH}" stroke-width="4"/><path d="M50 34 H70 A16 16 0 0 1 70 66 H50Z" fill="${G}" stroke="${CH}" stroke-width="4"/><rect x="22" y="40" width="18" height="6" rx="3" fill="#EDEAE0"/></g>`,
+  pillBottle: `<rect x="30" y="6" width="40" height="16" rx="4" fill="${F}"/><rect x="24" y="22" width="52" height="72" rx="10" fill="#F6E7C8" stroke="#C9A867" stroke-width="3"/>
+    <rect x="30" y="40" width="40" height="32" rx="5" fill="#fff"/><path d="M40 56 H60 M50 46 V66" stroke="${F}" stroke-width="6" stroke-linecap="round"/>`,
+  ketchup: `<path d="M44 4 H56 L58 16 H42Z" fill="${CH}"/><rect x="36" y="16" width="28" height="12" rx="3" fill="#F4F1EA" stroke="${CH}" stroke-width="3"/>
+    <path d="M36 28 H64 C76 36 80 48 80 62 V86 C80 92 76 96 70 96 H30 C24 96 20 92 20 86 V62 C20 48 24 36 36 28Z" fill="#C8392B"/>
+    <rect x="28" y="54" width="44" height="24" rx="5" fill="#FAFAF7"/><circle cx="50" cy="66" r="7" fill="#C8392B"/><path d="M30 40 C28 48 28 60 28 70" stroke="#E2705F" stroke-width="5" fill="none" stroke-linecap="round"/>`,
 };
 
 // Icono colocado en (x, y) con tamaño `sz` px; aparece en `at` segundos (opcional).

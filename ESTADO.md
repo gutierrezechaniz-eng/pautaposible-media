@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: domingo 11/10/2026_
+_Última actualización: lunes 12/10/2026_
 
 ## Hecho recientemente
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
@@ -14,7 +14,10 @@ _Última actualización: domingo 11/10/2026_
 
 - 11/10: aviso de voz por email (`aviso-voz.yml`) pausado: con la voz «santa» ya no hace falta que Iván grabe. Se puede lanzar a mano con workflow_dispatch.
 
+- 12/10: Iván eligió empezar el 19/10 las series de suplementos (lunes) y salsas caseras (miércoles). Programados suplementos 1/4 (393679028) y ketchup casero (393679081); azúcar moreno pasa al lunes 16/11 (393675755) y arroz salteado al miércoles 2/12 (393675795). Plan completo de las series en `calendario.md`.
+
 ## Pendiente
+- [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
 - [ ] Reels del martes 20 y jueves 22: con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
 - [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
