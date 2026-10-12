@@ -66,4 +66,6 @@ if (flag !== '--preview') {
   fs.writeFileSync(list, [...files, finMp4].map((f) => `file '${path.resolve(f)}'`).join('\n'));
   execFileSync(ffmpeg, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', path.join(out, 'vista-previa.mp4')]);
   fs.rmSync(list); fs.rmSync(finMp4);
+  // Versión para publicar: reel vertical con todas las diapositivas seguidas (ver reel-vertical.mjs)
+  execFileSync(process.execPath, [path.join(path.dirname(new URL(import.meta.url).pathname), 'reel-vertical.mjs'), postDir], { stdio: 'inherit' });
 }
