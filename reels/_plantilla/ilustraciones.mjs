@@ -358,3 +358,43 @@ export function desayunos() {
         label(710, 480, 'Cocina con lo que', 25.9, CH, 40) + label(710, 530, 'tienes en la nevera', 26.0, CH, 40), '#DCE9E1') },
   ];
 }
+
+// ---------- Reel martes 13/10: ¿Hay que beber 2 litros de agua al día? ----------
+const AG = '#9CCFE0';
+const botella = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="40" y="0" width="20" height="10" rx="3" fill="${F}"/><path d="M38 10 H62 V20 C76 26 78 34 78 44 V92 C78 97 74 100 69 100 H31 C26 100 22 97 22 92 V44 C22 34 24 26 38 20Z" fill="#E6F2F5" stroke="${CH}" stroke-width="3.5" stroke-linejoin="round"/><path d="M25 50 H75 V92 C75 95 72 97 69 97 H31 C28 97 25 95 25 92Z" fill="${AG}"/></g>`;
+const sopa = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M8 44 H92 C92 72 74 90 50 90 C26 90 8 72 8 44Z" fill="#fff" stroke="${CH}" stroke-width="4"/><ellipse cx="50" cy="44" rx="42" ry="9" fill="#E8B04A"/><path d="M36 30 C32 22 40 18 36 8 M54 30 C50 22 58 18 54 8" stroke="#C9D2CC" stroke-width="4" fill="none" stroke-linecap="round"/></g>`;
+const corredor = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})" stroke="${F}" stroke-width="9" stroke-linecap="round" fill="none"><circle cx="58" cy="12" r="10" fill="${F}" stroke="none"/><path d="M54 26 L44 58 M50 34 L68 46 L80 40 M50 34 L30 44 M44 58 L62 74 L58 96 M44 58 L30 80 L14 82"/></g>`;
+export function agua2litros() {
+  return [
+    { start: 0, end: 4.8, pan: 1, tag: '¿2 litros sí o sí?', svg: svg(
+        fl(vaso(80, 110, 260), 6, 2.6) + fl(vaso(300, 110, 260), 6, 2.9) +
+        label(720, 200, '2 litros', 1.2, F, 84) + label(720, 280, '¿sí o sí?', 2.3, CH, 54) +
+        pill(520, 330, 400, 'No exactamente', 3.4, G, CH, 44)) },
+    { start: 4.8, end: 10.85, pan: -1, tag: 'Unos 2 litros… en total', svg: svg(
+        botella(120, 80, 240) + botella(330, 80, 240) +
+        label(330, 470, '≈ 2 litros en total', 7.5, F, 54) +
+        g(ic('orange', 630, 120, 150) + ic('tomato', 790, 150, 120) + label(760, 360, '+ comida', undefined, CH, 46), 9.0, '760 250'), '#DCE9E1') },
+    { start: 10.85, end: 14.88, pan: 1, tag: 'La comida también hidrata', svg: svg(
+        ic('orange', 80, 110, 190, 11.0) + label(175, 360, 'Fruta', 11.1, CH, 40) +
+        ic('broccoli', 300, 110, 190, 11.6) + label(395, 360, 'Verdura', 11.7, CH, 40) +
+        g(sopa(520, 130, 190), 12.4, '615 225') + label(615, 360, 'Sopas', 12.5, CH, 40) +
+        ic('milk', 740, 110, 190, 13.0) + label(835, 360, 'Leche', 13.1, CH, 40) +
+        label(480, 520, 'Ya aportan una parte', 13.7, F, 50)) },
+    { start: 14.88, end: 20.0, pan: -1, tag: 'No todos necesitamos lo mismo', svg: svg(
+        fl(ic('sun', 140, 90, 260, 17.4), 6, 3) + label(270, 420, 'Calor', 17.5, CH, 46) +
+        g(corredor(560, 90, 280), 18.1, '700 230') + label(700, 420, 'Deporte', 18.2, CH, 46) +
+        pill(300, 440, 360, 'Bebe más', 19.2, G, CH, 46), '#DCE9E1') },
+    { start: 20.0, end: 24.0, pan: 1, tag: 'Lo práctico', svg: svg(
+        ic('drop', 150, 90, 200, 20.8) + label(250, 360, 'Bebe cuando', 20.9, CH, 44) + label(250, 415, 'tengas sed', 21.8, CH, 44) +
+        g(fl(botella(600, 70, 300), 8, 2.4), 22.4, '750 220') + label(750, 470, 'Llévala contigo', 22.9, F, 44)) },
+    { start: 24.0, end: 27.52, pan: -1, tag: 'Fíjate en el color', svg: svg(
+        [['#FBF3C4', 25.6], ['#F4DE7A', 25.75], ['#E2B93B', 25.9], ['#B98A1E', 26.05]].map(([c, at], i) =>
+          g(`<rect x="${130 + i * 185}" y="120" width="150" height="220" rx="30" fill="${c}" stroke="${CH}" stroke-width="3"/>`, at, `${205 + i * 185} 230`)).join('') +
+        ic('check', 155, 350, 100, 26.3) + label(480, 520, 'Amarilla clara = vas bien', 26.7, F, 50), '#DCE9E1') },
+    { start: 27.52, end: 99, pan: 1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 27.6) +
+        pill(500, 140, 420, 'pautaposible.es', 32.0, '#fff', F, 44) +
+        label(710, 320, 'Recetas fáciles', 28.3, CH, 40) +
+        pill(560, 380, 300, 'App gratis', 33.6, G, CH, 44)) },
+  ];
+}
