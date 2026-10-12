@@ -55,9 +55,11 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 393118634 (antes 392552824, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 393118651 (antes 392552832, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
-| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393114051 (antes 392569523, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
-| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393118665 (antes 392569539, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | posts/2026-10-19-suplementos | 393679028 · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 393679081 · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393118676 (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-11-16 (lun) | Mito o realidad (movido del 19/10 por las series, decisión de Iván del 12/10) | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393675755 (antes 393114051) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-12-02 (mié) | Receta sencilla (movido del 21/10 por las series, decisión de Iván del 12/10) | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393675795 (antes 393118665) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 
 Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palabra e ilustraciones propias), guiones en voz/GUIONES.md. Sustituyen a los reels automáticos sin voz en las mismas publicaciones de Metricool (ver tabla); los reel.mp4 sin voz se conservan como respaldo.
 
@@ -87,11 +89,28 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 Los reels acompañan al carrusel del día anterior o siguiente (como en las semanas del 28 sep y del 12 oct): así Iván graba un tema que ya conoce.
 | Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
 |---|---|---|---|---|
-| 2026-10-19 (lun) | Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 10:00 | programado (393114051, animado con narrador) |
+| 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | programado (393679028, animado con narrador) |
 | 2026-10-20 (mar) | Reel · Mito o realidad | ¿El azúcar moreno es mejor que el blanco? | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
-| 2026-10-21 (mié) | Receta sencilla | Arroz salteado con verduras y huevo | 10:00 | programado (393118665, animado con narrador) |
+| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (393679081, animado con narrador) |
 | 2026-10-22 (jue) | Reel · Hábito práctico | Batch cooking en 1 hora | 18:00 | guion en voz/GUIONES.md; esperando nota de voz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393118676, animado con narrador) |
+
+## Series de lunes y miércoles (decisión de Iván del 12/10/2026)
+Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y los de los miércoles la **serie de salsas caseras**. Guiones diapositiva a diapositiva en `/mnt/project-files/contenido/series-suplementos-y-salsas.md` (carpeta del proyecto de Claude); las fechas de ese archivo quedan corridas una semana porque la serie empezó el 19/10. Cada pieza va con la plantilla de siempre (animada, con narrador «santa» y subtítulos).
+| Fecha | Serie | Pieza | Estado |
+|---|---|---|---|
+| 2026-10-19 (lun) | Suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | programado (393679028) |
+| 2026-10-21 (mié) | Salsas 1/6 | Ketchup casero sin azúcar de mesa | programado (393679081) |
+| 2026-10-26 (lun) | Suplementos 2/4 | Lo que comes le gana al bote | por hacer |
+| 2026-10-28 (mié) | Salsas 2/6 | Mayonesa casera segura | por hacer |
+| 2026-11-02 (lun) | Suplementos 3/4 | Más no es mejor: el riesgo de las vitaminas A, D, E y K | por hacer |
+| 2026-11-04 (mié) | Salsas 3/6 | Alioli de yogur | por hacer |
+| 2026-11-09 (lun) | Suplementos 4/4 | Proteína, colágeno y quemagrasas: lo que pagas y lo que obtienes | por hacer |
+| 2026-11-11 (mié) | Salsas 4/6 | Salsa barbacoa casera | por hacer |
+| 2026-11-16 (lun) | (fin de la serie) | ¿El azúcar moreno es mejor que el blanco? | programado (393675755) |
+| 2026-11-18 (mié) | Salsas 5/6 | Salsa rosa (cóctel) de yogur | por hacer |
+| 2026-11-25 (mié) | Salsas 6/6 | Salsa César de yogur | por hacer |
+| 2026-12-02 (mié) | (fin de la serie) | Arroz salteado con verduras y huevo | programado (393675795) |
 
 ## Temas usados
 
@@ -115,6 +134,8 @@ Los reels acompañan al carrusel del día anterior o siguiente (como en las sema
 - Mito: azúcar moreno frente a blanco
 - Receta: arroz salteado con verduras y huevo
 - Hábito: batch cooking en 1 hora
+- Serie suplementos 1: ¿los necesitas o te han convencido?
+- Serie salsas 1: ketchup casero
 
 ## Banco de temas
 
