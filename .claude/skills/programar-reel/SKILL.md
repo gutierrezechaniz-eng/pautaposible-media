@@ -39,6 +39,12 @@ Igual que en el reel de modelo: datos de publicación, tabla de escenas, imágen
 - Nunca añadas audios originales (`*.m4a`, `*.wav`, `*.words.json`, `ivan.png` de la plantilla ya están en `.gitignore`).
 - Commit: `Reel <con|sin> voz del <día> DD/MM: <tema>`. Haz push antes de programar si Metricool va a tomar el vídeo desde una URL pública del repositorio.
 
+## 5b. Revisión antes de publicar (obligatoria, Iván 12/10/2026)
+- `ffprobe`: 1080×1920, H.264 + AAC, duración ≈ la del audio + 3 s de cierre.
+- Saca 4-5 fotogramas (gancho, dos del medio y cierre) y míralos: la imagen cambia, los subtítulos se leen y no se tapan, y el cierre muestra pautaposible.es.
+- Comprueba el audio (`volumedetect`): hay voz en todo el vídeo, sin silencios largos ni una frase repetida.
+- Después de programar, `getScheduledPosts`: tipo REEL, un solo vídeo, hora, texto, colaboradora e `isAiGenerated` correctos. Si algo falla, no lo dejes programado y avisa a Iván.
+
 ## 6. Programar en Metricool
 - Comprueba que la autorización de `calendario.md` siga **vigente**. Si no, prepáralo con `createScheduledPostForReview`.
 - Instagram Reel, a las 18:00 (Europe/Madrid), con el texto de la publicación, el vídeo y la portada, y la colaboradora `ibangutierrezetxaniz`.
