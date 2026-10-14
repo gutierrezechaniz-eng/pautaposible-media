@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: lunes 12/10/2026_
+_Última actualización: miércoles 14/10/2026_
 
 ## Hecho recientemente
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
@@ -15,6 +15,8 @@ _Última actualización: lunes 12/10/2026_
 - 11/10: aviso de voz por email (`aviso-voz.yml`) pausado: con la voz «santa» ya no hace falta que Iván grabe. Se puede lanzar a mano con workflow_dispatch.
 
 - 12/10: Iván eligió empezar el 19/10 las series de suplementos (lunes) y salsas caseras (miércoles). Programados suplementos 1/4 (393679028) y ketchup casero (393679081); azúcar moreno pasa al lunes 16/11 (393675755) y arroz salteado al miércoles 2/12 (393675795). Plan completo de las series en `calendario.md`.
+
+- 14/10: instaladas 12 skills externas (PR #15 y #16, ya en main). Las útiles para el contenido: `claude-banana` (prompts de imágenes con IA; una imagen de IA para Instagram necesita antes el visto bueno de Iván por la norma de imágenes propias o con licencia) y `verification-before-completion` (comprobar antes de dar algo por hecho). Las demás son para programar: `find-skills`, `skill-creator`, `mcp-builder`, `writing-plans`, `subagent-driven-development`, `code-review-and-quality`, `systematic-debugging` y `/grill-with-docs` (con `grilling` y `domain-modeling`). Están en `.agents/skills/` (enlazadas desde `.claude/skills/`) y `skills-lock.json`; `claude-banana` está en `.claude/skills/claude-banana/`. Iván prefiere que le escriban siempre en español.
 
 ## Pendiente
 - [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
