@@ -31,6 +31,12 @@
       "skillPath": "skills/subagent-driven-development/SKILL.md",
       "computedHash": "71259c008c49ff734e64c61045f1aa235b9aa99642a9aca9398beb775f6c59c5"
     },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "b529822bdac4b197b180fe12225cff86b930b65910435103c10622df7f041651"
+    },
     "writing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
