@@ -1,0 +1,12 @@
+{
+  "name": "editorial-magazine",
+  "colors": {
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "accent": "#FF3B30"
+  },
+  "style": "Bold editorial photography with strong geometric composition. High contrast black and white as the foundation with strategic red accent. Graphic, punchy, designed to stop the scroll.",
+  "typography": "Condensed all-caps sans-serif headlines. Large scale, tight leading. Text as visual element, not afterthought.",
+  "lighting": "High contrast with dramatic falloff. Hard light sources creating bold shadow shapes. Chiaroscuro influence.",
+  "mood": "Bold, provocative, contemporary. Makes a statement. Designed to challenge rather than comfort."
+}

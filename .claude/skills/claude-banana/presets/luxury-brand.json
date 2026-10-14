@@ -1,0 +1,12 @@
+{
+  "name": "luxury-brand",
+  "colors": {
+    "primary": "#1A1A1A",
+    "secondary": "#C9A96E",
+    "accent": "#FAFAF5"
+  },
+  "style": "Elegant high-end photography with rich textures and deep contrast. Emphasis on material quality — visible grain in leather, sheen on metal, depth in fabric. Sparse composition with intentional negative space.",
+  "typography": "Thin elegant serif with generous spacing and uppercase treatment. Gold on black or cream on deep charcoal.",
+  "lighting": "Rich dramatic lighting with deep contrast. Key light from one side creating sculpted shadows. Warm golden tones in highlights, cool depth in shadows.",
+  "mood": "Exclusive, sophisticated, aspirational. Quiet confidence rather than loud statement."
+}
