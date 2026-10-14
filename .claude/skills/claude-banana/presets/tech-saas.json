@@ -1,0 +1,12 @@
+{
+  "name": "tech-saas",
+  "colors": {
+    "primary": "#2563EB",
+    "secondary": "#1E40AF",
+    "accent": "#F8FAFC"
+  },
+  "style": "Clean minimal tech illustration with flat vectors, soft drop shadows, and generous whitespace. Modern SaaS aesthetic with subtle gradients and glassmorphism accents.",
+  "typography": "Bold geometric sans-serif with generous letter spacing. Headers in primary blue, body text in dark slate.",
+  "lighting": "Bright diffused studio lighting with soft even illumination. No harsh shadows. Clean, professional, trustworthy.",
+  "mood": "Professional, trustworthy, modern, approachable. Conveys competence without coldness."
+}
