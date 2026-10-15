@@ -58,6 +58,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 393940366 (reel con todas las diapositivas seguidas, 12/10; antes 393118634, carrusel de vídeos) (antes 392552824, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 393940467 (reel con todas las diapositivas seguidas, 12/10; antes 393118651, carrusel de vídeos) (antes 392552832, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-17 (sáb) | Reel especial · Lanzamiento de la app | La app gratuita de Pauta Posible: cámara con IA, Mi plato, recetas con tus cantidades, gratis y sin anuncios | 18:00 | reels/2026-10-17-lanzamiento-app/reel-voz.mp4 | 397084088 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | posts/2026-10-19-suplementos | 394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 393940752 (reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos) (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
@@ -87,6 +88,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (393940366 (reel con todas las diapositivas seguidas, 12/10; antes 393118634, carrusel de vídeos), animado con narrador) |
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | con voz programado (392576485; antes 392568483 sin voz) |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (393940467 (reel con todas las diapositivas seguidas, 12/10; antes 393118651, carrusel de vídeos), animado con narrador) |
+| 2026-10-17 (sáb) | Reel especial · Lanzamiento de la app | La app gratuita: cámara con IA, Mi plato, recetas con tus cantidades | 18:00 | programado (397084088, reel con narrador) |
 
 ## Plan · semana del 19 oct
 Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 12/10).
@@ -140,6 +142,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Reel mito: ¿hay que beber 2 litros de agua al día? (con narrador)
 - Serie suplementos 1: ¿los necesitas o te han convencido?
 - Serie salsas 1: ketchup casero
+- Lanzamiento: la app gratuita (cámara con IA, Mi plato, recetas con tus cantidades) · reel especial 17/10
 
 ## Banco de temas
 

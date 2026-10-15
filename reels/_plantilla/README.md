@@ -23,3 +23,7 @@ CHROMIUM=/opt/pw-browsers/chromium node render-voz.mjs <clave: hidratos-cena|pla
 - `palabras.json`: `{dur, words:[{w,s,e}]}`, texto del guion alineado con las marcas de tiempo de la transcripción (Parakeet/Whisper con sherpa-onnx; los modelos se descargan de las releases de GitHub de k2-fsa/sherpa-onnx).
 - Audio: mono 48 kHz, paso alto 80 Hz, `afftdn` suave, compresión ligera, silencios recortados (~0,2 s), ≈ -14 LUFS, AAC 128 kbps.
 - Los audios originales nunca se suben al repositorio (es público).
+
+## Reel de presentación de la app (`render-app.mjs`)
+
+`node render-app.mjs <escenas.json> <audio.m4a> <palabras.json> <carpeta-salida>` monta un reel con capturas de la app dentro de un móvil (plantilla `reel-app.html`): gancho con el icono, etiquetas, toques, rótulos flotantes, subtítulos palabra a palabra y el cierre fijo. Las rutas de `escenas.json` son relativas a la carpeta de salida; deja `portada.png` y `reel-voz.mp4`. Con `SOLO_SNAPS=1 SNAPS=2,8,… SNAPDIR=…` solo saca fotogramas de prueba. Si Playwright no encuentra su navegador, `CHROMIUM=/opt/pw-browsers/chromium`. Ejemplo: `reels/2026-10-17-lanzamiento-app/`.
