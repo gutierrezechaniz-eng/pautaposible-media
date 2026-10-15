@@ -1,0 +1,217 @@
+{
+ "hook": "¿Y si tu móvil<br>supiera lo<br>que comes?",
+ "icon": "capturas/icono.png",
+ "endLine": "Instala gratis la app y cocina<br>con lo que tienes en casa",
+ "endButton": "Compártelo",
+ "tags": [
+  {
+   "at": 2.6,
+   "text": "Nueva app · gratis"
+  },
+  {
+   "at": 6.5,
+   "text": "Escáner con IA"
+  },
+  {
+   "at": 16.25,
+   "text": "Mi plato"
+  },
+  {
+   "at": 22.5,
+   "text": "Recetas a tu medida"
+  },
+  {
+   "at": 26.9,
+   "text": "Gratis de verdad"
+  },
+  {
+   "at": 29.25,
+   "text": "Instálala hoy"
+  }
+ ],
+ "shots": [
+  {
+   "src": "capturas/app-inicio.jpg",
+   "at": 2.5
+  },
+  {
+   "src": "capturas/valores-1.jpg",
+   "at": 6.5
+  },
+  {
+   "src": "capturas/valores-7.jpg",
+   "at": 9.4
+  },
+  {
+   "src": "capturas/plato-1.jpg",
+   "at": 16.2
+  },
+  {
+   "src": "capturas/plato-4.jpg",
+   "at": 18.0
+  },
+  {
+   "src": "capturas/plato-total.jpg",
+   "at": 19.3
+  },
+  {
+   "src": "capturas/plato-anadido.jpg",
+   "at": 21.85
+  },
+  {
+   "src": "capturas/app-receta.jpg",
+   "at": 22.5
+  },
+  {
+   "src": "capturas/app-inicio.jpg",
+   "at": 26.9
+  },
+  {
+   "src": "capturas/instalar.jpg",
+   "at": 29.2
+  }
+ ],
+ "taps": [
+  {
+   "x": 0.5,
+   "y": 0.776,
+   "at": 21.3
+  },
+  {
+   "x": 0.71,
+   "y": 0.04,
+   "at": 33.4
+  },
+  {
+   "x": 0.71,
+   "y": 0.04,
+   "at": 33.85
+  }
+ ],
+ "zooms": [
+  {
+   "at": 9.5,
+   "until": 16.0,
+   "amount": 0.1
+  },
+  {
+   "at": 19.3,
+   "until": 22.3,
+   "amount": 0.06
+  }
+ ],
+ "badges": [
+  {
+   "at": 4.16,
+   "out": 6.4,
+   "x": 20,
+   "y": 600,
+   "ico": "✓",
+   "text": "Gratis"
+  },
+  {
+   "at": 5.3,
+   "out": 6.4,
+   "x": 640,
+   "y": 900,
+   "ico": "✓",
+   "text": "Android · iPhone"
+  },
+  {
+   "at": 8.9,
+   "out": 16.1,
+   "x": 15,
+   "y": 520,
+   "ico": "IA",
+   "text": "Cámara con IA"
+  },
+  {
+   "at": 12.9,
+   "out": 16.1,
+   "x": 640,
+   "y": 1010,
+   "cls": "gold",
+   "ico": "g",
+   "text": "Valores por 100 g"
+  },
+  {
+   "at": 14.4,
+   "out": 16.1,
+   "x": 190,
+   "y": 1130,
+   "cls": "big dark",
+   "ico": "0",
+   "text": "fotos guardadas"
+  },
+  {
+   "at": 19.6,
+   "out": 22.4,
+   "x": 700,
+   "y": 640,
+   "cls": "gold big",
+   "ico": "Σ",
+   "text": "414 kcal"
+  },
+  {
+   "at": 21.0,
+   "out": 22.4,
+   "x": 20,
+   "y": 1000,
+   "ico": "✓",
+   "text": "A tu diario"
+  },
+  {
+   "at": 24.2,
+   "out": 26.8,
+   "x": 20,
+   "y": 560,
+   "cls": "big",
+   "ico": "60",
+   "text": "recetas"
+  },
+  {
+   "at": 25.8,
+   "out": 26.8,
+   "x": 660,
+   "y": 980,
+   "cls": "gold",
+   "ico": "✓",
+   "text": "Tus cantidades"
+  },
+  {
+   "at": 27.1,
+   "out": 29.2,
+   "x": 20,
+   "y": 620,
+   "cls": "big",
+   "ico": "✕",
+   "text": "Sin anuncios"
+  },
+  {
+   "at": 28.3,
+   "out": 29.2,
+   "x": 440,
+   "y": 960,
+   "cls": "big dark",
+   "ico": "0€",
+   "text": "Sin pagar nada"
+  },
+  {
+   "at": 29.4,
+   "out": 31.6,
+   "x": 690,
+   "y": 560,
+   "cls": "gold",
+   "ico": "↻",
+   "text": "Compártelo"
+  },
+  {
+   "at": 31.8,
+   "x": 170,
+   "y": 1110,
+   "cls": "big dark",
+   "ico": "↗",
+   "text": "pautaposible.es"
+  }
+ ]
+}
