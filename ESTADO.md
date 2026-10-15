@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: miércoles 14/10/2026_
+_Última actualización: jueves 15/10/2026_
 
 ## Hecho recientemente
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
@@ -18,7 +18,10 @@ _Última actualización: miércoles 14/10/2026_
 
 - 14/10: instaladas 12 skills externas (PR #15 y #16, ya en main). Las útiles para el contenido: `claude-banana` (prompts de imágenes con IA; una imagen de IA para Instagram necesita antes el visto bueno de Iván por la norma de imágenes propias o con licencia) y `verification-before-completion` (comprobar antes de dar algo por hecho). Las demás son para programar: `find-skills`, `skill-creator`, `mcp-builder`, `writing-plans`, `subagent-driven-development`, `code-review-and-quality`, `systematic-debugging` y `/grill-with-docs` (con `grilling` y `domain-modeling`). Están en `.agents/skills/` (enlazadas desde `.claude/skills/`) y `skills-lock.json`; `claude-banana` está en `.claude/skills/claude-banana/`. Iván prefiere que le escriban siempre en español.
 
+- 15/10: reel especial de lanzamiento de la app programado para el sábado 17/10 a las 18:00 (397084088): capturas reales de la app con datos de ejemplo, narrador «santa», 38 s. Plantilla nueva `reels/_plantilla/render-app.mjs` + `reel-app.html`. Instagram solo admite 5 hashtags por publicación.
+
 ## Pendiente
+- [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.
 - [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
 - [ ] Reels del martes 20 (¿El pan engorda?) y jueves 22 (Más verdura sin darte cuenta): con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`. Guiones en `voz/GUIONES.md`.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
