@@ -28,6 +28,15 @@ REELS
 - El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
 - **Tema propio (decisión de Iván, 12/10/2026):** «no quiero dos publicaciones iguales». Un reel nunca repite el tema de un carrusel (ni de la misma semana ni de otra); se elige del banco de temas o uno nuevo.
 
+QUÉ FUNCIONA (datos de Metricool del 18/10/2026; Iván pide «el mayor número de me gustas posible»)
+- Lo que más alcance y me gusta da: **una pregunta que desmonta un mito o quita culpa**, respuesta práctica en 2-3 pasos y cierre «guárdalo y envíaselo a quien…». Mejores reels: «Deja la báscula: monta tu plato a ojo» (138 de alcance, 8 me gusta), «Tu vida, no la de un influencer» (117, 8), «¿Cenar hidratos engorda?» (90, 11 y el único guardado), «¿2 litros de agua?» (66). Las recetas y las listas llegan a menos (merluza 27, lista de la compra 14).
+- **Gancho:** el primer texto en pantalla y la primera línea del texto de la publicación son siempre una pregunta corta (también en recetas: «¿Sabes cuánto azúcar lleva…?»). Tono «sin miedo ni culpa».
+- **Recetas:** como mucho una por semana y con gancho de pregunta o de mito.
+- **Sábado 18:00:** reel extra con el tono que más me gusta recibe (culpa, dietas, redes), desde el 24/10.
+- **Me gusta y comentarios:** cada texto acaba con una pregunta fácil de contestar (sí/no o elegir entre dos) antes de la frase de la web.
+- Cifras: solo con fuente citada en el guion; nunca datos inventados ni «resultados» de clientes.
+- Descartado (18/10): ElevenLabs y Orshot (de pago y la voz «santa» es gratis y ya aprobada), y la palabra clave por mensaje directo (necesita responder a mano o una herramienta de pago).
+
 MÉTRICAS
 - En el informe semanal, incluye además los clics al perfil o al enlace de la bio, si Metricool los da, para ver si la gente llega a la web.
 
@@ -58,8 +67,9 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | posts/2026-10-14-merluza-bandeja | 393940366 (reel con todas las diapositivas seguidas, 12/10; antes 393118634, carrusel de vídeos) (antes 392552824, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-15 (jue) | Reel con voz · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | reels/2026-10-15-desayunos (reel-voz.mp4) | 392576485 (antes 392568483, sin voz) · colaboradora: ibangutierrezetxaniz |
 | 2026-10-16 (vie) | Hábito práctico | Tu lista de la compra básica para la semana | 10:00 | posts/2026-10-16-lista-compra | 393940467 (reel con todas las diapositivas seguidas, 12/10; antes 393118651, carrusel de vídeos) (antes 392552832, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-17 (sáb) | Reel especial · Lanzamiento de la app | La app gratuita de Pauta Posible: cámara con IA, Mi plato, recetas con tus cantidades, gratis y sin anuncios | 18:00 | reels/2026-10-17-lanzamiento-app/reel-voz.mp4 | 397084088 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | posts/2026-10-19-suplementos | 394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
-| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 393940752 (reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos) (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-11-16 (lun) | Mito o realidad (movido del 19/10 por las series, decisión de Iván del 12/10) | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393940824 (reel con todas las diapositivas seguidas, 12/10; antes 393675755, carrusel de vídeos) (antes 393114051) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-12-02 (mié) | Receta sencilla (movido del 21/10 por las series, decisión de Iván del 12/10) | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393940881 (reel con todas las diapositivas seguidas, 12/10; antes 393675795, carrusel de vídeos) (antes 393118665) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
@@ -87,6 +97,7 @@ Reels de la semana: reel con voz (voz real de Iván, subtítulos palabra a palab
 | 2026-10-14 (mié) | Receta sencilla | Merluza al horno con patata y verduras en una bandeja | 10:00 | programado (393940366 (reel con todas las diapositivas seguidas, 12/10; antes 393118634, carrusel de vídeos), animado con narrador) |
 | 2026-10-15 (jue) | Reel · Hábito práctico | 3 desayunos en 3 minutos | 18:00 | con voz programado (392576485; antes 392568483 sin voz) |
 | 2026-10-16 (vie) | Hábito práctico | Lista de la compra básica para la semana (para guardar) | 10:00 | programado (393940467 (reel con todas las diapositivas seguidas, 12/10; antes 393118651, carrusel de vídeos), animado con narrador) |
+| 2026-10-17 (sáb) | Reel especial · Lanzamiento de la app | La app gratuita: cámara con IA, Mi plato, recetas con tus cantidades | 18:00 | programado (397084088, reel con narrador) |
 
 ## Plan · semana del 19 oct
 Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 12/10).
@@ -94,16 +105,17 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 |---|---|---|---|---|
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | programado (394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos), animado con narrador) |
 | 2026-10-20 (mar) | Reel con narrador · Mito o realidad | ¿El pan engorda? | 18:00 | guion en voz/GUIONES.md |
-| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (393940752 (reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos), animado con narrador) |
+| 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos), animado con narrador) |
 | 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | guion en voz/GUIONES.md |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos), animado con narrador) |
+| 2026-10-24 (sáb) | Reel con narrador · Sin culpa | ¿Un día de pasarte lo arruina todo? | 18:00 | guion en voz/GUIONES.md |
 
 ## Series de lunes y miércoles (decisión de Iván del 12/10/2026)
 Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y los de los miércoles la **serie de salsas caseras**. Guiones diapositiva a diapositiva en `/mnt/project-files/contenido/series-suplementos-y-salsas.md` (carpeta del proyecto de Claude); las fechas de ese archivo quedan corridas una semana porque la serie empezó el 19/10. Cada pieza va con la plantilla de siempre (animada, con narrador «santa» y subtítulos).
 | Fecha | Serie | Pieza | Estado |
 |---|---|---|---|
 | 2026-10-19 (lun) | Suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | programado (394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos)) |
-| 2026-10-21 (mié) | Salsas 1/6 | Ketchup casero sin azúcar de mesa | programado (393940752 (reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos)) |
+| 2026-10-21 (mié) | Salsas 1/6 | Ketchup casero sin azúcar de mesa | programado (398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos)) |
 | 2026-10-26 (lun) | Suplementos 2/4 | Lo que comes le gana al bote | por hacer |
 | 2026-10-28 (mié) | Salsas 2/6 | Mayonesa casera segura | por hacer |
 | 2026-11-02 (lun) | Suplementos 3/4 | Más no es mejor: el riesgo de las vitaminas A, D, E y K | por hacer |
@@ -140,6 +152,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Reel mito: ¿hay que beber 2 litros de agua al día? (con narrador)
 - Serie suplementos 1: ¿los necesitas o te han convencido?
 - Serie salsas 1: ketchup casero
+- Lanzamiento: la app gratuita (cámara con IA, Mi plato, recetas con tus cantidades) · reel especial 17/10
 
 ## Banco de temas
 
