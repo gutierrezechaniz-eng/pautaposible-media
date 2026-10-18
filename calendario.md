@@ -28,6 +28,15 @@ REELS
 - El texto de la publicación del reel termina con la misma frase de la web y la app que los carruseles.
 - **Tema propio (decisión de Iván, 12/10/2026):** «no quiero dos publicaciones iguales». Un reel nunca repite el tema de un carrusel (ni de la misma semana ni de otra); se elige del banco de temas o uno nuevo.
 
+QUÉ FUNCIONA (datos de Metricool del 18/10/2026; Iván pide «el mayor número de me gustas posible»)
+- Lo que más alcance y me gusta da: **una pregunta que desmonta un mito o quita culpa**, respuesta práctica en 2-3 pasos y cierre «guárdalo y envíaselo a quien…». Mejores reels: «Deja la báscula: monta tu plato a ojo» (138 de alcance, 8 me gusta), «Tu vida, no la de un influencer» (117, 8), «¿Cenar hidratos engorda?» (90, 11 y el único guardado), «¿2 litros de agua?» (66). Las recetas y las listas llegan a menos (merluza 27, lista de la compra 14).
+- **Gancho:** el primer texto en pantalla y la primera línea del texto de la publicación son siempre una pregunta corta (también en recetas: «¿Sabes cuánto azúcar lleva…?»). Tono «sin miedo ni culpa».
+- **Recetas:** como mucho una por semana y con gancho de pregunta o de mito.
+- **Sábado 18:00:** reel extra con el tono que más me gusta recibe (culpa, dietas, redes), desde el 24/10.
+- **Me gusta y comentarios:** cada texto acaba con una pregunta fácil de contestar (sí/no o elegir entre dos) antes de la frase de la web.
+- Cifras: solo con fuente citada en el guion; nunca datos inventados ni «resultados» de clientes.
+- Descartado (18/10): ElevenLabs y Orshot (de pago y la voz «santa» es gratis y ya aprobada), y la palabra clave por mensaje directo (necesita responder a mano o una herramienta de pago).
+
 MÉTRICAS
 - En el informe semanal, incluye además los clics al perfil o al enlace de la bio, si Metricool los da, para ver si la gente llega a la web.
 
@@ -99,6 +108,7 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (393940752 (reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos), animado con narrador) |
 | 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | guion en voz/GUIONES.md |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos), animado con narrador) |
+| 2026-10-24 (sáb) | Reel con narrador · Sin culpa | ¿Un día de pasarte lo arruina todo? | 18:00 | guion en voz/GUIONES.md |
 
 ## Series de lunes y miércoles (decisión de Iván del 12/10/2026)
 Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y los de los miércoles la **serie de salsas caseras**. Guiones diapositiva a diapositiva en `/mnt/project-files/contenido/series-suplementos-y-salsas.md` (carpeta del proyecto de Claude); las fechas de ese archivo quedan corridas una semana porque la serie empezó el 19/10. Cada pieza va con la plantilla de siempre (animada, con narrador «santa» y subtítulos).
