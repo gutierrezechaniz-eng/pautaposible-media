@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: domingo 18/10/2026_
+_Última actualización: lunes 19/10/2026_
 
 ## Hecho recientemente
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
@@ -22,8 +22,11 @@ _Última actualización: domingo 18/10/2026_
 
 - 18/10: Iván trajo el traspaso de otra conversación (sin cara, voz IA, gancho de mito, recetas llegan menos). Contrastado con Metricool: se mantiene este sistema (voz «santa», repo, Metricool) y se añade la sección «QUÉ FUNCIONA» en `calendario.md`: gancho de pregunta siempre, máximo una receta por semana, reel extra los sábados a las 18:00 (24/10: «¿Un día de pasarte lo arruina todo?», guion en `voz/GUIONES.md`) y pregunta para comentar. Las publicaciones que citaba el traspaso (19, 21, 23/10 y 16/11) son las que ya estaban programadas: no hay duplicados. El reel de lanzamiento salió el 17/10: https://www.instagram.com/reel/Demf61ciDnM/
 
+- 19/10: reel del sábado 24 «¿Pasarte un día lo arruina todo?» programado (400121244), con narrador, 32 s. Escenas en `ilustraciones.mjs` (`unDiaNoArruina`).
+
 ## Pendiente
-- [ ] Sábado 24/10: reel con narrador «¿Un día de pasarte lo arruina todo?» (18:00), con `/programar-reel`.
+- [ ] Rama `claude/reel-sabado-24` (reel del sábado 24, ya programado en Metricool 400121244 con el vídeo de esa rama): abrir PR y fusionar en main cuando Iván dé el visto bueno. No borrar la rama antes del 24/10 a las 18:00.
+- [ ] Sábados siguientes (31/10…): un reel extra a las 18:00 con tono sin culpa; la rutina de martes y jueves no lo cubre.
 - [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.
 - [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
 - [ ] Reels del martes 20 (¿El pan engorda?) y jueves 22 (Más verdura sin darte cuenta): con narrador (voz «santa»), ver `/programar-reel`, con `isAiGenerated: true`. Guiones en `voz/GUIONES.md`.
