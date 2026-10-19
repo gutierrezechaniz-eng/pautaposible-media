@@ -404,3 +404,53 @@ export function agua2litros() {
         pill(560, 380, 300, 'App gratis', 33.6, G, CH, 44)) },
   ];
 }
+
+// ---------- Reel sábado 24/10: ¿Un día de pasarte lo arruina todo? ----------
+// Tira de la semana: `marks` = { índice: 'ok' | 'off' } y `at` = segundo en que aparece cada marca.
+const DIAS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+function semana(y, marks = {}, at = {}, base) {
+  return DIAS.map((d, i) => {
+    const x = 60 + i * 122, m = marks[i];
+    const fill = m === 'off' ? G : m === 'ok' ? F : '#fff';
+    const col = m ? '#fff' : CH;
+    const cell = `<rect x="${x}" y="${y}" width="104" height="120" rx="22" fill="${fill}" stroke="${m ? fill : '#C9D2CC'}" stroke-width="3"/>` +
+      `<text x="${x + 52}" y="${y + 76}" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="46" fill="${col}">${d}</text>`;
+    return g(cell, at[i] ?? base, `${x + 52} ${y + 60}`);
+  }).join('');
+}
+const platoVacio = (cx, cy, r) => `<circle cx="${cx}" cy="${cy + 8}" r="${r}" fill="rgba(36,50,42,.08)"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#fff" stroke="#E7E3D8" stroke-width="4"/><circle cx="${cx}" cy="${cy}" r="${r - 18}" fill="#F4F2EC"/>`;
+const tachar = (cx, cy, r, at) => g(`<g stroke="${RJ}" stroke-width="22" stroke-linecap="round"><path d="M${cx - r} ${cy - r} L${cx + r} ${cy + r}"/><path d="M${cx + r} ${cy - r} L${cx - r} ${cy + r}"/></g>`, at, `${cx} ${cy}`);
+const flecha = (x1, y, x2, at) => g(`<path d="M${x1} ${y} H${x2 - 30}" stroke="${F}" stroke-width="14" stroke-linecap="round"/><path d="M${x2 - 44} ${y - 30} L${x2} ${y} L${x2 - 44} ${y + 30}" stroke="${F}" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`, at);
+export function unDiaNoArruina() {
+  return [
+    { start: 0, end: 4.42, pan: 1, tag: 'El fin de semana', svg: svg(
+        semana(110, { 5: 'off', 6: 'off' }, { 5: 1.6, 6: 1.8 }, 0.6) +
+        label(480, 330, 'Fin de semana', 1.9, CH, 52) +
+        box(170, 390, 620, 96, '¿Lo he estropeado todo?', 3.2, G, CH, 44)) },
+    { start: 4.42, end: 8.42, pan: -1, tag: 'Un día no deshace la semana', svg: svg(
+        semana(130, { 0: 'ok', 1: 'ok', 2: 'ok', 3: 'ok', 4: 'ok', 5: 'off', 6: 'ok' }, { 0: 6.4, 1: 6.55, 2: 6.7, 3: 6.85, 4: 7.0, 5: 5.3, 6: 7.15 }) +
+        label(480, 370, '1 día', 5.3, G, 72) +
+        label(480, 450, 'no deshace', 5.8, CH, 52) + label(480, 520, 'el resto de la semana', 7.4, F, 52), '#DCE9E1') },
+    { start: 8.42, end: 10.63, pan: 1, tag: 'Lo que cuenta', svg: svg(
+        label(480, 210, 'Lo que cuenta es', 8.6, CH, 56) +
+        box(230, 260, 500, 120, 'lo que repites', 9.7, F, '#fff', 60) +
+        ic('check', 250, 440, 120, 9.8) + ic('check', 420, 440, 120, 10.0) + ic('check', 590, 440, 120, 10.2)) },
+    { start: 10.63, end: 12.97, pan: -1, tag: 'No compenses', svg: svg(
+        platoVacio(480, 250, 190) + tachar(480, 250, 135, 11.5) +
+        label(480, 525, 'No te saltes comidas', 11.6, CH, 54), '#DCE9E1') },
+    { start: 12.97, end: 17.54, pan: 1, tag: 'Tu siguiente comida, normal', svg: svg(
+        plate(340, 330, 240, { lines: 13.4, v: 15.3, p: 16.2, h: 14.6 }) +
+        label(780, 210, 'Verdura', 15.4, F, 50) + label(780, 300, 'Proteína', 16.3, CH, 50) +
+        ic('drop', 720, 350, 120, 16.9) + label(780, 540, 'Agua', 17.0, CH, 50)) },
+    { start: 17.54, end: 18.66, pan: -1, tag: 'Sin culpa', svg: svg(
+        g(fl(corazon(330, 90, 300, F), 8, 2), 17.55, '480 230') + label(480, 520, 'Sin culpa', 17.8, F, 88), '#DCE9E1') },
+    { start: 18.66, end: 21.91, pan: 1, tag: 'Envíaselo', svg: svg(
+        g(persona(220, 400, 280, F), 19.0, '220 260') + flecha(380, 260, 580, 19.5) + g(persona(740, 400, 280, S), 19.7, '740 260') +
+        box(200, 430, 560, 96, '«Empiezo el lunes»', 20.8, G, CH, 44)) },
+    { start: 21.91, end: 99, pan: -1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 22.0) +
+        label(710, 230, 'Recetas fáciles', 22.8, CH, 42) +
+        pill(500, 290, 420, 'pautaposible.es', 26.9, '#fff', F, 44) +
+        pill(560, 430, 300, 'App gratis', 28.0, G, CH, 44), '#DCE9E1') },
+  ];
+}
