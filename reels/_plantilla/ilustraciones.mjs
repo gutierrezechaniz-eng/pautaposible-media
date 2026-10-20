@@ -454,3 +454,39 @@ export function unDiaNoArruina() {
         pill(560, 430, 300, 'App gratis', 28.0, G, CH, 44), '#DCE9E1') },
   ];
 }
+
+// ---------- Reel martes 20/10: ¿El pan engorda? ----------
+export function elPan() {
+  return [
+    { start: 0, end: 5.75, pan: 1, tag: '¿El pan engorda?', svg: svg(
+        g(fl(ic('bread', 90, 50, 300), 8, 2.4), 0.3, '240 200') +
+        box(470, 70, 420, 104, '¿Engorda?', 0.8, '#fff', CH, 50) +
+        box(470, 200, 420, 104, 'Así, solo, no', 2.6, G, CH, 50) +
+        label(480, 455, 'Ningún alimento', 3.3, CH, 56) + label(480, 530, 'engorda por sí solo', 4.3, F, 56)) },
+    { start: 5.75, end: 9.0, pan: -1, tag: 'Lo que cuenta', svg: svg(
+        label(480, 130, 'Lo que cuenta es', 5.9, CH, 56) +
+        box(180, 170, 600, 110, 'el conjunto del día', 6.9, F, '#fff', 52) +
+        ic('sun', 110, 340, 190, 7.7) + g(plate(480, 435, 105, { lines: true, v: true, p: true, h: true }), 8.0, '480 435') + ic('moon', 660, 340, 190, 8.4) +
+        label(205, 600, 'Mañana', 7.8, CH, 38) + label(480, 600, 'Comidas', 8.1, CH, 38) + label(755, 600, 'Noche', 8.5, CH, 38), '#DCE9E1') },
+    { start: 9.0, end: 12.72, pan: 1, tag: 'Un cereal más', svg: svg(
+        label(480, 120, 'El pan es un cereal', 9.3, CH, 56) +
+        ic('bread', 130, 170, 220, 9.84) + ic('rice', 370, 170, 220, 10.0) + ic('pasta', 610, 170, 220, 10.15) +
+        ic('check', 90, 410, 120, 10.7) +
+        label(540, 460, 'Cabe en una alimentación', 11.1, CH, 46) + label(540, 530, 'saludable', 11.9, F, 52)) },
+    { start: 12.72, end: 15.4, pan: -1, tag: 'Mejor integral', svg: svg(
+        g(fl(ic('bread', 110, 130, 360), 8, 2.2), 12.8, '290 310') +
+        box(520, 190, 360, 110, 'Integral', 13.6, F, '#fff', 56) +
+        box(520, 360, 360, 110, '+ fibra', 14.9, G, CH, 56), '#DCE9E1') },
+    { start: 15.4, end: 17.62, pan: 1, tag: 'Ojo con lo de encima', svg: svg(
+        g(fl(ic('toast', 345, 40, 270), 6, 2), 15.5, '480 175') +
+        label(480, 420, 'Ojo con lo que', 15.7, CH, 58) + label(480, 510, 'le pones encima', 16.5, F, 62)) },
+    { start: 17.62, end: 20.62, pan: -1, tag: 'Envíaselo', svg: svg(
+        g(persona(220, 400, 280, F), 17.7, '220 260') + flecha(380, 260, 580, 18.4) + g(persona(740, 400, 280, S), 18.5, '740 260') +
+        box(200, 430, 560, 96, '¿Sin pan en casa?', 18.9, G, CH, 44), '#DCE9E1') },
+    { start: 20.62, end: 99, pan: 1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 20.7) +
+        label(710, 230, 'Recetas fáciles', 21.6, CH, 42) +
+        pill(500, 290, 420, 'pautaposible.es', 25.44, '#fff', F, 44) +
+        pill(560, 430, 300, 'App gratis', 27.44, G, CH, 44)) },
+  ];
+}
