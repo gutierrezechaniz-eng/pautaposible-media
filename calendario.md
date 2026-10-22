@@ -70,6 +70,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-17 (sáb) | Reel especial · Lanzamiento de la app | La app gratuita de Pauta Posible: cámara con IA, Mi plato, recetas con tus cantidades, gratis y sin anuncios | 18:00 | reels/2026-10-17-lanzamiento-app/reel-voz.mp4 | 397084088 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | posts/2026-10-19-suplementos | 394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-20 (mar) | Reel con narrador · Mito o realidad | ¿El pan engorda? | 18:00 | reels/2026-10-20-el-pan/reel-voz.mp4 | 400938509 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | reels/2026-10-22-mas-verdura/reel-voz.mp4 | 402992141 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos) (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-24 (sáb) | Reel con narrador · Sin culpa (reel extra del sábado) | ¿Pasarte un día lo arruina todo? | 18:00 | reels/2026-10-24-un-dia-no-arruina/reel-voz.mp4 | 400121244 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
@@ -108,7 +109,7 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | 2026-10-19 (lun) | Mito o realidad · Serie suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | 10:00 | programado (394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos), animado con narrador) |
 | 2026-10-20 (mar) | Reel con narrador · Mito o realidad | ¿El pan engorda? | 18:00 | programado (400938509, reel con narrador) |
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | programado (398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos), animado con narrador) |
-| 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | guion en voz/GUIONES.md |
+| 2026-10-22 (jue) | Reel con narrador · Hábito práctico | Más verdura sin darte cuenta | 18:00 | programado (402992141, reel con narrador) |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos), animado con narrador) |
 | 2026-10-24 (sáb) | Reel con narrador · Sin culpa | ¿Pasarte un día lo arruina todo? | 18:00 | programado (400121244, reel con narrador) |
 
@@ -157,6 +158,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Lanzamiento: la app gratuita (cámara con IA, Mi plato, recetas con tus cantidades) · reel especial 17/10
 - Sin culpa: pasarte un día no lo arruina todo (no compensar saltándote comidas)
 - Reel mito: ¿el pan engorda? (con narrador; mejor integral)
+- Reel hábito: más verdura sin darte cuenta (con narrador; espinacas en la tortilla, rallada en la salsa, congelada, crudités)
 
 ## Banco de temas
 
