@@ -490,3 +490,47 @@ export function elPan() {
         pill(560, 430, 300, 'App gratis', 27.44, G, CH, 44)) },
   ];
 }
+
+// ---------- Reel jueves 22/10: Más verdura sin darte cuenta ----------
+const tortilla = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><ellipse cx="50" cy="58" rx="48" ry="14" fill="rgba(36,50,42,.10)"/><path d="M4 50 C4 26 96 26 96 50 C96 62 4 62 4 50Z" fill="#E9B949"/><path d="M8 46 C14 30 86 30 92 46" stroke="#C98B2E" stroke-width="3" fill="none"/><g fill="#C98B2E"><circle cx="30" cy="42" r="2.5"/><circle cx="58" cy="38" r="2.5"/><circle cx="74" cy="46" r="2.5"/></g></g>`;
+const espinaca = (x, y, s, rot) => `<path transform="translate(${x} ${y}) rotate(${rot}) scale(${s / 100})" d="M0 0 C10 -36 54 -50 84 -30 C66 -2 34 10 0 0Z" fill="#3F8A5A"/><path transform="translate(${x} ${y}) rotate(${rot}) scale(${s / 100})" d="M0 0 C24 -12 50 -22 76 -28" stroke="#8DBF7A" stroke-width="4" fill="none"/>`;
+const calabacin = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="6" y="36" width="84" height="30" rx="15" fill="#4F8F4A"/><path d="M16 44 H70" stroke="#9BCB7A" stroke-width="4" stroke-linecap="round"/><rect x="86" y="44" width="10" height="14" rx="4" fill="#6b4a2b"/></g>`;
+const cazuela = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><rect x="0" y="40" width="14" height="10" rx="5" fill="${CH}"/><rect x="86" y="40" width="14" height="10" rx="5" fill="${CH}"/><path d="M10 36 H90 V76 C90 88 80 94 68 94 H32 C20 94 10 88 10 76Z" fill="${F}"/><ellipse cx="50" cy="36" rx="40" ry="9" fill="#C8402E"/><g fill="#E8964A"><rect x="30" y="32" width="10" height="3" rx="1.5"/><rect x="56" y="35" width="10" height="3" rx="1.5"/></g><g fill="#9BCB7A"><rect x="44" y="31" width="9" height="3" rx="1.5"/><rect x="66" y="31" width="8" height="3" rx="1.5"/></g></g>`;
+const congelada = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M16 10 H84 L88 92 C88 96 84 98 80 98 H20 C16 98 12 96 12 92Z" fill="#CFE7F0" stroke="#7FB4C8" stroke-width="3"/><path d="M16 10 H84 V20 H16Z" fill="#7FB4C8"/><g stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M50 36 V76"/><path d="M33 46 L67 66"/><path d="M67 46 L33 66"/></g><g fill="#3F8A5A"><circle cx="28" cy="84" r="5"/><circle cx="72" cy="84" r="5"/></g><circle cx="50" cy="86" r="5" fill="#E8964A"/></g>`;
+const palitos = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M6 70 H94 A44 26 0 0 1 6 70Z" fill="#fff" stroke="#E4E0D3" stroke-width="3"/><g stroke-linecap="round" stroke-width="9"><path d="M26 66 L18 22" stroke="#E8964A"/><path d="M40 66 L38 14" stroke="#9BCB7A"/><path d="M54 66 L60 18" stroke="#E8964A"/><path d="M68 66 L80 26" stroke="#D9634C"/><path d="M47 66 L48 26" stroke="#F2CF4A"/></g></g>`;
+const marcador = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M22 4 H78 C82 4 84 6 84 10 V96 L50 74 L16 96 V10 C16 6 18 4 22 4Z" fill="${F}"/><path d="M36 38 L46 48 L66 28" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+export function masVerdura() {
+  return [
+    { start: 0, end: 4.72, pan: 1, tag: '¿Te cuesta la verdura?', svg: svg(
+        g(fl(ic('broccoli', 130, 30, 180), 8, 2.4), 0.4, '220 120') + g(fl(ic('carrot', 390, 20, 180), 8, 2.8), 0.7, '480 110') + g(fl(ic('tomato', 650, 30, 180), 8, 2.2), 1.0, '740 120') +
+        box(250, 240, 460, 96, '¿Te cuesta?', 1.0, '#fff', CH, 48) +
+        label(480, 425, 'Escóndela en', 2.7, CH, 56) + label(480, 510, 'lo que ya comes', 3.7, F, 60)) },
+    { start: 4.72, end: 7.28, pan: -1, tag: 'Espinacas en la tortilla', svg: svg(
+        g(tortilla(255, 105, 450), 4.8, '480 230') +
+        g(espinaca(330, 210, 120, -20), 5.9) + g(espinaca(470, 180, 130, 10), 6.05) + g(espinaca(600, 220, 110, -40), 6.2) +
+        box(250, 400, 460, 96, '+ espinacas', 5.8, F, '#fff', 52) + label(480, 545, 'a la tortilla', 6.6, CH, 48), '#DCE9E1') },
+    { start: 7.28, end: 10.48, pan: 1, tag: 'Rallada en la salsa', svg: svg(
+        g(fl(calabacin(70, 40, 230), 6, 2.4), 7.85, '185 155') + label(480, 160, 'o', 8.4, CH, 60) + g(fl(ic('carrot', 650, 30, 230), 6, 2.6), 8.6, '765 145') +
+        g(cazuela(340, 200, 280), 9.5, '480 340') + box(230, 470, 500, 90, 'en la salsa de tomate', 9.5, G, CH, 42)) },
+    { start: 10.48, end: 13.36, pan: -1, tag: 'Verdura congelada', svg: svg(
+        g(fl(congelada(90, 70, 300), 6, 2.4), 10.6, '240 220') +
+        label(660, 150, 'Congelada', 11.5, F, 60) +
+        ic('rice', 470, 230, 190, 12.1) + ic('pasta', 680, 230, 190, 12.9) +
+        box(390, 470, 520, 100, 'al arroz o la pasta', 12.3, '#fff', CH, 46), '#DCE9E1') },
+    { start: 13.36, end: 16.08, pan: 1, tag: 'Crudités a mano', svg: svg(
+        g(fl(palitos(290, 0, 380), 6, 2.2), 13.6, '480 200') +
+        box(210, 420, 540, 104, 'Crudités para picar', 14.8, F, '#fff', 50)) },
+    { start: 16.08, end: 18.16, pan: -1, tag: 'Poco a poco', svg: svg(
+        label(480, 130, 'Poco a poco', 16.1, F, 76) +
+        g(plate(480, 285, 105, { lines: true, v: true, p: true, h: true }), 16.6, '480 285') +
+        box(200, 430, 560, 100, 'Sin cambiar de menú', 16.85, G, CH, 48), '#DCE9E1') },
+    { start: 18.16, end: 19.92, pan: 1, tag: 'Guárdalo', svg: svg(
+        g(fl(marcador(370, 40, 220), 8, 2), 18.2, '480 150') +
+        label(480, 410, 'Guárdalo', 18.3, F, 84) + label(480, 500, 'para esta semana', 19.1, CH, 56)) },
+    { start: 19.92, end: 99, pan: -1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 20.0) +
+        label(710, 230, 'Recetas fáciles', 20.96, CH, 42) +
+        pill(500, 290, 420, 'pautaposible.es', 24.8, '#fff', F, 44) +
+        pill(560, 430, 300, 'App gratis', 26.4, G, CH, 44), '#DCE9E1') },
+  ];
+}
