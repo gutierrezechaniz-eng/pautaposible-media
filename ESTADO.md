@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: viernes 23/10/2026_
+_Última actualización: viernes 23/10/2026 (web)_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -31,13 +31,10 @@ _Última actualización: viernes 23/10/2026_
 - 22/10: reel del jueves 22 «Más verdura sin darte cuenta» programado (402992141), con narrador, 30,3 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`masVerdura`).
 
 ## Pendiente
-- [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
-  - Está en Netlify (plan gratis, proyecto `pauta-posible`, id 469aacc8-f7a4-4927-a334-eee7a2dd9727). La última versión (16/10) se subió arrastrando una carpeta: el código no está en ningún repo ni en Netlify. Páginas conocidas: inicio e `instalar/`.
-  - Google no la tiene indexada (`site:pautaposible.es` no devuelve nada): dar de alta en Google Search Console y Bing Webmaster (gratis), con sitemap.
-  - El entorno de la nube bloquea `pautaposible.es` y `*.netlify.app`: Iván tiene que añadirlos en Network access → Allowed domains para poder verla y medirla.
-  - Propuesta: guardar el código en este repo, carpeta `web/` (todo unificado, sin repos ni ramas aparte), y conectar Netlify al repo con `web/` como directorio base. Enseñar el rediseño en un enlace de prueba de Netlify y no publicar en pautaposible.es sin el visto bueno de Iván.
-  - Skills elegidas (gratis): `frontend-design` (anthropics/skills, Apache 2.0), `taste-skill` (leonxlnx, MIT), `ui-ux-pro-max` (ya instalada), claude-seo (AgriciDaniel, MIT, sin las partes de pago de DataForSEO), marketingskills (coreyhaines31, MIT: `copywriting`, `cro`, `seo-audit`, `ai-seo`, `schema`), `web-design-guidelines` (vercel-labs). Medir antes y después con Lighthouse y Playwright.
-  - Falta de Iván: dónde está la carpeta de la web y permitir esos dominios.
+- [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Hecho el 23/10 en la rama `claude/web` (carpeta `web/`, el código completo de la web; la copia de trabajo y los zips están en `/mnt/project-files/web/`):
+  - Portada: sección «La app de Pauta Posible · gratis» con capturas reales (Hoy, Tu semana, ejercicio), cifras nuevas, título y descripción para Google, datos estructurados `WebApplication`, imagen para compartir `assets/compartir.png` (1200×630) y sitemap al día.
+  - Lo publicado en Netlify es la versión del 16/10: Iván tiene que subir `WEB-PORTADA-APP.zip` (incluye Moverme, plan semanal y dibujos nuevos).
+  - Falta de Iván: alta en Google Search Console y Bing Webmaster (pasos en `/mnt/project-files/web/VISIBILIDAD-GOOGLE.md`) y, si quiere, conectar Netlify al repositorio con `web` como directorio base (ver `web/netlify.toml`).
 - [ ] Rama `claude/reel-sabado-24` (reel del sábado 24, ya programado en Metricool 400121244 con el vídeo de esa rama): abrir PR y fusionar en main cuando Iván dé el visto bueno. No borrar la rama antes del 24/10 a las 18:00.
 - [ ] Sábados siguientes (31/10…): un reel extra a las 18:00 con tono sin culpa; la rutina de martes y jueves no lo cubre.
 - [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.

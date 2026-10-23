@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2E6F57">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Aplicación | Pauta Posible</title>
+  <meta name="description" content="Accede a la aplicación de Pauta Posible, guarda tu perfil y registra tu evolución.">
+  <link rel="icon" href="/assets/pauta-posible-symbol-natural.png" type="image/png">
+  <link rel="manifest" href="/app/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/app/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/app/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Ir al contenido</a>
+  <div class="background-shape shape-one" aria-hidden="true"></div>
+  <div class="background-shape shape-two" aria-hidden="true"></div>
+
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="Pauta Posible, volver a la web">
+      <img src="/assets/pauta-posible-symbol-natural.png" width="52" height="52" alt="">
+      <span><strong>Pauta Posible</strong><small>Nutrición práctica</small></span>
+    </a>
+    <a class="header-link" href="/">Volver al inicio y a las recetas</a>
+  </header>
+
+  <main id="app" aria-live="polite">
+    <section id="loading-view" class="center-view">
+      <div class="loader" aria-hidden="true"></div>
+      <p>Preparando tu espacio…</p>
+    </section>
+
+    <section id="auth-view" class="auth-layout hidden">
+      <article class="brand-panel">
+        <img class="large-logo" src="/assets/pauta-posible-symbol-natural.png" width="118" height="118" alt="Símbolo de Pauta Posible">
+        <p class="eyebrow">Aplicación web</p>
+        <h1>Tu nutrición,<br>con criterio.</h1>
+        <p>Una sola cuenta para avanzar por tu cuenta o con seguimiento profesional periódico.</p>
+        <ul class="benefit-list">
+          <li><span aria-hidden="true">✓</span> Tu perfil disponible en todos tus dispositivos</li>
+          <li><span aria-hidden="true">✓</span> Registro diario e historial sincronizados</li>
+          <li><span aria-hidden="true">✓</span> Acceso privado para cada persona</li>
+        </ul>
+      </article>
+
+      <article class="auth-card surface">
+        <div class="auth-heading">
+          <p class="eyebrow">Beta privada</p>
+          <h2 id="auth-title">Crea tu cuenta</h2>
+          <p id="auth-subtitle">Empieza en Pauta Posible y guarda tu progreso.</p>
+        </div>
+
+        <div class="segmented" role="tablist" aria-label="Tipo de acceso">
+          <button id="register-tab" class="active" type="button" role="tab" aria-selected="true">Crear cuenta</button>
+          <button id="login-tab" type="button" role="tab" aria-selected="false">Ya tengo cuenta</button>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <fieldset id="mode-fieldset">
+            <legend>¿Cómo quieres empezar?</legend>
+            <label class="mode-card selected">
+              <input type="radio" name="service-mode" value="self_guided" checked>
+              <span class="mode-icon" aria-hidden="true">⌁</span>
+              <span><strong>Ir por mi cuenta</strong><small>Planificación, registro y aprendizaje autónomo.</small></span>
+              <span class="mode-check" aria-hidden="true">✓</span>
+            </label>
+            <label class="mode-card">
+              <input type="radio" name="service-mode" value="professional_care">
+              <span class="mode-icon" aria-hidden="true">◎</span>
+              <span><strong>Quiero seguimiento</strong><small>Revisiones y evolución junto a un profesional.</small></span>
+              <span class="mode-check" aria-hidden="true">✓</span>
+            </label>
+          </fieldset>
+
+          <label class="field">
+            <span>Correo electrónico</span>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com">
+          </label>
+          <label class="field">
+            <span>Contraseña</span>
+            <input id="password" name="password" type="password" autocomplete="new-password" minlength="6" required placeholder="Mínimo 6 caracteres">
+          </label>
+          <div id="consent-field" class="consent-field">
+            <label class="consent-row">
+              <input id="consent-privacy" type="checkbox" autocomplete="off">
+              <span>He leído y acepto el <a href="/aviso-legal/" target="_blank" rel="noopener noreferrer">aviso legal</a> y la <a href="/privacidad/" target="_blank" rel="noopener noreferrer">política de privacidad</a>.</span>
+            </label>
+            <label class="consent-row">
+              <input id="consent-health" type="checkbox" autocomplete="off">
+              <span>Doy mi consentimiento expreso para el tratamiento de los datos de salud que introduzca o comparta (perfil, registro de comidas, evolución corporal, mensajes y archivos del seguimiento).</span>
+            </label>
+          </div>
+          <p id="auth-error" class="form-message error hidden" role="alert"></p>
+          <button id="auth-submit" class="button primary wide" type="submit">Crear cuenta y continuar</button>
+        </form>
+
+        <p class="privacy-note">Tus datos se guardan en tu cuenta privada. La información general no sustituye una valoración sanitaria individual.</p>
+      </article>
+    </section>
+
+    <section id="consent-view" class="workspace hidden" aria-labelledby="consent-title">
+      <div class="workspace-heading">
+        <div>
+          <p class="eyebrow">Antes de seguir</p>
+          <h1 id="consent-title">Tu consentimiento</h1>
+          <p>Tu cuenta no tiene guardado tu consentimiento para la versión actual de la <a href="/privacidad/" target="_blank" rel="noopener noreferrer">política de privacidad</a>. Lo necesitamos para guardar y mostrar tus datos de salud.</p>
+        </div>
+        <div class="heading-actions">
+          <button id="consent-back-professional" class="button secondary hidden" type="button">Panel profesional</button>
+          <button class="button ghost sign-out" type="button">Cerrar sesión</button>
+        </div>
+      </div>
+      <form id="consent-form" class="surface consent-form" novalidate>
+        <div class="consent-field">
+          <label class="consent-row">
+            <input id="consent-view-privacy" type="checkbox" autocomplete="off">
+            <span>He leído y acepto el <a href="/aviso-legal/" target="_blank" rel="noopener noreferrer">aviso legal</a> y la <a href="/privacidad/" target="_blank" rel="noopener noreferrer">política de privacidad</a>.</span>
+          </label>
+          <label class="consent-row">
+            <input id="consent-view-health" type="checkbox" autocomplete="off">
+            <span>Doy mi consentimiento expreso para el tratamiento de los datos de salud que introduzca o comparta (perfil, registro de comidas, evolución corporal, mensajes y archivos del seguimiento).</span>
+          </label>
+        </div>
+        <p id="consent-error" class="form-message error hidden" role="alert"></p>
+        <div class="form-actions"><button id="consent-submit" class="button primary" type="submit">Aceptar y continuar</button></div>
+        <p class="consent-note">Si prefieres no darlo, cierra sesión. Puedes pedir que borremos tu cuenta y tus datos escribiendo a <a href="mailto:hola@pautaposible.es">hola@pautaposible.es</a>.</p>
+      </form>
+    </section>
+
+    <section id="profile-view" class="workspace hidden">
+      <div class="workspace-heading">
+        <div>
+          <p class="eyebrow">Primer paso</p>
+          <h1>Completa tu perfil</h1>
+          <p>Estos datos permiten adaptar las orientaciones generales y mantener tu historial unido.</p>
+        </div>
+        <button class="button ghost sign-out" type="button">Cerrar sesión</button>
+      </div>
+      <form id="profile-form" class="surface form-grid">
+        <label class="field span-two"><span>Nombre</span><input id="profile-name" required autocomplete="name"></label>
+        <label class="field"><span>Edad</span><input id="profile-age" type="number" min="18" max="100" required></label>
+        <label class="field"><span>Sexo</span><select id="profile-gender" required><option value="">Selecciona</option><option value="female">Mujer</option><option value="male">Hombre</option></select></label>
+        <label class="field"><span>Altura (cm)</span><input id="profile-height" type="number" min="120" max="230" required></label>
+        <label class="field"><span>Peso actual (kg)</span><input id="profile-weight" type="number" min="35" max="300" step="0.1" required></label>
+        <label class="field"><span>Objetivo</span><select id="profile-goal" required><option value="">Selecciona</option><option value="improveHealth">Mejorar mi salud</option><option value="maintain">Mantenerme</option><option value="loseFat">Perder grasa</option><option value="gainMuscle">Ganar masa muscular</option></select></label>
+        <label class="field"><span>Actividad habitual</span><select id="profile-activity" required><option value="">Selecciona</option><option value="low">Baja</option><option value="moderate">Moderada</option><option value="high">Alta</option></select></label>
+        <label class="field span-two"><span>Móvil para avisos por WhatsApp (opcional)</span><input id="profile-whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 123 456" pattern="[+0-9 ().-]{9,20}" maxlength="20"><small class="field-help">Solo para avisarte de que tienes un mensaje nuevo en tu espacio. El aviso nunca incluye el contenido del mensaje. Déjalo vacío si no lo quieres.</small></label>
+        <p id="profile-message" class="form-message span-two hidden" role="status"></p>
+        <div class="form-actions span-two"><button class="button primary" type="submit">Guardar y entrar</button></div>
+      </form>
+      <details id="delete-account" class="surface delete-account hidden">
+        <summary>Eliminar mi cuenta</summary>
+        <p>Borraremos tu cuenta y todo lo que guarda: perfil, diario, pesos y medidas, mensajes y documentos de seguimiento. Lo hacemos en un máximo de 30 días y te avisamos por correo. No se puede deshacer.</p>
+        <button id="delete-account-request" class="button danger" type="button">Pedir que se borre mi cuenta</button>
+        <p id="delete-account-message" class="form-message hidden" role="status"></p>
+        <p class="field-help">Más información en <a href="/eliminar-cuenta/" target="_blank" rel="noopener">pautaposible.es/eliminar-cuenta</a>.</p>
+      </details>
+    </section>
+
+    <section id="client-view" class="workspace hidden">
+      <nav class="tab-bar" aria-label="Secciones de la app">
+        <button type="button" class="tab-button" data-tab="hoy" aria-controls="panel-hoy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5h-5v5H5a1 1 0 0 1-1-1z"/></svg><span>Hoy</span></button>
+        <button type="button" class="tab-button" data-tab="comida" aria-controls="panel-comida"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v7a2 2 0 0 0 2 2v9M11 3v7M7 7h4M17 21V3c-2 1.5-3 4-3 7 0 2 1 3 3 3"/></svg><span>Comida</span></button>
+        <button type="button" class="tab-button" data-tab="moverme" aria-controls="panel-moverme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="14" cy="4.5" r="2"/><path d="M6 21l3.5-6 3 2.5V22M9.5 15l1.5-6.5 4 2.5 3 1M11 8.5 7.5 9.5 6 13"/></svg><span>Moverme</span></button>
+        <button type="button" class="tab-button" data-tab="progreso" aria-controls="panel-progreso"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 16l4-5 3 3 5-7"/><path d="M15 7h3v3"/></svg><span>Progreso</span></button>
+        <button type="button" class="tab-button" data-tab="logros" aria-controls="panel-logros"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m9 13.5-1.5 7.5L12 18.5l4.5 2.5-1.5-7.5"/></svg><span>Logros</span></button>
+      </nav>
+
+      <div id="panel-hoy" class="tab-panel" data-panel="hoy">
+      <div class="workspace-heading">
+        <div>
+          <p id="client-mode" class="eyebrow">Tu espacio</p>
+          <h1 id="client-greeting">Hola</h1>
+          <p id="client-date" class="client-date">Tu día de hoy</p>
+        </div>
+        <div class="heading-actions">
+          <button id="open-professional" class="button secondary hidden" type="button">Panel profesional</button>
+          <button id="edit-profile" class="button secondary" type="button">Editar perfil</button>
+          <button class="button ghost sign-out" type="button">Cerrar sesión</button>
+        </div>
+      </div>
+
+        <section class="today-board" aria-label="Tu resumen de hoy">
+          <article class="surface today-rings">
+            <div class="ring-block">
+              <div class="ring" id="ring-food" style="--value:0"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50" pathLength="100"/></svg><strong id="ring-food-value">0</strong><small id="ring-food-unit">kcal</small></div>
+              <p><strong>Comida</strong><small id="ring-food-note">Apunta lo que comes</small></p>
+            </div>
+            <div class="ring-block">
+              <div class="ring ring-move" id="ring-move" style="--value:0"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50" pathLength="100"/></svg><strong id="ring-move-value">0</strong><small>min</small></div>
+              <p><strong>Movimiento</strong><small id="ring-move-note">Objetivo de hoy: 10 min</small></p>
+            </div>
+          </article>
+          <article class="surface today-streak">
+            <div class="streak-head"><span class="streak-flame" aria-hidden="true">🔥</span><div><strong id="streak-count">0 días</strong><small id="streak-note">seguidos</small></div></div>
+            <div class="week-dots" id="week-dots" aria-label="Días activos de esta semana"></div>
+            <p id="week-challenge-text" class="week-challenge-text">Reto de la semana: 4 días activos.</p>
+          </article>
+          <article class="surface today-next">
+            <p class="eyebrow">Lo siguiente</p>
+            <p id="next-step-text" class="next-step-text">Cargando tu día…</p>
+            <button id="next-step-button" class="button primary" type="button">Vamos</button>
+          </article>
+          <article class="surface water-card">
+            <div><p class="eyebrow">Agua</p><strong id="water-count">0 vasos</strong><small>Bebe agua a lo largo del día; el agua es la bebida de elección.</small></div>
+            <div class="water-buttons">
+              <button id="water-minus" class="round-button" type="button" aria-label="Quitar un vaso">−</button>
+              <button id="water-plus" class="round-button primary" type="button" aria-label="Añadir un vaso">+</button>
+            </div>
+          </article>
+          <div class="quick-actions">
+            <button class="quick-action" type="button" data-open-scanner="plate"><span aria-hidden="true">📸</span>Escanear mi plato</button>
+            <button class="quick-action" type="button" data-goto="moverme" data-focus="#activity-type"><span aria-hidden="true">👟</span>Apuntar actividad</button>
+            <button class="quick-action" type="button" data-start-recommended><span aria-hidden="true">⏱️</span>Empezar una sesión</button>
+          </div>
+        </section>
+
+        <div class="care-hub">
+          <section id="care-plan-section" class="surface care-plan-section folder hidden" aria-labelledby="care-plan-title">
+            <div class="section-title care-plan-heading">
+              <div><p class="eyebrow">Tu seguimiento</p><h2 id="care-plan-title">Mi carpeta</h2></div>
+              <span id="care-plan-status" class="care-plan-status">Privada</span>
+            </div>
+            <p class="folder-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Solo tú y tu profesional podéis ver esta carpeta: tus pautas, tus tablas y tus PDF.</p>
+            <div id="client-care-plan" class="care-plan-list"><p class="empty-state">Todavía no tienes ningún plan publicado.</p></div>
+          </section>
+          <section id="client-chat-section" class="surface chat-card hidden" aria-labelledby="client-chat-title">
+            <div class="chat-head">
+              <span id="client-chat-initials" class="chat-ini" aria-hidden="true">IV</span>
+              <div><h2 id="client-chat-title">Iván · Pauta Posible</h2><small id="client-chat-sub">Chat privado · suele responder en el día</small></div>
+            </div>
+            <div id="client-chat-messages" class="chat-messages" role="region" aria-live="off" aria-label="Mensajes del chat" tabindex="0"><p class="chat-empty">Cargando mensajes…</p></div>
+            <p id="client-chat-announce" class="sr-only" role="status" aria-live="polite"></p>
+            <form id="client-chat-form" class="chat-form">
+              <label class="sr-only" for="client-chat-input">Escribe un mensaje</label>
+              <textarea id="client-chat-input" rows="1" maxlength="1000" placeholder="Escribe un mensaje" autocomplete="off"></textarea>
+              <button class="chat-send" type="submit" aria-label="Enviar mensaje"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg></button>
+            </form>
+            <p class="chat-hint"><span id="client-chat-count" class="chat-count">0/1000</span> Intro para enviar · Mayús + Intro para saltar de línea</p>
+            <p id="client-chat-wa-hint" class="chat-hint hidden">¿Quieres un aviso por WhatsApp cuando te escriban? Añade tu móvil en «Editar perfil».</p>
+          </section>
+        </div>
+
+        <a id="install-banner" class="install-banner hidden" href="/instalar/">
+          <span><strong>Instala la app en tu móvil</strong><small>Con su icono en la pantalla de inicio. Gratis.</small></span>
+          <span class="install-banner-cta">Instalar</span>
+        </a>
+      </div>
+
+      <div id="panel-comida" class="tab-panel hidden" data-panel="comida">
+        <div class="client-grid">
+          <article class="surface">
+            <div class="section-title"><div><p class="eyebrow">Registro diario</p><h2>Añadir una comida</h2></div></div>
+            <div class="scan-actions">
+              <button class="button scan-button" type="button" data-open-scanner="plate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>Escanear mi plato</button>
+              <button class="button secondary scan-button" type="button" data-open-scanner="live"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6v12M7 6v12M10 6v12M14 6v12M17 6v12M20 6v12"/></svg>Ver valores de un alimento</button>
+            </div>
+            <p class="scan-or">o escríbela a mano</p>
+            <form id="meal-form" class="meal-form">
+              <label class="field"><span>Qué has comido</span><input id="meal-title" required placeholder="Ej. lentejas con verduras"></label>
+              <div class="nutrition-fields">
+                <label class="field"><span>Calorías</span><input id="meal-calories" type="number" min="0" step="1" placeholder="Opcional"></label>
+                <label class="field"><span>Proteína (g)</span><input id="meal-protein" type="number" min="0" step="0.1" placeholder="Opcional"></label>
+                <label class="field"><span>Hidratos (g)</span><input id="meal-carbs" type="number" min="0" step="0.1" placeholder="Opcional"></label>
+                <label class="field"><span>Grasa (g)</span><input id="meal-fat" type="number" min="0" step="0.1" placeholder="Opcional"></label>
+              </div>
+              <button class="button primary" type="submit">Guardar comida</button>
+              <p id="meal-message" class="form-message hidden" role="status"></p>
+            </form>
+          </article>
+          <article class="surface">
+            <div class="section-title"><div><p class="eyebrow">Hoy</p><h2>Tu registro</h2></div></div>
+            <div id="meal-list" class="empty-state">Todavía no has añadido ninguna comida.</div>
+          </article>
+        </div>
+
+        <section id="personal-recipe-calculator" class="surface personal-recipe-calculator" aria-labelledby="personal-recipe-title">
+          <div class="section-title recipe-calculator-heading">
+            <div><p class="eyebrow">Las recetas de Pauta Posible</p><h2 id="personal-recipe-title">Calcula mis cantidades</h2></div>
+            <span id="personal-recipe-target" class="recipe-target-badge">Calculando tu referencia…</span>
+          </div>
+          <p class="section-copy">Elige una de las 60 recetas y verás las cantidades ajustadas a los datos de tu perfil o a la referencia indicada en tu seguimiento.</p>
+          <div class="recipe-calculator-controls">
+            <label class="field recipe-select-field">
+              <span>Receta</span>
+              <select id="personal-recipe-select" aria-describedby="personal-recipe-note"></select>
+            </label>
+            <button id="personal-recipe-calculate" class="button primary" type="button">Calcular mis cantidades</button>
+          </div>
+          <div id="personal-recipe-result" class="personal-recipe-result" aria-live="polite"></div>
+          <p id="personal-recipe-note" class="recipe-calculator-note">Es una orientación práctica. Si tienes una pauta clínica, alergias o intolerancias, sigue siempre las indicaciones de tu profesional.</p>
+        </section>
+
+        <article class="surface history-card">
+          <div class="section-title"><div><p class="eyebrow">Historial</p><h2>Días anteriores</h2></div></div>
+          <div id="client-history" class="history-list empty-state">Cargando tu historial…</div>
+        </article>
+      </div>
+
+      <div id="panel-moverme" class="tab-panel hidden" data-panel="moverme">
+        <section class="surface move-intro" aria-labelledby="move-title">
+          <div class="section-title"><div><p class="eyebrow">Actividad física general</p><h2 id="move-title">Moverme</h2></div><span id="move-level" class="recipe-target-badge">Nivel 1</span></div>
+          <div class="week-goal">
+            <div class="week-goal-text"><strong id="week-minutes">0 min</strong><small id="week-goal-note">de 60 min esta semana</small></div>
+            <div class="bar" aria-hidden="true"><span id="week-goal-bar" style="width:0%"></span></div>
+          </div>
+          <p class="section-copy">Un plan sencillo para cada día de la semana, con caminatas, cardio y ejercicios funcionales básicos sin material (una silla, una pared o una mochila). Empieza por el plan suave y sube cuando te veas con fuerzas: la OMS recomienda a los adultos al menos 150 minutos de actividad a la semana y 2 días de fuerza.</p>
+          <p class="safety-note">Si tienes alguna lesión, dolor, una enfermedad o estás embarazada, consulta antes con tu médico o un profesional del ejercicio. Para si notas dolor, mareo o falta de aire.</p>
+        </section>
+
+        <section class="surface plan-card" aria-labelledby="plan-title">
+          <div class="section-title plan-head">
+            <div><p class="eyebrow">Qué toca cada día</p><h2 id="plan-title">Tu semana</h2></div>
+            <div class="plan-levels" role="group" aria-label="Elige tu plan">
+              <button type="button" data-plan-level="1">Suave</button>
+              <button type="button" data-plan-level="2">Medio</button>
+              <button type="button" data-plan-level="3">Activo</button>
+            </div>
+          </div>
+          <p id="plan-note" class="section-copy"></p>
+          <div id="plan-list" class="plan-list"></div>
+        </section>
+
+        <section aria-labelledby="sessions-title">
+          <div class="section-title plain"><div><p class="eyebrow">Sigue el temporizador</p><h2 id="sessions-title">Sesiones guiadas</h2></div></div>
+          <div id="session-list" class="session-list"></div>
+        </section>
+
+        <section class="surface activity-card" aria-labelledby="activity-title">
+          <div class="section-title"><div><p class="eyebrow">Registro diario</p><h2 id="activity-title">Apuntar una actividad</h2></div></div>
+          <form id="activity-form" class="activity-form">
+            <label class="field"><span>Qué has hecho</span><select id="activity-type"></select></label>
+            <label class="field"><span>Minutos</span><input id="activity-minutes" type="number" inputmode="numeric" min="1" max="600" step="1" required placeholder="Ej. 30"></label>
+            <button class="button primary" type="submit">Apuntar</button>
+          </form>
+          <p id="activity-estimate" class="activity-estimate"></p>
+          <p id="activity-message" class="form-message hidden" role="status"></p>
+          <div id="activity-list" class="empty-state">Todavía no has apuntado actividad hoy.</div>
+        </section>
+
+        <section aria-labelledby="library-title">
+          <div class="section-title plain"><div><p class="eyebrow">Cómo se hacen</p><h2 id="library-title">Ejercicios básicos</h2></div></div>
+          <div id="exercise-list" class="exercise-list"></div>
+        </section>
+
+        <section class="surface reminder-card" aria-labelledby="reminder-title">
+          <div><p class="eyebrow">Recordatorio</p><h2 id="reminder-title">¿A qué hora te viene bien moverte?</h2><p class="section-copy">Se añade a tu calendario como un aviso diario. Puedes borrarlo cuando quieras.</p></div>
+          <div class="reminder-controls">
+            <label class="field"><span>Hora</span><input id="reminder-time" type="time" value="18:00"></label>
+            <button id="reminder-button" class="button secondary" type="button">Añadir al calendario</button>
+          </div>
+        </section>
+      </div>
+
+      <div id="panel-progreso" class="tab-panel hidden" data-panel="progreso">
+        <section class="progress-grid" aria-labelledby="progress-chart-title">
+          <article class="surface progress-chart-card">
+            <div class="section-title"><div><p class="eyebrow">Tu tendencia</p><h2 id="progress-chart-title">Tu evolución</h2></div></div>
+            <form id="quick-weight-form" class="quick-weight" aria-label="Apuntar tu peso">
+              <label class="quick-field"><span>Fecha</span><input id="quick-weight-date" type="date" required></label>
+              <label class="quick-field"><span>Peso (kg)</span><input id="quick-weight-value" type="number" inputmode="decimal" min="30" max="350" step="0.1" required placeholder="Ej. 70,5"></label>
+              <button class="button primary" type="submit">Añadir</button>
+            </form>
+            <p id="quick-weight-message" class="form-message hidden" role="status"></p>
+            <div id="client-progress-chart" class="progress-visual empty-state">Añade tu primera medición para comenzar la gráfica.</div>
+            <p class="progress-note">El peso es solo un dato más. Lo miramos junto a cómo duermes, comes y te sientes.</p>
+          </article>
+          <article class="surface progress-entry-card">
+            <div class="section-title"><div><p class="eyebrow">Evolución corporal</p><h2 id="progress-title">Medición completa</h2></div></div>
+            <p class="section-copy">¿Tienes más datos? Añade grasa corporal, masa muscular o cintura. Registra solo los que tengas.</p>
+            <form id="progress-form" class="progress-form">
+              <label class="field"><span>Fecha</span><input id="progress-date" type="date" required></label>
+              <div class="measurement-fields">
+                <label class="field"><span>Peso (kg)</span><input id="progress-weight" type="number" min="30" max="350" step="0.1" placeholder="Ej. 78,4"></label>
+                <label class="field"><span>Grasa corporal (%)</span><input id="progress-body-fat" type="number" min="2" max="70" step="0.1" placeholder="Opcional"></label>
+                <label class="field"><span>Masa muscular (kg)</span><input id="progress-muscle" type="number" min="10" max="150" step="0.1" placeholder="Opcional"></label>
+                <label class="field"><span>Cintura (cm)</span><input id="progress-waist" type="number" min="40" max="220" step="0.1" placeholder="Opcional"></label>
+              </div>
+              <button class="button primary" type="submit">Guardar medición</button>
+              <p id="progress-message" class="form-message hidden" role="status"></p>
+            </form>
+          </article>
+        </section>
+
+        <article class="surface weeks-card">
+          <div class="section-title"><div><p class="eyebrow">Movimiento</p><h2>Minutos por semana</h2></div></div>
+          <div id="weeks-chart" class="weeks-chart" role="img" aria-label="Minutos de actividad de las últimas semanas"></div>
+          <p class="progress-note">La línea marca tu objetivo de esta semana.</p>
+        </article>
+      </div>
+
+      <div id="panel-logros" class="tab-panel hidden" data-panel="logros">
+        <section class="surface logros-head" aria-labelledby="logros-title">
+          <div class="section-title"><div><p class="eyebrow">Tu constancia</p><h2 id="logros-title">Logros</h2></div><span id="logros-count" class="recipe-target-badge">0 de 14</span></div>
+          <div class="logros-facts">
+            <p><strong id="logros-streak">0</strong><small>días seguidos</small></p>
+            <p><strong id="logros-best">0</strong><small>mejor racha</small></p>
+            <p><strong id="logros-sessions">0</strong><small>sesiones</small></p>
+            <p><strong id="logros-weeks">0</strong><small>retos cumplidos</small></p>
+          </div>
+          <div class="challenge">
+            <p><strong>Reto de esta semana</strong><span id="logros-challenge-note">4 días activos de lunes a domingo</span></p>
+            <div class="week-dots large" id="logros-week-dots"></div>
+          </div>
+          <p class="section-copy">Un día cuenta como activo si apuntas alguna comida o algo de movimiento. Aquí se premia la constancia, no el peso.</p>
+        </section>
+        <section aria-labelledby="medals-title">
+          <div class="section-title plain"><div><h2 id="medals-title">Medallas</h2></div></div>
+          <div id="medal-grid" class="medal-grid"></div>
+        </section>
+        <section aria-labelledby="cups-title">
+          <div class="section-title plain"><div><h2 id="cups-title">Copas</h2></div></div>
+          <div id="cup-grid" class="medal-grid"></div>
+        </section>
+      </div>
+    </section>
+    <div id="achievement-toast" class="achievement-toast hidden" role="status" aria-live="polite"></div>
+
+    <section id="professional-view" class="professional-layout hidden">
+      <aside class="professional-sidebar">
+        <div class="sidebar-head">
+          <p class="eyebrow">Seguimiento profesional</p>
+          <h1>Personas</h1>
+          <p>Cuentas, solicitudes e historial reunidos en un solo lugar.</p>
+        </div>
+        <button id="open-my-progress" class="button primary wide panel-my-progress" type="button">Mi app: diario y escáner</button>
+        <div id="care-request-alert" class="care-request-alert hidden" role="status">
+          <button id="open-care-request" type="button">
+            <span class="care-request-icon" aria-hidden="true">!</span>
+            <span><strong id="care-request-count">Nueva solicitud</strong><small>Requiere tu revisión</small></span>
+          </button>
+          <button id="enable-browser-notifications" class="notification-permission" type="button">Activar avisos del navegador</button>
+        </div>
+        <label class="search-field"><span class="sr-only">Buscar persona</span><input id="client-search" type="search" placeholder="Buscar por nombre o correo"></label>
+        <div id="professional-client-list" class="client-list"><p class="empty-state">Cargando personas…</p></div>
+        <button class="button ghost sign-out sidebar-signout" type="button">Cerrar sesión</button>
+      </aside>
+
+      <section class="professional-main">
+        <div id="professional-empty" class="professional-empty">
+          <div class="empty-illustration" aria-hidden="true">P</div>
+          <h2>Selecciona una persona</h2>
+          <p>Aquí podrás consultar su ficha, evolución y notas de seguimiento.</p>
+        </div>
+        <div id="professional-detail" class="hidden">
+          <div class="detail-heading">
+            <div><p id="detail-status" class="eyebrow">Seguimiento solicitado</p><h1 id="detail-name">Persona</h1><p id="detail-email"></p></div>
+            <div class="detail-actions">
+              <button id="activate-care" class="button primary" type="button">Activar seguimiento</button>
+              <p id="care-message" class="form-message hidden" role="status"></p>
+            </div>
+          </div>
+          <div id="detail-profile" class="profile-facts"></div>
+          <section id="pro-chat-section" class="surface chat-card hidden" aria-labelledby="pro-chat-title">
+          <div class="chat-head">
+            <span id="pro-chat-initials" class="chat-ini" aria-hidden="true">P</span>
+            <div><h2 id="pro-chat-title">Chat privado</h2><small id="pro-chat-sub">Mensajes con esta persona</small></div>
+            <a id="pro-chat-whatsapp" class="chat-wa hidden" href="#" target="_blank" rel="noopener noreferrer">Avisar por WhatsApp</a>
+          </div>
+          <p class="chat-off-note">El chat se activa cuando esta persona pide seguimiento. Hasta entonces no vería tus mensajes en su espacio.</p>
+          <div id="pro-chat-messages" class="chat-messages" role="region" aria-live="off" aria-label="Mensajes del chat" tabindex="0"><p class="chat-empty">Cargando mensajes…</p></div>
+          <p id="pro-chat-announce" class="sr-only" role="status" aria-live="polite"></p>
+          <form id="pro-chat-form" class="chat-form">
+            <label class="sr-only" for="pro-chat-input">Escribe un mensaje</label>
+            <textarea id="pro-chat-input" rows="1" maxlength="1000" placeholder="Escribe un mensaje" autocomplete="off"></textarea>
+            <button class="chat-send" type="submit" aria-label="Enviar mensaje"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg></button>
+          </form>
+          <p class="chat-hint"><span id="pro-chat-count" class="chat-count">0/1000</span> Intro para enviar · Mayús + Intro para saltar de línea</p>
+        </section>
+          <section class="professional-progress-workspace" aria-labelledby="professional-progress-title">
+            <article class="surface professional-progress-entry-card">
+              <div class="section-title checkup-heading">
+                <div><p class="eyebrow">Seguimiento periódico</p><h2 id="professional-progress-title">Registrar evolución</h2></div>
+                <span id="next-check-date" class="next-check-date">Primer control pendiente</span>
+              </div>
+              <p class="section-copy">Guarda las medidas disponibles y una valoración que la persona podrá consultar en su cuenta.</p>
+              <form id="professional-progress-form" class="progress-form">
+                <label class="field"><span>Fecha del control</span><input id="professional-progress-date" type="date" required></label>
+                <div class="measurement-fields">
+                  <label class="field"><span>Peso (kg)</span><input id="professional-progress-weight" type="number" min="30" max="350" step="0.1" placeholder="Ej. 78,4"></label>
+                  <label class="field"><span>Grasa corporal (%)</span><input id="professional-progress-body-fat" type="number" min="2" max="70" step="0.1" placeholder="Opcional"></label>
+                  <label class="field"><span>Masa muscular (kg)</span><input id="professional-progress-muscle" type="number" min="10" max="150" step="0.1" placeholder="Opcional"></label>
+                  <label class="field"><span>Cintura (cm)</span><input id="professional-progress-waist" type="number" min="40" max="220" step="0.1" placeholder="Opcional"></label>
+                </div>
+                <label class="field"><span>Valoración para la persona</span><textarea id="professional-progress-assessment" rows="4" placeholder="Ej. Buena evolución. Mantenemos la pauta hasta la próxima revisión."></textarea></label>
+                <button class="button primary" type="submit">Guardar control</button>
+                <p id="professional-progress-message" class="form-message hidden" role="status"></p>
+              </form>
+            </article>
+            <article class="surface professional-progress-card">
+              <div class="section-title"><div><p class="eyebrow">Evolución corporal</p><h2>Peso y composición corporal</h2></div></div>
+              <div id="detail-progress-chart" class="progress-visual empty-state">Sin mediciones todavía.</div>
+            </article>
+          </section>
+          <article class="surface care-plan-editor">
+            <div class="section-title care-plan-heading">
+              <div><p class="eyebrow">Contenido para la persona</p><h2>Publicar menú y pautas</h2></div>
+              <button id="care-plan-template" class="button secondary" type="button">Usar plantilla de 7 días</button>
+            </div>
+            <p class="section-copy">La persona lo verá al iniciar sesión. Puedes añadir varios documentos, una tabla pegada, pautas o combinarlo todo.</p>
+            <form id="care-plan-form">
+              <div class="review-settings care-followup-settings" aria-label="Configuración y aviso de la próxima revisión">
+                <label class="field"><span>Periodicidad del seguimiento</span><select id="review-frequency"><option value="weekly">Semanal</option><option value="biweekly">Quincenal</option><option value="monthly">Mensual</option></select></label>
+                <label class="field"><span>Próxima revisión</span><input id="next-review-date" type="date" required></label>
+                <label class="field"><span>Referencia energética (kcal/día)</span><input id="review-calorie-target" type="number" min="1000" max="5000" step="25" placeholder="Según su perfil"></label>
+                <div class="calendar-setting">
+                  <a id="review-calendar-link" class="button calendar-button" href="#" target="_blank" rel="noopener noreferrer">Crear aviso en Google Calendar</a>
+                  <small>Se abrirá el evento preparado; en Google Calendar solo tendrás que guardarlo.</small>
+                </div>
+                <button id="save-review-settings" class="button secondary" type="button">Guardar periodicidad y fecha</button>
+                <p id="review-settings-message" class="form-message hidden" role="status"></p>
+              </div>
+              <div class="care-plan-meta-fields">
+                <label class="field"><span>Título</span><input id="care-plan-name" required value="Menú semanal" placeholder="Ej. Menú semanal"></label>
+                <label class="field"><span>Fecha de inicio</span><input id="care-plan-date" type="date"></label>
+              </div>
+              <div class="field">
+                <span>Tablas del menú</span>
+                <label class="menu-upload-zone" for="care-plan-files">
+                  <input id="care-plan-files" class="sr-only" type="file" multiple accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                  <span class="menu-upload-icon" aria-hidden="true">PDF</span>
+                  <span class="menu-upload-copy">
+                    <strong>Pincha aquí para añadir uno o varios PDF</strong>
+                    <small>También admite Word. Máximo 10 documentos y 5 MB por archivo.</small>
+                  </span>
+                </label>
+                <ul id="selected-care-files" class="selected-care-files hidden" aria-live="polite"></ul>
+              </div>
+              <details id="care-plan-table-option" class="pasted-menu-option">
+                <summary>También puedes pegar una tabla de Excel o Google Sheets</summary>
+                <label class="field">
+                  <span class="sr-only">Tabla del menú pegada</span>
+                  <textarea id="care-plan-menu" rows="10" placeholder="Pega aquí las celdas de tu tabla"></textarea>
+                  <small class="field-help">Las filas y columnas se conservan automáticamente.</small>
+                </label>
+              </details>
+              <label class="field"><span>Pautas</span><textarea id="care-plan-guidelines" rows="6" placeholder="Escribe aquí las pautas, recordatorios y alternativas para esta persona…"></textarea></label>
+              <button class="button primary" type="submit">Publicar para esta persona</button>
+              <p id="care-plan-message" class="form-message hidden" role="status"></p>
+            </form>
+            <div class="published-plan-heading"><h3>Planes publicados</h3></div>
+            <div id="professional-care-plan-list" class="care-plan-list"><p class="empty-state">Todavía no hay ningún plan publicado.</p></div>
+          </article>
+          <div class="professional-detail-grid">
+            <article class="surface"><div class="section-title"><div><p class="eyebrow">Evolución</p><h2>Registro reciente</h2></div></div><div id="detail-history" class="history-list empty-state">Sin registros todavía.</div></article>
+            <article class="surface"><div class="section-title"><div><p class="eyebrow">Notas privadas</p><h2>Seguimiento</h2></div></div>
+              <form id="note-form"><label class="field"><span>Nueva nota</span><textarea id="note-text" rows="4" required placeholder="Escribe una observación para la próxima revisión…"></textarea></label><button class="button primary" type="submit">Guardar nota</button><p id="note-message" class="form-message hidden" role="status"></p></form>
+              <div id="note-list" class="note-list"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>© 2026 Pauta Posible</span>
+    <a href="mailto:hola@pautaposible.es">hola@pautaposible.es</a>
+    <span class="app-footer-links"><a href="/privacidad/" target="_blank" rel="noopener">Privacidad</a> · <a href="/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a> · <a href="/eliminar-cuenta/" target="_blank" rel="noopener">Eliminar cuenta</a></span>
+    <span>Sin publicidad. Orientación general: no es un producto sanitario ni sustituye la valoración de un profesional.</span>
+  </footer>
+
+  <script src="/recetas/data/pastas.js"></script>
+  <script src="/recetas/data/legumbres.js"></script>
+  <script src="/recetas/data/carnes.js"></script>
+  <script src="/recetas/data/pescados.js"></script>
+  <script src="/recetas/data/ensaladas.js"></script>
+  <script src="/recetas/data/salsas.js"></script>
+  <div id="scanner" class="scanner hidden" role="dialog" aria-modal="true" aria-labelledby="scanner-title" data-mode="live">
+    <div class="scanner-top">
+      <h2 id="scanner-title" class="sr-only">Escáner de alimentos</h2>
+      <div class="scanner-tabs" role="group" aria-label="Modo del escáner">
+        <button type="button" data-scanner-mode="live" aria-pressed="true">Valores</button>
+        <button type="button" data-scanner-mode="plate" aria-pressed="false">Mi plato</button>
+      </div>
+      <button id="scanner-close" class="scanner-close" type="button" aria-label="Cerrar el escáner">×</button>
+    </div>
+    <div class="scanner-stage">
+      <video id="scanner-video" playsinline muted autoplay></video>
+      <div class="scanner-frame" aria-hidden="true"></div>
+      <div id="scanner-labels" class="scanner-labels" aria-hidden="true"></div>
+      <p id="scanner-hint" class="scanner-hint" role="status" aria-live="polite"></p>
+    </div>
+    <div class="scanner-panel">
+      <button id="scanner-shutter" class="button primary scanner-shutter" type="button">Analizar ahora</button>
+      <div id="scanner-sheet" class="scanner-sheet" aria-live="polite"></div>
+      <form id="scanner-manual" class="scanner-manual">
+        <label for="scanner-manual-code">¿No lee el código? Escríbelo</label>
+        <div><input id="scanner-manual-code" inputmode="numeric" autocomplete="off" placeholder="Número del código de barras" maxlength="14"><button class="button secondary" type="submit">Buscar</button></div>
+      </form>
+      <p id="scanner-note" class="scanner-note"></p>
+    </div>
+  </div>
+  <script type="module" src="/app/app.js"></script>
+</body>
+</html>

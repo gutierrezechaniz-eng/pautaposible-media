@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAFAF7">
+  <meta name="description" content="App gratis para comer mejor y moverte más: 60 recetas con tus cantidades, escáner de alimentos, plan de ejercicio semanal con sesiones guiadas y medallas. Sin dietas milagro.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Pauta Posible | Come mejor y muévete más, gratis">
+  <meta property="og:description" content="Recetas con tus cantidades, escáner de alimentos, plan de ejercicio semanal y medallas por tu constancia. Una app gratis, sin dietas milagro.">
+  <meta property="og:image" content="https://pautaposible.es/assets/compartir.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="La app gratis de Pauta Posible: recetas, ejercicio guiado y medallas">
+  <meta property="og:url" content="https://pautaposible.es/">
+  <meta property="og:site_name" content="Pauta Posible">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://pautaposible.es/">
+  <title>Pauta Posible | Come mejor y muévete más, gratis</title>
+  <link rel="icon" type="image/png" href="/assets/pauta-posible-symbol-natural.png">
+  <link rel="preload" href="/assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Pauta Posible",
+        "url": "https://pautaposible.es/",
+        "logo": "https://pautaposible.es/assets/pauta-posible-symbol-natural.png",
+        "email": "mailto:hola@pautaposible.es",
+        "description": "Nutrición práctica para la vida real.",
+        "sameAs": [
+          "https://www.instagram.com/pautaposible/",
+          "https://www.youtube.com/@pautaposible",
+          "https://t.me/pautaposible"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Pauta Posible",
+        "url": "https://pautaposible.es/",
+        "inLanguage": "es"
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Pauta Posible",
+        "url": "https://pautaposible.es/app/",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android, iOS, navegador web",
+        "inLanguage": "es",
+        "description": "Diario de comidas con escáner, recetas con tus cantidades, plan de ejercicio semanal con sesiones guiadas, racha, retos y medallas.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Pauta Posible, inicio">
+        <img src="/assets/pauta-posible-symbol-natural.png" width="48" height="48" alt="">
+        <span><strong>Pauta Posible</strong><small>Nutrición práctica</small></span>
+      </a>
+
+      <a class="header-app" href="/instalar/" data-app-link><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18h3"/></svg><span>App</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-toggle>
+        <span class="menu-toggle-bars" aria-hidden="true"></span><span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal" data-nav>
+        <div class="nav-item" data-nav-item>
+          <button class="nav-trigger" type="button" aria-expanded="false">Recetas<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></button>
+          <div class="nav-panel nav-panel-recipes">
+            <form class="nav-search" action="/recetas/" role="search">
+              <label class="sr-only" for="nav-search-input">Buscar receta</label>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input id="nav-search-input" name="q" type="search" placeholder="Busca por plato o ingrediente" autocomplete="off">
+            </form>
+            <div class="nav-categories">
+              <a href="/recetas/?categoria=pastas"><img src="/assets/receta-pasta.webp" alt="" width="64" height="64" loading="lazy"><span>Pastas</span></a>
+              <a href="/recetas/?categoria=legumbres"><img src="/assets/receta-legumbres.webp" alt="" width="64" height="64" loading="lazy"><span>Legumbres</span></a>
+              <a href="/recetas/?categoria=carnes"><img src="/assets/receta-carnes.webp" alt="" width="64" height="64" loading="lazy"><span>Carnes</span></a>
+              <a href="/recetas/?categoria=pescados"><img src="/assets/receta-pescados.webp" alt="" width="64" height="64" loading="lazy"><span>Pescados</span></a>
+              <a href="/recetas/?categoria=ensaladas"><img src="/assets/receta-ensaladas.webp" alt="" width="64" height="64" loading="lazy"><span>Ensaladas</span></a>
+              <a href="/recetas/?categoria=salsas"><img src="/assets/receta-salsas.webp" alt="" width="64" height="64" loading="lazy"><span>Salsas</span></a>
+            </div>
+            <a class="nav-panel-foot" href="/recetas/">Ver las 60 recetas</a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-nav-item>
+          <button class="nav-trigger" type="button" aria-expanded="false">Aprende<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></button>
+          <div class="nav-panel nav-panel-learn">
+            <a class="nav-feature" href="/aprende/seguridad-alimentaria/">
+              <img src="/assets/guias/guia-seguridad-higiene-mini.webp" alt="" width="84" height="119" loading="lazy">
+              <span><strong>Seguridad alimentaria</strong><small>Dos guías ilustradas para cocinar y conservar en casa. Descarga gratis.</small></span>
+            </a>
+            <ul class="nav-guides">
+              <li><a href="/aprende/#plato-flexible">Plato flexible</a></li>
+              <li><a href="/aprende/#planificar">Planificar el menú</a></li>
+              <li><a href="/aprende/#etiquetas">Leer etiquetas</a></li>
+              <li><a href="/aprende/#proteinas">Proteínas</a></li>
+              <li><a href="/aprende/#fibra">Fibra</a></li>
+              <li><a href="/aprende/#hidratacion">Hidratación</a></li>
+              <li><a href="/aprende/#conservas">Congelados y conservas</a></li>
+              <li><a href="/aprende/#suplementos">Suplementos</a></li>
+              <li><a href="/aprende/#sal-azucar">Sal y azúcar</a></li>
+              <li><a href="/aprende/#hambre">Hambre y saciedad</a></li>
+              <li><a href="/aprende/#fuera-de-casa">Comer fuera</a></li>
+              <li><a href="/aprende/#progreso">Medir el progreso</a></li>
+            </ul>
+            <a class="nav-panel-foot" href="/aprende/">Todas las guías</a>
+          </div>
+        </div>
+
+        <div class="nav-item" data-nav-item>
+          <button class="nav-trigger" type="button" aria-expanded="false">Más<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5"/></svg></button>
+          <div class="nav-panel nav-panel-more">
+            <a class="nav-link-rich" href="/app/?vista=app"><span class="nav-ico ico-forest" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18h3"/></svg></span><span><strong>La app (beta)</strong><small>Tu diario, el escáner, ejercicios guiados y tus logros</small></span></a>
+            <a class="nav-link-rich" href="/instalar/"><span class="nav-ico ico-forest" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg></span><span><strong>Instalar la app</strong><small>Gratis, en Android, iPhone u ordenador</small></span></a>
+            <a class="nav-link-rich" href="/app/?mode=care"><span class="nav-ico ico-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></span><span><strong>Seguimiento conmigo</strong><small>Revisiones periódicas de tu progreso</small></span></a>
+            <div class="nav-social" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/pautaposible/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.youtube.com/@pautaposible" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://t.me/pautaposible" target="_blank" rel="noopener noreferrer">Telegram</a>
+            </div>
+            <a class="nav-panel-foot" href="mailto:hola@pautaposible.es">hola@pautaposible.es</a>
+          </div>
+        </div>
+
+        <a class="nav-direct" href="/ciencia/">Ciencia</a>
+        <a class="nav-direct nav-app" href="/instalar/" data-app-link><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18h3"/></svg>La app</a>
+        <a class="nav-login" href="/app/?mode=login">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="home">
+    <section class="h-hero" aria-labelledby="hero-title">
+      <div class="wrap h-hero-grid">
+        <div class="h-hero-copy">
+          <p class="eyebrow">Nutrición práctica, sin miedo ni culpa</p>
+          <h1 id="hero-title"><span class="sr-only">Come mejor sin complicarte.</span><span aria-hidden="true">Come mejor<br><span class="rot" data-rotator><span class="rot-word is-on">sin complicarte.</span><span class="rot-word">sin culpa.</span><span class="rot-word">con lo que tienes.</span><span class="rot-word">sin dietas milagro.</span></span></span></h1>
+          <p class="h-lead">Recetas con tus cantidades calculadas, un plan para moverte cada día con ejercicios guiados y guías cortas que explican la ciencia sin ruido. Todo en una app gratis.</p>
+          <div class="h-ctas">
+            <a class="btn btn-main" href="#test">Haz el test de 1 minuto</a>
+            <a class="btn btn-ghost" href="/app/?mode=register">Crear mi espacio gratis</a>
+          </div>
+          <ul class="h-facts" aria-label="Pauta Posible en cifras">
+            <li><b>60</b>recetas fáciles</li>
+            <li><b>18</b>ejercicios guiados</li>
+            <li><b>0 €</b>la app, sin anuncios</li>
+          </ul>
+          <button class="motion-toggle" type="button" data-motion-toggle hidden>Pausar animaciones</button>
+        </div>
+
+        <div class="phone-stage">
+          <div class="phone" role="img" aria-label="Vista de la app: una receta con las cantidades calculadas para ti">
+            <div class="screen" aria-hidden="true">
+              <img class="screen-photo" src="/assets/recipes/legumbres/ensalada-templada-de-lentejas-y-calabaza.webp" width="640" height="427" alt="">
+              <span class="screen-eyebrow">Tu receta</span>
+              <span class="screen-title">Ensalada templada de lentejas y calabaza</span>
+              <span class="screen-note">Raciones para ti · 35 min</span>
+              <span class="slider"><i></i></span>
+              <span class="qty"><span>Lentejas cocidas</span><b data-qty="150,170,130">150 g</b></span>
+              <span class="qty"><span>Calabaza</span><b data-qty="150,180,120">150 g</b></span>
+              <span class="qty"><span>Yogur natural</span><b data-qty="50,60,40">50 g</b></span>
+              <span class="qty"><span>Espinacas</span><b>1 puñado</b></span>
+            </div>
+          </div>
+          <span class="float f1" aria-hidden="true">Tus cantidades<small>ajustadas a tu perfil</small></span>
+          <span class="float f2" aria-hidden="true">Tu evolución<small>de un vistazo</small></span>
+          <span class="float f3" aria-hidden="true">Chat conmigo<small>si tienes seguimiento</small></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="band" aria-hidden="true"><div class="band-track">
+      <span>Sin dietas milagro</span><span>Sin contar cada caloría</span><span>Con evidencia</span><span>Con lo que tienes en casa</span><span>Sin culpa</span>
+      <span>Sin dietas milagro</span><span>Sin contar cada caloría</span><span>Con evidencia</span><span>Con lo que tienes en casa</span><span>Sin culpa</span>
+    </div></div>
+
+
+    <section class="block app-block" id="app" aria-labelledby="app-title">
+      <div class="wrap app-grid">
+        <div class="app-copy">
+          <p class="eyebrow">La app de Pauta Posible · gratis</p>
+          <h2 id="app-title">Comer mejor y moverte más, en una sola app</h2>
+          <p class="app-lead">Sin dietas milagro ni rutinas de gimnasio: lo básico, cada día y a tu ritmo.</p>
+          <ul class="app-features">
+            <li><span aria-hidden="true">📸</span><div><b>Escáner de comida</b>Apunta la cámara al plato o al código de barras y apúntalo en tu diario.</div></li>
+            <li><span aria-hidden="true">📅</span><div><b>Tu semana, día a día</b>Caminata, ejercicios funcionales, cardio o descanso. Elige plan suave, medio o activo.</div></li>
+            <li><span aria-hidden="true">💪</span><div><b>18 ejercicios guiados</b>Dibujos que enseñan cómo empiezas y hasta dónde llegas, con temporizador y sin material.</div></li>
+            <li><span aria-hidden="true">🏆</span><div><b>Racha, retos y medallas</b>Aquí se premia la constancia, nunca el peso.</div></li>
+          </ul>
+          <div class="h-ctas">
+            <a class="btn btn-gold" href="/app/?mode=register">Abrir la app gratis</a>
+            <a class="btn btn-ghost-light" href="/instalar/">Instalarla en el móvil</a>
+          </div>
+          <p class="app-note">Funciona en Android, iPhone y ordenador. Sin anuncios y sin compras.</p>
+        </div>
+        <div class="app-visual">
+        <div class="app-phones">
+          <figure class="app-phone p1"><img src="/assets/app/app-hoy.webp" width="540" height="1080" alt="Pantalla Hoy de la app: anillos de comida y movimiento, racha de días y reto de la semana" loading="lazy" decoding="async"><figcaption>Hoy</figcaption></figure>
+          <figure class="app-phone p2"><img src="/assets/app/app-semana.webp" width="540" height="1080" alt="Pantalla Tu semana: qué toca cada día, con caminata, ejercicios funcionales y cardio" loading="lazy" decoding="async"><figcaption>Tu semana</figcaption></figure>
+          <figure class="app-phone p3"><img src="/assets/app/app-ejercicio.webp" width="540" height="1080" alt="Ejercicio sentadilla a la silla: dibujo de cómo empieza y hasta dónde llega" loading="lazy" decoding="async"><figcaption>Ejercicios guiados</figcaption></figure>
+        </div>
+        <p class="app-demo">Capturas con datos de ejemplo</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="test" aria-labelledby="test-title">
+      <div class="wrap">
+        <div class="quiz">
+          <div class="quiz-intro">
+            <p class="eyebrow">Test de 1 minuto</p>
+            <h2 id="test-title">¿Por dónde empiezo?</h2>
+            <p>Tres preguntas y te digo qué te va a servir más de Pauta Posible. Al final puedes crear tu espacio gratis para guardarlo todo.</p>
+            <div class="qsteps" data-quiz-steps aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+          </div>
+          <div class="qcard" data-quiz aria-live="polite">
+            <noscript><p>Activa JavaScript para hacer el test o <a href="/app/?mode=register">crea tu espacio gratis</a>.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-tight" aria-labelledby="mitos-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="mitos-title">¿Mito o realidad?</h2>
+          <p>Lo que ves en redes, explicado en 20 segundos. Toca una tarjeta para darle la vuelta.</p>
+        </div>
+        <div class="myths">
+          <div class="myth" data-myth>
+            <button class="myth-in" type="button" aria-pressed="false">
+              <span class="myth-face myth-front"><span class="tag">¿Mito o realidad?</span><strong>¿Las legumbres de bote son peores que las secas?</strong><span class="tap">Toca o pulsa para ver la respuesta</span></span>
+              <span class="myth-face myth-back"><span class="tag">Realidad a medias</span><span>Son las mismas legumbres, ya cocidas. Escúrrelas y enjuágalas para quitar buena parte de la sal.</span><span class="tap">Más en @pautaposible</span></span>
+            </button>
+          </div>
+          <div class="myth" data-myth>
+            <button class="myth-in" type="button" aria-pressed="false">
+              <span class="myth-face myth-front"><span class="tag">¿Mito o realidad?</span><strong>¿Hay que beber 2 litros de agua al día sí o sí?</strong><span class="tap">Toca o pulsa para ver la respuesta</span></span>
+              <span class="myth-face myth-back"><span class="tag">Mito</span><span>Las referencias incluyen el agua que llega con la comida. Bebe agua cuando tengas sed y un poco más si hace calor o te mueves mucho.</span><span class="tap">Más en @pautaposible</span></span>
+            </button>
+          </div>
+          <div class="myth" data-myth>
+            <button class="myth-in" type="button" aria-pressed="false">
+              <span class="myth-face myth-front"><span class="tag">¿Mito o realidad?</span><strong>¿El azúcar moreno es más sano que el blanco?</strong><span class="tap">Toca o pulsa para ver la respuesta</span></span>
+              <span class="myth-face myth-back"><span class="tag">Mito</span><span>Los dos son casi todo sacarosa. Lo que cuenta es cuánto tomas, no el color.</span><span class="tap">Más en @pautaposible</span></span>
+            </button>
+          </div>
+          <div class="myth" data-myth>
+            <button class="myth-in" type="button" aria-pressed="false">
+              <span class="myth-face myth-front"><span class="tag">¿Mito o realidad?</span><strong>¿Cenar hidratos es mala idea?</strong><span class="tap">Toca o pulsa para ver la respuesta</span></span>
+              <span class="myth-face myth-back"><span class="tag">Mito</span><span>Cuenta el conjunto del día, no la hora. Un plato de pasta con verdura por la noche puede encajar perfectamente.</span><span class="tap">Más en @pautaposible</span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-tint" id="ciencia" aria-labelledby="ciencia-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Ciencia sin ruido</p>
+            <h2 id="ciencia-title">El estudio, en un minuto</h2>
+          </div>
+          <p>Estudios contados en claro: qué se hizo, qué salió y qué significa para tu día a día. Siempre con el enlace al original.</p>
+        </div>
+        <div class="papers">
+          <a class="paper" href="/ciencia/#predimed">
+            <span class="paper-meta"><span>NEJM · 2018</span><span>7.447 personas</span><span class="lvl">Ensayo clínico</span></span>
+            <strong>La dieta mediterránea con aceite de oliva o frutos secos cuida el corazón</strong>
+            <span class="paper-so"><b>Para ti:</b> el aceite de oliva como grasa principal y un puñado de frutos secos tienen respaldo.</span>
+            <span class="paper-more">Leer el resumen</span>
+          </a>
+          <a class="paper" href="/ciencia/#ultraprocesados">
+            <span class="paper-meta"><span>Cell Metabolism · 2019</span><span>20 personas</span><span class="lvl">Ensayo controlado</span></span>
+            <strong>Con ultraprocesados comemos más sin darnos cuenta</strong>
+            <span class="paper-so"><b>Para ti:</b> cocinar con alimentos poco procesados ya te ayuda a comer lo que necesitas.</span>
+            <span class="paper-more">Leer el resumen</span>
+          </a>
+          <a class="paper" href="/ciencia/#fibra">
+            <span class="paper-meta"><span>The Lancet · 2019</span><span>185 estudios y 58 ensayos</span><span class="lvl">Revisión sistemática</span></span>
+            <strong>Comer más fibra se asocia a menos enfermedad cardiovascular, diabetes tipo 2 y cáncer colorrectal</strong>
+            <span class="paper-so"><b>Para ti:</b> legumbres, fruta, verdura e integrales cada día, poco a poco.</span>
+            <span class="paper-more">Leer el resumen</span>
+          </a>
+        </div>
+        <p class="sec-foot"><a class="btn btn-ghost" href="/ciencia/">Ver Ciencia sin ruido</a></p>
+      </div>
+    </section>
+
+    <section class="block" id="recetas" aria-labelledby="recetas-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Recetas</p>
+            <h2 id="recetas-title">Recetas que sí vas a repetir</h2>
+          </div>
+          <a class="btn btn-ghost" href="/recetas/">Ver las 60 recetas</a>
+        </div>
+        <div class="rail" tabindex="0" aria-label="Recetas destacadas, desliza para ver más">
+          <a class="rcp" href="/recetas/?q=Ensalada%20templada%20de%20lentejas%20y%20calabaza" style="--rcp-bg:#DDEEDF">
+            <img src="/assets/recipes/legumbres/ensalada-templada-de-lentejas-y-calabaza.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>35 min</span><span>Legumbres</span><span>2 raciones</span></span><strong>Ensalada templada de lentejas y calabaza</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Salm%C3%B3n%20al%20horno%20con%20lim%C3%B3n%20y%20jud%C3%ADas%20verdes" style="--rcp-bg:#F6DDD4">
+            <img src="/assets/recipes/pescados/salmon-al-horno-con-limon-y-judias-verdes.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>30 min</span><span>Pescados</span><span>2 raciones</span></span><strong>Salmón al horno con limón y judías verdes</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Macarrones%20con%20tomate%20asado%20y%20ricotta" style="--rcp-bg:#F3E6CB">
+            <img src="/assets/recipes/pastas/macarrones-con-tomate-asado-y-ricotta.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>35 min</span><span>Pastas</span><span>2 raciones</span></span><strong>Macarrones con tomate asado y ricotta</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Curry%20suave%20de%20garbanzos%20y%20espinacas" style="--rcp-bg:#E3EEDC">
+            <img src="/assets/recipes/legumbres/curry-suave-de-garbanzos-y-espinacas.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>25 min</span><span>Legumbres</span><span>3 raciones</span></span><strong>Curry suave de garbanzos y espinacas</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Fajitas%20de%20pollo%20y%20pimientos" style="--rcp-bg:#F7E3D6">
+            <img src="/assets/recipes/carnes/fajitas-de-pollo-y-pimientos.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>22 min</span><span>Carnes</span><span>2 raciones</span></span><strong>Fajitas de pollo y pimientos</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Ensalada%20mediterr%C3%A1nea%20de%20garbanzos" style="--rcp-bg:#E6EEF2">
+            <img src="/assets/recipes/ensaladas/ensalada-mediterranea-de-garbanzos.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>15 min</span><span>Ensaladas</span><span>2 raciones</span></span><strong>Ensalada mediterránea de garbanzos</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Espaguetis%20con%20at%C3%BAn%2C%20lim%C3%B3n%20y%20r%C3%BAcula" style="--rcp-bg:#F4EBD3">
+            <img src="/assets/recipes/pastas/espaguetis-con-atun-limon-y-rucula.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>18 min</span><span>Pastas</span><span>2 raciones</span></span><strong>Espaguetis con atún, limón y rúcula</strong></span>
+          </a>
+          <a class="rcp" href="/recetas/?q=Tzatziki%20sencillo" style="--rcp-bg:#E2EEE8">
+            <img src="/assets/recipes/salsas/tzatziki-sencillo.webp" width="640" height="427" alt="" loading="lazy">
+            <span class="rcp-body"><span class="chips"><span>10 min</span><span>Salsas</span><span>4 raciones</span></span><strong>Tzatziki sencillo</strong></span>
+          </a>
+        </div>
+        <form class="h-search" action="/recetas/" role="search">
+          <label class="sr-only" for="home-search-input">Buscar receta por plato o ingrediente</label>
+          <input id="home-search-input" name="q" type="search" placeholder="Prueba con «garbanzos» o «salmón»" autocomplete="off">
+          <button class="btn btn-main" type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="block block-tight" aria-labelledby="seguimiento-title">
+      <div class="wrap">
+        <div class="care">
+          <div>
+            <p class="eyebrow eyebrow-gold">Seguimiento conmigo</p>
+            <h2 id="seguimiento-title">Tu carpeta, tu chat y tu evolución, en un solo sitio</h2>
+            <ul class="care-list">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Tu pauta, tus tablas y tus PDF, en tu carpeta privada.</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Un chat directo conmigo para dudas cortas y feedback.</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Apuntas tu peso cuando quieras y ves tu evolución en una gráfica.</span></li>
+            </ul>
+            <div class="h-ctas">
+              <a class="btn btn-gold" href="/app/?mode=care">Quiero seguimiento</a>
+              <a class="btn btn-ghost-light" href="/app/?mode=login">Ya tengo cuenta</a>
+            </div>
+          </div>
+          <div class="care-mini" aria-hidden="true">
+            <div class="mini-head"><span class="mini-ini">IV</span><span><b>Iván · Pauta Posible</b><small>Chat privado</small></span></div>
+            <div class="mini-msgs">
+              <span class="day">Hoy</span>
+              <span class="m them">¿Qué tal la semana con la pauta nueva?<time>09:12</time></span>
+              <span class="m me">¡Muy bien! Las lentejas templadas, un éxito 😄<time>09:15</time></span>
+            </div>
+            <div class="mini-chart">
+              <span class="mini-chart-head"><b>Tu evolución</b><small>Ejemplo</small></span>
+              <svg viewBox="0 0 320 110" role="presentation">
+                <line x1="10" x2="310" y1="25" y2="25" class="g"/><line x1="10" x2="310" y1="55" y2="55" class="g"/><line x1="10" x2="310" y1="85" y2="85" class="g"/>
+                <path d="M10 54 L60 47 L110 56 L160 50 L210 58 L260 49 L310 53 L310 100 L10 100 Z" class="a"/>
+                <path d="M10 54 L60 47 L110 56 L160 50 L210 58 L260 49 L310 53" class="l"/>
+                <circle cx="10" cy="54" r="3" class="p"/><circle cx="60" cy="47" r="3" class="p"/><circle cx="110" cy="56" r="3" class="p"/><circle cx="160" cy="50" r="3" class="p"/><circle cx="210" cy="58" r="3" class="p"/><circle cx="260" cy="49" r="3" class="p"/><circle cx="304" cy="53" r="5.5" class="last"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-tight" aria-labelledby="quien-title">
+      <div class="wrap me">
+        <div class="avatar"><img src="/assets/pauta-posible-symbol-natural.png" width="512" height="512" alt="" loading="lazy"></div>
+        <div>
+          <p class="eyebrow" id="quien-title">Quién está detrás</p>
+          <blockquote><p>«La mejor pauta no es la más perfecta. Es la que puedes repetir.»</p></blockquote>
+          <p class="me-sign">Iván · Pauta Posible. Aquí se viene a aprender a comer mejor sin vivir a dieta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block-tight" aria-labelledby="espacio-title">
+      <div class="wrap">
+        <div class="final-cta">
+          <img src="/assets/pauta-posible-symbol-natural.png" width="64" height="64" alt="" loading="lazy">
+          <div>
+            <h2 id="espacio-title">Tu espacio gratis, en dos minutos</h2>
+            <p>Guarda tu perfil y cada receta te dirá cuánto poner. Sin tarjeta y sin publicidad.</p>
+          </div>
+          <div class="final-actions">
+            <a class="btn btn-main" href="/app/?mode=register">Crear mi espacio gratis</a>
+            <a class="btn btn-ghost" href="/recetas/">Primero, ver recetas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="social-strip" id="comunidad" aria-labelledby="comunidad-titulo">
+        <h2 id="comunidad-titulo">Ideas prácticas cada semana, también en redes</h2>
+        <div class="social-pills">
+          <a href="https://www.instagram.com/pautaposible/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/></svg>Instagram</a>
+          <a href="https://www.youtube.com/@pautaposible" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/></svg>YouTube</a>
+          <a href="https://t.me/pautaposible" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/></svg>Telegram</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="footer-brand" href="/"><img src="/assets/pauta-posible-symbol-natural.png" width="40" height="40" alt=""><span>Pauta Posible</span></a>
+        <p>La mejor pauta no es la más perfecta. Es la que puedes repetir.</p>
+        <a class="footer-mail" href="mailto:hola@pautaposible.es">hola@pautaposible.es</a>
+      </div>
+      <nav class="footer-col" aria-label="Recetas">
+        <h2>Recetas</h2>
+        <a href="/recetas/?categoria=pastas">Pastas</a>
+        <a href="/recetas/?categoria=legumbres">Legumbres</a>
+        <a href="/recetas/?categoria=carnes">Carnes</a>
+        <a href="/recetas/?categoria=pescados">Pescados</a>
+        <a href="/recetas/?categoria=ensaladas">Ensaladas</a>
+        <a href="/recetas/?categoria=salsas">Salsas</a>
+      </nav>
+      <nav class="footer-col" aria-label="Aprende">
+        <h2>Aprende</h2>
+        <a href="/aprende/">Guías de nutrición</a>
+        <a href="/ciencia/">Ciencia sin ruido</a>
+        <a href="/aprende/seguridad-alimentaria/">Seguridad alimentaria</a>
+        <a href="/app/">Mi espacio</a>
+        <a href="/app/?mode=care">Seguimiento conmigo</a>
+      </nav>
+      <nav class="footer-col" aria-label="Síguenos">
+        <h2>Síguenos</h2>
+        <a href="https://www.instagram.com/pautaposible/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@pautaposible" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://t.me/pautaposible" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="disclaimer">La información publicada es general y no sustituye la valoración de un profesional sanitario.</p>
+      <p class="footer-legal-links"><span>© 2026 Pauta Posible</span><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Privacidad</a><a href="/cookies/">Cookies</a></p>
+    </div>
+  </footer>
+  <script src="/site.js" defer></script>
+</body>
+</html>
