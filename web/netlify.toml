@@ -1,0 +1,9 @@
+# Netlify: esta carpeta es la web pautaposible.es tal cual (HTML, CSS y JS sin compilar).
+# Al conectar el proyecto pauta-posible con el repositorio, usar «web» como directorio base.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/app/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
