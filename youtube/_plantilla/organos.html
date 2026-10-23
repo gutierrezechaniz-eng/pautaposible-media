@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --tinta: #1d1a1f; --papel: #fff8ea; --amarillo: #ffe066; --menta: #7fd6b5; }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--papel); }
+  #escena { position: absolute; inset: 0; }
+  .bocadillo { position: absolute; width: 860px; box-sizing: border-box; padding: 26px 36px 28px; background: #fff; border: 6px solid var(--tinta);
+    border-radius: 46px; font: 700 42px/1.22 'Comic Neue', sans-serif; color: var(--tinta); box-shadow: 10px 10px 0 rgba(29,26,31,.18); }
+  .bocadillo .quien { display: block; font: 400 34px/1 Bangers, sans-serif; letter-spacing: 2px; margin-bottom: 8px; }
+  .cartela { position: absolute; left: 60px; top: 50px; width: 940px; box-sizing: border-box; padding: 22px 32px 26px; background: var(--amarillo);
+    border: 6px solid var(--tinta); font: 700 40px/1.22 'Comic Neue', sans-serif; color: var(--tinta); box-shadow: 10px 10px 0 rgba(29,26,31,.18); }
+  .cartela .quien { display: block; font: 400 30px/1 Bangers, sans-serif; letter-spacing: 2px; margin-bottom: 8px; }
+  .w { transition: none; }
+  .pegatina { position: absolute; padding: 14px 30px 10px; background: #fff; border: 6px solid var(--tinta); font: 400 58px/1.05 Bangers, sans-serif;
+    letter-spacing: 2px; color: var(--tinta); text-align: center; box-shadow: 8px 8px 0 var(--tinta); max-width: 720px; }
+  .rotulo { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+  .rotulo .num { font: 400 120px/1 Bangers, sans-serif; color: #fff; -webkit-text-stroke: 5px var(--tinta); text-shadow: 10px 10px 0 var(--tinta); }
+  .rotulo .txt { margin-top: 26px; padding: 24px 54px 16px; background: #fff; border: 7px solid var(--tinta); font: 400 92px/1.05 Bangers, sans-serif; letter-spacing: 3px;
+    color: var(--tinta); box-shadow: 14px 14px 0 var(--tinta); text-align: center; max-width: 1500px; }
+  .titulo { font: 400 210px/0.95 Bangers, sans-serif; color: #fff; -webkit-text-stroke: 8px var(--tinta); text-shadow: 16px 16px 0 var(--tinta); letter-spacing: 6px; text-align: center; }
+  .sub { margin-top: 34px; padding: 18px 48px 10px; background: var(--amarillo); border: 7px solid var(--tinta); font: 400 76px/1 Bangers, sans-serif; letter-spacing: 3px; box-shadow: 12px 12px 0 var(--tinta); }
+  .marca { position: absolute; right: 40px; bottom: 30px; font: 400 34px/1 Bangers, sans-serif; letter-spacing: 2px; color: var(--tinta); opacity: .8; }
+</style>
+</head>
+<body>
+<div id="escena"></div>
+<script>
+// Vídeo de YouTube con los órganos como personajes de cómic. render(t) dibuja el fotograma del segundo t (determinista).
+const W = 1920, H = 1080, BASE = 700, VASO = [700, 860];
+const COLOR = { narrador: '#ffe066', pancreas: '#f4a259', higado: '#b5473a', musculo: '#d64545', grasa: '#f7d35c', insulina: '#e8b923', glucosa: '#bfe3ff' };
+const NOMBRE = { narrador: 'Narrador', pancreas: 'Páncreas', higado: 'Hígado', musculo: 'Músculo', grasa: 'Tejido graso', insulina: 'Insulina', glucosa: 'Glucosa' };
+const POS = { higado: 300, pancreas: 720, musculo: 1150, grasa: 1640, glucosa: 500, insulina: 950 };
+let C; // configuración: tiempos, escenas, estados
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const ease = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+const lerp = (a, b, k) => a + (b - a) * k;
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+// Estados del escenario por escena (se interpolan durante el primer segundo y medio de cada una)
+const ESTADOS = {
+  intro:       { grasa: 1, higadoGraso: 0, puerta: 1, glucosas: 3, llaves: 0, cansancio: 0, inflama: 0, animo: { pancreas: 'feliz', higado: 'feliz', musculo: 'feliz', grasa: 'feliz', insulina: 'feliz', glucosa: 'feliz' } },
+  sano:        { grasa: 1, higadoGraso: 0, puerta: 1, glucosas: 4, llaves: 0, cansancio: 0, inflama: 0, animo: { pancreas: 'feliz', higado: 'feliz', musculo: 'feliz', grasa: 'feliz', insulina: 'feliz', glucosa: 'feliz' } },
+  resistencia: { grasa: 1.2, higadoGraso: 1, puerta: 0, glucosas: 7, llaves: 1, cansancio: 0.3, inflama: 1, animo: { pancreas: 'preocupado', higado: 'preocupado', musculo: 'preocupado', grasa: 'agobiado', insulina: 'enfadado', glucosa: 'normal' } },
+  agotado:     { grasa: 1.2, higadoGraso: 1, puerta: 0, glucosas: 16, llaves: 5, cansancio: 1, inflama: 1, animo: { pancreas: 'agotado', higado: 'preocupado', musculo: 'preocupado', grasa: 'agobiado', insulina: 'preocupado', glucosa: 'pillo' } },
+  solucion:    { grasa: 1.05, higadoGraso: 0.15, puerta: 1, glucosas: 4, llaves: 0, cansancio: 0, inflama: 0, animo: { pancreas: 'feliz', higado: 'feliz', musculo: 'fuerte', grasa: 'feliz', insulina: 'feliz', glucosa: 'feliz' } },
+};
+
+function estado(t) {
+  const es = C.escenas;
+  let i = es.findIndex((e) => t < e.fin); if (i < 0) i = es.length - 1;
+  const cur = ESTADOS[es[i].id] || ESTADOS.sano, prev = i ? (ESTADOS[es[i - 1].id] || cur) : cur;
+  const t0 = es[i].ini + (es[i].rotulo ? C.rotulo : 0);
+  const k = ease((t - t0) / 1.5);
+  const o = { escena: es[i], k };
+  for (const key of ['grasa', 'higadoGraso', 'puerta', 'glucosas', 'llaves', 'cansancio', 'inflama']) o[key] = lerp(prev[key], cur[key], k);
+  o.animo = k < 0.5 ? prev.animo : cur.animo;
+  return o;
+}
+
+function lineaActual(t) {
+  for (const e of C.escenas) for (const l of e.lineas) if (t >= l.ini - 0.05 && t <= l.fin + 0.35) return l;
+  return null;
+}
+
+// ---------- Caras ----------
+function cara(cx, cy, s, animo, boca, t, semilla) {
+  const parpadeo = ((t + semilla * 1.7) % 4.1) < 0.12;
+  const ojo = 17 * s, sep = 30 * s;
+  let g = '';
+  const cejas = { feliz: [-6, 6], normal: [0, 0], preocupado: [14, -14], agobiado: [16, -16], agotado: [10, -10], enfadado: [-16, 16], pillo: [-10, 4], fuerte: [-8, 8] }[animo] || [0, 0];
+  for (const d of [-1, 1]) {
+    const x = cx + d * sep, y = cy;
+    if (parpadeo) g += `<path d="M${x - ojo},${y} q${ojo},${ojo * 0.5} ${2 * ojo},0" fill="none" stroke="#1d1a1f" stroke-width="${5 * s}" stroke-linecap="round"/>`;
+    else {
+      g += `<ellipse cx="${x}" cy="${y}" rx="${ojo}" ry="${ojo * 1.15}" fill="#fff" stroke="#1d1a1f" stroke-width="${4.5 * s}"/>`;
+      g += `<circle cx="${x + 3 * s}" cy="${y + 3 * s}" r="${ojo * 0.5}" fill="#1d1a1f"/><circle cx="${x + 7 * s}" cy="${y - 2 * s}" r="${ojo * 0.17}" fill="#fff"/>`;
+      if (animo === 'agotado') g += `<path d="M${x - ojo - 2},${y - ojo * 1.2} h${2 * ojo + 4} v${ojo * 1.1} q${-ojo - 2},${ojo * 0.35} ${-2 * ojo - 4},0 z" fill="${'#e48d4a'}" stroke="#1d1a1f" stroke-width="${4 * s}"/>`;
+    }
+    const a = d < 0 ? cejas[0] : -cejas[0];
+    g += `<path d="M${x - ojo},${y - ojo * 1.55} l${2 * ojo},0" stroke="#1d1a1f" stroke-width="${6 * s}" stroke-linecap="round" transform="rotate(${a} ${x} ${y - ojo * 1.55})"/>`;
+  }
+  // Boca: abierta según el volumen de la voz o con el gesto del ánimo
+  const my = cy + 40 * s;
+  if (boca > 0.06) {
+    const h = (8 + boca * 30) * s, w = (22 + boca * 8) * s;
+    g += `<ellipse cx="${cx}" cy="${my + h / 2 - 6 * s}" rx="${w}" ry="${h / 2 + 4 * s}" fill="#5a1620" stroke="#1d1a1f" stroke-width="${4.5 * s}"/>`;
+    g += `<ellipse cx="${cx}" cy="${my + h - 4 * s}" rx="${w * 0.55}" ry="${Math.max(3, h * 0.22)}" fill="#ff7b8a"/>`;
+  } else {
+    const curva = { feliz: 22, fuerte: 24, pillo: 14, normal: 4, preocupado: -10, agobiado: -14, agotado: -12, enfadado: -12 }[animo] ?? 6;
+    g += `<path d="M${cx - 24 * s},${my} q${24 * s},${curva * s} ${48 * s},0" fill="${curva > 15 ? '#5a1620' : 'none'}" stroke="#1d1a1f" stroke-width="${5.5 * s}" stroke-linecap="round"/>`;
+  }
+  // Coloretes y sudor
+  if (['feliz', 'fuerte', 'pillo'].includes(animo)) for (const d of [-1, 1]) g += `<ellipse cx="${cx + d * 58 * s}" cy="${cy + 26 * s}" rx="${13 * s}" ry="${8 * s}" fill="#ff7b8a" opacity=".55"/>`;
+  if (['agobiado', 'agotado', 'preocupado'].includes(animo)) {
+    const dy = ((t * 0.9 + semilla) % 1.6) * 30 * s;
+    g += `<path d="M${cx + 62 * s},${cy - 34 * s + dy} q${-10 * s},${16 * s} 0,${22 * s} q${10 * s},${-6 * s} 0,${-22 * s} z" fill="#7cc6ff" stroke="#1d1a1f" stroke-width="${3.5 * s}"/>`;
+  }
+  return g;
+}
+
+function brazos(cx, cy, ancho, s, hablando, t, fuerte) {
+  let g = '';
+  for (const d of [-1, 1]) {
+    const x = cx + d * ancho, osc = hablando ? Math.sin(t * 7 + d) * 18 : Math.sin(t * 1.4 + d) * 5;
+    const ang = fuerte ? -70 : -20 + osc;
+    const ex = x + d * 55 * s * Math.cos(ang * Math.PI / 180), ey = cy + 55 * s * Math.sin(ang * Math.PI / 180);
+    g += `<path d="M${x},${cy} L${ex},${ey}" stroke="#1d1a1f" stroke-width="${10 * s}" stroke-linecap="round"/>`;
+    g += `<circle cx="${ex}" cy="${ey}" r="${13 * s}" fill="#fff" stroke="#1d1a1f" stroke-width="${5 * s}"/>`;
+  }
+  return g;
+}
+
+// ---------- Personajes (origen: centro de la base) ----------
+const TRAZO = 'stroke="#1d1a1f" stroke-width="7" stroke-linejoin="round"';
+function higado(st, boca, t, habla) {
+  let g = brazos(0, -130, 150, 1, habla, t);
+  g += `<path d="M-170,-60 C-185,-230 40,-265 165,-200 C195,-180 150,-110 70,-70 C10,-35 -160,0 -170,-60 Z" fill="${COLOR.higado}" ${TRAZO}/>`;
+  g += `<path d="M-120,-170 C-60,-215 40,-225 110,-195" fill="none" stroke="#d9786b" stroke-width="10" stroke-linecap="round" opacity=".7"/>`;
+  // Gotas de grasa dentro del hígado (hígado graso)
+  const gotas = [[-110, -110, 16], [-60, -80, 12], [-20, -190, 14], [60, -150, 11], [100, -110, 13], [-140, -150, 10], [20, -95, 10]];
+  for (const [x, y, r] of gotas) g += `<circle cx="${x}" cy="${y}" r="${r * st.higadoGraso}" fill="#f7d35c" stroke="#1d1a1f" stroke-width="${3 * st.higadoGraso}" opacity="${st.higadoGraso}"/>`;
+  g += cara(-20, -150, 1, st.animo.higado, boca, t, 1);
+  return g;
+}
+function pancreas(st, boca, t, habla) {
+  const can = st.cansancio;
+  let g = brazos(30, -110, 140, 1, habla, t);
+  g += `<path d="M-175,-70 C-180,-115 -80,-120 -20,-110 C40,-175 175,-175 175,-95 C175,-25 90,-20 30,-45 C-30,-30 -170,-20 -175,-70 Z" fill="${can > .5 ? '#e8945a' : COLOR.pancreas}" ${TRAZO}/>`;
+  for (const [x, y] of [[-140, -98], [-100, -104], [-60, -100], [60, -150], [110, -145]]) g += `<circle cx="${x}" cy="${y}" r="13" fill="#fbc58f" opacity=".8"/>`;
+  // Islotes: células beta (verdes) y alfa (moradas)
+  g += `<circle cx="-110" cy="-62" r="12" fill="#7fd6b5" stroke="#1d1a1f" stroke-width="3" opacity="${1 - can * 0.6}"/><circle cx="-84" cy="-58" r="8" fill="#b58ce0" stroke="#1d1a1f" stroke-width="3"/>`;
+  g += cara(80, -110, 0.92, st.animo.pancreas, boca, t, 2);
+  return g;
+}
+function musculo(st, boca, t, habla) {
+  const fuerte = st.animo.musculo === 'fuerte';
+  let g = brazos(0, -150, 95, 1.05, habla, t, fuerte);
+  g += `<path d="M0,-330 C125,-260 120,-70 0,-10 C-120,-70 -125,-260 0,-330 Z" fill="${COLOR.musculo}" ${TRAZO}/>`;
+  for (const x of [-55, -20, 20, 55]) g += `<path d="M${x * 0.5},-300 C${x * 1.3},-230 ${x * 1.3},-110 ${x * 0.5},-40" fill="none" stroke="#ef8585" stroke-width="7" stroke-linecap="round"/>`;
+  g += `<path d="M-14,-330 h28 v-18 h-28 z M-14,-10 h28 v22 h-28 z" fill="#f4efe6" stroke="#1d1a1f" stroke-width="5"/>`;
+  g += cara(0, -190, 1, st.animo.musculo, boca, t, 3);
+  return g;
+}
+function puerta(st, t) {
+  // Puerta de la célula muscular (GLUT4): abierta en el cuerpo sano, con candado atascado en la resistencia
+  const ab = st.puerta;
+  let g = `<rect x="-48" y="-150" width="96" height="150" rx="8" fill="#3a2a35" stroke="#1d1a1f" stroke-width="6"/>`;
+  g += `<g transform="translate(-48 0) skewY(${-ab * 18}) scale(${1 - ab * 0.62} 1)"><rect x="0" y="-150" width="96" height="150" rx="6" fill="#8fd3ff" stroke="#1d1a1f" stroke-width="6"/><circle cx="78" cy="-72" r="7" fill="#1d1a1f"/></g>`;
+  if (ab < 0.5) {
+    const sh = Math.sin(t * 9) * 4 * (1 - ab * 2);
+    g += `<g transform="translate(${sh} 0)" opacity="${1 - ab * 2}"><path d="M-22,-92 v-20 a22,22 0 0 1 44,0 v20" fill="none" stroke="#1d1a1f" stroke-width="9"/><rect x="-32" y="-94" width="64" height="52" rx="8" fill="#e8b923" stroke="#1d1a1f" stroke-width="6"/>`;
+    g += `<path d="M-40,-30 L40,-110 M-40,-110 L40,-30" stroke="#e23d3d" stroke-width="12" stroke-linecap="round"/></g>`;
+  }
+  g += `<text x="0" y="40" text-anchor="middle" font-family="Bangers" font-size="32" fill="#fff" letter-spacing="1">PUERTA</text>`;
+  return g;
+}
+function grasa(st, boca, t, habla) {
+  const s = st.grasa;
+  let g = `<g transform="scale(${s})">` + brazos(0, -120, 140, 1 / s, habla, t);
+  const bolas = [[-95, -70, 62], [0, -60, 66], [95, -70, 62], [-55, -160, 64], [55, -160, 64], [0, -235, 52], [-130, -150, 40], [130, -150, 40]];
+  for (const [x, y, r] of bolas) g += `<circle cx="${x}" cy="${y}" r="${r}" fill="${COLOR.grasa}" ${TRAZO}/><circle cx="${x - r * 0.35}" cy="${y - r * 0.35}" r="${r * 0.18}" fill="#fff6c9"/>`;
+  g += cara(0, -140, 1, st.animo.grasa, boca, t, 4) + '</g>';
+  // Inflamación: chispas rojas alrededor
+  if (st.inflama > 0.05) for (let i = 0; i < 7; i++) {
+    const a = i / 7 * Math.PI * 2 + t * 0.6, r = 200 * s + Math.sin(t * 4 + i) * 12;
+    const x = Math.cos(a) * r, y = -150 * s + Math.sin(a) * r * 0.75;
+    g += `<path d="M${x},${y - 16} l6,10 l12,2 l-9,8 l3,12 l-12,-6 l-12,6 l3,-12 l-9,-8 l12,-2 z" fill="#ff5a4f" stroke="#1d1a1f" stroke-width="3" opacity="${st.inflama}"/>`;
+  }
+  return g;
+}
+function llave(boca, t, animo, s = 1, conCara = true) {
+  let g = `<g transform="scale(${s})"><path d="M30,-6 h120 v-14 h-16 v-14 h-14 v14 h-14 v-18 h-16 v18 h-60 z" fill="${COLOR.insulina}" ${TRAZO}/>`;
+  g += `<circle cx="0" cy="0" r="62" fill="${COLOR.insulina}" ${TRAZO}/>`;
+  if (conCara) g += cara(0, -10, 0.72, animo, boca, t, 5);
+  else g += `<circle cx="0" cy="0" r="20" fill="#fff8ea" stroke="#1d1a1f" stroke-width="6"/>`;
+  return g + '</g>';
+}
+function azucar(boca, t, animo, s = 1, conCara = true) {
+  let g = `<g transform="scale(${s})"><path d="M-60,-30 L0,-60 L60,-30 L0,0 Z" fill="#ffffff" ${TRAZO}/><path d="M-60,-30 L0,0 L0,70 L-60,40 Z" fill="#e6f3ff" ${TRAZO}/><path d="M60,-30 L0,0 L0,70 L60,40 Z" fill="${COLOR.glucosa}" ${TRAZO}/>`;
+  if (conCara) g += `<g transform="translate(-30 22) skewY(26)">${cara(0, 0, 0.5, animo, boca, t, 6)}</g>`;
+  return g + '</g>';
+}
+
+// ---------- Vaso sanguíneo con glucosas y glóbulos ----------
+function sangre(st, t) {
+  let g = `<rect x="-20" y="${VASO[0]}" width="${W + 40}" height="${VASO[1] - VASO[0]}" fill="#c0392b" stroke="#1d1a1f" stroke-width="8"/>`;
+  g += `<rect x="-20" y="${VASO[0] + 22}" width="${W + 40}" height="${VASO[1] - VASO[0] - 44}" fill="#e05a4b"/>`;
+  for (let i = 0; i < 14; i++) {
+    const x = ((i * 157 + t * 90) % (W + 200)) - 100, y = VASO[0] + 40 + ((i * 53) % 90);
+    g += `<ellipse cx="${x}" cy="${y}" rx="26" ry="15" fill="#a82a20" stroke="#1d1a1f" stroke-width="3"/><ellipse cx="${x}" cy="${y}" rx="12" ry="6" fill="#8f1f18"/>`;
+  }
+  // Glucosas sueltas: cuantas más, más alta la glucosa en sangre
+  const n = Math.round(st.glucosas);
+  for (let i = 0; i < 18; i++) {
+    const vis = clamp(st.glucosas - i, 0, 1);
+    if (vis <= 0) continue;
+    const x = ((i * 233 + 60 + t * (40 + (i % 3) * 12)) % (W + 160)) - 80, y = VASO[0] + 52 + ((i * 37) % 80) + Math.sin(t * 2 + i) * 6;
+    g += `<g transform="translate(${x} ${y}) rotate(${(i * 29) % 40 - 20}) scale(${0.32 * vis})">${azucar(0, t, 'normal', 1, false)}</g>`;
+  }
+  // Llaves de insulina extra (el páncreas manda más y más)
+  for (let i = 0; i < 6; i++) {
+    const vis = clamp(st.llaves - i, 0, 1);
+    if (vis <= 0) continue;
+    const x = 1190 + i * 48 + Math.sin(t * 3 + i) * 10, y = VASO[0] + 50 + (i % 2) * 50 + Math.cos(t * 2.4 + i) * 8;
+    g += `<g transform="translate(${x} ${y}) rotate(${-15 + i * 9}) scale(${0.3 * vis})">${llave(0, t, 'normal', 1, false)}</g>`;
+  }
+  g += `<text x="40" y="${VASO[1] - 18}" font-family="Bangers" font-size="34" fill="#fff" letter-spacing="2" opacity=".9">SANGRE</text>`;
+  return g;
+}
+
+function etiqueta(x, y, txt, color) {
+  const w = txt.length * 19 + 50;
+  return `<g transform="translate(${x} ${y}) rotate(-2)"><rect x="${-w / 2}" y="-30" width="${w}" height="54" fill="${color}" stroke="#1d1a1f" stroke-width="5"/><text x="0" y="12" text-anchor="middle" font-family="Bangers" font-size="38" letter-spacing="2" fill="#1d1a1f">${txt.toUpperCase()}</text></g>`;
+}
+
+function fondo(id) {
+  const tono = { intro: '#fff3d6', sano: '#e8f7ef', resistencia: '#fff0dc', agotado: '#ffe4e0', solucion: '#e6f4ff' }[id] || '#fff8ea';
+  return `<defs><pattern id="puntos" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="4" fill="#1d1a1f" opacity=".07"/><circle cx="19" cy="19" r="4" fill="#1d1a1f" opacity=".07"/></pattern>
+    <radialGradient id="foco"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+    <rect width="${W}" height="${H}" fill="${tono}"/><rect width="${W}" height="${H}" fill="url(#puntos)"/>
+    <rect x="${0}" y="${VASO[1]}" width="${W}" height="${H - VASO[1]}" fill="#f1dcc4"/><rect x="0" y="${VASO[1]}" width="${W}" height="${H - VASO[1]}" fill="url(#puntos)"/>`;
+}
+
+// ---------- Escenario completo ----------
+function escenario(t, st, linea, aparecer) {
+  const quien = linea && linea.who;
+  const habla = (p) => linea && quien === p && t >= linea.ini && t <= linea.fin;
+  const boca = (p) => habla(p) ? (C.env[Math.floor(t * C.fps)] || 0) : 0;
+  const salto = (p) => habla(p) ? Math.abs(Math.sin(t * 6)) * 8 : Math.sin(t * 1.5 + POS[p]) * 3;
+  const escala = (p) => (habla(p) ? 1.07 : 1) * ease(aparecer(p));
+  let g = fondo(st.escena.id);
+  // Foco detrás de quien habla
+  if (quien && quien !== 'narrador' && POS[quien] !== undefined) g += `<ellipse cx="${POS[quien]}" cy="${quien === 'glucosa' || quien === 'insulina' ? 780 : 540}" rx="260" ry="230" fill="url(#foco)"/>`;
+  g += sangre(st, t);
+  const org = { higado, pancreas, musculo, grasa };
+  for (const p of ['higado', 'pancreas', 'musculo', 'grasa']) {
+    const sc = escala(p); if (sc <= 0.01) continue;
+    g += `<g transform="translate(${POS[p]} ${BASE + 10 - salto(p)}) scale(${sc})">${org[p](st, boca(p), t, habla(p))}</g>`;
+  }
+  g += `<g transform="translate(${POS.musculo + 175} ${BASE + 4}) scale(${0.85 * ease(aparecer('musculo'))})">${puerta(st, t)}</g>`;
+  for (const p of ['glucosa', 'insulina']) {
+    const sc = escala(p); if (sc <= 0.01) continue;
+    const y = 780 - salto(p) + Math.sin(t * 2 + (p === 'glucosa' ? 0 : 2)) * 6;
+    const fig = p === 'glucosa' ? azucar(boca(p), t, st.animo.glucosa, 1.25) : llave(boca(p), t, st.animo.insulina, 1.05);
+    g += `<g transform="translate(${POS[p]} ${y}) scale(${sc})">${fig}</g>`;
+  }
+  // Nombres
+  for (const p of ['higado', 'pancreas', 'musculo', 'grasa']) if (aparecer(p) > 0.5) g += etiqueta(POS[p], 960, NOMBRE[p], COLOR[p] === '#b5473a' ? '#e8907f' : COLOR[p]);
+  for (const p of ['glucosa', 'insulina']) if (aparecer(p) > 0.5) g += etiqueta(POS[p], 900, NOMBRE[p], p === 'glucosa' ? '#ffffff' : COLOR[p]);
+  return g;
+}
+
+// ---------- Texto: bocadillo, cartela del narrador, pegatina ----------
+function palabras(l, t) {
+  const ws = l.text.split(' '), k = clamp((t - l.ini) / Math.max(0.3, l.fin - l.ini - 0.15), 0, 1);
+  const n = Math.ceil(k * ws.length);
+  return ws.map((w, i) => `<span class="w" style="opacity:${i < n ? 1 : 0}">${esc(w)}</span>`).join(' ');
+}
+function textos(t, l, st) {
+  if (!l) return { html: '', cola: '' };
+  const ent = ease((t - l.ini + 0.05) / 0.18), sal = 1 - ease((t - l.fin - 0.15) / 0.2);
+  const op = Math.min(ent, sal);
+  let html = '', cola = '';
+  const lado = l.who === 'narrador' ? 'izq' : (POS[l.who] < 960 ? 'izq' : 'der');
+  if (l.who === 'narrador') {
+    html += `<div class="cartela" style="opacity:${op};transform:translateY(${(1 - ent) * -20}px)"><span class="quien">Narrador</span>${palabras(l, t)}</div>`;
+  } else {
+    const cx = lado === 'izq' ? 500 : 1420, bottom = 335;
+    html += `<div class="bocadillo" id="boc" style="left:${cx - 430}px;bottom:${H - bottom}px;opacity:${op};transform:scale(${0.9 + 0.1 * ent});transform-origin:50% 100%"><span class="quien" style="color:${l.who === 'glucosa' ? '#2b7bbd' : (l.who === 'higado' ? '#b5473a' : '#1d1a1f')}">${NOMBRE[l.who]}</span>${palabras(l, t)}</div>`;
+    // Cola del bocadillo hacia el personaje
+    const px = POS[l.who], py = ['glucosa', 'insulina'].includes(l.who) ? 700 : ({ higado: 440, pancreas: 520, musculo: 380, grasa: 700 - 300 * st.grasa })[l.who];
+    const bx = clamp(px, cx - 330, cx + 330);
+    cola = `<path d="M${bx - 34},${bottom - 10} L${lerp(bx, px, 0.85)},${lerp(bottom, py, 0.85)} L${bx + 34},${bottom - 10} Z" fill="#fff" stroke="#1d1a1f" stroke-width="6" stroke-linejoin="round" opacity="${op}"/>`;
+  }
+  if (l.pega) {
+    const pe = ease((t - l.ini - 0.4) / 0.25), x = lado === 'izq' ? 1420 : 500;
+    const rot = lado === 'izq' ? 3 : -3;
+    html += `<div class="pegatina" style="left:${x}px;top:170px;font-size:${l.pega.length > 30 ? 46 : 58}px;opacity:${Math.min(pe, sal)};transform:translate(-50%,-50%) rotate(${rot}deg) scale(${0.6 + 0.4 * pe})">${esc(l.pega)}</div>`;
+  }
+  return { html, cola };
+}
+
+function rotulo(t, e, i) {
+  const k = (t - e.ini) / C.rotulo; if (k < 0 || k > 1) return '';
+  const ent = ease(k / 0.12), sal = 1 - ease((k - 0.88) / 0.12);
+  const color = ['#7fd6b5', '#ffb35c', '#ff7b7b', '#7cc6ff'][(i - 1) % 4];
+  const [num, ...resto] = e.rotulo.split('. ');
+  return `<div class="rotulo" style="background:${color};clip-path:circle(${ent * 75 * sal + (sal < 1 ? 0 : 0)}% at 50% 50%)">
+    <svg width="${W}" height="${H}" style="position:absolute;inset:0"><rect width="${W}" height="${H}" fill="url(#puntosR)"/>
+    <defs><pattern id="puntosR" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="6" fill="#1d1a1f" opacity=".1"/></pattern></defs>
+    ${rayos(W / 2, H / 2, t)}</svg>
+    <div class="num" style="position:relative;transform:scale(${0.6 + 0.4 * ease(k / 0.2)}) rotate(-4deg)">${esc(num)}</div>
+    <div class="txt" style="position:relative;transform:scale(${0.7 + 0.3 * ease((k - 0.05) / 0.2)}) rotate(-1.5deg)">${esc(resto.join('. '))}</div></div>`;
+}
+function rayos(cx, cy, t) {
+  let g = '';
+  for (let i = 0; i < 24; i++) {
+    const a = i / 24 * Math.PI * 2 + t * 0.15, b = a + Math.PI / 48;
+    g += `<path d="M${cx},${cy} L${cx + Math.cos(a) * 1400},${cy + Math.sin(a) * 1400} L${cx + Math.cos(b) * 1400},${cy + Math.sin(b) * 1400} Z" fill="#fff" opacity=".22"/>`;
+  }
+  return g;
+}
+
+function portadaHTML(t, dur) {
+  // Título (primeros segundos) y cierre (últimos segundos)
+  const ini = t < C.inicio, k = ini ? t / C.inicio : (t - (dur - C.final)) / C.final;
+  const ent = ease(k / 0.15), sal = ini ? 1 - ease((k - 0.88) / 0.12) : 1;
+  const st = { ...ESTADOS.solucion, escena: { id: 'intro' }, animo: ESTADOS.sano.animo };
+  const fig = (p, x, y, s, d) => {
+    const a = ease((k - d) / 0.12), sy = Math.sin(t * 5 + x) * 6;
+    const f = { higado, pancreas, musculo, grasa }[p];
+    const body = f ? f({ ...st, grasa: 1 }, 0, t, true) : (p === 'glucosa' ? azucar(0, t, 'feliz', 1.2) : llave(0, t, 'feliz', 1));
+    return `<g transform="translate(${x} ${y + sy}) scale(${s * a})">${body}</g>`;
+  };
+  const figs = fig('higado', 230, 1040, 0.8, 0.1) + fig('pancreas', 560, 1040, 0.75, 0.16) + fig('glucosa', 820, 990, 0.8, 0.22)
+    + fig('insulina', 1100, 960, 0.8, 0.28) + fig('musculo', 1380, 1050, 0.75, 0.34) + fig('grasa', 1700, 1040, 0.75, 0.4);
+  const titulo = ini
+    ? `<div class="titulo">${esc(C.titulo.toUpperCase())}</div><div class="sub">${esc(C.subtitulo)}</div>`
+    : `<div class="titulo" style="font-size:150px">PAUTA POSIBLE</div><div class="sub">pautaposible.es · ¡Suscríbete!</div>`;
+  return `<div class="rotulo" style="background:#ffd166;opacity:${sal};justify-content:flex-start;padding-top:${ini ? 120 : 150}px;box-sizing:border-box">
+    <svg width="${W}" height="${H}" style="position:absolute;inset:0"><defs><pattern id="puntosT" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="6" fill="#1d1a1f" opacity=".1"/></pattern></defs>
+    <rect width="${W}" height="${H}" fill="url(#puntosT)"/>${rayos(W / 2, 330, t)}${figs}</svg>
+    <div style="position:relative;transform:scale(${0.7 + 0.3 * ent}) rotate(-3deg);opacity:${ent};display:flex;flex-direction:column;align-items:center">${titulo}</div></div>`;
+}
+
+window.setup = (cfg) => {
+  C = cfg;
+  const st = document.createElement('style');
+  st.textContent = cfg.fuentes;
+  document.head.appendChild(st);
+  return cfg.dur;
+};
+
+window.render = (t) => {
+  const dur = C.dur;
+  if (t < C.inicio || t >= dur - C.final) { document.getElementById('escena').innerHTML = portadaHTML(t, dur); return; }
+  const st = estado(t), l = lineaActual(t);
+  // En la introducción los personajes aparecen uno a uno con la segunda frase
+  const intro = C.escenas[0], l2 = intro.lineas[1] || intro.lineas[0];
+  const orden = ['higado', 'pancreas', 'glucosa', 'insulina', 'musculo', 'grasa'];
+  const aparecer = (p) => st.escena.id !== 'intro' ? 1 : (t - (l2.ini + orden.indexOf(p) * 0.45)) / 0.35;
+  const tx = textos(t, l, st);
+  let html = `<svg width="${W}" height="${H}" style="position:absolute;inset:0">${escenario(t, st, l, aparecer)}${tx.cola}</svg>${tx.html}`;
+  const i = C.escenas.indexOf(st.escena);
+  if (st.escena.rotulo) html += rotulo(t, st.escena, i);
+  html += `<div class="marca">PAUTA POSIBLE</div>`;
+  document.getElementById('escena').innerHTML = html;
+};
+</script>
+</body>
+</html>
