@@ -5,6 +5,7 @@ Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho v
 _Última actualización: viernes 23/10/2026_
 
 ## Hecho recientemente
+- 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
 - 23/10: instalado el pack de skills de diseño «UI UX Pro Max» (7 skills en `.claude/skills/`, commit 28327f2 de nextlevelbuilder/ui-ux-pro-max-skill). Ver «Skills del proyecto» en `CLAUDE.md`.
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
 - 10/10 (2.ª sesión): el aviso de voz no llegaba porque la prueba del 10/10 cayó en sábado y la routine decidió no enviar nada. Corregido el prompt de la routine «Recordatorio voz reels» (trig_01VLSsVajJm6F5WjA5stBthe, lunes y miércoles 8:51, notificación por email y móvil): ahora envía siempre y, si se dispara otro día, manda el próximo guion como prueba. Prueba enviada el 10/10 a las 7:35 con el guion del jueves 15. Iván ya no quiere avisos de Google Calendar: solo email.
@@ -30,6 +31,13 @@ _Última actualización: viernes 23/10/2026_
 - 22/10: reel del jueves 22 «Más verdura sin darte cuenta» programado (402992141), con narrador, 30,3 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`masVerdura`).
 
 ## Pendiente
+- [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
+  - Está en Netlify (plan gratis, proyecto `pauta-posible`, id 469aacc8-f7a4-4927-a334-eee7a2dd9727). La última versión (16/10) se subió arrastrando una carpeta: el código no está en ningún repo ni en Netlify. Páginas conocidas: inicio e `instalar/`.
+  - Google no la tiene indexada (`site:pautaposible.es` no devuelve nada): dar de alta en Google Search Console y Bing Webmaster (gratis), con sitemap.
+  - El entorno de la nube bloquea `pautaposible.es` y `*.netlify.app`: Iván tiene que añadirlos en Network access → Allowed domains para poder verla y medirla.
+  - Propuesta: guardar el código en este repo, carpeta `web/` (todo unificado, sin repos ni ramas aparte), y conectar Netlify al repo con `web/` como directorio base. Enseñar el rediseño en un enlace de prueba de Netlify y no publicar en pautaposible.es sin el visto bueno de Iván.
+  - Skills elegidas (gratis): `frontend-design` (anthropics/skills, Apache 2.0), `taste-skill` (leonxlnx, MIT), `ui-ux-pro-max` (ya instalada), claude-seo (AgriciDaniel, MIT, sin las partes de pago de DataForSEO), marketingskills (coreyhaines31, MIT: `copywriting`, `cro`, `seo-audit`, `ai-seo`, `schema`), `web-design-guidelines` (vercel-labs). Medir antes y después con Lighthouse y Playwright.
+  - Falta de Iván: dónde está la carpeta de la web y permitir esos dominios.
 - [ ] Rama `claude/reel-sabado-24` (reel del sábado 24, ya programado en Metricool 400121244 con el vídeo de esa rama): abrir PR y fusionar en main cuando Iván dé el visto bueno. No borrar la rama antes del 24/10 a las 18:00.
 - [ ] Sábados siguientes (31/10…): un reel extra a las 18:00 con tono sin culpa; la rutina de martes y jueves no lo cubre.
 - [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.
