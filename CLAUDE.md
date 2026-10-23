@@ -49,6 +49,7 @@ En español, describen la pieza y el día. Ejemplos:
 ## Skills del proyecto
 
 - `/programar-reel`: generar el reel (con o sin voz), programarlo en Metricool y actualizar el calendario.
+- Pack de diseño «UI UX Pro Max» (nextlevelbuilder, MIT, instalado el 23/10/2026): `ui-ux-pro-max`, `design`, `design-system`, `brand`, `banner-design`, `slides`, `ui-styling`. Son genéricas: el estilo de Pauta Posible (plantillas de `posts/_plantilla/` y `reels/_plantilla/`) y las normas de `calendario.md` mandan sobre ellas. La generación de logos de `design` necesita claves de API externas (Gemini, Atlas Cloud o MuAPI) y no se usa por defecto.
 
 ## Ahorro de tokens
 

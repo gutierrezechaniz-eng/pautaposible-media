@@ -2,9 +2,10 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: jueves 22/10/2026_
+_Última actualización: viernes 23/10/2026_
 
 ## Hecho recientemente
+- 23/10: instalado el pack de skills de diseño «UI UX Pro Max» (7 skills en `.claude/skills/`, commit 28327f2 de nextlevelbuilder/ui-ux-pro-max-skill). Ver «Skills del proyecto» en `CLAUDE.md`.
 - Aviso de voz por email: workflow de GitHub `.github/workflows/aviso-voz.yml` (lunes y miércoles 8:51 Madrid). Abre un issue con la etiqueta `aviso-voz` que menciona y asigna a Iván, y GitHub se lo envía por email. Probado el 10/10: a Iván le llegó. Se lanza a mano con workflow_dispatch (fecha opcional). La routine trig_01VLSsVajJm6F5WjA5stBthe queda desactivada porque sus emails no llegaban. Los guiones tienen que estar en `voz/GUIONES.md` en main, con el título «# Guiones de voz · semana del D de mes de AAAA» y las secciones «## Reel del martes|jueves D · tema».
 - 10/10 (2.ª sesión): el aviso de voz no llegaba porque la prueba del 10/10 cayó en sábado y la routine decidió no enviar nada. Corregido el prompt de la routine «Recordatorio voz reels» (trig_01VLSsVajJm6F5WjA5stBthe, lunes y miércoles 8:51, notificación por email y móvil): ahora envía siempre y, si se dispara otro día, manda el próximo guion como prueba. Prueba enviada el 10/10 a las 7:35 con el guion del jueves 15. Iván ya no quiere avisos de Google Calendar: solo email.
 - Lo que hay que hacer con la nota de voz: Iván la adjunta en una conversación del proyecto Pauta Posible → `/programar-reel` (sustituye la versión sin voz en la misma publicación de Metricool).
