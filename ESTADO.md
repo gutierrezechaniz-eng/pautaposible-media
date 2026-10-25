@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: viernes 23/10/2026_
+_Última actualización: domingo 25/10/2026_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -30,6 +30,9 @@ _Última actualización: viernes 23/10/2026_
 
 - 22/10: reel del jueves 22 «Más verdura sin darte cuenta» programado (402992141), con narrador, 30,3 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`masVerdura`).
 
+- 25/10 (tarea del domingo): semana del 26 lista. Carruseles animados con narrador programados como reel: lunes suplementos 2/4 (405510303), miércoles mayonesa casera segura (405511492), viernes menú del día (405512928), todos a las 10:00 con colaboradora e `isAiGenerated`. Guiones de martes 27 (fruta por la noche), jueves 29 (legumbre 4 veces por semana) y sábado 31 (¿tienes que ganarte la comida?) en `voz/GUIONES.md`. Página de copias actualizada.
+- 25/10: el narrador falla con `sherpa-onnx` 2.0 (sale audio vacío): instalar `python3 -m pip install "sherpa-onnx<2" numpy soundfile` (con 1.13.8 funciona). `render-animado.mjs` admite `SOLO=7` para volver a renderizar solo una diapositiva.
+
 ## Pendiente
 - [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
   - Está en Netlify (plan gratis, proyecto `pauta-posible`, id 469aacc8-f7a4-4927-a334-eee7a2dd9727). La última versión (16/10) se subió arrastrando una carpeta: el código no está en ningún repo ni en Netlify. Páginas conocidas: inicio e `instalar/`.
@@ -41,9 +44,8 @@ _Última actualización: viernes 23/10/2026_
 - [ ] Rama `claude/reel-sabado-24` (reel del sábado 24, ya programado en Metricool 400121244 con el vídeo de esa rama): abrir PR y fusionar en main cuando Iván dé el visto bueno. No borrar la rama antes del 24/10 a las 18:00.
 - [ ] Sábados siguientes (31/10…): un reel extra a las 18:00 con tono sin culpa; la rutina de martes y jueves no lo cubre.
 - [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.
-- [ ] Semana del 26: los carruseles del lunes y el miércoles son de las series (suplementos 2/4 y mayonesa casera segura); ver «Series de lunes y miércoles» en `calendario.md`.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
-- [ ] Antes del lunes 26: plan, guiones (en main) y carruseles de la semana del 26 oct.
+- [ ] Sábado 31: reel extra «¿Tienes que ganarte la comida?» (guion ya en `voz/GUIONES.md`), por montar y programar.
 - [ ] Revisar las métricas del reel «Tu vida, no la de un influencer» (sábado 10/10, 18:30, Metricool 392827236) con las de la semana.
 
 ## Decisiones vigentes

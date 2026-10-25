@@ -74,6 +74,12 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-21 (mié) | Receta sencilla · Serie salsas caseras 1/6 | Ketchup casero sin azúcar de mesa | 10:00 | posts/2026-10-21-ketchup-casero | 398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora | 10:00 | posts/2026-10-23-batch-cooking | 393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos) (antes 392569546, estático) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-24 (sáb) | Reel con narrador · Sin culpa (reel extra del sábado) | ¿Pasarte un día lo arruina todo? | 18:00 | reels/2026-10-24-un-dia-no-arruina/reel-voz.mp4 | 400121244 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-26 (lun) | Mito o realidad · Serie suplementos 2/4 | ¿Una pastilla puede sustituir a un buen plato? (lo que comes le gana al bote) | 10:00 | posts/2026-10-26-suplementos-2 | 405510303 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-27 (mar) | Reel con narrador · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | reels/2026-10-27-fruta-noche (lo monta la tarea de las 12:00) | pendiente de voz (narrador «santa») · guion en voz/GUIONES.md |
+| 2026-10-28 (mié) | Receta sencilla · Serie salsas caseras 2/6 | Mayonesa casera segura | 10:00 | posts/2026-10-28-mayonesa-casera | 405511492 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | reels/2026-10-29-legumbre-semana (lo monta la tarea de las 12:00) | pendiente de voz (narrador «santa») · guion en voz/GUIONES.md |
+| 2026-10-30 (vie) | Hábito práctico | ¿Comes fuera y no sabes qué pedir? 4 trucos para el menú del día | 10:00 | posts/2026-10-30-menu-del-dia | 405512928 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-10-31 (sáb) | Reel extra con narrador · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | (por hacer: la tarea de martes y jueves no cubre el sábado) | pendiente · guion en voz/GUIONES.md |
 | 2026-11-16 (lun) | Mito o realidad (movido del 19/10 por las series, decisión de Iván del 12/10) | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393940824 (reel con todas las diapositivas seguidas, 12/10; antes 393675755, carrusel de vídeos) (antes 393114051) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-12-02 (mié) | Receta sencilla (movido del 21/10 por las series, decisión de Iván del 12/10) | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393940881 (reel con todas las diapositivas seguidas, 12/10; antes 393675795, carrusel de vídeos) (antes 393118665) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 
@@ -113,14 +119,30 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | 2026-10-23 (vie) | Hábito práctico | Batch cooking en 1 hora (para guardar) | 10:00 | programado (393940779 (reel con todas las diapositivas seguidas, 12/10; antes 393118676, carrusel de vídeos), animado con narrador) |
 | 2026-10-24 (sáb) | Reel con narrador · Sin culpa | ¿Pasarte un día lo arruina todo? | 18:00 | programado (400121244, reel con narrador) |
 
+## Plan · semana del 26 oct
+| Fecha | Pilar / formato | Tema | Hora (Madrid) | Estado |
+|---|---|---|---|---|
+| 2026-10-26 (lun) | Mito o realidad · Serie suplementos 2/4 | ¿Una pastilla puede sustituir a un buen plato? | 10:00 | programado (405510303) |
+| 2026-10-27 (mar) | Reel con narrador · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | pendiente de voz (narrador) |
+| 2026-10-28 (mié) | Receta sencilla · Serie salsas 2/6 | Mayonesa casera segura | 10:00 | programado (405511492) |
+| 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | pendiente de voz (narrador) |
+| 2026-10-30 (vie) | Hábito práctico · Sin culpa | ¿Comes fuera y no sabes qué pedir? | 10:00 | programado (405512928) |
+| 2026-10-31 (sáb) | Reel extra · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | guion listo, reel por hacer |
+
+## Métricas · semana del 19 oct (consultadas el 25/10/2026)
+- Reels con narrador: «Más verdura sin darte cuenta» 39 de alcance y 66 reproducciones; «¿El pan engorda?» 36 y 61; suplementos 1/4 34 y 48 (3 me gusta); ketchup 30 y 52 (2 me gusta y **2 guardados**, lo único guardado de la semana); batch cooking 26 y 31. El reel del sábado 24 aún sin datos.
+- La semana del 12 llegó más lejos: «¿2 litros de agua?» 75 de alcance y «3 desayunos en 3 minutos» 71 (4 me gusta). Visionado medio: 8-18 s.
+- Seguidores: de 37 a 38 (+1). Alcance de la cuenta: 19-35 personas al día. Clics al enlace de la bio: Metricool sigue sin dar el dato.
+- Cambio: portadas siempre con pregunta corta (las tres de esta semana lo son), más motivos para guardar (cantidades y pasos concretos, como el ketchup) y un tema «sin culpa» el viernes (comer fuera), el tono que más me gusta recibe.
+
 ## Series de lunes y miércoles (decisión de Iván del 12/10/2026)
 Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y los de los miércoles la **serie de salsas caseras**. Guiones diapositiva a diapositiva en `/mnt/project-files/contenido/series-suplementos-y-salsas.md` (carpeta del proyecto de Claude); las fechas de ese archivo quedan corridas una semana porque la serie empezó el 19/10. Cada pieza va con la plantilla de siempre (animada, con narrador «santa» y subtítulos).
 | Fecha | Serie | Pieza | Estado |
 |---|---|---|---|
 | 2026-10-19 (lun) | Suplementos 1/4 | ¿Necesitas suplementos o te han convencido de que los necesitas? | programado (394062221 (reel con todas las diapositivas seguidas, 12/10; antes 393679028, carrusel de vídeos)) |
 | 2026-10-21 (mié) | Salsas 1/6 | Ketchup casero sin azúcar de mesa | programado (398948804 (texto con gancho de pregunta, 18/10; antes 393940752, reel con todas las diapositivas seguidas, 12/10; antes 393679081, carrusel de vídeos)) |
-| 2026-10-26 (lun) | Suplementos 2/4 | Lo que comes le gana al bote | por hacer |
-| 2026-10-28 (mié) | Salsas 2/6 | Mayonesa casera segura | por hacer |
+| 2026-10-26 (lun) | Suplementos 2/4 | ¿Una pastilla puede sustituir a un buen plato? (lo que comes le gana al bote) | programado (405510303) |
+| 2026-10-28 (mié) | Salsas 2/6 | Mayonesa casera segura | programado (405511492) |
 | 2026-11-02 (lun) | Suplementos 3/4 | Más no es mejor: el riesgo de las vitaminas A, D, E y K | por hacer |
 | 2026-11-04 (mié) | Salsas 3/6 | Alioli de yogur | por hacer |
 | 2026-11-09 (lun) | Suplementos 4/4 | Proteína, colágeno y quemagrasas: lo que pagas y lo que obtienes | por hacer |
@@ -160,10 +182,16 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Reel mito: ¿el pan engorda? (con narrador; mejor integral)
 - Reel hábito: más verdura sin darte cuenta (con narrador; espinacas en la tortilla, rallada en la salsa, congelada, crudités)
 
+- Serie suplementos 2: una pastilla no sustituye al plato (dónde está cada nutriente, vitamina C + hierro)
+- Serie salsas 2: mayonesa casera segura (huevo pasteurizado, nevera y 24 horas)
+- Hábito: menú del día sin agobios (4 trucos para comer fuera, sin culpa)
+- Reel mito: ¿la fruta por la noche engorda? (guion 27/10)
+- Reel hábito: 4 raciones de legumbre a la semana (guion 29/10)
+- Sin culpa: ¿tienes que ganarte la comida? (guion sábado 31/10)
+
 ## Banco de temas
 
 Mito o realidad
-- ¿La fruta de noche engorda?
 - ¿Hay que quitar el gluten sin ser celíaco? (el pan engorda: reel del 20/10)
 
 Receta sencilla
@@ -172,4 +200,5 @@ Receta sencilla
 - Tortilla de calabacín al horno
 
 Hábito práctico
-- Cómo añadir más legumbre a la semana
+- Cómo organizar las cenas de la semana en 10 minutos
+- Comer fuera de casa: la cena del restaurante (sin culpa)
