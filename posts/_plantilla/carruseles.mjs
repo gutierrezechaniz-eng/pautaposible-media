@@ -100,7 +100,7 @@ export const carruseles = {
       { type: 'texto', kicker: 'Cambia el bote por el plato', title: 'Dónde está lo que buscas.', checks: ['**Vitamina C**: naranja, kiwi, pimiento', '**Hierro**: legumbre, carne, mejillones', '**Calcio**: lácteos, sardinas en lata, almendras', '**Omega-3**: pescado azul, nueces', '**Fibra**: integrales, fruta, verdura'] },
       { type: 'texto', kicker: 'Un truco', title: 'Combina y aprovecha más.', steps: ['Lentejas con **pimiento o tomate**: la vitamina C ayuda a absorber el hierro.', 'Ensalada con **aceite de oliva**: ayuda a absorber vitaminas como la A.', 'El café o el té, **mejor lejos** de la comida rica en hierro.'] },
       { type: 'texto', kicker: 'Ojo', title: 'A veces el plato no basta.', p: 'B12 si comes vegano, ácido fólico en el embarazo o un déficit confirmado en una analítica.', box: 'Ahí sí: **suplemento con pauta profesional**. Habla con tu médico o dietista-nutricionista.' },
-      { type: 'cierre', title: 'Tu mejor multivitamínico está en el plato.', sub: 'Próxima semana: más no es mejor (vitaminas A, D, E y K).', url: 'pautaposible.es/aprende', foot: 'Guárdalo y compártelo' },
+      { type: 'cierre', title: 'Tu mejor multivitamínico está en el plato.', sub: 'Próxima semana: más no es mejor.', url: 'pautaposible.es/aprende', foot: 'Guárdalo y compártelo' },
       { type: 'final' },
     ],
   },

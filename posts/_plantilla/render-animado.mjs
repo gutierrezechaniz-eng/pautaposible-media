@@ -3,6 +3,7 @@
 // y llevan subtítulos; la diapositiva dura lo que la voz más 0,9 s (como mínimo su «dur»).
 // Crea <carpeta>/animado/01.mp4… (1080×1350, 30 fps, H.264 + audio AAC silencioso), copia la diapositiva final estática
 // (último PNG de la carpeta) y monta vista-previa.mp4 con todas seguidas.
+// SOLO=7 (o 2,7) vuelve a renderizar solo esas diapositivas y reutiliza los mp4 ya hechos de las demás.
 import { chromium } from 'playwright';
 import { spawn, execFileSync } from 'child_process';
 import { createRequire } from 'module';
@@ -23,8 +24,10 @@ page.on('pageerror', (e) => console.log('ERR', e.message));
 await page.goto('file://' + path.join(dir, 'animado.html'));
 await page.evaluate(() => document.fonts.ready);
 const files = [];
+const solo = process.env.SOLO ? process.env.SOLO.split(',').map(Number) : null;
 for (const [i, s] of slides.entries()) {
   const n = String(i + 1).padStart(2, '0');
+  if (solo && !solo.includes(i + 1) && flag !== '--preview') { files.push(path.join(out, `${n}.mp4`)); continue; }
   const cfg = { ...s };
   let wav = null;
   if (s.voz) {
