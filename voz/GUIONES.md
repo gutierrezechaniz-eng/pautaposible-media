@@ -6,19 +6,12 @@
 > - **Revisión antes de publicar (Iván, 12/10/2026), obligatoria:** antes de programar o cambiar algo en Metricool, comprueba que (1) el formato es el correcto: lo que lleva narrador va como REEL con un único vídeo; (2) el vídeo final se ve y se oye de principio a fin: duración esperada, audio presente y sin bucles ni silencios largos, y capturas de varios momentos (inicio, mitad y cierre) donde cambie la imagen y los subtítulos se lean; (3) el texto, la hora, la portada, la colaboradora e `isAiGenerated` son los correctos; (4) después de programar, `getScheduledPosts` devuelve lo esperado (tipo REEL, un solo vídeo). Si algo falla, no lo programes: avisa a Iván.
 > - Los textos de voz se siguen escribiendo en `voz/GUIONES.md` (los lee el narrador). Si reescribes ese archivo, conserva esta nota al principio.
 
-# Guiones de voz · semana del 12 de octubre de 2026
-Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
-## Reel del martes 13 · ✔ Hecho con narrador: ¿Hay que beber 2 litros de agua al día? (sustituye al de legumbres de bote, 12/10)
-Iván envió el 10/10 su nota de voz sobre las legumbres de bote: ese es el reel del martes (ya programado). No hay que grabar nada más para el martes.
-## Reel del jueves 15 · ✔ Ya grabado
-Iván envió el 10/10 su nota de voz de los 3 desayunos: el reel del jueves ya está programado con su voz. No hay que grabar nada más para el jueves.
+# Guiones de voz · semana del 26 de octubre de 2026
+Los lee el narrador «santa» (decisión de Iván del 11/10): no hace falta grabar nada. Si algún día Iván prefiere su voz, con calma, el móvil cerca y sin ruido de fondo (unos 25 segundos).
+## Reel del martes 27 · ¿La fruta por la noche engorda?
+> ¿La fruta por la noche engorda? No. Una manzana es la misma a las nueve de la mañana que a las nueve de la noche: lo que cuenta es el conjunto del día. Si te apetece en la cena, adelante. Envíaselo a quien la evita por la noche. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
+## Reel del jueves 29 · 4 raciones de legumbre a la semana, sin complicarte
+> ¿Te cuesta llegar a cuatro raciones de legumbre a la semana? Hazlo fácil. Ten botes en la despensa, enjuágalos y añádelos a la ensalada, al arroz o a una crema. Un hummus para picar también cuenta. Guárdalo para tu próxima compra. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
 
-# Guiones de voz · semana del 19 de octubre de 2026
-Léelos con calma, como si se lo contaras a un amigo (unos 25 segundos cada uno); graba con el móvil cerca, en una habitación tranquila y sin ruido de fondo.
-## Reel del martes 20 · ¿El pan engorda?
-> ¿El pan engorda? Así, solo, no. Ningún alimento engorda por sí solo: lo que cuenta es el conjunto de lo que comes en el día. El pan es un cereal y cabe en una alimentación saludable. Mejor si es integral, que tiene más fibra, y ojo con lo que le pones encima. Envíaselo a quien ha desterrado el pan de casa. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
-## Reel del jueves 22 · Más verdura sin darte cuenta
-> ¿Te cuesta comer verdura? Prueba a esconderla en lo que ya comes. Echa un puñado de espinacas a la tortilla, ralla calabacín o zanahoria en la salsa de tomate, añade verdura congelada al arroz o a la pasta y ten a mano unas crudités para picar. Poco a poco, sin cambiar de menú. Guárdalo para esta semana. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
-
-## Reel del sábado 24 · ¿Un día de pasarte lo arruina todo?
-> ¿Te pasaste el fin de semana y sientes que lo has estropeado todo? Tranquilidad: un día no deshace lo que haces el resto de la semana. Lo que cuenta es lo que repites. No compenses saltándote comidas: vuelve a tu siguiente comida normal, con verdura, algo de proteína y agua. Sin culpa. Envíaselo a quien siempre empieza la dieta el lunes. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
+## Reel del sábado 31 · ¿Tienes que ganarte la comida?
+> ¿Sientes que tienes que ganarte la comida haciendo ejercicio? No funciona así. Comer no es un premio ni moverte un castigo. Muévete porque te sienta bien: andar, bailar, subir escaleras. Y come porque lo necesitas, sin cuentas pendientes. Envíaselo a quien siempre dice «hoy me lo he ganado». Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.

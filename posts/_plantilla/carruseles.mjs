@@ -92,4 +92,40 @@ export const carruseles = {
       { type: 'final' },
     ],
   },
+  'suplementos-2': {
+    slides: [
+      { type: 'portada', tag: 'Mito o realidad', title: '¿Una pastilla puede sustituir a un buen plato?', sub: 'Serie suplementos · 2 de 4 · Lo que comes le gana al bote.' },
+      { type: 'texto', kicker: 'Respuesta corta', title: 'No: la comida trae mucho más.', p: 'Una naranja no es solo vitamina C: trae **fibra, agua, potasio** y otros compuestos que actúan juntos.', box: 'Un bote aísla uno o dos nutrientes. El plato te da **el paquete completo**.' },
+      { type: 'texto', kicker: 'Lo que dicen los estudios', title: 'La cápsula no imita a la comida.', p: 'Comer fruta, verdura y legumbre se asocia a mejor salud. Con los multivitamínicos, en personas sanas, **los estudios no ven ese mismo beneficio**.', box: 'Por eso las guías piden cubrir lo que necesitas **con la alimentación**.' },
+      { type: 'texto', kicker: 'Cambia el bote por el plato', title: 'Dónde está lo que buscas.', checks: ['**Vitamina C**: naranja, kiwi, pimiento', '**Hierro**: legumbre, carne, mejillones', '**Calcio**: lácteos, sardinas en lata, almendras', '**Omega-3**: pescado azul, nueces', '**Fibra**: integrales, fruta, verdura'] },
+      { type: 'texto', kicker: 'Un truco', title: 'Combina y aprovecha más.', steps: ['Lentejas con **pimiento o tomate**: la vitamina C ayuda a absorber el hierro.', 'Ensalada con **aceite de oliva**: ayuda a absorber vitaminas como la A.', 'El café o el té, **mejor lejos** de la comida rica en hierro.'] },
+      { type: 'texto', kicker: 'Ojo', title: 'A veces el plato no basta.', p: 'B12 si comes vegano, ácido fólico en el embarazo o un déficit confirmado en una analítica.', box: 'Ahí sí: **suplemento con pauta profesional**. Habla con tu médico o dietista-nutricionista.' },
+      { type: 'cierre', title: 'Tu mejor multivitamínico está en el plato.', sub: 'Próxima semana: más no es mejor (vitaminas A, D, E y K).', url: 'pautaposible.es/aprende', foot: 'Guárdalo y compártelo' },
+      { type: 'final' },
+    ],
+  },
+  'mayonesa-segura': {
+    slides: [
+      { type: 'portada', tag: 'Receta sencilla', title: '¿Mayonesa casera sin sustos?', sub: 'Serie salsas caseras · 2 · Lista en 5 minutos.' },
+      { type: 'texto', kicker: 'Por qué con cuidado', title: 'El huevo crudo pide mimo.', p: 'La mayonesa casera lleva huevo **sin cocinar**, y el huevo crudo puede llevar **salmonela**.', box: 'Sin miedo: con **4 gestos sencillos** la haces segura.' },
+      { type: 'texto', kicker: 'Ingredientes · 1 bol', title: 'Lo que necesitas.', checks: ['1 huevo fresco o 60 ml de huevo pasteurizado', '200 ml de aceite de oliva suave o de girasol', '1 cucharada de zumo de limón o vinagre', 'Una pizca de sal'], p2: 'Para niños pequeños, embarazo o personas mayores, **mejor huevo pasteurizado** (se vende en brik).' },
+      { type: 'texto', kicker: 'Paso a paso', title: 'En 5 minutos, con batidora.', steps: ['Pon en el vaso el huevo, el limón, la sal y el aceite.', 'Apoya la batidora **en el fondo** y bate sin moverla hasta que espese.', 'Súbela **poco a poco** hasta que esté toda ligada.'] },
+      { type: 'texto', kicker: 'Los 4 gestos seguros', title: 'Así es segura.', steps: ['Huevos **de la nevera**, limpios y sin grietas.', '**Lávate las manos** después de tocar la cáscara.', 'A la **nevera nada más hacerla**, en un recipiente tapado.', 'Haz solo la que vayas a comer y **tómala en 24 horas**.'] },
+      { type: 'texto', kicker: '¿Se te ha cortado?', title: 'Tiene arreglo.', p: 'En un vaso limpio pon **otro huevo** y añade la mayonesa cortada poco a poco mientras bates.', box: 'El limón o el vinagre no son solo sabor: la **acidez** también ayuda a que sea más segura.' },
+      { type: 'cierre', title: 'Casera, rica y segura.', sub: 'La semana que viene: alioli de yogur.', url: 'pautaposible.es/recetas', foot: 'Guárdala para tu próxima salsa' },
+      { type: 'final' },
+    ],
+  },
+  'menu-del-dia': {
+    slides: [
+      { type: 'portada', tag: 'Hábito práctico', title: '¿Comes fuera y no sabes qué pedir?', sub: '4 trucos para el menú del día, sin agobios.' },
+      { type: 'texto', kicker: 'La idea', title: 'Comer fuera no es «saltarse» nada.', p: 'Es parte de tu semana. No hace falta pedir lo más ligero: basta con **equilibrar el plato**.', box: 'Lo que cuenta es lo que haces **casi siempre**, no una comida.' },
+      { type: 'texto', kicker: 'Los 4 trucos', title: 'Así eliges.', steps: ['De primero, **verdura, ensalada o legumbre**.', 'De segundo, **plancha, horno o guiso**. Los fritos, de vez en cuando.', 'De guarnición, pide **ensalada o verdura** si la tienen.', 'De postre, **fruta o yogur**… o el flan, si te apetece de verdad.'] },
+      { type: 'texto', kicker: 'Para inspirarte', title: 'Combinaciones que funcionan.', checks: ['Lentejas + merluza a la plancha', 'Ensalada mixta + pollo asado', 'Crema de verduras + albóndigas', 'Judías verdes + tortilla'] },
+      { type: 'texto', kicker: 'Los detalles', title: 'Pan, bebida y hambre.', checks: ['**Agua** como bebida de diario', 'El pan, si te apetece; **integral** si hay', 'No tienes que acabarte el plato si **ya no tienes hambre**'] },
+      { type: 'texto', kicker: 'Sin culpa', title: '¿Un día pides lo que te apetece?', p: 'No pasa nada. Disfrútalo y vuelve a tu siguiente comida normal.', box: 'Comer fuera también es **disfrutar y compartir**.' },
+      { type: 'cierre', title: 'Menú del día, sin agobios.', sub: 'Más guías para tu día a día.', url: 'pautaposible.es/aprende', foot: 'Guárdalo para tu próxima comida fuera' },
+      { type: 'final' },
+    ],
+  },
 };
