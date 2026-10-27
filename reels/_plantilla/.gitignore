@@ -3,3 +3,5 @@ ivan.png
 *.m4a
 *.wav
 *.words.json
+package.json
+package-lock.json
