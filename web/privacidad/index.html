@@ -171,7 +171,7 @@
           <li>Crear y gestionar tu cuenta y tu espacio personal.</li>
           <li>Calcular una referencia nutricional orientativa y adaptar las cantidades de las recetas a tu perfil.</li>
           <li>Guardar tu registro de comidas, tu actividad y tu evolución para que puedas consultar tu historial, tu racha y tus logros.</li>
-          <li>Si lo solicitas, permitir que una persona con rol profesional revise tu perfil y evolución, y te publique menús, pautas y documentos de seguimiento, y que podáis comunicaros por un chat privado.</li>
+          <li>Si lo solicitas, permitir que una persona con rol profesional revise tu perfil y evolución, y te publique menús, pautas y documentos de seguimiento, y que podáis comunicaros por un chat privado. Si escribes al profesional por WhatsApp desde tu espacio, esa conversación ocurre en WhatsApp y se rige también por la política de privacidad de WhatsApp (Meta).</li>
           <li>Si has dado tu móvil, avisarte por WhatsApp de que tienes un mensaje nuevo. El aviso solo dice que hay un mensaje y enlaza a tu espacio; nunca incluye el contenido del mensaje ni datos de salud.</li>
           <li>Si usas el escáner, reconocer el alimento que enfocas y darte sus valores nutricionales orientativos para que puedas apuntarlo en tu registro. Cada persona tiene un número máximo de consultas al día; para contarlas se guarda tu identificador de usuario y la fecha durante dos días.</li>
           <li>Responder a tus consultas por correo electrónico.</li>
@@ -197,7 +197,7 @@
           <tbody>
             <tr><td>Google (Firebase)</td><td>Autenticación de cuentas y base de datos (Firestore)</td><td>Cuenta, perfil, registro de comidas y de actividad, logros, evolución corporal y mensajes del chat de seguimiento</td></tr>
             <tr><td>Cloudflare</td><td>Almacenamiento de los documentos de seguimiento profesional</td><td>Menús, pautas y documentos PDF/Word compartidos en el seguimiento, y los controles de evolución que registra el profesional (peso, medidas y valoración)</td></tr>
-            <tr><td>WhatsApp (Meta)</td><td>Envío del aviso de mensaje nuevo, solo si has dado tu móvil</td><td>Tu número de móvil y el texto del aviso (sin el contenido del mensaje ni datos de salud)</td></tr>
+            <tr><td>WhatsApp (Meta)</td><td>Envío del aviso de mensaje nuevo, solo si has dado tu móvil, y conversaciones que inicies por WhatsApp con el profesional</td><td>Tu número de móvil y el texto del aviso (sin el contenido del mensaje ni datos de salud)</td></tr>
             <tr><td>Anthropic (Claude)</td><td>Inteligencia artificial que reconoce los alimentos del escáner, cuando se usa en lugar de la de Cloudflare</td><td>La imagen pequeña de lo que enfocas, solo para responder a esa consulta; no se usa para entrenar sus modelos</td></tr>
             <tr><td>Cloudflare</td><td>Servidor del escáner, que comprueba tu sesión y cuenta las consultas diarias, e inteligencia artificial que reconoce los alimentos (Workers AI)</td><td>Tu identificador de usuario, la imagen mientras se analiza (sin guardarla) y datos técnicos de la conexión</td></tr>
             <tr><td>Open Food Facts</td><td>Base de datos abierta de productos envasados</td><td>El número del código de barras que escaneas y datos técnicos de la conexión</td></tr>

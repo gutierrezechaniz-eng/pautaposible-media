@@ -177,7 +177,7 @@
       const detail = healthTopic
         ? 'Aquí puedes complementar lo que te indique con recetas sencillas y guías que explican la evidencia.'
         : wantsCare
-          ? 'Tendrás tu carpeta con tus pautas y PDF, un chat conmigo para dudas cortas y tu evolución en una gráfica.'
+          ? 'Tendrás tu carpeta con tus pautas y PDF, WhatsApp directo conmigo para dudas cortas y tu evolución en una gráfica.'
           : 'Con tu espacio gratis cada receta te dice cuánto poner según tu perfil.';
       const actions = el('div', 'q-actions');
       if (healthTopic) {

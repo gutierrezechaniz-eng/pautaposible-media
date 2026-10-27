@@ -441,6 +441,15 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: non
 #pro-chat-section.chat-off { height: auto; }
 .chat-card.chat-off .chat-off-note { display: block; }
 .chat-card.chat-off .chat-messages, .chat-card.chat-off .chat-form, .chat-card.chat-off .chat-hint { display: none; }
+/* Chat de la persona por WhatsApp: el botón sustituye a la caja de texto; los mensajes anteriores siguen a la vista */
+.chat-wa-cta { padding: 14px 18px; display: grid; gap: 10px; border-bottom: 1px solid var(--border); background: white; }
+.chat-wa-cta p { margin: 0; color: var(--stone); font-size: .9rem; }
+.chat-wa-big { display: inline-flex; align-items: center; justify-content: center; gap: 8px; color: white; background: #1f8a4c; text-decoration: none; }
+.chat-wa-big:hover, .chat-wa-big:focus-visible { background: #176b3b; }
+.chat-wa-big svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.chat-card.chat-via-wa { height: auto; max-height: 560px; }
+.chat-card.chat-via-wa .chat-messages { min-height: 120px; }
+.chat-card.chat-via-wa .chat-form, .chat-card.chat-via-wa .chat-hint { display: none; }
 .chat-messages:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
 
 /* Lista profesional: no leídos */

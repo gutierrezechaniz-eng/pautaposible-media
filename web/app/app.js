@@ -2112,6 +2112,9 @@ document.querySelector("#quick-weight-form").addEventListener("submit", async (e
 
 /* ---------- Chat privado persona ↔ profesional ---------- */
 const CHAT_MAX_LENGTH = 1000;
+// WhatsApp de Iván: las personas con seguimiento le escriben por aquí en lugar del chat de la web.
+// Con el número vacío vuelve el chat de la web tal cual.
+const PRO_WHATSAPP = "34608861858";
 
 function toMillis(value) {
   if (!value) return 0;
@@ -2190,7 +2193,9 @@ function renderChatMessages(kind, messages) {
     const empty = document.createElement("p");
     empty.className = "chat-empty";
     empty.textContent = kind === "client"
-      ? "Aún no hay mensajes. Escribe aquí tus dudas cortas o cuéntame qué tal va la semana."
+      ? (PRO_WHATSAPP
+        ? "Aquí verás los mensajes que te deje en la web. Para escribirme, usa el botón de WhatsApp."
+        : "Aún no hay mensajes. Escribe aquí tus dudas cortas o cuéntame qué tal va la semana.")
       : "Aún no hay mensajes con esta persona.";
     list.append(empty);
     return;
@@ -2316,8 +2321,19 @@ function openChat(kind, clientId) {
 }
 
 function syncClientChat(hasCare) {
-  document.querySelector("#client-chat-section").classList.toggle("hidden", !hasCare);
-  document.querySelector("#client-chat-wa-hint").classList.toggle("hidden", Boolean(state.userData?.whatsappPhone));
+  const section = document.querySelector("#client-chat-section");
+  section.classList.toggle("hidden", !hasCare);
+  section.classList.toggle("chat-via-wa", Boolean(PRO_WHATSAPP));
+  document.querySelector("#client-chat-wa").classList.toggle("hidden", !PRO_WHATSAPP);
+  document.querySelector("#client-chat-sub").textContent = PRO_WHATSAPP
+    ? "Por WhatsApp · suele responder en el día"
+    : "Chat privado · suele responder en el día";
+  if (PRO_WHATSAPP) {
+    const name = state.userData?.profile?.name;
+    const text = `Hola Iván, soy ${name || "una persona con seguimiento"} de Pauta Posible. `;
+    document.querySelector("#client-chat-wa-link").href = `https://wa.me/${PRO_WHATSAPP}?text=${encodeURIComponent(text)}`;
+  }
+  document.querySelector("#client-chat-wa-hint").classList.toggle("hidden", Boolean(PRO_WHATSAPP || state.userData?.whatsappPhone));
   if (hasCare && state.user) openChat("client", state.user.uid);
   else stopChat("client");
 }
