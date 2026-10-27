@@ -534,3 +534,33 @@ export function masVerdura() {
         pill(560, 430, 300, 'App gratis', 26.4, G, CH, 44), '#DCE9E1') },
   ];
 }
+
+// ---------- Reel martes 27/10: ¿La fruta por la noche engorda? ----------
+const manzana = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M50 30 C36 18 10 22 10 52 C10 78 30 96 42 94 C46 93 48 91 50 91 C52 91 54 93 58 94 C70 96 90 78 90 52 C90 22 64 18 50 30Z" fill="#D9634C"/><path d="M26 44 C28 36 34 32 40 32" stroke="#F09A86" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M50 30 C50 20 52 12 56 6" stroke="#6b4a2b" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M56 16 C64 4 80 6 84 12 C76 20 64 22 56 16Z" fill="#5C9A5E"/></g>`;
+export function frutaNoche() {
+  return [
+    { start: 0, end: 7.4, pan: 1, tag: 'La misma manzana', svg: svg(
+        box(330, 40, 300, 100, 'No', 2.24, F, '#fff', 64) +
+        g(fl(manzana(110, 175, 210), 8, 2.4), 3.28, '215 280') + g(fl(manzana(640, 175, 210), 8, 2.6), 3.6, '745 280') +
+        label(480, 315, '=', 4.1, F, 120) +
+        ic('sun', 120, 410, 100, 4.8) + label(285, 480, '9:00', 4.9, CH, 54) +
+        ic('moon', 600, 410, 100, 6.24) + label(780, 480, '21:00', 6.3, CH, 54)) },
+    { start: 7.4, end: 9.9, pan: -1, tag: 'Lo que cuenta', svg: svg(
+        label(480, 105, 'Lo que cuenta es', 7.5, CH, 56) +
+        box(180, 135, 600, 105, 'el conjunto del día', 8.64, F, '#fff', 52) +
+        ic('sun', 120, 280, 170, 8.9) + g(plate(480, 365, 90, { lines: true, v: true, p: true, h: true }), 9.1, '480 365') + ic('moon', 670, 280, 170, 9.3) +
+        label(205, 505, 'Mañana', 8.9, CH, 38) + label(480, 505, 'Comidas', 9.1, CH, 38) + label(755, 505, 'Noche', 9.3, CH, 38), '#DCE9E1') },
+    { start: 9.9, end: 12.2, pan: 1, tag: '¿Te apetece en la cena?', svg: svg(
+        ic('moon', 60, 40, 130, 10.0) + label(560, 120, '¿Te apetece en la cena?', 10.1, CH, 50) +
+        g(fl(manzana(150, 180, 200), 8, 2.4), 10.4, '250 300') + g(fl(ic('orange', 380, 180, 200), 8, 2.8), 10.6, '480 300') + g(fl(ic('banana', 610, 180, 200), 8, 2.2), 10.8, '710 300') +
+        box(260, 425, 440, 110, 'Adelante', 11.52, G, CH, 64)) },
+    { start: 12.2, end: 14.8, pan: -1, tag: 'Envíaselo', svg: svg(
+        g(persona(220, 400, 280, F), 12.3, '220 260') + flecha(380, 260, 580, 12.8) + g(persona(740, 400, 280, S), 13.2, '740 260') +
+        box(150, 430, 660, 96, '¿La evitas por la noche?', 13.5, G, CH, 44), '#DCE9E1') },
+    { start: 14.8, end: 99, pan: 1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 14.9) +
+        label(710, 230, 'Recetas fáciles', 15.84, CH, 42) +
+        pill(500, 290, 420, 'pautaposible.es', 19.6, '#fff', F, 44) +
+        pill(560, 430, 300, 'App gratis', 21.12, G, CH, 44)) },
+  ];
+}

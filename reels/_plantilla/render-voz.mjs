@@ -5,7 +5,7 @@ import { spawn, execFileSync } from 'child_process';
 import { createRequire } from 'module';
 import fs from 'fs';
 import path from 'path';
-import { hidratosCena, platoSinBascula, legumbresBote, munecasRusas, desayunos, agua2litros, unDiaNoArruina, elPan, masVerdura } from './ilustraciones.mjs';
+import { hidratosCena, platoSinBascula, legumbresBote, munecasRusas, desayunos, agua2litros, unDiaNoArruina, elPan, masVerdura, frutaNoche } from './ilustraciones.mjs';
 const require = createRequire(import.meta.url);
 const ffmpeg = require('ffmpeg-static');
 const dir = path.dirname(new URL(import.meta.url).pathname);
@@ -21,6 +21,7 @@ const reels = {
   'un-dia-no-arruina': { hook: '¿Pasarte un día<br>lo arruina todo?', scenes: unDiaNoArruina },
   'el-pan': { hook: '¿El pan<br>engorda?', scenes: elPan },
   'mas-verdura': { hook: '¿Te cuesta<br>comer verdura?', scenes: masVerdura },
+  'fruta-noche': { hook: '¿La fruta por la noche<br>engorda?', scenes: frutaNoche },
 };
 const [name, audio, wordsFile, outDir] = process.argv.slice(2);
 const { dur, words } = JSON.parse(fs.readFileSync(wordsFile, 'utf8'));
