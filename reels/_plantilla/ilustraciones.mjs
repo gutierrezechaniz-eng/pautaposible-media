@@ -564,3 +564,41 @@ export function frutaNoche() {
         pill(560, 430, 300, 'App gratis', 21.12, G, CH, 44)) },
   ];
 }
+
+// ---------- Reel jueves 29/10: 4 raciones de legumbre a la semana ----------
+const hummus = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><ellipse cx="50" cy="90" rx="42" ry="6" fill="rgba(36,50,42,.10)"/><path d="M6 46 H94 C94 72 76 90 50 90 C24 90 6 72 6 46Z" fill="#fff" stroke="${CH}" stroke-width="4"/><ellipse cx="50" cy="46" rx="44" ry="11" fill="#E9D3A4"/><path d="M28 46 C34 38 62 38 70 46 C62 52 40 52 36 46" stroke="#D4B57A" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="52" cy="45" rx="9" ry="3.5" fill="#C9A23A" opacity=".8"/><g fill="#C8402E"><circle cx="38" cy="42" r="2"/><circle cx="62" cy="49" r="2"/><circle cx="70" cy="42" r="1.8"/></g><g fill="#9A5B3F"><ellipse cx="44" cy="50" rx="3.5" ry="2.5"/><ellipse cx="58" cy="41" rx="3.5" ry="2.5"/></g></g>`;
+const ensalada = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s / 100})"><path d="M6 50 H94 C94 76 76 92 50 92 C24 92 6 76 6 50Z" fill="${F}"/><path d="M12 50 C14 30 30 26 40 34 C46 20 64 22 66 34 C76 28 90 36 88 50Z" fill="#8DBF7A"/><circle cx="34" cy="44" r="8" fill="#D9634C"/><circle cx="64" cy="42" r="7" fill="#D9634C"/><g fill="#9A5B3F"><ellipse cx="48" cy="46" rx="5" ry="3.5"/><ellipse cx="76" cy="47" rx="5" ry="3.5"/><ellipse cx="22" cy="48" rx="5" ry="3.5"/></g></g>`;
+export function legumbre4() {
+  return [
+    { start: 0, end: 4.94, pan: 1, tag: '4 raciones a la semana', svg: svg(
+        label(480, 110, '4 raciones a la semana', 1.44, F, 64) +
+        semana(170, { 0: 'ok', 2: 'ok', 4: 'ok', 6: 'ok' }, { 0: 1.9, 2: 2.2, 4: 2.5, 6: 2.8 }, 1.3) +
+        g(fl(ic('beans', 120, 300, 120), 6, 2.2), 2.9, '180 360') + g(fl(ic('beans', 720, 300, 120), 6, 2.6), 3.0, '780 360') +
+        box(290, 410, 380, 110, 'Hazlo fácil', 4.4, G, CH, 60)) },
+    { start: 4.94, end: 8.0, pan: -1, tag: 'Botes en la despensa', svg: svg(
+        `<rect x="40" y="318" width="500" height="18" rx="9" fill="#C98B5E"/>` +
+        ic('jar', 60, 140, 170, 5.1) + ic('jar', 205, 140, 170, 5.3) + ic('jar', 350, 140, 170, 5.5) +
+        label(290, 410, 'En la despensa', 6.0, CH, 46) +
+        ic('tap', 690, 0, 150, 6.56) + ic('drop', 768, 140, 34, 6.8) + ic('drop', 780, 185, 34, 6.95) + ic('drop', 762, 228, 34, 7.1) +
+        ic('colander', 640, 230, 240, 6.6) +
+        box(590, 450, 340, 96, 'Enjuágalos', 6.7, F, '#fff', 48), '#DCE9E1') },
+    { start: 8.0, end: 10.48, pan: 1, tag: 'Añádelos', svg: svg(
+        label(480, 100, 'Añádelos a…', 8.0, F, 60) +
+        g(fl(ensalada(55, 170, 250), 6, 2.4), 8.24, '180 290') + label(180, 480, 'Ensalada', 8.3, CH, 46) +
+        g(fl(ic('rice', 355, 170, 250), 6, 2.8), 9.04, '480 290') + g(ic('beans', 440, 190, 90), 9.2, '485 235') + label(480, 480, 'Arroz', 9.1, CH, 46) +
+        g(fl(`<g transform="translate(655 170) scale(2.5)"><path d="M8 44 H92 C92 72 74 90 50 90 C26 90 8 72 8 44Z" fill="#fff" stroke="${CH}" stroke-width="4"/><ellipse cx="50" cy="44" rx="42" ry="9" fill="#B9874F"/><path d="M36 30 C32 22 40 18 36 8 M54 30 C50 22 58 18 54 8" stroke="#C9D2CC" stroke-width="4" fill="none" stroke-linecap="round"/></g>`, 6, 2.2), 9.92, '780 290') + label(780, 480, 'Crema', 9.95, CH, 46)) },
+    { start: 10.48, end: 12.9, pan: -1, tag: 'Hummus para picar', svg: svg(
+        g(fl(hummus(110, 70, 340), 6, 2.6), 10.64, '280 240') +
+        g(fl(palitos(560, 120, 300), 6, 2.2), 11.44, '710 270') + label(710, 140, 'Para picar', 11.44, CH, 46) +
+        box(250, 440, 460, 100, 'También cuenta', 12.32, G, CH, 52), '#DCE9E1') },
+    { start: 12.9, end: 15.0, pan: 1, tag: 'Guárdalo', svg: svg(
+        g(fl(marcador(100, 40, 220), 8, 2), 12.96, '210 150') + label(210, 330, 'Guárdalo', 13.0, F, 64) +
+        ic('basket', 500, 40, 330, 13.84) + g(ic('jar', 585, 70, 120), 14.0, '645 130') + g(ic('jar', 690, 80, 110), 14.1, '745 135') +
+        box(170, 420, 620, 100, 'Para tu próxima compra', 14.0, '#fff', CH, 46)) },
+    { start: 15.0, end: 99, pan: -1, tag: 'Recetas y app gratis', svg: svg(
+        ic('phone', 90, 50, 440, 15.1) +
+        label(710, 230, 'Recetas fáciles', 16.0, CH, 42) +
+        pill(500, 290, 420, 'pautaposible.es', 19.68, '#fff', F, 44) +
+        pill(560, 430, 300, 'App gratis', 21.36, G, CH, 44), '#DCE9E1') },
+  ];
+}
