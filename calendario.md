@@ -77,7 +77,7 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-26 (lun) | Mito o realidad · Serie suplementos 2/4 | ¿Una pastilla puede sustituir a un buen plato? (lo que comes le gana al bote) | 10:00 | posts/2026-10-26-suplementos-2 | 405510303 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-27 (mar) | Reel con voz (narrador «santa») · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | reels/2026-10-27-fruta-noche/reel-voz.mp4 | 407693561 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-28 (mié) | Receta sencilla · Serie salsas caseras 2/6 | Mayonesa casera segura | 10:00 | posts/2026-10-28-mayonesa-casera | 405511492 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
-| 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | reels/2026-10-29-legumbre-semana (lo monta la tarea de las 12:00) | pendiente de voz (narrador «santa») · guion en voz/GUIONES.md |
+| 2026-10-29 (jue) | Reel con voz (narrador «santa») · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | reels/2026-10-29-legumbre-4-semana/reel-voz.mp4 | 409945537 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-30 (vie) | Hábito práctico | ¿Comes fuera y no sabes qué pedir? 4 trucos para el menú del día | 10:00 | posts/2026-10-30-menu-del-dia | 405512928 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-31 (sáb) | Reel extra con narrador · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | (por hacer: la tarea de martes y jueves no cubre el sábado) | pendiente · guion en voz/GUIONES.md |
 | 2026-11-16 (lun) | Mito o realidad (movido del 19/10 por las series, decisión de Iván del 12/10) | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393940824 (reel con todas las diapositivas seguidas, 12/10; antes 393675755, carrusel de vídeos) (antes 393114051) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
@@ -125,7 +125,7 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | 2026-10-26 (lun) | Mito o realidad · Serie suplementos 2/4 | ¿Una pastilla puede sustituir a un buen plato? | 10:00 | programado (405510303) |
 | 2026-10-27 (mar) | Reel con narrador · Mito o realidad | ¿La fruta por la noche engorda? | 18:00 | programado (407693561, reel con narrador) |
 | 2026-10-28 (mié) | Receta sencilla · Serie salsas 2/6 | Mayonesa casera segura | 10:00 | programado (405511492) |
-| 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | pendiente de voz (narrador) |
+| 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | programado (409945537, reel con narrador) |
 | 2026-10-30 (vie) | Hábito práctico · Sin culpa | ¿Comes fuera y no sabes qué pedir? | 10:00 | programado (405512928) |
 | 2026-10-31 (sáb) | Reel extra · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | guion listo, reel por hacer |
 
@@ -186,7 +186,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Serie salsas 2: mayonesa casera segura (huevo pasteurizado, nevera y 24 horas)
 - Hábito: menú del día sin agobios (4 trucos para comer fuera, sin culpa)
 - Reel mito: ¿la fruta por la noche engorda? (con narrador; la misma manzana a las 9:00 que a las 21:00)
-- Reel hábito: 4 raciones de legumbre a la semana (guion 29/10)
+- Reel hábito: 4 raciones de legumbre a la semana (con narrador, 29/10)
 - Sin culpa: ¿tienes que ganarte la comida? (guion sábado 31/10)
 
 ## Banco de temas

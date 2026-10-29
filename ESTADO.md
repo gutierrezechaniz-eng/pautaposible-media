@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: martes 27/10/2026_
+_Última actualización: jueves 29/10/2026_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -33,6 +33,7 @@ _Última actualización: martes 27/10/2026_
 - 25/10 (tarea del domingo): semana del 26 lista. Carruseles animados con narrador programados como reel: lunes suplementos 2/4 (405510303), miércoles mayonesa casera segura (405511492), viernes menú del día (405512928), todos a las 10:00 con colaboradora e `isAiGenerated`. Guiones de martes 27 (fruta por la noche), jueves 29 (legumbre 4 veces por semana) y sábado 31 (¿tienes que ganarte la comida?) en `voz/GUIONES.md`. Página de copias actualizada.
 - 25/10: el narrador falla con `sherpa-onnx` 2.0 (sale audio vacío): instalar `python3 -m pip install "sherpa-onnx<2" numpy soundfile` (con 1.13.8 funciona). `render-animado.mjs` admite `SOLO=7` para volver a renderizar solo una diapositiva.
 - 27/10: reel del martes 27 «¿La fruta por la noche engorda?» programado (407693561), con narrador, 25,1 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`frutaNoche`).
+- 29/10: reel del jueves 29 «4 raciones de legumbre a la semana» programado (409945537), con narrador, 25,3 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`legumbre4`).
 
 ## Pendiente
 - [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
