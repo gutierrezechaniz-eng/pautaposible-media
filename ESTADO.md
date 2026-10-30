@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: jueves 29/10/2026_
+_Última actualización: viernes 30/10/2026_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -35,7 +35,12 @@ _Última actualización: jueves 29/10/2026_
 - 27/10: reel del martes 27 «¿La fruta por la noche engorda?» programado (407693561), con narrador, 25,1 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`frutaNoche`).
 - 29/10: reel del jueves 29 «4 raciones de legumbre a la semana» programado (409945537), con narrador, 25,3 s, colaboradora añadida. Escenas en `ilustraciones.mjs` (`legumbre4`).
 
+- 30/10: **relanzamiento** (Iván: objetivo más me gusta y más seguidores; sigue el plan gratis de Metricool). Del 24 al 30/10 no salió nada: cupo de 20 posts/mes de Metricool agotado. Nueva norma arriba en `CLAUDE.md` y `calendario.md`: 4 piezas/semana (lun, mié, vie 18:00 y sáb 11:00), martes y jueves sin publicación, nicho tripa/azúcar/hígado/peso, sin la frase fija de la web. Plantilla de YouTube traída a main (`youtube/`) con modo vertical. Semana del 2/11 programada (ver `calendario.md`). Doc: https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn
+
 ## Pendiente
+- [ ] Iván: subir a YouTube el cap. 1 (ficha en `youtube/01-diabetes-tipo-2/youtube.md`) antes del sábado 7/11, que sale su recorte en Instagram.
+- [ ] Cap. 2 (SII) para el 13/11: dibujar colon, intestino delgado, cerebro y microbiota en `organos.html`; guion en el doc del relanzamiento.
+- [ ] Domingo 8/11: primera revisión con las metas nuevas (vistas >3 s, envíos por alcance, seguidores).
 - [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
   - Está en Netlify (plan gratis, proyecto `pauta-posible`, id 469aacc8-f7a4-4927-a334-eee7a2dd9727). La última versión (16/10) se subió arrastrando una carpeta: el código no está en ningún repo ni en Netlify. Páginas conocidas: inicio e `instalar/`.
   - Google no la tiene indexada (`site:pautaposible.es` no devuelve nada): dar de alta en Google Search Console y Bing Webmaster (gratis), con sitemap.
@@ -44,10 +49,8 @@ _Última actualización: jueves 29/10/2026_
   - Skills elegidas (gratis): `frontend-design` (anthropics/skills, Apache 2.0), `taste-skill` (leonxlnx, MIT), `ui-ux-pro-max` (ya instalada), claude-seo (AgriciDaniel, MIT, sin las partes de pago de DataForSEO), marketingskills (coreyhaines31, MIT: `copywriting`, `cro`, `seo-audit`, `ai-seo`, `schema`), `web-design-guidelines` (vercel-labs). Medir antes y después con Lighthouse y Playwright.
   - Falta de Iván: dónde está la carpeta de la web y permitir esos dominios.
 - [ ] Rama `claude/reel-sabado-24` (reel del sábado 24, ya programado en Metricool 400121244 con el vídeo de esa rama): abrir PR y fusionar en main cuando Iván dé el visto bueno. No borrar la rama antes del 24/10 a las 18:00.
-- [ ] Sábados siguientes (31/10…): un reel extra a las 18:00 con tono sin culpa; la rutina de martes y jueves no lo cubre.
 - [ ] Domingo 18-lunes 19: mirar las métricas del reel de lanzamiento (397084088) y, si funciona, repetir el formato con cada función de la app.
 - [ ] Viernes 16-sábado 17: métricas de la semana del 12 (incluye el táper del 09/10, que el 10/10 seguía a 0 en Metricool).
-- [ ] Sábado 31: reel extra «¿Tienes que ganarte la comida?» (guion ya en `voz/GUIONES.md`), por montar y programar.
 - [ ] Revisar las métricas del reel «Tu vida, no la de un influencer» (sábado 10/10, 18:30, Metricool 392827236) con las de la semana.
 
 ## Decisiones vigentes

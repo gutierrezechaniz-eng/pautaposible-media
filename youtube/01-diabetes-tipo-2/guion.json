@@ -1,0 +1,162 @@
+{
+ "titulo": "Diabetes tipo 2",
+ "subtitulo": "contada por tus órganos",
+ "escenas": [
+  {
+   "id": "intro",
+   "rotulo": "",
+   "lineas": [
+    [
+     "narrador",
+     "¿Qué pasa dentro de tu cuerpo cuando aparece la diabetes tipo 2?"
+    ],
+    [
+     "narrador",
+     "Hoy te lo cuentan sus protagonistas: tus propios órganos."
+    ]
+   ]
+  },
+  {
+   "id": "sano",
+   "rotulo": "1. Un cuerpo sano, después de comer",
+   "lineas": [
+    [
+     "glucosa",
+     "¡Hola! Soy la glucosa. Vengo del plato de macarrones y traigo energía para todos."
+    ],
+    [
+     "pancreas",
+     "Te he visto subir en la sangre. Ahora mismo suelto insulina."
+    ],
+    [
+     "insulina",
+     "Y aquí estoy yo, la insulina. Soy la llave que abre las puertas de las células.",
+     "INSULINA = LA LLAVE"
+    ],
+    [
+     "musculo",
+     "¡Pasa, glucosa! Te uso para moverme y guardo un poco de reserva, el glucógeno.",
+     "GLUCÓGENO = RESERVA"
+    ],
+    [
+     "higado",
+     "Yo también guardo reservas. Y mientras haya insulina, dejo de fabricar azúcar."
+    ],
+    [
+     "grasa",
+     "Y lo que sobra, lo guardo yo.",
+     "TEJIDO ADIPOSO"
+    ],
+    [
+     "narrador",
+     "En un cuerpo sano la glucosa sube un poco después de comer, y en un par de horas vuelve a su sitio.",
+     "MENOS DE 140 MG/DL A LAS 2 H"
+    ]
+   ]
+  },
+  {
+   "id": "resistencia",
+   "rotulo": "2. Años después: resistencia a la insulina",
+   "lineas": [
+    [
+     "narrador",
+     "Pero pasan los años. Poco movimiento, muchos ultraprocesados, poco descanso. Y la grasa se acumula en la barriga y dentro del hígado."
+    ],
+    [
+     "grasa",
+     "Estoy a reventar. Cuando me lleno tanto, suelto grasa y sustancias inflamatorias a la sangre.",
+     "GRASA ABDOMINAL + INFLAMACIÓN"
+    ],
+    [
+     "grasa",
+     "Y fabrico menos adiponectina, una hormona que ayudaba a la insulina.",
+     "ADIPONECTINA ↓"
+    ],
+    [
+     "insulina",
+     "¡Músculo, ábreme! ¡Que soy la llave!"
+    ],
+    [
+     "musculo",
+     "Lo intento, pero con tanta grasa e inflamación la cerradura se atasca. Casi no te oigo.",
+     "PUERTAS CERRADAS"
+    ],
+    [
+     "higado",
+     "A mí me pasa igual. Tengo grasa dentro, no le hago caso a la insulina y sigo fabricando glucosa aunque no haga falta.",
+     "HÍGADO GRASO"
+    ],
+    [
+     "narrador",
+     "Esto tiene nombre: resistencia a la insulina. Las células responden menos a su llave.",
+     "RESISTENCIA A LA INSULINA"
+    ]
+   ]
+  },
+  {
+   "id": "agotado",
+   "rotulo": "3. El páncreas se agota",
+   "lineas": [
+    [
+     "pancreas",
+     "Si no me hacen caso, mando más insulina. ¡El doble! ¡El triple!",
+     "INSULINA ↑↑"
+    ],
+    [
+     "narrador",
+     "Durante años, el páncreas compensa. La glucosa parece normal, pero la insulina está muy alta. Por eso un análisis puede salir bien mucho tiempo.",
+     "MUCHA INSULINA, GLUCOSA AÚN NORMAL"
+    ],
+    [
+     "pancreas",
+     "Pero estoy agotado. Mis células beta no dan más de sí. Y mis células alfa siguen soltando glucagón, que le pide al hígado todavía más azúcar.",
+     "CÉLULAS BETA AGOTADAS · GLUCAGÓN ↑"
+    ],
+    [
+     "glucosa",
+     "Como nadie me deja entrar, me quedo en la sangre. ¡Y cada vez somos más!",
+     "GLUCOSA ALTA EN SANGRE"
+    ],
+    [
+     "narrador",
+     "Primero llega la prediabetes, y después la diabetes tipo 2. Años de glucosa alta dañan los vasos sanguíneos de los ojos, los riñones, los nervios y el corazón.",
+     "EN AYUNAS: 100–125 PREDIABETES · 126 O MÁS, DIABETES (MG/DL)"
+    ]
+   ]
+  },
+  {
+   "id": "solucion",
+   "rotulo": "4. Qué puedes hacer tú",
+   "lineas": [
+    [
+     "musculo",
+     "¡Muévete! Cuando trabajo, abro puertas a la glucosa incluso sin insulina. Un paseo después de comer ya ayuda.",
+     "EL EJERCICIO ABRE PUERTAS"
+    ],
+    [
+     "higado",
+     "Si pierdes algo de peso, aunque sea entre un cinco y un diez por ciento, saco la grasa de dentro y vuelvo a escuchar a la insulina.",
+     "PERDER UN 5–10 % DEL PESO"
+    ],
+    [
+     "grasa",
+     "Menos ultraprocesados y bebidas azucaradas. Más verdura, legumbres, fruta entera e integrales. La fibra hace que la glucosa llegue poco a poco.",
+     "FIBRA = GLUCOSA POCO A POCO"
+    ],
+    [
+     "pancreas",
+     "Y así yo descanso. Si se actúa pronto, en algunas personas la diabetes tipo 2 puede llegar a remitir.",
+     "LA REMISIÓN ES POSIBLE"
+    ],
+    [
+     "narrador",
+     "Dormir bien y bajar el estrés también cuenta. Si tienes diabetes o tomas medicación, haz los cambios siempre con tu médico y un dietista-nutricionista."
+    ],
+    [
+     "narrador",
+     "Suscríbete a Pauta Posible: en el próximo capítulo, los órganos nos hablan de la obesidad."
+    ]
+   ]
+  }
+ ]
+}

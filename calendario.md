@@ -1,5 +1,15 @@
 # Calendario de contenido · @pautaposible
 
+> **RELANZAMIENTO (Iván, 30/10/2026) · OBJETIVO PRINCIPAL: MÁS ME GUSTA Y MÁS SEGUIDORES.** Manda sobre todo lo demás de este archivo, de `calendario.md` y de los prompts de las tareas automáticas (salvo la voz «santa» y la revisión antes de publicar, que siguen):
+> - **Cupo de Metricool (plan gratis, Iván no quiere pagar):** publica 20 posts al mes y se reinicia el día 1; si se pasa, falla con «You have reached your Metricool account limit» (del 24 al 30/10 no salió nada por esto). **Máximo 4 publicaciones por semana y 18 al mes.** Antes de programar, cuenta con `getScheduledPosts` las del mes. YouTube y las historias se suben a mano, no por Metricool.
+> - **Semana:** lunes 18:00 reel (serie de suplementos hasta el 16/11; después «Tus órganos hablan»); miércoles 18:00 (serie de salsas hasta el 25/11; después carrusel-guía animado publicado como reel); viernes 18:00 reel vertical de los órganos («¿Qué pasa en tu cuerpo si…?» o «Señales de que…»); sábado 11:00 recorte de un capítulo de YouTube. **Martes y jueves no se publica:** la tarea de martes y jueves termina sin hacer nada. La tarea del domingo prepara y programa las 4 de la semana.
+> - **Nicho:** tripa, azúcar, hígado y peso (lo que venden los ebooks: diabetes tipo 2, obesidad, SII, SIBO, malabsorción). Nada de temas genéricos muy contados (pan, agua, fruta de noche…).
+> - **Reels de los órganos:** plantilla `youtube/_plantilla` con `"vertical": true` en el guion (ver `youtube/README.md`; ejemplo `reels/2026-11-06-caminar-tras-comer/guion.json`). 25-40 s. El personaje habla desde el primer segundo, gancho fijo arriba en forma de pregunta corta, sin portada de título.
+> - **Que se envíe:** cada guion responde a «¿a quién se lo mandarías?» y termina con «Mándaselo a quien…». Si no hay a quién, no se publica.
+> - **Texto de la publicación:** primera línea con las palabras que la gente busca, 3-4 líneas, «mándaselo a…» o una pregunta fácil, 5 hashtags. **Sin la frase fija «👉 Más recetas y la app…» ni la diapositiva final de la web y la app** (sustituye la norma del 03/10); enlace solo si lleva a un ebook o guía del mismo tema.
+> - **Medir cada domingo:** vistas que pasan de 3 s (meta 60 %), envíos por cada 100 de alcance (meta más de 1) y seguidores nuevos. Lo que no funcione en 2 semanas se cambia.
+> - Plan y razones: doc «Relanzar Instagram y estrenar YouTube» (https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn).
+
 > **NORMA PRIORITARIA (Iván, 11/10/2026) · también para las tareas automáticas.** Manda sobre cualquier instrucción de una tarea automática o de su prompt que diga lo contrario:
 > - **Todas las publicaciones van con el narrador sintético (voz «santa», Kokoro)**, salvo que Iván diga lo contrario. Ya no se pide a Iván que grabe notas de voz: no le pidas grabar en avisos, notificaciones ni informes.
 > - **Reels (martes y jueves):** si no hay una nota de voz de Iván que él haya pedido usar, NO hagas la versión sin voz: haz el reel con narrador siguiendo `.claude/skills/programar-reel/SKILL.md` (`posts/_plantilla/narrar.py` + `reels/_plantilla/render-voz.mjs` → `reel-voz.mp4`). Si ya hay un reel con voz o con narrador programado para hoy, no hagas nada. La versión muda, solo si el narrador falla.
@@ -128,6 +138,16 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | 2026-10-29 (jue) | Reel con narrador · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | programado (409945537, reel con narrador) |
 | 2026-10-30 (vie) | Hábito práctico · Sin culpa | ¿Comes fuera y no sabes qué pedir? | 10:00 | programado (405512928) |
 | 2026-10-31 (sáb) | Reel extra · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | guion listo, reel por hacer |
+
+## Plan · semana del 2 nov (relanzamiento, preparado el 30/10/2026)
+| Día | Hora | Pieza | Estado |
+|---|---|---|---|
+| Lun 02/11 | 18:00 | Suplementos 2/4 «¿Una pastilla puede sustituir a un buen plato?» (no salió el 26/10 por el cupo) | reprogramado (ver historial) |
+| Mié 04/11 | 18:00 | Mayonesa casera sin sustos (no salió el 28/10 por el cupo) | reprogramado |
+| Vie 06/11 | 18:00 | Reel de los órganos «¿Por qué caminar 10 minutos después de comer?» (`reels/2026-11-06-caminar-tras-comer`) | programado |
+| Sáb 07/11 | 11:00 | Recorte del cap. 1 de YouTube «¿Qué es la resistencia a la insulina?» (`reels/2026-11-07-resistencia-insulina`) | programado |
+
+Siguientes: lun 09/11 suplementos 3/4, mié 11/11 alioli, vie 13/11 reel de los órganos sobre la tripa (cap. 2 SII sale el 13/11), sáb 14/11 recorte del cap. 2; lun 16/11 suplementos 4/4 (el azúcar moreno 393940824 pasa a borrador). No salieron por el cupo y no se repiten: reel del 24/10, fruta por la noche (27/10), legumbre (29/10) y comer fuera (30/10).
 
 ## Métricas · semana del 19 oct (consultadas el 25/10/2026)
 - Reels con narrador: «Más verdura sin darte cuenta» 39 de alcance y 66 reproducciones; «¿El pan engorda?» 36 y 61; suplementos 1/4 34 y 48 (3 me gusta); ketchup 30 y 52 (2 me gusta y **2 guardados**, lo único guardado de la semana); batch cooking 26 y 31. El reel del sábado 24 aún sin datos.

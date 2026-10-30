@@ -1,0 +1,27 @@
+{
+ "titulo": "Caminar después de comer",
+ "vertical": true,
+ "gancho": "¿Por qué caminar 10 minutos después de comer?",
+ "cierre": "Tus órganos te explican lo que comes",
+ "camara": 950,
+ "escenas": [
+  {
+   "id": "pico",
+   "lineas": [
+    ["glucosa", "¡Acabas de comer y aquí llegamos todas! ¡La sangre está llena de glucosa!", "PICO DE AZÚCAR"],
+    ["insulina", "Y yo voy de puerta en puerta… ¡no doy abasto!"],
+    ["narrador", "¿Sabías que un paseo de diez minutos ayuda a bajar ese pico?"]
+   ]
+  },
+  {
+   "id": "paseo",
+   "lineas": [
+    ["musculo", "¡Eso es cosa mía! Cuando me muevo, abro mis puertas a la glucosa, incluso sin esperar a la insulina.", "MOVERTE ABRE LA PUERTA"],
+    ["glucosa", "¡Pues para dentro! Aquí me usan como energía."],
+    ["insulina", "Y yo puedo trabajar más tranquila. ¡Gracias, músculo!"],
+    ["narrador", "No hace falta correr: basta con caminar a ritmo tranquilo, mejor en la primera hora después de comer."],
+    ["narrador", "Mándaselo a quien se va directo al sofá nada más comer."]
+   ]
+  }
+ ]
+}
