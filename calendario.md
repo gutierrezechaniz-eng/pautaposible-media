@@ -142,12 +142,12 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 ## Plan · semana del 2 nov (relanzamiento, preparado el 30/10/2026)
 | Día | Hora | Pieza | Estado |
 |---|---|---|---|
-| Lun 02/11 | 18:00 | Suplementos 2/4 «¿Una pastilla puede sustituir a un buen plato?» (no salió el 26/10 por el cupo) | reprogramado (ver historial) |
-| Mié 04/11 | 18:00 | Mayonesa casera sin sustos (no salió el 28/10 por el cupo) | reprogramado |
-| Vie 06/11 | 18:00 | Reel de los órganos «¿Por qué caminar 10 minutos después de comer?» (`reels/2026-11-06-caminar-tras-comer`) | programado |
-| Sáb 07/11 | 11:00 | Recorte del cap. 1 de YouTube «¿Qué es la resistencia a la insulina?» (`reels/2026-11-07-resistencia-insulina`) | programado |
+| Lun 02/11 | 18:00 | Suplementos 2/4 «¿Una pastilla puede sustituir a un buen plato?» (no salió el 26/10 por el cupo) | reprogramado · 410841609 |
+| Mié 04/11 | 18:00 | Mayonesa casera sin sustos (no salió el 28/10 por el cupo) | reprogramado · 410841614 |
+| Vie 06/11 | 18:00 | Reel de los órganos «¿Por qué caminar 10 minutos después de comer?» (`reels/2026-11-06-caminar-tras-comer`) | programado · 410841422 |
+| Sáb 07/11 | 11:00 | Recorte del cap. 1 de YouTube «¿Qué es la resistencia a la insulina?» (`reels/2026-11-07-resistencia-insulina`) | programado · 410841431 |
 
-Siguientes: lun 09/11 suplementos 3/4, mié 11/11 alioli, vie 13/11 reel de los órganos sobre la tripa (cap. 2 SII sale el 13/11), sáb 14/11 recorte del cap. 2; lun 16/11 suplementos 4/4 (el azúcar moreno 393940824 pasa a borrador). No salieron por el cupo y no se repiten: reel del 24/10, fruta por la noche (27/10), legumbre (29/10) y comer fuera (30/10).
+**La semana del 2/11 ya tiene sus 4 piezas: la tarea del domingo 1/11 no añade nada, solo informa.** Siguientes: lun 09/11 suplementos 3/4, mié 11/11 alioli, vie 13/11 reel de los órganos sobre la tripa (cap. 2 SII sale el 13/11), sáb 14/11 recorte del cap. 2; lun 16/11 suplementos 4/4 (el azúcar moreno pasa a borrador: 410841624). No salieron por el cupo y no se repiten: reel del 24/10, fruta por la noche (27/10), legumbre (29/10) y comer fuera (30/10).
 
 ## Métricas · semana del 19 oct (consultadas el 25/10/2026)
 - Reels con narrador: «Más verdura sin darte cuenta» 39 de alcance y 66 reproducciones; «¿El pan engorda?» 36 y 61; suplementos 1/4 34 y 48 (3 me gusta); ketchup 30 y 52 (2 me gusta y **2 guardados**, lo único guardado de la semana); batch cooking 26 y 31. El reel del sábado 24 aún sin datos.
