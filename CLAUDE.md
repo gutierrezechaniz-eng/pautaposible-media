@@ -2,6 +2,16 @@
 
 Repositorio **público** con el contenido de redes de Iván (Pauta Posible, nutrición práctica). Se publica y programa en Instagram con Metricool.
 
+> **RELANZAMIENTO (Iván, 30/10/2026) · OBJETIVO PRINCIPAL: MÁS ME GUSTA Y MÁS SEGUIDORES.** Manda sobre todo lo demás de este archivo, de `calendario.md` y de los prompts de las tareas automáticas (salvo la voz «santa» y la revisión antes de publicar, que siguen):
+> - **Cupo de Metricool (plan gratis, Iván no quiere pagar):** publica 20 posts al mes y se reinicia el día 1; si se pasa, falla con «You have reached your Metricool account limit» (del 24 al 30/10 no salió nada por esto). **Máximo 4 publicaciones por semana y 18 al mes.** Antes de programar, cuenta con `getScheduledPosts` las del mes. YouTube y las historias se suben a mano, no por Metricool.
+> - **Semana:** lunes 18:00 reel (serie de suplementos hasta el 16/11; después «Tus órganos hablan»); miércoles 18:00 (serie de salsas hasta el 25/11; después carrusel-guía animado publicado como reel); viernes 18:00 reel vertical de los órganos («¿Qué pasa en tu cuerpo si…?» o «Señales de que…»); sábado 11:00 recorte de un capítulo de YouTube. **Martes y jueves no se publica:** la tarea de martes y jueves termina sin hacer nada. La tarea del domingo prepara y programa las 4 de la semana.
+> - **Nicho:** tripa, azúcar, hígado y peso (lo que venden los ebooks: diabetes tipo 2, obesidad, SII, SIBO, malabsorción). Nada de temas genéricos muy contados (pan, agua, fruta de noche…).
+> - **Reels de los órganos:** plantilla `youtube/_plantilla` con `"vertical": true` en el guion (ver `youtube/README.md`; ejemplo `reels/2026-11-06-caminar-tras-comer/guion.json`). 25-40 s. El personaje habla desde el primer segundo, gancho fijo arriba en forma de pregunta corta, sin portada de título.
+> - **Que se envíe:** cada guion responde a «¿a quién se lo mandarías?» y termina con «Mándaselo a quien…». Si no hay a quién, no se publica.
+> - **Texto de la publicación:** primera línea con las palabras que la gente busca, 3-4 líneas, «mándaselo a…» o una pregunta fácil, 5 hashtags. **Sin la frase fija «👉 Más recetas y la app…» ni la diapositiva final de la web y la app** (sustituye la norma del 03/10); enlace solo si lleva a un ebook o guía del mismo tema.
+> - **Medir cada domingo:** vistas que pasan de 3 s (meta 60 %), envíos por cada 100 de alcance (meta más de 1) y seguidores nuevos. Lo que no funcione en 2 semanas se cambia.
+> - Plan y razones: doc «Relanzar Instagram y estrenar YouTube» (https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn).
+
 > **NORMA PRIORITARIA (Iván, 11/10/2026) · también para las tareas automáticas.** Manda sobre cualquier instrucción de una tarea automática o de su prompt que diga lo contrario:
 > - **Todas las publicaciones van con el narrador sintético (voz «santa», Kokoro)**, salvo que Iván diga lo contrario. Ya no se pide a Iván que grabe notas de voz: no le pidas grabar en avisos, notificaciones ni informes.
 > - **Reels (martes y jueves):** si no hay una nota de voz de Iván que él haya pedido usar, NO hagas la versión sin voz: haz el reel con narrador siguiendo `.claude/skills/programar-reel/SKILL.md` (`posts/_plantilla/narrar.py` + `reels/_plantilla/render-voz.mjs` → `reel-voz.mp4`). Si ya hay un reel con voz o con narrador programado para hoy, no hagas nada. La versión muda, solo si el narrador falla.
@@ -22,18 +32,19 @@ Al empezar cada sesión, lee **`ESTADO.md`** (qué quedó pendiente) y, si la ta
 | `posts/_plantilla/` | Generador de carruseles: el contenido va en `carruseles.mjs` y se renderiza con `render.mjs`; ver su README |
 | `reels/AAAA-MM-DD-tema/` | `guion.md` (escenas, fuentes, texto de la publicación), `portada.png`, `reel.mp4` (sin voz) y/o `reel-voz.mp4` |
 | `reels/_plantilla/` | Generador de reels: `render.mjs` (sin voz), `render-voz.mjs` (con voz), `ilustraciones.mjs`; ver su README |
+| `youtube/` | Capítulos de YouTube «Tus órganos hablan» y su plantilla (`_plantilla/`, también en vertical para reels y Shorts) |
 | `voz/GUIONES.md` | Textos que Iván lee para los reels de la semana |
 | `assets/ivan.png` | Retrato de Iván (cierres y última diapositiva) |
 
 ## Calendario semanal habitual
 
-- Carruseles: lunes, miércoles y viernes a las 10:00 (Madrid). Pilares: Mito o realidad, Receta sencilla, Hábito práctico.
-- Reels: martes y jueves a las 18:00 (Madrid). Todas las publicaciones van con el narrador sintético (voz «santa») salvo que Iván diga lo contrario (decisión del 11/10); ver `calendario.md`.
+- Desde el 02/11/2026 (relanzamiento): lunes, miércoles y viernes a las 18:00 y sábado a las 11:00 (Madrid); ver la norma de arriba. Antes: carruseles lunes, miércoles y viernes a las 10:00 y reels martes y jueves a las 18:00.
+- YouTube (@pautaposible): capítulos de «Tus órganos hablan» cada dos semanas, en `youtube/`; Iván los sube a mano. Todas las publicaciones van con el narrador sintético (voz «santa») salvo que Iván diga lo contrario (decisión del 11/10); ver `calendario.md`.
 - Colaboradora en Metricool: `ibangutierrezetxaniz`.
 
 ## Reglas fijas
 
-- Todo cierre lleva a pautaposible.es (ver la norma en `calendario.md`). El texto de la publicación termina con: «👉 Más recetas y la app gratuita para cocinar con lo que tienes en casa en pautaposible.es (enlace en la bio)» + hashtags.
+- Cierre y texto de la publicación: ver la norma del relanzamiento (30/10) arriba; ya no se añade la frase fija de la web y la app.
 - Sin el título «nutricionista» y sin prometer resultados de salud ni de peso. Base en evidencia (AESAN, SENC) y citarla en el `guion.md`.
 - Solo imágenes propias (SVG) o con licencia, con los créditos en el `guion.md`.
 - **Nunca subas los audios originales de Iván** (el repositorio es público; `.gitignore` de la plantilla ya los excluye).
