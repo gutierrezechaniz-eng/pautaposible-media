@@ -38,7 +38,7 @@ _Última actualización: viernes 30/10/2026_
 - 30/10: **relanzamiento** (Iván: objetivo más me gusta y más seguidores; sigue el plan gratis de Metricool). Del 24 al 30/10 no salió nada: cupo de 20 posts/mes de Metricool agotado. Nueva norma arriba en `CLAUDE.md` y `calendario.md`: 4 piezas/semana (lun, mié, vie 18:00 y sáb 11:00), martes y jueves sin publicación, nicho tripa/azúcar/hígado/peso, sin la frase fija de la web. Plantilla de YouTube traída a main (`youtube/`) con modo vertical. Semana del 2/11 programada (ver `calendario.md`). Doc: https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn
 
 ## Pendiente
-- [ ] Iván: subir a YouTube el cap. 1 (ficha en `youtube/01-diabetes-tipo-2/youtube.md`) antes del sábado 7/11, que sale su recorte en Instagram.
+- 30/10: cap. 1 de YouTube y su Short programados por Metricool para el domingo 1/11 (11:00 y 17:00): 410848121 y 410848126. Comprobar el 1/11 que salieron.
 - [ ] Cap. 2 (SII) para el 13/11: dibujar colon, intestino delgado, cerebro y microbiota en `organos.html`; guion en el doc del relanzamiento.
 - [ ] Domingo 8/11: primera revisión con las metas nuevas (vistas >3 s, envíos por alcance, seguidores).
 - [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
