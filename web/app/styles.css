@@ -222,7 +222,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--forest); box-sha
 .published-plan-heading h3 { margin: 0; font-size: 1.12rem; }
 .progress-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 20px; margin-top: 20px; }
 .progress-entry-card, .progress-chart-card, .professional-progress-card, .professional-progress-entry-card { padding: 28px; }
-.professional-progress-workspace { display: grid; grid-template-columns: minmax(300px, .78fr) minmax(0, 1.22fr); gap: 20px; margin-bottom: 20px; }
+.professional-progress-workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin-bottom: 20px; }
 .professional-progress-entry-card { align-self: start; }
 .checkup-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 .next-check-date { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 11px; border-radius: 999px; color: #8b4d00; background: #fff0d5; font-size: .72rem; font-weight: 820; text-align: center; }
@@ -242,19 +242,36 @@ input:focus, select:focus, textarea:focus { border-color: var(--forest); box-sha
 .care-plan-card-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
 .care-plan-document-count { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 11px; border-radius: 999px; color: #7a4300; background: #fff0d5; font-size: .72rem; font-weight: 820; }
 .measurement-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0 13px; }
-.progress-summary { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 10px; margin: 20px 0 12px; }
-.progress-metric { padding: 12px; border: 1px solid var(--border); border-radius: 15px; background: #fbfdfb; }
+.progress-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); gap: 10px; margin: 20px 0 12px; }
+.progress-metric { min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 15px; background: #fbfdfb; }
 .progress-metric span, .progress-metric strong { display: flex; align-items: center; gap: 7px; }
 .progress-metric span { color: var(--stone); font-size: .76rem; }
 .progress-metric strong { margin-top: 4px; font-size: 1rem; }
 .progress-metric i { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 10px; }
-.progress-chart-scroll { width: 100%; overflow-x: auto; }
-.progress-chart-scroll svg { display: block; min-width: 600px; width: 100%; }
+.progress-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin: 14px 0 8px; align-items: stretch; }
+.progress-charts .weight-chart { margin: 0; }
+.composition-chart { min-width: 0; padding: 16px; background: white; border: 1px solid var(--border); border-radius: 18px; }
+.composition-chart .progress-subtitle { margin: 0 0 6px; }
+.composition-chart svg { display: block; width: 100%; height: auto; }
 .chart-grid { stroke: #dfe8e1; stroke-width: 1; }
 .chart-zero { stroke: #9bad9f; stroke-width: 1.5; }
 .chart-axis-label, .chart-date-label { fill: var(--stone); font-size: 12px; }
 .progress-note { margin: 8px 0 0; color: var(--stone); font-size: .78rem; }
 .measurement-timeline { display: grid; gap: 10px; margin-top: 20px; }
+.measurement-latest-label { margin: 0; color: var(--forest); font-size: .74rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.measurement-history summary { min-height: 44px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border: 1px dashed var(--border); border-radius: 14px; color: var(--forest); font-size: .86rem; font-weight: 800; cursor: pointer; list-style: none; }
+.measurement-history summary::-webkit-details-marker { display: none; }
+.measurement-history summary::before { content: "▸"; transition: transform .15s; }
+.measurement-history[open] summary::before { transform: rotate(90deg); }
+.measurement-history summary:hover { background: var(--tint); }
+.measurement-history-list { display: grid; gap: 10px; margin-top: 10px; max-height: 480px; overflow-y: auto; }
+/* Registrar evolución a lo ancho: fecha y medidas en una fila, valoración debajo */
+@media (min-width: 1000px) {
+  .professional-progress-entry-card .progress-form { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 12px; align-items: end; }
+  .professional-progress-entry-card .measurement-fields { display: contents; }
+  .professional-progress-entry-card .progress-form > .field:has(textarea), .professional-progress-entry-card .progress-form > .form-message { grid-column: 1 / -1; }
+  .professional-progress-entry-card .progress-form > .button { grid-column: 1 / -1; justify-self: start; white-space: nowrap; }
+}
 .measurement-record { padding: 15px 16px; border: 1px solid var(--border); border-radius: 16px; background: #fbfdfb; }
 .measurement-record-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
 .measurement-record-head strong { font-size: .92rem; }

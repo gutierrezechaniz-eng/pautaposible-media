@@ -481,17 +481,20 @@ function renderProgressChart(container, measurements) {
   });
 
   const weightSeries = series.find((metric) => metric.key === "weight");
-  const chartNodes = [summary];
-  if (weightSeries) chartNodes.push(renderWeightChart(weightSeries.points));
+  // Las dos gráficas (peso y todas las medidas) van en una rejilla: lado a lado si hay sitio,
+  // una debajo de otra en pantallas estrechas. Ninguna necesita desplazarse para verse entera.
+  const charts = document.createElement("div");
+  charts.className = "progress-charts";
+  if (weightSeries) charts.append(renderWeightChart(weightSeries.points));
   if (!series.some((metric) => metric.key !== "weight")) {
-    container.append(...chartNodes);
+    container.append(summary, charts);
     renderMeasurementTimeline(container, measurements);
     return;
   }
 
-  const width = 760;
-  const height = 310;
-  const margin = { top: 24, right: 28, bottom: 48, left: 58 };
+  const width = 480;
+  const height = 220;
+  const margin = { top: 16, right: 18, bottom: 30, left: 48 };
   const graphWidth = width - margin.left - margin.right;
   const graphHeight = height - margin.top - margin.bottom;
   const totalPositions = Math.max(measurements.length - 1, 1);
@@ -555,26 +558,24 @@ function renderProgressChart(container, measurements) {
   dateIndexes.forEach((index) => {
     const label = document.createElementNS(svgNamespace, "text");
     label.setAttribute("x", x(index));
-    label.setAttribute("y", height - 15);
+    label.setAttribute("y", height - 8);
     label.setAttribute("class", "chart-date-label");
     label.setAttribute("text-anchor", index === 0 ? "start" : index === measurements.length - 1 ? "end" : "middle");
     label.textContent = formatDate(`${measurements[index].date || measurements[index].id}T12:00:00`);
     svg.append(label);
   });
 
-  const chartScroll = document.createElement("div");
-  chartScroll.className = "progress-chart-scroll";
-  chartScroll.append(svg);
+  const composition = document.createElement("div");
+  composition.className = "composition-chart";
+  const compositionTitle = document.createElement("h3");
+  compositionTitle.className = "progress-subtitle";
+  compositionTitle.textContent = "Todas las medidas: cambio en %";
   const note = document.createElement("p");
   note.className = "progress-note";
-  note.textContent = "Las líneas muestran el cambio porcentual respecto al primer registro de cada medida.";
-  if (weightSeries) {
-    const compositionTitle = document.createElement("h3");
-    compositionTitle.className = "progress-subtitle";
-    compositionTitle.textContent = "Todas las medidas: cambio en %";
-    chartNodes.push(compositionTitle);
-  }
-  container.append(...chartNodes, chartScroll, note);
+  note.textContent = "Cambio respecto al primer registro de cada medida.";
+  composition.append(compositionTitle, svg, note);
+  charts.append(composition);
+  container.append(summary, charts);
   renderMeasurementTimeline(container, measurements);
 }
 
@@ -598,7 +599,7 @@ function renderWeightChart(points) {
   }
   head.append(latest, delta);
 
-  const width = 640;
+  const width = 480;
   const height = 220;
   const pad = { top: 16, right: 18, bottom: 30, left: 42 };
   const time = (point) => new Date(`${point.date}T12:00:00`).getTime();
@@ -649,34 +650,59 @@ function renderWeightChart(points) {
 }
 
 function renderMeasurementTimeline(container, measurements) {
+  // Solo se ve el último registro; el resto, en un desplegable para no alargar la ficha.
+  const records = measurements.slice().reverse().map(measurementRecord);
+  if (!records.length) return;
   const timeline = document.createElement("div");
   timeline.className = "measurement-timeline";
-  measurements.slice().reverse().slice(0, 8).forEach((measurement) => {
-    const record = document.createElement("article");
-    record.className = "measurement-record";
-    const head = document.createElement("div");
-    head.className = "measurement-record-head";
-    const date = document.createElement("strong");
-    date.textContent = formatDate(`${measurement.date || measurement.id}T12:00:00`);
-    const source = document.createElement("small");
-    source.textContent = measurement.source === "professional" ? "Control profesional" : "Registro personal";
-    head.append(date, source);
-    const values = progressMetrics
-      .filter((metric) => Number.isFinite(Number(measurement[metric.key])) && Number(measurement[metric.key]) > 0)
-      .map((metric) => `${metric.label}: ${Number(measurement[metric.key]).toLocaleString("es-ES", { maximumFractionDigits: 1 })} ${metric.unit}`);
-    const valuesText = document.createElement("p");
-    valuesText.className = "measurement-record-values";
-    valuesText.textContent = values.join(" · ");
-    record.append(head, valuesText);
-    if (measurement.assessment) {
-      const assessment = document.createElement("p");
-      assessment.className = "measurement-assessment";
-      assessment.textContent = measurement.assessment;
-      record.append(assessment);
-    }
-    timeline.append(record);
-  });
+  const latestLabel = document.createElement("p");
+  latestLabel.className = "measurement-latest-label";
+  latestLabel.textContent = "Último registro";
+  timeline.append(latestLabel, records[0]);
+  if (records.length > 1) {
+    const history = document.createElement("details");
+    history.className = "measurement-history";
+    const summary = document.createElement("summary");
+    const older = records.length - 1;
+    summary.textContent = `Ver los ${older} registro${older === 1 ? "" : "s"} anterior${older === 1 ? "" : "es"}`;
+    const list = document.createElement("div");
+    list.className = "measurement-history-list";
+    list.append(...records.slice(1));
+    history.append(summary, list);
+    history.addEventListener("toggle", () => {
+      summary.textContent = history.open
+        ? "Ocultar los registros anteriores"
+        : `Ver los ${older} registro${older === 1 ? "" : "s"} anterior${older === 1 ? "" : "es"}`;
+    });
+    timeline.append(history);
+  }
   container.append(timeline);
+}
+
+function measurementRecord(measurement) {
+  const record = document.createElement("article");
+  record.className = "measurement-record";
+  const head = document.createElement("div");
+  head.className = "measurement-record-head";
+  const date = document.createElement("strong");
+  date.textContent = formatDate(`${measurement.date || measurement.id}T12:00:00`);
+  const source = document.createElement("small");
+  source.textContent = measurement.source === "professional" ? "Control profesional" : "Registro personal";
+  head.append(date, source);
+  const values = progressMetrics
+    .filter((metric) => Number.isFinite(Number(measurement[metric.key])) && Number(measurement[metric.key]) > 0)
+    .map((metric) => `${metric.label}: ${Number(measurement[metric.key]).toLocaleString("es-ES", { maximumFractionDigits: 1 })} ${metric.unit}`);
+  const valuesText = document.createElement("p");
+  valuesText.className = "measurement-record-values";
+  valuesText.textContent = values.join(" · ");
+  record.append(head, valuesText);
+  if (measurement.assessment) {
+    const assessment = document.createElement("p");
+    assessment.className = "measurement-assessment";
+    assessment.textContent = measurement.assessment;
+    record.append(assessment);
+  }
+  return record;
 }
 
 function reviewFrequencyLabel(value) {
