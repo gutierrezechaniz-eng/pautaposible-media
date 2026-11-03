@@ -66,22 +66,13 @@ export default function escenas(o) {
         }).join('')}`),
     },
     { // 5. También cuenta
-      start: o + 20.35, end: o + 24.3, tag: 'TAMBIÉN CUENTA',
+      start: o + 20.35, end: o + 30, tag: 'TAMBIÉN CUENTA',
       svg: svg(`
         ${[['Fregar', 20.48], ['Tender la ropa', 21.2], ['Bajar al perro', 22.2]].map(([s, at], i) => {
           const y = 210 + i * 140;
           return `<g data-at="${A(at)}" data-pop="490 ${y + 40}"><rect x="140" y="${y}" width="700" height="100" rx="50" fill="${M}"/>${check(210, y + 50)}${txt(270, y + 64, s, 44, 800, CH, 'start')}</g>`;
         }).join('')}
         <g data-at="${A(23.0)}" data-pop="490 680">${txt(490, 690, 'Todo lo que sea moverte suma', 34, 700, F)}</g>`),
-    },
-    { // 6. Mándaselo
-      start: o + 24.3, end: o + 27.5, tag: '',
-      svg: svg(`<rect width="980" height="760" fill="${F}"/>
-        <g data-at="${A(24.4)}">${txt(490, 170, 'Mándaselo a quien', 58, 800, CR)}${txt(490, 240, 'se va directo al sofá', 58, 800, CR)}</g>
-        <g data-at="${A(25.4)}" data-pop="490 480">
-          <rect x="300" y="420" width="380" height="120" rx="34" fill="${G}"/><rect x="270" y="470" width="70" height="140" rx="26" fill="#C4923F"/><rect x="640" y="470" width="70" height="140" rx="26" fill="#C4923F"/>
-          <rect x="320" y="520" width="340" height="80" rx="20" fill="#E6BE77"/><rect x="300" y="600" width="18" height="40" fill="${CH}"/><rect x="662" y="600" width="18" height="40" fill="${CH}"/></g>
-        <g data-at="${A(26.2)}" data-float="8 1.6"><path d="M760 330 L900 280 L850 410 L815 360 Z" fill="${CR}"/><path d="M815 360 L900 280" stroke="${F}" stroke-width="5"/></g>`),
     },
   ];
 }

@@ -12,7 +12,8 @@ import path from 'path';
 import { pathToFileURL } from 'url';
 const dir = path.dirname(new URL(import.meta.url).pathname);
 const FPS = 30, GAP = 0.15, END = 2.5;
-const [escenasMod, hookVid, body, wordsFile, outDir] = process.argv.slice(2).map((p) => path.resolve(p));
+const [escenasMod, hookVid, body, wordsFile, outDir, outroVid] = process.argv.slice(2).map((p) => p && path.resolve(p));
+// Opcional, 6.º argumento: vídeo de cierre (HeyGen) con la última frase; OUTRO_DESDE = segundo del cuerpo donde empieza esa frase
 fs.mkdirSync(outDir, { recursive: true });
 const ff = (args) => execFileSync('ffmpeg', ['-v', 'error', '-y', ...args], { maxBuffer: 1 << 28 });
 const dur = (f) => parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).toString());
@@ -24,6 +25,13 @@ fs.rmSync(fdir, { recursive: true, force: true }); fs.mkdirSync(fdir);
 ff(['-i', hookVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920`, path.join(fdir, '%04d.jpg')]);
 const frames = fs.readdirSync(fdir).sort().map((f) => 'hook-frames/' + f);
 const hookEnd = frames.length / FPS;
+let outroFrames = null;
+if (outroVid) {
+  const odir = path.join(dir, 'outro-frames');
+  fs.rmSync(odir, { recursive: true, force: true }); fs.mkdirSync(odir);
+  ff(['-i', outroVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920`, path.join(odir, '%04d.jpg')]);
+  outroFrames = fs.readdirSync(odir).sort().map((f) => 'outro-frames/' + f);
+}
 const bodyStart = hookEnd + GAP;
 
 // 2. Audio: voz del gancho (la del propio vídeo) + voz del cuerpo, a -14 LUFS
@@ -57,7 +65,8 @@ if (!hookWords) {
 const words = P.words.map((w) => ({ ...w, s: w.s + bodyStart, e: w.e + bodyStart }));
 const voiceEnd = bodyStart + P.dur;
 const { default: escenas } = await import(pathToFileURL(escenasMod).href);
-const cfg = { frames, fps: FPS, hookEnd, hookQ: process.env.PREGUNTA || P.hook.pregunta, hookWords, words, voiceEnd, scenes: escenas(bodyStart), env, endDur: END };
+const cfg = { frames, fps: FPS, hookEnd, hookQ: process.env.PREGUNTA || P.hook.pregunta, hookWords, words, voiceEnd, scenes: escenas(bodyStart), env, endDur: END,
+  outro: outroFrames ? { frames: outroFrames, start: bodyStart + parseFloat(process.env.OUTRO_DESDE), pill: process.env.OUTRO_TEXTO || '' } : null };
 
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
