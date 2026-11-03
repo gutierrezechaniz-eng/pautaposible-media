@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Manrope;font-weight:600;src:url(node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:700;src:url(node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:800;src:url(node_modules/@fontsource/manrope/files/manrope-latin-800-normal.woff2)}
+:root{--forest:#2E6F57;--cream:#FAFAF7;--mint:#DDEEDF;--sage:#6FA67A;--gold:#D7A95B;--char:#24322A}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--cream);font-family:Manrope,sans-serif;color:var(--char)}
+.layer{position:absolute;inset:0}
+.blob{position:absolute;border-radius:50%}
+/* Gancho: Iban hablando (vídeo de HeyGen) a pantalla completa */
+#hook{background:#000}
+#hook img.fr{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#hook .shade{position:absolute;left:0;right:0;bottom:0;height:900px;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.55))}
+#hook .q{position:absolute;left:60px;right:60px;top:1330px;text-align:center}
+#hook .q span{display:inline;background:var(--cream);color:var(--forest);font-weight:800;font-size:76px;line-height:1.32;letter-spacing:-1.5px;padding:6px 26px;border-radius:24px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#hsubs{position:absolute;left:60px;right:60px;top:1180px;height:280px;display:flex;align-items:center;justify-content:center;text-align:center}
+#hook .blk{color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.45)}
+#hook .w.todo{color:rgba(255,255,255,.55)}
+/* Parte central: diapositivas + foto de Iban en círculo */
+#main{opacity:0}
+#card{position:absolute;left:50px;right:50px;top:240px;height:760px;border-radius:56px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(36,50,42,.12)}
+.sl{position:absolute;inset:0;opacity:0}
+.sl svg{width:100%;height:100%;display:block}
+.sl .cap{position:absolute;left:0;right:0;top:34px;text-align:center}
+.tag{display:inline-block;border-radius:999px;padding:14px 34px;font-weight:800;font-size:36px;background:var(--forest);color:var(--cream);letter-spacing:.5px}
+#me{position:absolute;left:50%;top:1035px;width:200px;height:200px;margin-left:-100px}
+#me .ring{position:absolute;inset:-10px;border-radius:50%;background:var(--sage);opacity:.35}
+#me .ph{position:absolute;inset:0;border-radius:50%;overflow:hidden;border:8px solid var(--cream);background:var(--mint)}
+#me .ph img{width:100%;height:100%;display:block;object-fit:cover}
+#subs{position:absolute;left:50px;right:50px;top:1250px;height:260px;display:flex;align-items:center;justify-content:center;text-align:center}
+.blk{text-wrap:balance;font-weight:800;font-size:74px;line-height:1.16;letter-spacing:-1px;color:var(--char)}
+.w{display:inline-block;padding:0 12px;margin:0 -2px;border-radius:22px}
+.w.on{background:var(--mint);color:var(--forest)}
+.w.todo{color:rgba(36,50,42,.38)}
+#hook .w.on{background:var(--mint);color:var(--forest);text-shadow:none}
+.handle{position:absolute;left:0;right:0;top:1520px;text-align:center;font-weight:700;font-size:30px;color:var(--char);opacity:.45}
+/* Cierre */
+#end{background:var(--forest);color:var(--cream);opacity:0}
+#end .zone{position:absolute;left:80px;right:80px;top:380px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cta{display:inline-block;border-radius:999px;padding:30px 60px;font-weight:800;font-size:56px;background:var(--cream);color:var(--forest)}
+.e{opacity:0}
+</style></head>
+<body>
+<div class="layer" id="main">
+  <div class="blob" style="width:360px;height:360px;right:-150px;top:-120px;background:var(--mint)"></div>
+  <div class="blob" style="width:60px;height:60px;left:70px;top:160px;background:var(--gold)"></div>
+  <div class="blob" style="width:300px;height:300px;left:-170px;top:1250px;background:var(--mint);opacity:.7"></div>
+  <div id="card"></div>
+  <div id="me"><div class="ring"></div><div class="ph"><img src="ivan-foto.png"></div></div>
+  <div id="subs"></div>
+  <div class="handle">@pautaposible</div>
+</div>
+<div class="layer" id="hook">
+  <img class="fr" id="hfr">
+  <div class="shade"></div>
+  <div class="q" id="hq"></div>
+  <div id="hsubs"></div>
+</div>
+<div class="layer" id="end">
+  <div class="blob" style="width:620px;height:620px;left:-270px;top:1250px;background:rgba(111,166,122,.25)"></div>
+  <div class="blob" style="width:90px;height:90px;right:130px;top:250px;background:var(--gold)"></div>
+  <div class="zone">
+    <div class="e" data-d="0" style="width:300px;height:300px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 14px rgba(221,238,223,.25)"><img src="ivan-foto.png" style="width:100%;height:100%;object-fit:cover"></div>
+    <div class="e" data-d="0.08" style="font-weight:800;font-size:64px;margin-top:48px">Iban · Pauta Posible</div>
+    <div class="e" data-d="0.16" style="font-weight:600;font-size:40px;margin-top:12px;opacity:.85">Nutrición práctica, sin miedo ni culpa</div>
+    <div class="e" data-d="0.3" style="margin-top:70px"><span class="cta">Sigue a @pautaposible</span></div>
+  </div>
+</div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.min(Math.max(x,a),b);
+const ease=x=>1-Math.pow(1-clamp(x),3);
+const XF=0.35, SXF=0.4, ENDXF=0.3;
+let C, BLOCKS, HBLOCKS, SL=[];
+function blocks(words,end){
+  const phrases=[];let cur=[];
+  words.forEach((w,i)=>{cur.push(w);if(/[.,:;?!]$/.test(w.w)||i===words.length-1){phrases.push(cur);cur=[]}});
+  const len=a=>a.map(w=>w.w).join(' ').length;
+  const merged=[];
+  phrases.forEach(p=>{const last=merged[merged.length-1];
+    if(last&&!/[.?!:]$/.test(last[last.length-1].w)&&last.length+p.length<=8&&len([...last,...p])<=34&&(last.length<=3||p.length<=2))merged[merged.length-1]=[...last,...p];else merged.push(p)});
+  const out=[];
+  merged.forEach(p=>{
+    const n=Math.max(Math.ceil(p.length/8),Math.ceil(len(p)/34));
+    let i=0;
+    for(let part=n;part>1;part--){
+      const ideal=i+Math.round((p.length-i)/part);let best=ideal;
+      search:for(const re of [/^(y|o)$/i,/^(en|con|para|sin|como|que|a|de)$/i,/^(el|la)$/i])for(const d of [0,-1,1,2,-2]){const k=ideal+d;if(k>i+1&&k<p.length-1&&re.test(p[k].w)&&len(p.slice(i,k))<=34){best=k;break search}}
+      out.push(p.slice(i,best));i=best;
+    }
+    out.push(p.slice(i));
+  });
+  return out.map((ws,k)=>({ws,s:ws[0].s,e:k+1<out.length?out[k+1][0].s:end}));
+}
+function subsHTML(B,t){
+  const b=B.find(b=>t>=b.s-0.05&&t<b.e)||(t<B[0].s?B[0]:null);
+  if(!b)return '';
+  return `<div class="blk">${b.ws.map(w=>{const st=t>=w.s&&t<w.e+0.05?'on':(t>=w.e?'done':'todo');return `<span class="w ${st}">${w.w}</span>`}).join(' ')}</div>`;
+}
+// cfg: {frames:[rutas], fps, hookEnd, hookQ, hookWords, bodyStart, words (tiempos absolutos), voiceEnd, scenes:[{start,end,svg,tag}], env, endDur}
+function setup(cfg){
+  C=cfg;
+  BLOCKS=blocks(cfg.words,cfg.voiceEnd+0.3);
+  HBLOCKS=blocks(cfg.hookWords,cfg.hookEnd);
+  document.getElementById('hq').innerHTML=`<span>${cfg.hookQ}</span>`;
+  const card=document.getElementById('card');
+  card.innerHTML=cfg.scenes.map((s,i)=>`<div class="sl" id="s${i}">${s.svg}${s.tag?`<div class="cap"><span class="tag">${s.tag}</span></div>`:''}</div>`).join('');
+  SL=cfg.scenes.map((s,i)=>({...s,el:document.getElementById('s'+i)}));
+  return cfg.voiceEnd+cfg.endDur;
+}
+function render(t,opts={}){
+  // 1. Gancho con el vídeo de Iban
+  const hk=document.getElementById('hook');
+  const fi=Math.min(C.frames.length-1,Math.floor(t*C.fps));
+  if(t<C.hookEnd+XF){const src=C.frames[fi];const im=document.getElementById('hfr');if(im.getAttribute('src')!==src)im.setAttribute('src',src)}
+  hk.style.opacity=t<C.hookEnd?1:1-ease((t-C.hookEnd)/XF);
+  hk.style.display=t<C.hookEnd+XF?'block':'none';
+  const q=document.getElementById('hq'),qp=ease((t-0.1)/0.5);
+  q.style.opacity=qp;q.style.transform=`translateY(${(1-qp)*30}px)`;
+  // Sin subtítulos en el gancho: la pregunta ya dice lo que oye (y no tapa la boca)
+  // 2. Diapositivas
+  const mn=document.getElementById('main');
+  mn.style.opacity=t<C.hookEnd?0:1;
+  const tb=Math.min(t,C.voiceEnd-0.01);
+  document.getElementById('subs').innerHTML=(opts.nosubs||t<C.hookEnd)?'':subsHTML(BLOCKS,tb);
+  const env=C.env[Math.min(C.env.length-1,Math.max(0,Math.round(t*30)))]||0;
+  const ring=document.querySelector('#me .ring');
+  ring.style.transform=`scale(${1+0.18*env})`;ring.style.opacity=0.25+0.55*env;
+  const mp=ease((t-C.hookEnd)/0.5);
+  document.getElementById('me').style.transform=`scale(${(0.6+0.4*mp)*(1+0.035*env)}) translateY(${Math.sin(t*2.2)*4}px)`;
+  const cd=document.getElementById('card');
+  cd.style.transform=`translateY(${(1-ease((t-C.hookEnd)/0.5))*60}px)`;
+  SL.forEach((s,i)=>{
+    const first=i===0,last=i===SL.length-1;
+    const fin=first?1:ease((t-s.start-0.15)/0.35), fout=last?1:1-ease((t-s.end)/0.22);
+    const vis=t>=s.start-(first?99:0)&&t<s.end+SXF+(last?99:0);
+    const op=vis?Math.min(fin,fout):0;
+    s.el.style.opacity=op;
+    s.el.style.transform=`translateX(${first?0:(1-fin)*80}px)`;
+    if(op<=0)return;
+    s.el.querySelectorAll('[data-at]').forEach(e=>{
+      const p=ease((t-parseFloat(e.dataset.at))/0.45);
+      const qq=e.dataset.out===undefined?1:1-ease((t-parseFloat(e.dataset.out))/0.35);
+      e.style.opacity=p*qq;
+      if(e.dataset.pop!==undefined){const bb=e.dataset.pop.split(' ');e.setAttribute('transform',`translate(${bb[0]} ${bb[1]}) scale(${0.6+0.4*p+0.08*Math.sin(Math.PI*p)}) translate(${-bb[0]} ${-bb[1]})`)}
+    });
+    // data-draw="inicio duración": dibuja un trazo poco a poco
+    s.el.querySelectorAll('[data-draw]').forEach(e=>{
+      const [a,d]=e.dataset.draw.split(' ').map(Number);const L=e.getTotalLength();
+      e.style.strokeDasharray=L;e.style.strokeDashoffset=L*(1-ease((t-a)/(d||1)));
+    });
+    // data-mv="inicio dx dy duración": desplazamiento
+    s.el.querySelectorAll('[data-mv]').forEach(e=>{const [a,dx,dy,d]=e.dataset.mv.split(' ').map(Number);const p=ease((t-a)/(d||0.6));e.setAttribute('transform',`translate(${dx*p} ${dy*p})`)});
+    s.el.querySelectorAll('[data-float]').forEach(e=>{const [amp,per]=e.dataset.float.split(' ').map(Number);e.setAttribute('transform',`translate(0 ${(amp*Math.sin(2*Math.PI*t/(per||2))).toFixed(2)})`)});
+    // data-count="inicio duración hasta": número que cuenta
+    s.el.querySelectorAll('[data-count]').forEach(e=>{const [a,d,n]=e.dataset.count.split(' ').map(Number);e.textContent=Math.round(n*ease((t-a)/(d||0.8)))});
+    const cap=s.el.querySelector('.cap');
+    if(cap){const p=ease((t-s.start-0.15)/0.45);cap.style.opacity=p;cap.style.transform=`translateY(${(1-p)*-20}px)`}
+  });
+  // 3. Cierre
+  const ed=document.getElementById('end');
+  const ep=ease((t-C.voiceEnd-0.15)/ENDXF);ed.style.opacity=t<C.voiceEnd+0.15?0:ep;
+  ed.querySelectorAll('.e').forEach(e=>{const p=ease((t-C.voiceEnd-0.15-parseFloat(e.dataset.d))/0.45);e.style.opacity=p;e.style.transform=`translateY(${(1-p)*36}px)`});
+}
+window.setup=setup;window.render=render;
+</script></body></html>
