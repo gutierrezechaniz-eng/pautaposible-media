@@ -1617,8 +1617,6 @@ function resetProfessionalDrafts(client) {
   document.querySelector("#care-plan-files").value = "";
   renderSelectedCareFiles();
   setMessage(document.querySelector("#care-plan-message"));
-  document.querySelector("#note-text").value = "";
-  setMessage(document.querySelector("#note-message"));
 }
 
 // Chat del panel: solo con personas que tienen seguimiento (las que pueden verlo en su espacio).
@@ -1686,9 +1684,7 @@ async function openProfessionalClient(client) {
     document.querySelector(selector).value = "";
   });
   setMessage(document.querySelector("#professional-progress-message"));
-  const [, , measurements, plans] = await Promise.all([
-    loadProfessionalHistory(client.id),
-    loadProfessionalNotes(client.id),
+  const [measurements, plans] = await Promise.all([
     loadProgressMeasurements(client.id, "#detail-progress-chart"),
     loadCarePlans(client.id, "#professional-care-plan-list"),
   ]);
@@ -2031,78 +2027,6 @@ function renderProfileFacts(client) {
     box.append(small, strong);
     container.append(box);
   });
-}
-
-async function loadProfessionalHistory(clientId) {
-  const container = document.querySelector("#detail-history");
-  container.textContent = "Cargando…";
-  container.className = "history-list empty-state";
-  try {
-    const snapshot = await getDocs(query(collection(db, "users", clientId, "dailyNutrition"), orderBy("day", "desc"), limit(30)));
-    if (state.selectedClientId !== clientId) return;
-    renderHistory(container, snapshot.docs.map((item) => ({ id: item.id, ...item.data() })));
-  } catch (error) {
-    if (state.selectedClientId !== clientId) return;
-    container.textContent = "No se ha podido cargar el historial.";
-  }
-}
-
-document.querySelector("#note-form").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  if (!state.user || !state.selectedClientId) return;
-  const text = document.querySelector("#note-text").value.trim();
-  if (!text) return;
-  const submit = event.currentTarget.querySelector('button[type="submit"]');
-  const message = document.querySelector("#note-message");
-  setBusy(submit, true, "Guardando…", "Guardar nota");
-  setMessage(message);
-  try {
-    await addDoc(collection(db, "users", state.selectedClientId, "professionalNotes"), {
-      text,
-      authorUid: state.user.uid,
-      createdAt: serverTimestamp(),
-    });
-    document.querySelector("#note-text").value = "";
-    setMessage(message, "Nota guardada.");
-    await loadProfessionalNotes(state.selectedClientId);
-  } catch (error) {
-    setMessage(message, "No se ha podido guardar la nota.", "error");
-  } finally {
-    setBusy(submit, false, "", "Guardar nota");
-  }
-});
-
-async function loadProfessionalNotes(clientId) {
-  const container = document.querySelector("#note-list");
-  container.replaceChildren();
-  try {
-    const snapshot = await getDocs(query(collection(db, "users", clientId, "professionalNotes"), orderBy("createdAt", "desc"), limit(30)));
-    if (state.selectedClientId !== clientId) return;
-    if (snapshot.empty) {
-      const empty = document.createElement("p");
-      empty.className = "empty-state";
-      empty.textContent = "Todavía no hay notas.";
-      container.append(empty);
-      return;
-    }
-    snapshot.docs.forEach((item) => {
-      const data = item.data();
-      const row = document.createElement("div");
-      row.className = "note-row";
-      const text = document.createElement("p");
-      text.textContent = data.text || "";
-      const date = document.createElement("small");
-      date.textContent = formatDate(data.createdAt);
-      row.append(text, date);
-      container.append(row);
-    });
-  } catch (error) {
-    if (state.selectedClientId !== clientId) return;
-    const failed = document.createElement("p");
-    failed.className = "form-message error";
-    failed.textContent = "No se han podido cargar las notas.";
-    container.append(failed);
-  }
 }
 
 /* ---------- Peso rápido (misma ruta que «Añadir una medición») ---------- */
