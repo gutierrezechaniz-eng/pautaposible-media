@@ -131,7 +131,7 @@ import { carruseles } from './carruseles.mjs';
 import { ic } from '../../reels/_plantilla/ilustraciones.mjs';
 const sinMd = (s) => s.replace(/\*\*/g, '');
 // Lo que lee el narrador (números y símbolos dichos como se dicen)
-const decir = (s) => sinMd(s).replace(/[«»]/g, '').replace(/(\d+)\s?g\b/g, '$1 gramos').replace(/°C/g, ' grados').replace(/(\d+)\s?%/g, '$1 por ciento')
+const decir = (s) => sinMd(s).replace(/[«»]/g, '').replace(/(\d+)\s?g\b/g, '$1 gramos').replace(/(\d)\.(\d{3})/g, '$1$2').replace(/µg/g, 'microgramos').replace(/\bUI\b/g, 'unidades').replace(/kcal/g, 'calorías').replace(/°C/g, ' grados').replace(/(\d+)\s?%/g, '$1 por ciento')
   .replace(/(\d+)-(\d+)/g, '$1 o $2').replace(/½/g, 'medio').replace(/ · /g, ', ').replace(/pautaposible\.es(\/\w+)?/g, 'pauta posible punto es').replace(/\s+/g, ' ').trim();
 // Trozos de voz de una frase larga: por oraciones y, si hace falta, por comas (≤ 75 caracteres)
 function trozos(txt) {
@@ -162,13 +162,14 @@ function animarDiapositiva(s, i, n, iconos) {
   }
   if (s.type === 'cierre') {
     cue(s.title); const cf = cue(s.foot + '.'); const cu = voz.length;
-    voz.push(['Y si quieres más recetas y la app gratis, entra en pauta posible punto es.', 'Más recetas y la app gratis en pautaposible.es']);
+    // Relanzamiento (30/10): sin url, el cierre acaba en «Mándaselo a quien…» y no menciona la web ni la app
+    if (s.url) voz.push(['Y si quieres más recetas y la app gratis, entra en pauta posible punto es.', 'Más recetas y la app gratis en pautaposible.es']);
     return { dur: 5, cls: 'dark', voz, html: blobs(true) + brand(true) +
       iconos.slice(0, 4).map((k, j) => flota(k, [90, 860, 830, 100][j], [150, 170, 990, 1000][j], 120, (0.8 + j * 0.2).toFixed(2), j * 0.25)).join('') +
       `<div class="title xl" style="top:300px;text-align:center;font-size:${s.title.length > 35 ? 84 : 100}px">${words(s.title, 0.3, 0.09)}</div>` +
       `<div class="a" style="left:80px;right:80px;top:660px;text-align:center;font-size:40px;font-weight:600;opacity:.9" data-in="1.5 fade">${sinMd(s.sub)}</div>` +
-      `<div class="a" style="left:0;right:0;top:760px;text-align:center" data-in="c${cu} pop"><span class="btn" data-pulse=".05 1.4" style="display:inline-block">${s.url}</span></div>` +
-      `<div class="a" style="left:0;right:0;top:910px;text-align:center;font-size:34px;font-weight:700" data-in="${cf} up"><span data-float="4 1.4" style="display:inline-block;vertical-align:middle"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 H23 V28 L13 21 L3 28Z" fill="#D7A95B"/></svg></span> ${sinMd(s.foot)}</div>` +
+      (s.url ? `<div class="a" style="left:0;right:0;top:760px;text-align:center" data-in="c${cu} pop"><span class="btn" data-pulse=".05 1.4" style="display:inline-block">${s.url}</span></div>` : '') +
+      `<div class="a" style="left:80px;right:80px;top:${s.url ? 910 : 790}px;line-height:1.3;text-align:center;font-size:${s.url ? 34 : 42}px;font-weight:700" data-in="${cf} up"><span data-float="4 1.4" style="display:inline-block;vertical-align:middle"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 H23 V28 L13 21 L3 28Z" fill="#D7A95B"/></svg></span> ${sinMd(s.foot)}</div>` +
       foot('@pautaposible', num) };
   }
   // texto
@@ -206,4 +207,6 @@ Object.assign(animados, {
   'suplementos-2': desdeCarrusel('suplementos-2', ['pillBottle', 'orange', 'beans', 'fish', 'walnut']),
   'mayonesa-segura': desdeCarrusel('mayonesa-segura', ['egg', 'oil', 'jar', 'salt', 'check']),
   'menu-del-dia': desdeCarrusel('menu-del-dia', ['fork', 'broccoli', 'fish', 'bread', 'drop']),
+  'suplementos-3': desdeCarrusel('suplementos-3', ['pillBottle', 'pill', 'sun', 'fish', 'egg']),
+  'alioli-yogur': desdeCarrusel('alioli-yogur', ['yogurt', 'oil', 'potato', 'fish', 'ladle']),
 });
