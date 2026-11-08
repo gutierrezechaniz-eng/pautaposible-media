@@ -90,6 +90,10 @@ Autorización para publicar y programar: **vigente** (Iván autoriza publicar y 
 | 2026-10-29 (jue) | Reel con voz (narrador «santa») · Hábito práctico | 4 raciones de legumbre a la semana, sin complicarte | 18:00 | reels/2026-10-29-legumbre-4-semana/reel-voz.mp4 | 409945537 · reel con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-30 (vie) | Hábito práctico | ¿Comes fuera y no sabes qué pedir? 4 trucos para el menú del día | 10:00 | posts/2026-10-30-menu-del-dia | 405512928 · reel con todas las diapositivas seguidas (animado/reel.mp4), narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-10-31 (sáb) | Reel extra con narrador · Sin culpa | ¿Tienes que ganarte la comida? | 18:00 | (por hacer: la tarea de martes y jueves no cubre el sábado) | pendiente · guion en voz/GUIONES.md |
+| 2026-11-09 (lun) | Reel (carrusel animado) · Serie suplementos 3/4 | ¿Si una vitamina es buena, más es mejor? (vitaminas A, D, E y K) | 18:00 | posts/2026-11-09-suplementos-3 (animado/reel.mp4, 94 s) | 420553397 · narrador, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-11-11 (mié) | Reel (carrusel animado) · Serie salsas 3/6 | Alioli de yogur (sin huevo crudo, menos aceite) | 18:00 | posts/2026-11-11-alioli-yogur (animado/reel.mp4, 75 s) | 420553432 · narrador, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-11-13 (vie) | Reel de los órganos | ¿Qué hace tu hígado con un refresco al día? | 18:00 | reels/2026-11-13-refresco-higado (reel-voz.mp4, 36,5 s) | 420553461 · voces Kokoro, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
+| 2026-11-14 (sáb) | Recorte de YouTube (cap. 1, 2.º recorte) | ¿Se puede frenar la diabetes tipo 2? | 11:00 | reels/2026-11-14-frenar-diabetes (reel.mp4, 41 s) | 420553501 · etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-11-16 (lun) | Mito o realidad (movido del 19/10 por las series, decisión de Iván del 12/10) | ¿El azúcar moreno es mejor que el blanco? | 10:00 | posts/2026-10-19-azucar-moreno | 393940824 (reel con todas las diapositivas seguidas, 12/10; antes 393675755, carrusel de vídeos) (antes 393114051) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 | 2026-12-02 (mié) | Receta sencilla (movido del 21/10 por las series, decisión de Iván del 12/10) | Arroz salteado con verduras y huevo | 10:00 | posts/2026-10-21-arroz-salteado | 393940881 (reel con todas las diapositivas seguidas, 12/10; antes 393675795, carrusel de vídeos) (antes 393118665) · animado con narrador y subtítulos, etiqueta de IA · colaboradora: ibangutierrezetxaniz |
 
@@ -149,6 +153,22 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 
 **La semana del 2/11 ya tiene sus 4 piezas: la tarea del domingo 1/11 no añade nada, solo informa.** Siguientes: lun 09/11 suplementos 3/4, mié 11/11 alioli, vie 13/11 reel de los órganos sobre la tripa (cap. 2 SII sale el 13/11), sáb 14/11 recorte del cap. 2; lun 16/11 suplementos 4/4 (el azúcar moreno pasa a borrador: 410841624). No salieron por el cupo y no se repiten: reel del 24/10, fruta por la noche (27/10), legumbre (29/10) y comer fuera (30/10).
 
+## Plan · semana del 9 nov (tarea del domingo 08/11)
+| Día | Hora | Pieza | Estado |
+|---|---|---|---|
+| Lun 09/11 | 18:00 | Suplementos 3/4 «¿Si una vitamina es buena, más es mejor?» | programado · 420553397 |
+| Mié 11/11 | 18:00 | Salsas 3/6 «¿Alioli sin una taza de aceite?» (alioli de yogur) | programado · 420553432 |
+| Vie 13/11 | 18:00 | Órganos «¿Qué hace tu hígado con un refresco al día?» (el de la tripa espera al cap. 2) | programado · 420553461 |
+| Sáb 14/11 | 11:00 | Recorte del cap. 1 «¿Se puede frenar la diabetes tipo 2?» (el cap. 2 aún no está hecho) | programado · 420553501 |
+
+Cupo de noviembre en Metricool: 10 de 18 (6 publicadas + 4 de esta semana; aparte, el borrador 410841624). El cap. 2 de YouTube (SII, previsto el 13/11) **no está hecho**: falta dibujar colon, intestino delgado, cerebro y microbiota.
+
+## Métricas · semana del 2 nov (consultadas el 08/11/2026, primera revisión con las metas nuevas)
+- Reel de los órganos «Caminar 10 minutos después de comer» (vie): **151 de alcance**, 166 reproducciones, 2 me gusta, 3 guardados, 0 envíos; vistas de más de 3 s: **48 %** (meta 60 %).
+- Mayonesa casera (mié): 54 de alcance, 65 reproducciones, 1 me gusta; más de 3 s: 33 %. Suplementos 2/4 (lun): 36 de alcance, 52 reproducciones; más de 3 s: **17 %**. Recorte del sábado 07/11: aún sin datos.
+- Envíos: 0 en todo (meta: más de 1 por cada 100 de alcance). Seguidores: 39, sin cambios (+1 desde el 25/10). Alcance de la cuenta: 148 el viernes, 2-49 los demás días.
+- Lectura: el formato de los órganos llega 3-4 veces más lejos y retiene más que los carruseles animados de las series, que arrancan con una portada estática y duran 75-100 s. Cambio: el viernes repite formato de órganos (hígado) y el sábado otro recorte del capítulo. Si las series siguen por debajo del 35 % de vistas de más de 3 s el 15/11, proponer a Iván acortarlas (menos de 45 s) o pasarlas al formato de los órganos cuando terminen (16/11 y 25/11).
+
 ## Métricas · semana del 19 oct (consultadas el 25/10/2026)
 - Reels con narrador: «Más verdura sin darte cuenta» 39 de alcance y 66 reproducciones; «¿El pan engorda?» 36 y 61; suplementos 1/4 34 y 48 (3 me gusta); ketchup 30 y 52 (2 me gusta y **2 guardados**, lo único guardado de la semana); batch cooking 26 y 31. El reel del sábado 24 aún sin datos.
 - La semana del 12 llegó más lejos: «¿2 litros de agua?» 75 de alcance y «3 desayunos en 3 minutos» 71 (4 me gusta). Visionado medio: 8-18 s.
@@ -165,11 +185,13 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 | 2026-10-28 (mié) | Salsas 2/6 | Mayonesa casera segura | programado (405511492) |
 | 2026-11-02 (lun) | Suplementos 3/4 | Más no es mejor: el riesgo de las vitaminas A, D, E y K | por hacer |
 | 2026-11-04 (mié) | Salsas 3/6 | Alioli de yogur | por hacer |
-| 2026-11-09 (lun) | Suplementos 4/4 | Proteína, colágeno y quemagrasas: lo que pagas y lo que obtienes | por hacer |
-| 2026-11-11 (mié) | Salsas 4/6 | Salsa barbacoa casera | por hacer |
-| 2026-11-16 (lun) | (fin de la serie) | ¿El azúcar moreno es mejor que el blanco? | programado (393940824 (reel con todas las diapositivas seguidas, 12/10; antes 393675755, carrusel de vídeos)) |
-| 2026-11-18 (mié) | Salsas 5/6 | Salsa rosa (cóctel) de yogur | por hacer |
-| 2026-11-25 (mié) | Salsas 6/6 | Salsa César de yogur | por hacer |
+| 2026-11-09 (lun) | Suplementos 3/4 (movido por el cupo) | Más no es mejor: vitaminas A, D, E y K | programado (420553397) |
+| 2026-11-16 (lun) | Suplementos 4/4 | Proteína, colágeno y quemagrasas: lo que pagas y lo que obtienes | por hacer |
+| 2026-11-11 (mié) | Salsas 3/6 (movido por el cupo) | Alioli de yogur | programado (420553432) |
+| 2026-11-18 (mié) | Salsas 4/6 | Salsa barbacoa casera | por hacer |
+| — | (fuera de la serie) | ¿El azúcar moreno es mejor que el blanco? | borrador en Metricool (410841624), sin fecha |
+| 2026-11-25 (mié) | Salsas 5/6 (última por la norma del relanzamiento) | Salsa rosa (cóctel) de yogur | por hacer |
+| — | Salsas 6/6 | Salsa César de yogur | sin hueco (la serie acaba el 25/11) |
 | 2026-12-02 (mié) | (fin de la serie) | Arroz salteado con verduras y huevo | programado (393940881 (reel con todas las diapositivas seguidas, 12/10; antes 393675795, carrusel de vídeos)) |
 
 ## Temas usados
@@ -208,6 +230,11 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Reel mito: ¿la fruta por la noche engorda? (con narrador; la misma manzana a las 9:00 que a las 21:00)
 - Reel hábito: 4 raciones de legumbre a la semana (con narrador, 29/10)
 - Sin culpa: ¿tienes que ganarte la comida? (guion sábado 31/10)
+- Órganos: caminar 10 minutos después de comer (06/11) · recorte cap. 1: ¿qué es la resistencia a la insulina? (07/11)
+- Serie suplementos 3: más no es mejor, vitaminas A, D, E y K (09/11)
+- Serie salsas 3: alioli de yogur (11/11)
+- Órganos: ¿qué hace tu hígado con un refresco al día? (13/11)
+- Recorte cap. 1: ¿se puede frenar la diabetes tipo 2? (14/11)
 
 ## Banco de temas
 

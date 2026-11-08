@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: domingo 01/11/2026_
+_Última actualización: domingo 08/11/2026_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -38,10 +38,12 @@ _Última actualización: domingo 01/11/2026_
 - 30/10: **relanzamiento** (Iván: objetivo más me gusta y más seguidores; sigue el plan gratis de Metricool). Del 24 al 30/10 no salió nada: cupo de 20 posts/mes de Metricool agotado. Nueva norma arriba en `CLAUDE.md` y `calendario.md`: 4 piezas/semana (lun, mié, vie 18:00 y sáb 11:00), martes y jueves sin publicación, nicho tripa/azúcar/hígado/peso, sin la frase fija de la web. Plantilla de YouTube traída a main (`youtube/`) con modo vertical. Semana del 2/11 programada (ver `calendario.md`). Doc: https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn
 
 ## Pendiente
+- 08/11 (tarea del domingo): semana del 9/11 programada: lun 420553397 (suplementos 3/4), mié 420553432 (alioli de yogur), vie 420553461 (órganos: refresco e hígado), sáb 420553501 (2.º recorte del cap. 1). Cupo de noviembre: 10 de 18. Plantilla: `SIN_FINAL=1` en `render-animado.mjs` y cierre sin `url` (sin la web ni la app); estados `refresco`, `higadograso` y `agua` en `organos.html`.
+- [ ] **Cap. 2 de YouTube (SII) no está hecho y estaba previsto el 13/11**: no se ha programado. Hace falta una sesión para dibujar colon, intestino delgado, cerebro y microbiota. Semana del 16/11: lun suplementos 4/4, mié salsa barbacoa, vie órganos, sáb recorte (cap. 2 si existe; si no, 3.er recorte del cap. 1 «El páncreas se agota»).
+- [ ] Métricas 08/11: órganos 48 % de vistas >3 s y 151 de alcance; series 17-33 % y 36-54. Revisar el 15/11 (ver `calendario.md`).
 - 01/11 (tarea del domingo): semana del 2/11 comprobada en Metricool, sin añadir nada: lun 410841609, mié 410841614, vie 410841422, sáb 410841431 (todos REEL, `isAiGenerated`, colaboradora). Cupo de noviembre: 6 de 18-20 ocupados (+ borrador 410841624). Sin datos de Instagram desde el 23/10 (cupo agotado).
 - 30/10: cap. 1 de YouTube y su Short programados por Metricool para el domingo 1/11 (11:00 y 17:00): 410848121 y 410848126. Comprobar el 1/11 que salieron.
 - [ ] Cap. 2 (SII) para el 13/11: dibujar colon, intestino delgado, cerebro y microbiota en `organos.html`; guion en el doc del relanzamiento.
-- [ ] Domingo 8/11: primera revisión con las metas nuevas (vistas >3 s, envíos por alcance, seguidores).
 - [ ] **Web pautaposible.es más vistosa y más visible (Iván, 23/10).** Sin pagar nada más. Lo averiguado:
   - Está en Netlify (plan gratis, proyecto `pauta-posible`, id 469aacc8-f7a4-4927-a334-eee7a2dd9727). La última versión (16/10) se subió arrastrando una carpeta: el código no está en ningún repo ni en Netlify. Páginas conocidas: inicio e `instalar/`.
   - Google no la tiene indexada (`site:pautaposible.es` no devuelve nada): dar de alta en Google Search Console y Bing Webmaster (gratis), con sitemap.
