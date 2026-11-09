@@ -157,7 +157,7 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | Día | Hora | Pieza | Estado |
 |---|---|---|---|
 | Lun 09/11 | 18:00 | Suplementos 3/4 «¿Si una vitamina es buena, más es mejor?» | programado · 420553397 |
-| Lun 09/11 | 18:00 | Reel con la cara y la voz de Iban «¿Te fías de la letra del Nutri-Score?» (`reels/2026-11-09-nutri-score`, pedido por Iban el 7/11) | programado · 421412875 |
+| Lun 09/11 | 18:00 | Reel con la cara y la voz de Iban «¿Te fías de la letra del Nutri-Score?» (`reels/2026-11-09-nutri-score`, pedido por Iban el 7/11) | programado · 421421225 (antes 421412875; círculo con la cara entera, 9/11) |
 | Mié 11/11 | 18:00 | Salsas 3/6 «¿Alioli sin una taza de aceite?» (alioli de yogur) | programado · 420553432 |
 | Vie 13/11 | 18:00 | Órganos «¿Qué hace tu hígado con un refresco al día?» (el de la tripa espera al cap. 2) | programado · 420553461 |
 | Sáb 14/11 | 11:00 | Recorte del cap. 1 «¿Se puede frenar la diabetes tipo 2?» (el cap. 2 aún no está hecho) | programado · 420553501 |
