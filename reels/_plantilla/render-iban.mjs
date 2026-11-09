@@ -25,6 +25,11 @@ fs.rmSync(fdir, { recursive: true, force: true }); fs.mkdirSync(fdir);
 ff(['-i', hookVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920`, path.join(fdir, '%04d.jpg')]);
 const frames = fs.readdirSync(fdir).sort().map((f) => 'hook-frames/' + f);
 const hookEnd = frames.length / FPS;
+// Fotogramas de la cara (recorte cuadrado del gancho) para el círculo de las diapositivas; FACE_CROP=w:h:x:y
+const cdir = path.join(dir, 'face-frames');
+fs.rmSync(cdir, { recursive: true, force: true }); fs.mkdirSync(cdir);
+ff(['-i', hookVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,crop=${process.env.FACE_CROP || '960:960:60:430'},scale=420:420`, '-q:v', '3', path.join(cdir, '%04d.jpg')]);
+const faceFrames = fs.readdirSync(cdir).sort().map((f) => 'face-frames/' + f);
 let outroFrames = null;
 if (outroVid) {
   const odir = path.join(dir, 'outro-frames');
@@ -65,7 +70,7 @@ if (!hookWords) {
 const words = P.words.map((w) => ({ ...w, s: w.s + bodyStart, e: w.e + bodyStart }));
 const voiceEnd = bodyStart + P.dur;
 const { default: escenas } = await import(pathToFileURL(escenasMod).href);
-const cfg = { frames, fps: FPS, hookEnd, hookQ: process.env.PREGUNTA || P.hook.pregunta, hookWords, words, voiceEnd, scenes: escenas(bodyStart), env, endDur: END,
+const cfg = { frames, fps: FPS, hookEnd, hookQ: process.env.PREGUNTA || P.hook.pregunta, hookWords, words, voiceEnd, scenes: escenas(bodyStart, P.words), env, endDur: END, face: faceFrames,
   outro: outroFrames ? { frames: outroFrames, start: bodyStart + parseFloat(process.env.OUTRO_DESDE), pill: process.env.OUTRO_TEXTO || '' } : null };
 
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
