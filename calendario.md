@@ -157,11 +157,12 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 | Día | Hora | Pieza | Estado |
 |---|---|---|---|
 | Lun 09/11 | 18:00 | Suplementos 3/4 «¿Si una vitamina es buena, más es mejor?» | programado · 420553397 |
+| Lun 09/11 | 18:00 | Reel con la cara y la voz de Iban «¿Te fías de la letra del Nutri-Score?» (`reels/2026-11-09-nutri-score`, pedido por Iban el 7/11) | programado · 421412875 |
 | Mié 11/11 | 18:00 | Salsas 3/6 «¿Alioli sin una taza de aceite?» (alioli de yogur) | programado · 420553432 |
 | Vie 13/11 | 18:00 | Órganos «¿Qué hace tu hígado con un refresco al día?» (el de la tripa espera al cap. 2) | programado · 420553461 |
 | Sáb 14/11 | 11:00 | Recorte del cap. 1 «¿Se puede frenar la diabetes tipo 2?» (el cap. 2 aún no está hecho) | programado · 420553501 |
 
-Cupo de noviembre en Metricool: 10 de 18 (6 publicadas + 4 de esta semana; aparte, el borrador 410841624). El cap. 2 de YouTube (SII, previsto el 13/11) **no está hecho**: falta dibujar colon, intestino delgado, cerebro y microbiota.
+Cupo de noviembre en Metricool: 11 de 18 (6 publicadas + 5 de esta semana: el 9/11 coinciden a las 18:00 vitaminas y Nutri-Score; la idea es pasar vitaminas al lun 16/11 a las 18:00, falta que Iban lo apruebe o lo mueva; aparte, el borrador 410841624). El cap. 2 de YouTube (SII, previsto el 13/11) **no está hecho**: falta dibujar colon, intestino delgado, cerebro y microbiota.
 
 ## Métricas · semana del 2 nov (consultadas el 08/11/2026, primera revisión con las metas nuevas)
 - Reel de los órganos «Caminar 10 minutos después de comer» (vie): **151 de alcance**, 166 reproducciones, 2 me gusta, 3 guardados, 0 envíos; vistas de más de 3 s: **48 %** (meta 60 %).
@@ -235,6 +236,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 - Sin culpa: ¿tienes que ganarte la comida? (guion sábado 31/10)
 - Órganos: caminar 10 minutos después de comer (06/11) · recorte cap. 1: ¿qué es la resistencia a la insulina? (07/11)
 - Serie suplementos 3: más no es mejor, vitaminas A, D, E y K (09/11)
+- Nutri-Score: la letra engaña (AOVE de C a B, cereales azucarados de A/B a C; calcula por 100 g y no mira el ultraprocesado) (09/11, cara y voz de Iban)
 - Serie salsas 3: alioli de yogur (11/11)
 - Órganos: ¿qué hace tu hígado con un refresco al día? (13/11)
 - Recorte cap. 1: ¿se puede frenar la diabetes tipo 2? (14/11)

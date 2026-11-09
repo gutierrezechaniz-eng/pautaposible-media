@@ -2,7 +2,7 @@
 
 Actualízalo al final de cada sesión: breve, con fecha. Lo que ya está hecho va al historial de `calendario.md`, no aquí.
 
-_Última actualización: domingo 08/11/2026_
+_Última actualización: lunes 09/11/2026_
 
 ## Hecho recientemente
 - 23/10: el pack UI UX Pro Max también está subido a la cuenta de claude.ai de Iván (vale en todas sus conversaciones).
@@ -38,6 +38,7 @@ _Última actualización: domingo 08/11/2026_
 - 30/10: **relanzamiento** (Iván: objetivo más me gusta y más seguidores; sigue el plan gratis de Metricool). Del 24 al 30/10 no salió nada: cupo de 20 posts/mes de Metricool agotado. Nueva norma arriba en `CLAUDE.md` y `calendario.md`: 4 piezas/semana (lun, mié, vie 18:00 y sáb 11:00), martes y jueves sin publicación, nicho tripa/azúcar/hígado/peso, sin la frase fija de la web. Plantilla de YouTube traída a main (`youtube/`) con modo vertical. Semana del 2/11 programada (ver `calendario.md`). Doc: https://claude.ai/artifact/P9msr4GjfHd1sL3xr2usSn
 
 ## Pendiente
+- 09/11: reel del Nutri-Score con la cara y la voz de Iban programado hoy a las 18:00 (421412875). Coincide a la misma hora con vitaminas (420553397): moverlo al lun 16/11 18:00 (Metricool no dejó a Claude cambiarlo; pendiente de Iban). Rama `claude/reel-viernes-6-11-iban` con la plantilla `render-iban.mjs` sin fusionar en main.
 - 08/11 (tarea del domingo): semana del 9/11 programada: lun 420553397 (suplementos 3/4), mié 420553432 (alioli de yogur), vie 420553461 (órganos: refresco e hígado), sáb 420553501 (2.º recorte del cap. 1). Cupo de noviembre: 10 de 18. Plantilla: `SIN_FINAL=1` en `render-animado.mjs` y cierre sin `url` (sin la web ni la app); estados `refresco`, `higadograso` y `agua` en `organos.html`.
 - [ ] **Cap. 2 de YouTube (SII) no está hecho y estaba previsto el 13/11**: no se ha programado. Hace falta una sesión para dibujar colon, intestino delgado, cerebro y microbiota. Semana del 16/11: lun suplementos 4/4, mié salsa barbacoa, vie órganos, sáb recorte (cap. 2 si existe; si no, 3.er recorte del cap. 1 «El páncreas se agota»).
 - [ ] Métricas 08/11 (revisión completa en `calendario.md`): recorte del sábado 392 de alcance, 14 me gusta, 3 envíos; caminar 177; series 36-54. Short de YouTube 195 vistas, cap. 1 largo 4 y sin miniatura (Iván: verificar el canal en youtube.com/verify). Revisar el 15/11.
