@@ -1,0 +1,30 @@
+{
+ "titulo": "Un refresco al día y tu hígado",
+ "vertical": true,
+ "gancho": "¿Qué hace tu hígado con un refresco al día?",
+ "cierre": "Tus órganos te explican lo que comes",
+ "camara": 950,
+ "escenas": [
+  {
+   "id": "refresco",
+   "lineas": [
+    ["glucosa", "¡Venimos del refresco! Una lata normal trae unos treinta y cinco gramos de azúcar.", "35 G DE AZÚCAR"],
+    ["insulina", "Y casi todo llega de golpe. ¡No doy abasto!"]
+   ]
+  },
+  {
+   "id": "higadograso",
+   "lineas": [
+    ["higado", "Y lo que sobra me toca a mí. Si me llega azúcar de más un día tras otro, lo convierto en grasa y me la guardo dentro.", "AZÚCAR DE MÁS = GRASA"],
+    ["narrador", "Así empieza muchas veces el hígado graso, que casi nunca avisa."]
+   ]
+  },
+  {
+   "id": "agua",
+   "lineas": [
+    ["higado", "¿Lo bueno? Si cambias el hábito, puedo ir soltando esa grasa. Agua en la comida, y el refresco, de vez en cuando.", "AGUA EN LA MESA"],
+    ["narrador", "Mándaselo a quien no perdona su refresco en la comida."]
+   ]
+  }
+ ]
+}

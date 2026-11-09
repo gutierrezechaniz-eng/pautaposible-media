@@ -39,7 +39,7 @@ Al empezar cada sesión, lee **`ESTADO.md`** (qué quedó pendiente) y, si la ta
 ## Calendario semanal habitual
 
 - Desde el 02/11/2026 (relanzamiento): lunes, miércoles y viernes a las 18:00 y sábado a las 11:00 (Madrid); ver la norma de arriba. Antes: carruseles lunes, miércoles y viernes a las 10:00 y reels martes y jueves a las 18:00.
-- YouTube (@pautaposible): capítulos de «Tus órganos hablan» cada dos semanas, en `youtube/`; Iván los sube a mano. Todas las publicaciones van con el narrador sintético (voz «santa») salvo que Iván diga lo contrario (decisión del 11/10); ver `calendario.md`.
+- YouTube (@pautaposible): capítulos de «Tus órganos hablan» cada dos semanas, en `youtube/`; se publican por Metricool (canal conectado), con su Short el mismo día. Todas las publicaciones van con el narrador sintético (voz «santa») salvo que Iván diga lo contrario (decisión del 11/10); ver `calendario.md`.
 - Colaboradora en Metricool: `ibangutierrezetxaniz`.
 
 ## Reglas fijas

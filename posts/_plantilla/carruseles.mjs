@@ -128,4 +128,26 @@ export const carruseles = {
       { type: 'final' },
     ],
   },
+  'suplementos-3': {
+    slides: [
+      { type: 'portada', tag: 'Mito o realidad', title: '¿Si una vitamina es buena, más es mejor?', sub: 'Serie suplementos · 3 de 4 · Las vitaminas A, D, E y K.' },
+      { type: 'texto', kicker: 'Respuesta corta', title: 'No: algunas se acumulan.', p: 'Las vitaminas **A, D, E y K** se disuelven en grasa. Lo que sobra no se va con la orina: se **guarda en el hígado y en la grasa**.', box: 'Por eso, con estas cuatro, **pasarse sí tiene riesgo**.' },
+      { type: 'texto', kicker: 'Lo que dice la EFSA', title: 'Tienen un tope al día.', checks: ['**Vitamina A**: 3.000 µg', '**Vitamina D**: 100 µg (4.000 UI)', '**Vitamina E**: 300 mg'], p2: 'Son los máximos para adultos, sumando comida y suplementos. **Con la comida es muy difícil llegar**: el exceso viene casi siempre del bote.' },
+      { type: 'texto', kicker: 'Dónde está el riesgo', title: 'Lo que puede pasar.', steps: ['**Vitamina A** de más puede dañar el hígado y, en el embarazo, al bebé.', '**Vitamina D** de más sube el calcio en sangre y castiga al riñón.', '**Vitamina E** a dosis altas puede aumentar el riesgo de sangrado.'], box: 'Y la **vitamina K** interfiere con el Sintrom: si lo tomas, nada por tu cuenta.' },
+      { type: 'texto', kicker: 'Cómo se llega al exceso', title: 'Sin darte cuenta.', checks: ['Sumar **varios botes** que repiten vitaminas', 'Dosis altas **sin analítica**', 'Seguir con la vitamina D **sin revisarla**', 'Gominolas de vitaminas al alcance de **los niños**'] },
+      { type: 'texto', kicker: 'Lo seguro', title: '¿Te la han pautado? Sigue la pauta.', p: 'La vitamina D, por ejemplo, se receta a muchas personas y **es útil cuando hace falta**.', box: '**Con analítica y pauta profesional**, sí. Por tu cuenta y «por si acaso», no.' },
+      { type: 'cierre', title: 'Más no es mejor.', sub: 'Próxima semana: proteína, colágeno y quemagrasas.', foot: 'Mándaselo a quien toma vitaminas «por si acaso»' },
+    ],
+  },
+  'alioli-yogur': {
+    slides: [
+      { type: 'portada', tag: 'Receta sencilla', title: '¿Alioli sin una taza de aceite?', sub: 'Serie salsas caseras · 3 · Con yogur, en 3 minutos.' },
+      { type: 'texto', kicker: 'La diferencia', title: 'El mismo ajo, mucho menos aceite.', p: 'El alioli clásico es casi todo **aceite**: una cucharada ronda las **100 kcal**.', box: 'Con base de yogur, la misma cucharada se queda en unas **20 kcal**. Y sin huevo crudo.' },
+      { type: 'texto', kicker: 'Ingredientes · 1 bol', title: 'Lo que necesitas.', checks: ['1 yogur natural sin azúcar (125 g)', '1 diente de ajo pequeño', '1 cucharada de aceite de oliva virgen extra', 'Unas gotas de limón y una pizca de sal'] },
+      { type: 'texto', kicker: 'Paso a paso', title: 'En 3 minutos.', steps: ['Pela el ajo, quítale el **germen** y rállalo o machácalo.', 'Mézclalo con el yogur, el limón y la sal.', 'Añade el aceite **poco a poco** mientras remueves.', 'Déjalo **10 minutos en la nevera**: el ajo suelta su sabor.'] },
+      { type: 'texto', kicker: 'Con qué', title: 'Dónde queda bien.', chips: ['Patatas al horno', 'Pescado a la plancha', 'Verduras asadas', 'Bocadillo de pollo'] },
+      { type: 'texto', kicker: 'Trucos', title: '¿Muy líquido o muy fuerte?', checks: ['¿Líquido? Usa **yogur tipo griego** o escúrrelo', '¿Pica mucho? Con **medio diente** basta', 'Tapado en la nevera, tómalo en **2 días**'] },
+      { type: 'cierre', title: 'Alioli de siempre, versión ligera.', sub: 'La semana que viene: salsa barbacoa casera.', foot: 'Mándaselo a quien le pone alioli a todo' },
+    ],
+  },
 };

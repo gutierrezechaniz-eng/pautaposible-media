@@ -58,17 +58,19 @@ for (const [i, s] of slides.entries()) {
 await browser.close();
 if (flag !== '--preview') {
   // Diapositiva final fija: el último PNG estático del post
+  // SIN_FINAL=1 (relanzamiento, 30/10): sin la diapositiva fija de la web y la app
+  const sinFinal = !!process.env.SIN_FINAL;
   const pngs = fs.readdirSync(postDir).filter((f) => /^\d\d\.png$/.test(f)).sort();
   const fin = pngs[pngs.length - 1], n = String(slides.length + 1).padStart(2, '0');
-  fs.copyFileSync(path.join(postDir, fin), path.join(out, `${n}.png`));
+  if (!sinFinal) fs.copyFileSync(path.join(postDir, fin), path.join(out, `${n}.png`));
   // Vista previa: todas las diapositivas seguidas (la final, 3 s)
   const finMp4 = path.join(out, '_final.mp4');
-  execFileSync(ffmpeg, ['-y', '-v', 'error', '-loop', '1', '-t', '3', '-i', path.join(out, `${n}.png`), '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-shortest',
+  if (!sinFinal) execFileSync(ffmpeg, ['-y', '-v', 'error', '-loop', '1', '-t', '3', '-i', path.join(out, `${n}.png`), '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-shortest',
     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-c:a', 'aac', '-b:a', '64k', finMp4]);
   const list = path.join(out, '_lista.txt');
-  fs.writeFileSync(list, [...files, finMp4].map((f) => `file '${path.resolve(f)}'`).join('\n'));
+  fs.writeFileSync(list, (sinFinal ? files : [...files, finMp4]).map((f) => `file '${path.resolve(f)}'`).join('\n'));
   execFileSync(ffmpeg, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', '-movflags', '+faststart', path.join(out, 'vista-previa.mp4')]);
-  fs.rmSync(list); fs.rmSync(finMp4);
+  fs.rmSync(list); if (!sinFinal) fs.rmSync(finMp4);
   // Versión para publicar: reel vertical con todas las diapositivas seguidas (ver reel-vertical.mjs)
   execFileSync(process.execPath, [path.join(path.dirname(new URL(import.meta.url).pathname), 'reel-vertical.mjs'), postDir], { stdio: 'inherit' });
 }

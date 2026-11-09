@@ -6,12 +6,9 @@
 > - **Revisión antes de publicar (Iván, 12/10/2026), obligatoria:** antes de programar o cambiar algo en Metricool, comprueba que (1) el formato es el correcto: lo que lleva narrador va como REEL con un único vídeo; (2) el vídeo final se ve y se oye de principio a fin: duración esperada, audio presente y sin bucles ni silencios largos, y capturas de varios momentos (inicio, mitad y cierre) donde cambie la imagen y los subtítulos se lean; (3) el texto, la hora, la portada, la colaboradora e `isAiGenerated` son los correctos; (4) después de programar, `getScheduledPosts` devuelve lo esperado (tipo REEL, un solo vídeo). Si algo falla, no lo programes: avisa a Iván.
 > - Los textos de voz se siguen escribiendo en `voz/GUIONES.md` (los lee el narrador). Si reescribes ese archivo, conserva esta nota al principio.
 
-# Guiones de voz · semana del 26 de octubre de 2026
-Los lee el narrador «santa» (decisión de Iván del 11/10): no hace falta grabar nada. Si algún día Iván prefiere su voz, con calma, el móvil cerca y sin ruido de fondo (unos 25 segundos).
-## Reel del martes 27 · ¿La fruta por la noche engorda?
-> ¿La fruta por la noche engorda? No. Una manzana es la misma a las nueve de la mañana que a las nueve de la noche: lo que cuenta es el conjunto del día. Si te apetece en la cena, adelante. Envíaselo a quien la evita por la noche. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
-## Reel del jueves 29 · 4 raciones de legumbre a la semana, sin complicarte
-> ¿Te cuesta llegar a cuatro raciones de legumbre a la semana? Hazlo fácil. Ten botes en la despensa, enjuágalos y añádelos a la ensalada, al arroz o a una crema. Un hummus para picar también cuenta. Guárdalo para tu próxima compra. Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
-
-## Reel del sábado 31 · ¿Tienes que ganarte la comida?
-> ¿Sientes que tienes que ganarte la comida haciendo ejercicio? No funciona así. Comer no es un premio ni moverte un castigo. Muévete porque te sienta bien: andar, bailar, subir escaleras. Y come porque lo necesitas, sin cuentas pendientes. Envíaselo a quien siempre dice «hoy me lo he ganado». Y si quieres más recetas fáciles o cocinar con lo que tienes en casa, entra en pautaposible.es: la app es gratis.
+# Guiones de voz · semana del 9 de noviembre de 2026
+Los lee el narrador «santa» (decisión de Iván del 11/10): no hace falta grabar nada. Desde el relanzamiento (30/10) martes y jueves no hay publicación; aquí quedan los textos narrados de la semana.
+## Reel del lunes 9 · ¿Si una vitamina es buena, más es mejor? (suplementos 3/4)
+> ¿Si una vitamina es buena, más es mejor? No: algunas se acumulan. Las vitaminas A, D, E y K se disuelven en grasa y lo que sobra se guarda en el hígado y en la grasa. La EFSA marca un tope al día, y con la comida es muy difícil llegar: el exceso viene casi siempre del bote. Si te la han pautado, sigue la pauta. Más no es mejor. Mándaselo a quien toma vitaminas por si acaso.
+## Reel del viernes 13 · ¿Qué hace tu hígado con un refresco al día? (órganos)
+> ¡Venimos del refresco! Una lata normal trae unos treinta y cinco gramos de azúcar. Y lo que sobra le toca al hígado: si le llega azúcar de más un día tras otro, lo convierte en grasa y se la guarda dentro. Así empieza muchas veces el hígado graso, que casi nunca avisa. Si cambias el hábito, puede ir soltando esa grasa. Mándaselo a quien no perdona su refresco en la comida.
