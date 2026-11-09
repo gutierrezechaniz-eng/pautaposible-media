@@ -28,7 +28,7 @@ const hookEnd = frames.length / FPS;
 // Fotogramas de la cara (recorte cuadrado del gancho) para el círculo de las diapositivas; FACE_CROP=w:h:x:y
 const cdir = path.join(dir, 'face-frames');
 fs.rmSync(cdir, { recursive: true, force: true }); fs.mkdirSync(cdir);
-ff(['-i', hookVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,crop=${process.env.FACE_CROP || '960:960:60:430'},scale=420:420`, '-q:v', '3', path.join(cdir, '%04d.jpg')]);
+ff(['-i', hookVid, '-vf', `fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,crop=${process.env.FACE_CROP || '1080:1080:0:520'},scale=420:420`, '-q:v', '3', path.join(cdir, '%04d.jpg')]);
 const faceFrames = fs.readdirSync(cdir).sort().map((f) => 'face-frames/' + f);
 let outroFrames = null;
 if (outroVid) {
