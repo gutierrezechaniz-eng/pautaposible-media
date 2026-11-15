@@ -1,0 +1,24 @@
+{
+ "titulo": "Zumo o naranja entera",
+ "vertical": true,
+ "gancho": "¿Zumo de naranja o naranja entera?",
+ "cierre": "Tus órganos te explican lo que comes",
+ "camara": 950,
+ "escenas": [
+  {
+   "id": "zumo",
+   "lineas": [
+    ["glucosa", "¡Venimos del zumo! Para un vaso hacen falta dos o tres naranjas. Y sin su fibra, llegamos todas de golpe.", "2-3 NARANJAS EN UN VASO"],
+    ["pancreas", "¡Otra vez con prisas! Insulina, sal ya, que no paran de llegar."]
+   ]
+  },
+  {
+   "id": "naranja",
+   "lineas": [
+    ["glucosa", "Con la naranja entera es otra historia. La fibra nos frena y entramos poco a poco.", "LA FIBRA FRENA"],
+    ["insulina", "Así sí. Abro las puertas sin agobios. Y además, te llena más."],
+    ["narrador", "Para la OMS, el zumo cuenta como azúcar libre, aunque sea natural. Mándaselo a quien desayuna zumo porque es sano."]
+   ]
+  }
+ ]
+}

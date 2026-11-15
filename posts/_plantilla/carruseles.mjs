@@ -150,4 +150,22 @@ export const carruseles = {
       { type: 'cierre', title: 'Alioli de siempre, versión ligera.', sub: 'La semana que viene: salsa barbacoa casera.', foot: 'Mándaselo a quien le pone alioli a todo' },
     ],
   },
+  'suplementos-4': {
+    slides: [
+      { type: 'portada', tag: 'Mito o realidad', title: '¿Los quemagrasas queman grasa?', sub: 'Serie suplementos · 4 de 4 · Quemagrasas, colágeno y proteína.' },
+      { type: 'texto', kicker: 'Quemagrasas', title: 'No queman nada.', p: 'En Europa, **ningún ingrediente** tiene una declaración aprobada para quemar grasa.', box: 'Y Sanidad avisa: algunos que se venden por internet llevan **fármacos ocultos**.' },
+      { type: 'texto', kicker: 'Colágeno', title: '¿Y el colágeno?', p: 'Se digiere como cualquier proteína: **tu cuerpo decide** dónde la usa, no el bote.', box: 'La EFSA **no ha aprobado** sus promesas para las articulaciones.' },
+      { type: 'texto', kicker: 'Proteína en polvo', title: 'Casi siempre, ya te llega.', p: 'La mayoría ya come la proteína que necesita con **huevo, legumbre, lácteos, pescado o carne**.', box: 'Puede ayudar si **comes poco** o te la pauta un profesional.' },
+      { type: 'cierre', title: 'Lo que pagas no es lo que obtienes.', sub: 'Fin de la serie de suplementos.', foot: 'Mándaselo a quien tiene quemagrasas en casa' },
+    ],
+  },
+  'salsa-barbacoa': {
+    slides: [
+      { type: 'portada', tag: 'Receta sencilla', title: '¿Salsa barbacoa sin un bote de azúcar?', sub: 'Serie salsas caseras · 4 · En 15 minutos.' },
+      { type: 'texto', kicker: 'Ingredientes · 1 bote pequeño', title: 'Lo que necesitas.', checks: ['200 g de tomate triturado', '1 cucharadita de **pimentón ahumado**', '1 cucharada de vinagre de manzana', '1 cucharadita de mostaza', 'Ajo en polvo, sal y, si quieres, **1 cucharadita de miel**'] },
+      { type: 'texto', kicker: 'Paso a paso', title: 'En 15 minutos.', steps: ['Todo al cazo y **remueve**.', '**10-12 minutos** a fuego suave, hasta que espese.', 'Prueba y ajusta: **más ahumado** o más ácido.'] },
+      { type: 'texto', kicker: 'La diferencia', title: '¿Y la de bote?', p: 'En muchas, el **azúcar** está entre los primeros ingredientes. Míralo en la etiqueta.', box: 'Aquí el dulzor lo pone el **tomate**. Tapada en la nevera, dura **3-4 días**.' },
+      { type: 'cierre', title: 'Barbacoa casera, sin bote.', sub: 'La semana que viene: salsa rosa de yogur.', foot: 'Mándaselo a quien le echa barbacoa a todo' },
+    ],
+  },
 };
