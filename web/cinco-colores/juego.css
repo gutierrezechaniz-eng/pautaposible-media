@@ -1,0 +1,103 @@
+/* Cinco Colores: página del juego (para imprimir y online). Usa los colores de /styles.css. */
+.cc, .cc-page { --cc-V: #3f9650; --cc-F: #a8458c; --cc-C: #2e6fb7; --cc-P: #c2452d; --cc-G: #d99a1e; --cc-K: #111418; --cc-muted: #5d6b62; --cc-line: #dfe6e0; }
+
+/* Portada y bloques de la página */
+.cc-hero .cc-swatches { display: flex; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.cc-hero .cc-swatches li { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: #fff; font-weight: 850; font-size: 1.2rem; }
+.cc-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0 !important; }
+.cc-section { margin: 0 0 48px; scroll-margin-top: 90px; }
+.cc-section > h2 { margin: 0 0 8px; font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.15; letter-spacing: -.02em; }
+.cc-section > .cc-intro { max-width: 62ch; margin: 0 0 20px; color: var(--cc-muted); }
+.cc-board-wrap { max-width: 640px; padding: clamp(14px, 3vw, 26px); background: #fff; border: 1px solid var(--border); border-radius: 26px; box-shadow: var(--shadow); }
+.cc-print-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.cc-print-card { padding: 22px; background: #fff; border: 1px solid var(--border); border-radius: 22px; }
+.cc-print-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.cc-print-card p, .cc-print-card li { color: #4d5d53; }
+.cc-print-card ol, .cc-print-card ul { margin: 0; padding-left: 20px; }
+.cc-print-card li { margin-bottom: 6px; }
+.cc-print-card .cc-ico { width: 44px; height: 44px; margin-bottom: 10px; display: grid; place-items: center; border-radius: 14px; background: var(--mint); color: var(--forest); }
+.cc-print-card .cc-ico svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.cc-download { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.cc-download small { color: var(--cc-muted); }
+.cc-learn { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.cc-learn li { padding: 16px 18px; background: #fff; border: 1px solid var(--border); border-left: 6px solid var(--c); border-radius: 16px; }
+.cc-learn strong { display: block; color: var(--c); }
+.cc-learn span { color: #4d5d53; font-size: .95rem; }
+
+/* Juego online */
+.cc { color: var(--charcoal); line-height: 1.45; }
+.cc button { font: inherit; color: inherit; cursor: pointer; }
+.cc button:disabled { opacity: .4; cursor: default; }
+.cc button:focus-visible, .cc a:focus-visible, .cc input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.cc-tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 0 8px; }
+.cc-tabs button { flex: none; border: 1px solid var(--cc-line); background: #fff; border-radius: 999px; padding: 8px 14px; font-weight: 750; font-size: 14px; color: var(--cc-muted); }
+.cc-tabs button[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: #fff; }
+.cc-h { font-size: 19px; font-weight: 800; margin: 18px 0 6px; }
+.cc h4 { font-size: 15px; font-weight: 800; margin: 0 0 6px; }
+.cc p { margin: 0 0 10px; }
+.cc-muted { color: var(--cc-muted); font-size: 14px; }
+.cc-card { background: #fff; border: 1px solid var(--cc-line); border-radius: 18px; padding: 14px; margin-top: 12px; }
+.cc-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cc-spread { justify-content: space-between; }
+.cc-pill { border: 1px solid var(--cc-line); background: #fff; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; }
+.cc-pill.on { background: var(--forest); border-color: var(--forest); color: #fff !important; }
+.cc-pill.gold { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
+.cc-pill.ghost { border-style: dashed; color: var(--cc-muted); }
+.cc-players { display: flex; gap: 8px; overflow-x: auto; padding: 8px 0 2px; }
+.cc-players .cc-pill { flex: none; }
+.cc-daynav { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; }
+.cc-daynav strong { font-weight: 800; text-align: center; }
+.cc-iconbtn { width: 40px; height: 40px; flex: none; border-radius: 50%; border: 1px solid var(--cc-line); background: #fff; font-size: 18px; font-weight: 800; }
+.cc-score { display: flex; align-items: baseline; gap: 8px; }
+.cc-score b { font-size: 44px; font-weight: 800; letter-spacing: -.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.cc-score span { color: var(--cc-muted); font-weight: 700; }
+.cc-grp { margin-top: 12px; }
+.cc-lab { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+.cc-cells { display: flex; gap: 8px; flex-wrap: wrap; }
+.cc-cell { width: 54px; height: 54px; border-radius: 14px; border: 3px solid; background: #fff; font-weight: 800; font-size: 22px; display: inline-flex; align-items: center; justify-content: center; position: relative; padding: 0; transition: transform .12s; }
+.cc-cell:active { transform: scale(.94); }
+.cc-cell.opt { border-style: dashed; }
+.cc-cell small { position: absolute; right: 4px; bottom: 1px; font-size: 11px; }
+.gV .cc-lab { color: var(--cc-V); } .gF .cc-lab { color: var(--cc-F); } .gC .cc-lab { color: var(--cc-C); } .gP .cc-lab { color: var(--cc-P); } .gG .cc-lab { color: #8a5f08; }
+.gV .cc-cell { border-color: var(--cc-V); color: var(--cc-V); } .gV .cc-cell.full { background: var(--cc-V); color: #fff; } .gV .cc-cell.half { background: linear-gradient(90deg, var(--cc-V) 50%, #fff 50%); color: var(--charcoal); }
+.gF .cc-cell { border-color: var(--cc-F); color: var(--cc-F); } .gF .cc-cell.full { background: var(--cc-F); color: #fff; } .gF .cc-cell.half { background: linear-gradient(90deg, var(--cc-F) 50%, #fff 50%); color: var(--charcoal); }
+.gC .cc-cell { border-color: var(--cc-C); color: var(--cc-C); } .gC .cc-cell.full { background: var(--cc-C); color: #fff; } .gC .cc-cell.half { background: linear-gradient(90deg, var(--cc-C) 50%, #fff 50%); color: var(--charcoal); }
+.gP .cc-cell { border-color: var(--cc-P); color: var(--cc-P); } .gP .cc-cell.full { background: var(--cc-P); color: #fff; } .gP .cc-cell.half { background: linear-gradient(90deg, var(--cc-P) 50%, #fff 50%); color: var(--charcoal); }
+.gG .cc-cell { border-color: var(--cc-G); color: #8a5f08; } .gG .cc-cell.full { background: var(--cc-G); color: var(--charcoal); } .gG .cc-cell.half { background: linear-gradient(90deg, var(--cc-G) 50%, #fff 50%); color: var(--charcoal); }
+.cc-kbox { border: 2px solid var(--cc-K); border-radius: 18px; padding: 14px; margin-top: 12px; background: #fff; }
+.cc-kbtn { background: var(--cc-K); color: #fff !important; border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 800; min-width: 64px; }
+.cc-kcount { font-weight: 800; font-variant-numeric: tabular-nums; }
+.cc-step { display: inline-flex; align-items: center; gap: 8px; }
+.cc-step button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--cc-line); background: #fff; font-weight: 800; font-size: 18px; }
+.cc-step b { min-width: 22px; text-align: center; font-variant-numeric: tabular-nums; }
+.cc-reto { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--cc-line); }
+.cc-reto:last-child { border-bottom: 0; }
+.cc-name { font-weight: 700; }
+.cc-goal { font-size: 13px; color: var(--cc-muted); }
+.cc-tag { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 800; }
+.cc-tag.ok { background: var(--mint); color: var(--forest); } .cc-tag.bad { background: #f8e3df; color: var(--cc-P); } .cc-tag.wait { background: #eef0ee; color: var(--cc-muted); }
+.cc table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.cc th, .cc td { padding: 8px 6px; border-bottom: 1px solid var(--cc-line); text-align: center; font-size: 14px; }
+.cc th { font-size: 12px; color: var(--cc-muted); font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+.cc td:first-child, .cc th:first-child { text-align: left; }
+.cc table.tight th, .cc table.tight td { padding: 8px 3px; font-size: 13px; }
+.cc-scroll { overflow-x: auto; }
+.cc tr.win td { font-weight: 800; }
+.cc-crown { color: var(--gold); }
+.cc-details { border: 1px solid var(--cc-line); border-radius: 16px; background: #fff; margin-top: 10px; overflow: hidden; }
+.cc-details summary { list-style: none; cursor: pointer; padding: 12px 14px; font-weight: 800; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cc-details summary::-webkit-details-marker { display: none; }
+.cc-dot { width: 16px; height: 16px; border-radius: 5px; flex: none; }
+.cc-in { padding: 0 14px 12px; }
+.cc-details td, .cc-details th { text-align: left; }
+.cc-cta { display: block; text-align: center; text-decoration: none; background: var(--forest); color: #fff !important; border-radius: 999px; padding: 14px 18px; font-weight: 800; margin-top: 12px; border: 0; width: 100%; }
+.cc-cta.alt { background: #fff; color: var(--forest) !important; border: 2px solid var(--forest); }
+.cc-field { display: flex; gap: 8px; margin-top: 8px; }
+.cc-field input { flex: 1; border: 1px solid var(--cc-line); border-radius: 12px; padding: 10px 12px; font: inherit; min-width: 0; }
+.cc-shareimg { width: 100%; border-radius: 14px; border: 1px solid var(--cc-line); margin-top: 10px; display: block; }
+.cc-how { padding-left: 20px; margin: 0; }
+.cc-how li { margin-bottom: 8px; }
+.cc-toast { position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 60; width: max-content; max-width: calc(100% - 32px); transform: translateX(-50%); background: var(--charcoal); color: #fff; border-radius: 18px; padding: 10px 18px; font-weight: 700; font-size: 14px; text-align: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.cc-toast.show { opacity: 1; }
+@media (max-width: 380px) { .cc-cell { width: 46px; height: 46px; } }
+@media (prefers-reduced-motion: reduce) { .cc-toast, .cc-cell { transition: none; } }

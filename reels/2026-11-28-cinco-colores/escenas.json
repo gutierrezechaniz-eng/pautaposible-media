@@ -1,0 +1,46 @@
+{
+ "hook": "¿Tus hijos<br>comen<br>variado?",
+ "icon": "capturas/icono.png",
+ "endLine": "Cinco Colores: el juego gratis<br>para comer variado en familia",
+ "endButton": "Mándaselo",
+ "tags": [
+  {"at": 2.6, "text": "Juego gratis · familia"},
+  {"at": 8.55, "text": "Cinco colores"},
+  {"at": 14.2, "text": "Fichas negras"},
+  {"at": 16.45, "text": "Campeón del domingo"},
+  {"at": 18.35, "text": "Aprenden jugando"},
+  {"at": 23.8, "text": "Móvil o nevera"},
+  {"at": 27.4, "text": "60 recetas"},
+  {"at": 31.3, "text": "Su ración, calculada"},
+  {"at": 35.1, "text": "Mándaselo"}
+ ],
+ "shots": [
+  {"src": "capturas/pagina.jpg", "at": 2.5},
+  {"src": "capturas/tablero.jpg", "at": 8.55},
+  {"src": "capturas/tablero-toque.jpg", "at": 11.5},
+  {"src": "capturas/fichas-negras.jpg", "at": 14.2},
+  {"src": "capturas/marcador.jpg", "at": 16.45},
+  {"src": "capturas/raciones.jpg", "at": 18.35},
+  {"src": "capturas/retos.jpg", "at": 21.4},
+  {"src": "capturas/imprimir.jpg", "at": 23.8},
+  {"src": "capturas/recetas.jpg", "at": 27.4},
+  {"src": "capturas/app-receta.jpg", "at": 31.3},
+  {"src": "capturas/pagina.jpg", "at": 35.1}
+ ],
+ "taps": [
+  {"x": 0.495, "y": 0.368, "at": 11.1}
+ ],
+ "zooms": [
+  {"at": 9.0, "until": 13.9, "amount": 0.06}
+ ],
+ "badges": [
+  {"at": 4.4, "out": 8.4, "x": 20, "y": 560, "ico": "✓", "text": "Gratis"},
+  {"at": 6.6, "out": 8.4, "x": 600, "y": 980, "ico": "✓", "text": "Sin cuenta"},
+  {"at": 11.6, "out": 14.0, "x": 560, "y": 1150, "cls": "gold", "ico": "✓", "text": "Aprende algo"},
+  {"at": 15.0, "out": 16.3, "x": 20, "y": 620, "ico": "−1", "text": "Refrescos"},
+  {"at": 17.2, "out": 18.3, "x": 600, "y": 560, "cls": "gold", "ico": "★", "text": "Campeón"},
+  {"at": 21.6, "out": 23.6, "x": 20, "y": 980, "ico": "✓", "text": "Sin báscula"},
+  {"at": 25.4, "out": 27.3, "x": 620, "y": 560, "ico": "✓", "text": "PDF gratis"},
+  {"at": 33.0, "out": 34.9, "x": 20, "y": 560, "cls": "gold", "ico": "✓", "text": "Cuenta gratis"}
+ ]
+}
