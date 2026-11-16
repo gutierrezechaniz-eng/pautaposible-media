@@ -2,7 +2,7 @@
 
 > **RELANZAMIENTO (Iván, 30/10/2026) · OBJETIVO PRINCIPAL: MÁS ME GUSTA Y MÁS SEGUIDORES.** Manda sobre todo lo demás de este archivo, de `calendario.md` y de los prompts de las tareas automáticas (salvo la voz «santa» y la revisión antes de publicar, que siguen):
 > - **Cupo de Metricool (plan gratis, Iván no quiere pagar):** publica 20 posts al mes y se reinicia el día 1; si se pasa, falla con «You have reached your Metricool account limit» (del 24 al 30/10 no salió nada por esto). **Máximo 4 publicaciones por semana y 18 al mes.** Antes de programar, cuenta con `getScheduledPosts` las del mes. **YouTube también se publica por Metricool (canal conectado) y gasta cupo:** en noviembre van 2 de YouTube el 1/11 (cap. 1 410848121 y su Short 410848126) + 17 de Instagram = 19; el cap. 2 (13/11) llega a 20, así que el sábado 28/11 no lleva recorte. Vídeos largos de YouTube: `youtube/NN-tema/video.mp4` (comprimido, <100 MB) y `miniatura.jpg`. Las historias de Instagram, a mano.
-> - **Semana:** lunes 18:00 reel (serie de suplementos hasta el 16/11; después «Tus órganos hablan»); miércoles 18:00 (serie de salsas hasta el 25/11; después carrusel-guía animado publicado como reel); viernes 18:00 reel vertical de los órganos («¿Qué pasa en tu cuerpo si…?» o «Señales de que…»); sábado 11:00 recorte de un capítulo de YouTube. **Martes y jueves no se publica:** la tarea de martes y jueves termina sin hacer nada. La tarea del domingo prepara y programa las 4 de la semana.
+> - **Semana:** lunes 18:00 reel (serie de suplementos hasta el 16/11; después «Tus órganos hablan»); miércoles 18:00 (serie de salsas hasta el 25/11; después carrusel-guía animado publicado como reel); viernes 18:00 reel vertical de los órganos («¿Qué pasa en tu cuerpo si…?» o «Señales de que…»); sábado 11:00 recorte de un capítulo de YouTube, salvo **cada 15 días, que el sábado 11:00 va un anuncio de Cinco Colores** (juego familiar gratis de la web, pautaposible.es/cinco-colores/; pedido de Iván del 16/11): reel con narrador, enfoque educativo sobre los hábitos de los más pequeños, que se usa con las recetas de la web y que con cuenta calcula la ración de cada uno; un ángulo distinto cada vez (propuestas en `reels/2026-11-28-cinco-colores/`). Fechas: 28/11 (programado, 430173362), 12/12, 26/12, 9/1…; esos sábados no llevan recorte. **Martes y jueves no se publica:** la tarea de martes y jueves termina sin hacer nada. La tarea del domingo prepara y programa las 4 de la semana.
 > - **Nicho:** tripa, azúcar, hígado y peso (lo que venden los ebooks: diabetes tipo 2, obesidad, SII, SIBO, malabsorción). Nada de temas genéricos muy contados (pan, agua, fruta de noche…).
 > - **Reels de los órganos:** plantilla `youtube/_plantilla` con `"vertical": true` en el guion (ver `youtube/README.md`; ejemplo `reels/2026-11-06-caminar-tras-comer/guion.json`). 25-40 s. El personaje habla desde el primer segundo, gancho fijo arriba en forma de pregunta corta, sin portada de título.
 > - **Que se envíe:** cada guion responde a «¿a quién se lo mandarías?» y termina con «Mándaselo a quien…». Si no hay a quién, no se publica.
@@ -163,6 +163,13 @@ Los reels tienen tema propio y no repiten ningún carrusel (decisión de Iván, 
 
 Cupo de noviembre en Metricool: 10 de 18 (6 publicadas + 4 de esta semana; aparte, el borrador 410841624). El cap. 2 de YouTube (SII, previsto el 13/11) **no está hecho**: falta dibujar colon, intestino delgado, cerebro y microbiota.
 
+## Anuncio de Cinco Colores · sábados alternos 11:00 (Iban, 16/11/2026)
+| Fecha | Hora | Pieza | Estado |
+|---|---|---|---|
+| Sáb 28/11 | 11:00 | Reel con narrador «santa» del juego Cinco Colores (`reels/2026-11-28-cinco-colores/`, rama claude/project-thread-u7xrcl, commit dc76158) | programado · 430173362 |
+
+Va en el hueco del sábado que quedó libre porque el cap. 2 de YouTube no salió: **el 28/11 no lleva recorte.** Con la semana del 23/11 (lun, mié, vie) noviembre queda en 18. Próximos: 12/12, 26/12, 9/1, cada uno con un ángulo distinto.
+
 ## Métricas · semana del 2 nov (consultadas el 08/11/2026, primera revisión con las metas nuevas)
 - Reel de los órganos «Caminar 10 minutos después de comer» (vie): **151 de alcance**, 166 reproducciones, 2 me gusta, 3 guardados, 0 envíos; vistas de más de 3 s: **48 %** (meta 60 %).
 - Mayonesa casera (mié): 54 de alcance, 65 reproducciones, 1 me gusta; más de 3 s: 33 %. Suplementos 2/4 (lun): 36 de alcance, 52 reproducciones; más de 3 s: **17 %**. Recorte del sábado 07/11: aún sin datos.
@@ -199,6 +206,7 @@ Desde el 19/10, los carruseles de los lunes son la **serie de suplementos** y lo
 
 ## Temas usados
 
+- Cinco Colores, juego familiar de la web: hábitos de los más pequeños (28/11, anuncio 1)
 - Mito: huevo y colesterol
 - Mito: hidratos por la noche
 - Receta: lentejas con verduras (legumbre de bote)
