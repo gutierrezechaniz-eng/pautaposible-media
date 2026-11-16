@@ -50,4 +50,10 @@
   </url>
   <url><loc>https://pautaposible.es/eliminar-cuenta/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://pautaposible.es/instalar/</loc><lastmod>2026-10-23</lastmod></url>
+  <url>
+    <loc>https://pautaposible.es/cinco-colores/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
